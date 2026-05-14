@@ -66,7 +66,7 @@ export default function Home() {
     <Layout
       noFooter
       title="Omry Yadan"
-      description="Personal website for Omry Yadan: projects, notes, and selected personal context.">
+      description="Personal website for Omry Yadan: projects and blog.">
       <main className={styles.homeMain}>
         <section className={styles.homeFrame} aria-labelledby="home-title">
           <div className={styles.homeGrid} aria-label="Site surfaces">

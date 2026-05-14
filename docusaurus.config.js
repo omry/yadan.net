@@ -65,12 +65,12 @@ const config = {
         {
           name: 'description',
           content:
-            'Personal website for Omry Yadan: projects, notes, and selected personal context.',
+            'Personal website for Omry Yadan: projects and blog.',
         },
         {property: 'og:title', content: 'Omry Yadan · Yadan.net'},
         {
           property: 'og:description',
-          content: 'Projects, notes, and selected context from Omry Yadan.',
+          content: 'Projects and blog from Omry Yadan.',
         },
         {property: 'og:site_name', content: 'Yadan.net'},
         {property: 'og:type', content: 'website'},
@@ -79,11 +79,11 @@ const config = {
         {property: 'og:image:height', content: '630'},
         {
           property: 'og:image:alt',
-          content: 'Omry Yadan - projects, notes, and selected context.',
+          content: 'Omry Yadan - Projects and Blog.',
         },
         {
           name: 'twitter:image:alt',
-          content: 'Omry Yadan - projects, notes, and selected context.',
+          content: 'Omry Yadan - Projects and Blog.',
         },
       ],
       navbar: {
