@@ -5,7 +5,7 @@ Initial static scaffold for Omry Yadan's personal website.
 ## Intent
 
 - Personal project and CV showcase, not a recruiting site.
-- Backend-less by default so Apache can serve it directly.
+- Backend-less by default so static hosts can serve it directly.
 - Canonical host recommendation: `yadan.net`, with `omry.yadan.net` kept as a future alias/subdomain if desired.
 
 ## Local preview
@@ -15,6 +15,20 @@ python3 -m http.server 8000
 ```
 
 Then open <http://localhost:8000>.
+
+## Deployment notes for GitHub Pages
+
+This repository includes a GitHub Actions workflow at `.github/workflows/pages.yml` that publishes the repository root as a static GitHub Pages site whenever changes are pushed to `main`. It can also be started manually from the Actions tab with **Run workflow**.
+
+Initial setup in GitHub:
+
+1. Open the repository **Settings** tab.
+2. Go to **Pages**.
+3. Set **Build and deployment** → **Source** to **GitHub Actions**.
+4. Push to `main` or run the `Deploy static site to GitHub Pages` workflow manually.
+5. If using the custom domain, keep the root `CNAME` file set to `yadan.net` and configure DNS with the GitHub Pages records for the apex domain.
+
+The `.nojekyll` file tells GitHub Pages to publish the static files exactly as provided instead of running Jekyll.
 
 ## Deployment notes for Apache
 
