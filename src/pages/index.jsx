@@ -11,7 +11,7 @@ import {
 } from '../data/siteContent';
 import styles from './index.module.css';
 
-const HOME_NOTE_LIMIT = 3;
+const HOME_BLOG_LIMIT = 3;
 
 function HomeProjectList({projects}) {
   return (
@@ -35,7 +35,7 @@ function HomeProjectList({projects}) {
   );
 }
 
-function formatNoteDate(date) {
+function formatBlogDate(date) {
   return new Intl.DateTimeFormat('en', {
     day: 'numeric',
     month: 'short',
@@ -44,17 +44,17 @@ function formatNoteDate(date) {
   }).format(new Date(date));
 }
 
-function RecentNotes() {
-  const notes = blogPostList.items
+function RecentBlogPosts() {
+  const posts = blogPostList.items
     .filter((post) => !post.unlisted)
-    .slice(0, HOME_NOTE_LIMIT);
+    .slice(0, HOME_BLOG_LIMIT);
 
   return (
-    <ul className={styles.homeNoteList}>
-      {notes.map((post) => (
+    <ul className={styles.homeBlogList}>
+      {posts.map((post) => (
         <li key={post.permalink}>
           <Link to={post.permalink}>{post.title}</Link>
-          <time dateTime={post.date}>{formatNoteDate(post.date)}</time>
+          <time dateTime={post.date}>{formatBlogDate(post.date)}</time>
         </li>
       ))}
     </ul>
@@ -79,12 +79,12 @@ export default function Home() {
                 <p className={styles.homeLede}>May your sockets never timeout.</p>
               </header>
 
-              <article className={`${styles.homeCard} ${styles.homeNotesCard}`}>
+              <article className={`${styles.homeCard} ${styles.homeBlogCard}`}>
                 <div>
                   <Link className={`${styles.eyebrow} ${styles.surfaceLink}`} to="/blog">
-                    Notes
+                    Blog
                   </Link>
-                  <RecentNotes />
+                  <RecentBlogPosts />
                 </div>
               </article>
             </div>

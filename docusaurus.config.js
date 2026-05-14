@@ -34,9 +34,9 @@ const config = {
         docs: false,
         blog: {
           routeBasePath: 'blog',
-          blogTitle: 'Notes',
+          blogTitle: 'Blog',
           blogDescription:
-            'Project notes, maintenance context, and longer-form writing from Omry Yadan.',
+            'Project updates, maintenance context, and longer-form writing from Omry Yadan.',
           showReadingTime: true,
           feedOptions: {
             type: ['rss', 'atom'],
@@ -98,7 +98,7 @@ const config = {
         items: [
           {to: '/', label: 'Home', position: 'left', activeBaseRegex: '^/$'},
           {to: '/projects', label: 'Projects', position: 'left'},
-          {to: '/blog', label: 'Notes', position: 'left'},
+          {to: '/blog', label: 'Blog', position: 'left'},
           {to: '/about', label: 'About', position: 'left'},
           {to: '/contact', label: 'Contact', position: 'left'},
         ],

@@ -75,7 +75,7 @@
   padding: 1.25rem;
 }
 
-.homeNotesCard {
+.homeBlogCard {
   min-height: 0;
 }
 
@@ -225,7 +225,7 @@
   -webkit-line-clamp: 2;
 }
 
-.homeNoteList {
+.homeBlogList {
   display: grid;
   gap: 0.75rem;
   margin: 0.8rem 0 0;
@@ -233,18 +233,18 @@
   list-style: none;
 }
 
-.homeNoteList li {
+.homeBlogList li {
   padding-top: 0.75rem;
   border-top: 1px solid var(--site-line);
 }
 
-.homeNoteList a {
+.homeBlogList a {
   display: block;
   color: var(--site-ink);
   font-weight: 850;
 }
 
-.homeNoteList time {
+.homeBlogList time {
   display: block;
   margin-top: 0.25rem;
   color: var(--site-muted);
@@ -368,12 +368,12 @@
   font-size: 1.35rem;
 }
 
-.statusNote,
+.statusMessage,
 .sectionCopy,
 .featureList p,
 .timeline p,
 .contact p,
-.notesPreview p,
+.blogPreview p,
 .projectCard p:not(.tag),
 .topicGrid p {
   color: var(--site-muted);
@@ -427,7 +427,7 @@
 .featureList article,
 .timeline article,
 .contactCard,
-.noteLanes article,
+.blogLanes article,
 .topicGrid article {
   border: 1px solid var(--site-line);
   border-radius: 8px;
@@ -533,7 +533,7 @@
 
 .featureList,
 .timeline,
-.noteLanes {
+.blogLanes {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
@@ -541,7 +541,7 @@
 
 .featureList article,
 .timeline article,
-.noteLanes article {
+.blogLanes article {
   padding: 1.25rem;
 }
 
@@ -879,11 +879,11 @@
   font-weight: 850;
 }
 
-.notesPreview {
+.blogPreview {
   border-bottom: 1px solid var(--site-line);
 }
 
-.noteLanes {
+.blogLanes {
   margin-bottom: 1.25rem;
 }
 
@@ -898,7 +898,7 @@
   padding: 1.1rem;
 }
 
-.noteLanes span,
+.blogLanes span,
 .timeline span,
 .topicGrid span {
   display: inline-block;
@@ -1187,7 +1187,7 @@
   .sectionHeading,
   .featureList,
   .timeline,
-  .noteLanes,
+  .blogLanes,
   .topicGrid,
   .contact {
     grid-template-columns: 1fr;

@@ -30,14 +30,14 @@ export default function About() {
             </p>
             <p>
               I use this site as a quiet home for project context and occasional
-              notes.
+              blog posts.
             </p>
             <div className={styles.aboutLinks} aria-label="About page links">
               <Link className={styles.aboutLink} to="/projects">
                 Projects
               </Link>
               <Link className={styles.aboutLink} to="/blog">
-                Notes
+                Blog
               </Link>
               <Link className={styles.aboutLink} to="/contact">
                 Contact

@@ -177,18 +177,18 @@ export function projectAnchor(project) {
 
 export const secondaryProjects = [];
 
-export const noteTopics = [
+export const blogTopics = [
   {
     title: 'Engineering',
     body: 'Configuration, libraries, maintenance, and systems work.',
   },
   {
     title: 'Projects',
-    body: 'Progress notes and context for public work as it becomes ready.',
+    body: 'Progress updates and context for public work as it becomes ready.',
   },
   {
     title: 'Architecture',
-    body: 'Ponderosa and other design/building notes when they need a stable home.',
+    body: 'Ponderosa and other design/building posts when they need a stable home.',
   },
   {
     title: 'Baking',

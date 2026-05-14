@@ -2,8 +2,8 @@
 
 Personal website for Omry Yadan, published at <https://yadan.net>.
 
-The site is a small Docusaurus app with project notes, a blog-style notes
-section, short background context, and a standalone contact form.
+The site is a small Docusaurus app with project context, a blog section, short
+background context, and a standalone contact form.
 
 ## Stack
 

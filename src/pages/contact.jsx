@@ -164,7 +164,7 @@ export default function Contact() {
           <header className={styles.contactIntro}>
             <p className={styles.eyebrow}>Contact</p>
             <h1>Get in touch.</h1>
-            <p>Send a note and I will get back to you when I can.</p>
+            <p>Send a message and I will get back to you when I can.</p>
           </header>
           <ContactForm
             formId={formspreeFormId}
