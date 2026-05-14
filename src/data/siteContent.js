@@ -1,3 +1,6 @@
+export const aboutSummary =
+  'Retired software engineer, formerly at Facebook, Face.com, and Telmap.com. Today I keep Hydra and OmegaConf running and make room for new ideas.';
+
 export const featuredProjects = [
   {
     title: 'Rakia',
@@ -43,8 +46,8 @@ export const featuredProjects = [
         label: 'PyPI downloads/mo',
         value: '36.6M',
         badge: {
-          src: 'https://img.shields.io/pypi/dm/omegaconf?style=flat&logo=pypi&label=downloads%2Fmo',
-          href: 'https://pypi.org/project/omegaconf/',
+          src: 'https://pepy.tech/badge/omegaconf/month',
+          href: 'https://pepy.tech/project/omegaconf',
         },
       },
       {
@@ -95,8 +98,8 @@ export const featuredProjects = [
         label: 'PyPI downloads/mo',
         value: '17.4M',
         badge: {
-          src: 'https://img.shields.io/pypi/dm/hydra-core?style=flat&logo=pypi&label=downloads%2Fmo',
-          href: 'https://pypi.org/project/hydra-core/',
+          src: 'https://pepy.tech/badge/hydra-core/month',
+          href: 'https://www.pepy.tech/projects/hydra-core',
         },
       },
       {
@@ -134,9 +137,9 @@ export const featuredProjects = [
       },
     ],
     tagline:
-      'Google Sheets finance function for global tickers, ETFs, and ISIN lookup beyond GOOGLEFINANCE.',
+      'Market data for U.S. and international listings, identifier lookups, and built-in currency conversion for Google Sheets.',
     description:
-      'HoodleFinance is a Google Sheets function for fetching market data in places where GOOGLEFINANCE is too narrow. It is aimed at global tickers, ETFs, ISIN lookup, and other identifiers that need a lightweight spreadsheet workflow instead of a full finance data platform.',
+      'HoodleFinance is a Google Sheets Addon for fetching market data in places where GOOGLEFINANCE falls short, especially around international tickers and identifiers. It also features built-in currency conversion.',
     stats: [
       {
         type: 'github-stars',
@@ -154,6 +157,16 @@ export const featuredProjects = [
     ],
   },
 ];
+
+const homeFeaturedProjectTitles = new Set(['Rakia']);
+
+export const homeFeaturedProjects = featuredProjects.filter((project) =>
+  homeFeaturedProjectTitles.has(project.title),
+);
+
+export const homeProjectListProjects = featuredProjects.filter(
+  (project) => !homeFeaturedProjectTitles.has(project.title),
+);
 
 export function projectAnchor(project) {
   return project.title

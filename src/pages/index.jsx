@@ -2,32 +2,33 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import blogPostList from '~blog/default/blog-post-list-prop-default.json';
-import ProjectLinks from '../components/ProjectLinks';
+import ProjectBubble from '../components/ProjectBubble';
 import ProjectMark from '../components/ProjectMark';
-import {featuredProjects, projectAnchor} from '../data/siteContent';
+import {
+  homeFeaturedProjects,
+  homeProjectListProjects,
+  projectAnchor,
+} from '../data/siteContent';
 import styles from './index.module.css';
 
 const HOME_NOTE_LIMIT = 3;
 
-function HomeProjectList() {
+function HomeProjectList({projects}) {
   return (
     <ul className={styles.homeProjectList}>
-      {featuredProjects.map((project) => (
+      {projects.map((project) => (
         <li key={project.title}>
-          <div className={styles.homeProjectBody}>
+          <Link
+            className={styles.homeProjectBody}
+            to={`/projects/#${projectAnchor(project)}`}>
             <div className={styles.homeProjectCopy}>
               <span className={styles.projectTitleLine}>
                 <ProjectMark project={project} />
-                <Link
-                  className={styles.projectTitleText}
-                  to={`/projects/#${projectAnchor(project)}`}>
-                  {project.title}
-                </Link>
+                <span className={styles.projectTitleText}>{project.title}</span>
               </span>
               <p>{project.tagline}</p>
             </div>
-            <ProjectLinks links={project.links} projectTitle={project.title} />
-          </div>
+          </Link>
         </li>
       ))}
     </ul>
@@ -68,43 +69,38 @@ export default function Home() {
       description="Personal website for Omry Yadan: projects, notes, and selected personal context.">
       <main className={styles.homeMain}>
         <section className={styles.homeFrame} aria-labelledby="home-title">
-          <header className={styles.homeIntro}>
-            <div className={styles.homeTitleBlock}>
-              <h1 id="home-title">
-                <span className={styles.logoO}>O</span>mry{' '}
-                <span className={styles.logoY}>Y</span>adan
-              </h1>
-              <p className={styles.homeLede}>May your sockets never timeout.</p>
+          <div className={styles.homeGrid} aria-label="Site surfaces">
+            <div className={styles.homeLeftColumn}>
+              <header className={styles.homeTitleBlock}>
+                <h1 id="home-title">
+                  <span className={styles.logoO}>O</span>mry{' '}
+                  <span className={styles.logoY}>Y</span>adan
+                </h1>
+                <p className={styles.homeLede}>May your sockets never timeout.</p>
+              </header>
+
+              <article className={`${styles.homeCard} ${styles.homeNotesCard}`}>
+                <div>
+                  <Link className={`${styles.eyebrow} ${styles.surfaceLink}`} to="/blog">
+                    Notes
+                  </Link>
+                  <RecentNotes />
+                </div>
+              </article>
             </div>
-            <div className={styles.homeAboutBrief}>
-              <p>
-                Retired software engineer, formerly at Facebook, Face.com, and
-                Telmap.com. Today I keep Hydra and OmegaConf running and make
-                room for new ideas.
-              </p>
-              <Link className={styles.textLink} to="/about">
-                About...
+
+            <article className={`${styles.homeCard} ${styles.homeProjectsCard}`}>
+              <Link className={`${styles.eyebrow} ${styles.surfaceLink}`} to="/projects">
+                Projects
               </Link>
-            </div>
-          </header>
 
-          <div className={styles.homeDeck} aria-label="Site surfaces">
-            <article className={styles.homeCard}>
-              <div>
-                <Link className={`${styles.eyebrow} ${styles.surfaceLink}`} to="/blog">
-                  Notes
-                </Link>
-                <RecentNotes />
+              <div className={styles.homeFeaturedList} aria-label="Highlighted project">
+                {homeFeaturedProjects.map((project) => (
+                  <ProjectBubble key={project.title} project={project} />
+                ))}
               </div>
-            </article>
 
-            <article className={styles.homeCard}>
-              <div>
-                <Link className={`${styles.eyebrow} ${styles.surfaceLink}`} to="/projects">
-                  Projects
-                </Link>
-                <HomeProjectList />
-              </div>
+              <HomeProjectList projects={homeProjectListProjects} />
             </article>
           </div>
         </section>

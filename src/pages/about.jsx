@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
+import {aboutSummary} from '../data/siteContent';
 import styles from './index.module.css';
 
 export default function About() {
@@ -17,14 +18,10 @@ export default function About() {
               <span className={styles.logoY}>Y</span>adan
             </h1>
             <div className={styles.aboutBody}>
+              <p>{aboutSummary}</p>
               <p>
-                Retired software engineer, formerly at Facebook, Face.com, and
-                Telmap.com.
-              </p>
-              <p>
-                These days I keep Hydra and OmegaConf running, work on Rakia,
-                and use this site as a quiet home for project context and
-                occasional notes.
+                I am also building Rakia and use this site as a quiet home for
+                project context and occasional notes.
               </p>
             </div>
             <div className={styles.aboutActions}>
