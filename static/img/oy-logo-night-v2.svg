@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="OY">
+  <path
+    d="M20 18L32 35L44 18M32 35V50"
+    fill="none"
+    stroke="#fb7185"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="7"
+  />
+  <ellipse
+    cx="32"
+    cy="32"
+    fill="none"
+    rx="22"
+    ry="24"
+    stroke="#60a5fa"
+    stroke-width="7"
+  />
+</svg>

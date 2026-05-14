@@ -1,0 +1,62 @@
+.projectLinks {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: stretch;
+  color: inherit;
+  line-height: 1.1;
+}
+
+.rowLinks {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.labeledLinks {
+  gap: 0.75rem;
+}
+
+.projectLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.15rem;
+  height: 2.15rem;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--site-muted);
+  text-decoration: none;
+}
+
+.labeledLinks .projectLink {
+  width: auto;
+  min-width: 0;
+  gap: 0.35rem;
+  padding: 0.2rem 0;
+  font-size: 0.82rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.projectLink:hover {
+  border-color: var(--site-line);
+  background: transparent;
+  color: var(--site-ink);
+  text-decoration: none;
+}
+
+.projectLink:focus-visible {
+  border-color: var(--site-teal);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+  outline: 0;
+}
+
+.icon {
+  display: block;
+  flex: 0 0 auto;
+  width: 1.18rem;
+  height: 1.18rem;
+}

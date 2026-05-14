@@ -1,0 +1,34 @@
+.projectMark {
+  display: inline-flex;
+  flex: 0 0 auto;
+  width: 1.55rem;
+  height: 1.55rem;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid var(--site-line);
+  border-radius: 7px;
+  background: var(--site-logo-tile-bg);
+  color: var(--site-logo-tile-text);
+  font-size: 0.62rem;
+  font-weight: 850;
+  line-height: 1;
+}
+
+.projectMark.projectMark {
+  color: var(--site-logo-tile-text);
+}
+
+.projectMark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 0.12rem;
+}
+
+.placeholder {
+  background:
+    linear-gradient(135deg, rgba(37, 99, 235, 0.2), transparent 60%),
+    var(--site-logo-tile-bg);
+}

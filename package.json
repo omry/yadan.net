@@ -1,0 +1,32 @@
+{
+  "name": "yadan.net",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "NO_UPDATE_NOTIFIER=1 docusaurus start",
+    "build": "NO_UPDATE_NOTIFIER=1 docusaurus build",
+    "serve": "NO_UPDATE_NOTIFIER=1 docusaurus serve",
+    "clear": "NO_UPDATE_NOTIFIER=1 docusaurus clear"
+  },
+  "dependencies": {
+    "@docusaurus/core": "3.10.1",
+    "@docusaurus/preset-classic": "3.10.1",
+    "@mdx-js/react": "^3.1.1",
+    "clsx": "^2.1.1",
+    "prism-react-renderer": "^2.4.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 3 chrome version",
+      "last 3 firefox version",
+      "last 5 safari version"
+    ]
+  }
+}
