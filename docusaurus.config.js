@@ -60,6 +60,7 @@ const config = {
         disableSwitch: true,
         respectPrefersColorScheme: false,
       },
+      image: 'img/social-card.png',
       metadata: [
         {
           name: 'description',
@@ -70,6 +71,19 @@ const config = {
         {
           property: 'og:description',
           content: 'Projects, notes, and selected context from Omry Yadan.',
+        },
+        {property: 'og:site_name', content: 'Yadan.net'},
+        {property: 'og:type', content: 'website'},
+        {property: 'og:image:type', content: 'image/png'},
+        {property: 'og:image:width', content: '1200'},
+        {property: 'og:image:height', content: '630'},
+        {
+          property: 'og:image:alt',
+          content: 'Omry Yadan - projects, notes, and selected context.',
+        },
+        {
+          name: 'twitter:image:alt',
+          content: 'Omry Yadan - projects, notes, and selected context.',
         },
       ],
       navbar: {
