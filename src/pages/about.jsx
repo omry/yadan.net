@@ -19,18 +19,6 @@ export default function About() {
             </h1>
             <div className={styles.aboutBody}>
               <p>{aboutSummary}</p>
-              <p>
-                I am also building Rakia and use this site as a quiet home for
-                project context and occasional notes.
-              </p>
-            </div>
-            <div className={styles.aboutActions}>
-              <Link className={`${styles.button} ${styles.primary}`} to="/projects">
-                Projects
-              </Link>
-              <Link className={styles.button} to="/contact">
-                Contact
-              </Link>
             </div>
           </article>
 
@@ -40,9 +28,21 @@ export default function About() {
               Maintaining Hydra and OmegaConf, building Rakia, and writing when
               a stable URL is useful.
             </p>
-            <Link className={styles.textLink} to="/blog">
-              Notes
-            </Link>
+            <p>
+              I use this site as a quiet home for project context and occasional
+              notes.
+            </p>
+            <div className={styles.aboutLinks} aria-label="About page links">
+              <Link className={styles.aboutLink} to="/projects">
+                Projects
+              </Link>
+              <Link className={styles.aboutLink} to="/blog">
+                Notes
+              </Link>
+              <Link className={styles.aboutLink} to="/contact">
+                Contact
+              </Link>
+            </div>
           </aside>
         </section>
       </main>

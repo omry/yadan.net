@@ -1,6 +1,8 @@
 // @ts-check
 
 /** @type {import('@docusaurus/types').Config} */
+const recaptchaSiteKey = '6Lc-d-osAAAAAEfK4-panenxHhr-TOe4WOSHbGfl';
+
 const config = {
   title: 'Omry Yadan',
   tagline: 'May your sockets never timeout.',
@@ -11,6 +13,7 @@ const config = {
   projectName: 'yadan.net',
   customFields: {
     formspreeFormId: 'xdabvpjd',
+    recaptchaSiteKey: process.env.RECAPTCHA_SITE_KEY || recaptchaSiteKey,
   },
   trailingSlash: true,
   onBrokenLinks: 'throw',

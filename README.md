@@ -58,5 +58,12 @@ directly.
 ## Contact Form
 
 The contact page posts to Formspree using the public form ID configured in
-`docusaurus.config.js`. The recipient address and spam controls live in the
-Formspree dashboard, not in this repository.
+`docusaurus.config.js`. The recipient address, reCAPTCHA secret key, and spam
+controls live in the Formspree dashboard, not in this repository.
+
+The public reCAPTCHA v3 site key is configured in `docusaurus.config.js`. To
+override it locally or while rotating keys, build the site with:
+
+```bash
+RECAPTCHA_SITE_KEY=your-public-site-key npm run build
+```

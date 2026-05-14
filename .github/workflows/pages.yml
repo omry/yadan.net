@@ -35,6 +35,8 @@ jobs:
         run: npm ci
 
       - name: Build Docusaurus
+        env:
+          RECAPTCHA_SITE_KEY: ${{ secrets.RECAPTCHA_SITE_KEY }}
         run: npm run build
 
       - name: Configure Pages
