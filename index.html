@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Personal website for Omry Yadan: open-source projects, selected work, CV notes, and contact details."
+    />
+    <meta property="og:title" content="Omry Yadan · Yadan.net" />
+    <meta
+      property="og:description"
+      content="Open-source systems, configuration tooling, personal finance software, and selected past work."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yadan.net/" />
+    <title>Omry Yadan · Yadan.net</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="Yadan.net home">Yadan.net</a>
+        <div class="nav-links">
+          <a href="#work">Work</a>
+          <a href="#projects">Projects</a>
+          <a href="#cv">CV</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <section class="hero" aria-labelledby="intro-title">
+        <p class="eyebrow">Personal site draft · static-first</p>
+        <div class="hero-grid">
+          <div>
+            <h1 id="intro-title">Omry Yadan</h1>
+            <p class="lede">
+              Software engineer and open-source maintainer behind Hydra, OmegaConf,
+              and HoodleFinance. This site is a home for selected projects, CV notes,
+              and longer-form updates.
+            </p>
+            <p class="retired-note">
+              Retired and not looking for work; contact is best for project history,
+              open-source coordination, and personal correspondence.
+            </p>
+            <div class="cta-row" aria-label="Page shortcuts">
+              <a class="button primary" href="#projects">Explore projects</a>
+              <a class="button secondary" href="#contact">Get in touch</a>
+            </div>
+          </div>
+          <aside class="domain-card" aria-labelledby="domain-title">
+            <h2 id="domain-title">Hosting call</h2>
+            <p>
+              Start at <strong>Yadan.net</strong> as the canonical personal domain,
+              with <strong>omry.yadan.net</strong> available as a future alias or
+              project-specific subdomain.
+            </p>
+            <p class="small">
+              The scaffold is plain HTML/CSS and can be served directly by Apache.
+            </p>
+          </aside>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="section" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <p class="eyebrow">Selected work</p>
+          <h2 id="work-title">Building practical tools that other builders keep using.</h2>
+        </div>
+        <div class="feature-list">
+          <article>
+            <h3>Configuration systems for complex software</h3>
+            <p>
+              Hydra and OmegaConf are widely used in Python and machine-learning
+              workflows for composing, overriding, validating, and launching complex
+              application configurations.
+            </p>
+          </article>
+          <article>
+            <h3>Research engineering</h3>
+            <p>
+              Public CV breadcrumbs include former Research Engineer work at Facebook
+              and a 2013 paper on multi-GPU training of convolutional networks.
+            </p>
+          </article>
+          <article>
+            <h3>Personal systems and finance tooling</h3>
+            <p>
+              Current public activity points to HoodleFinance and related maintenance
+              work. More details can be added as the project narrative settles.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contrast" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <p class="eyebrow">Project showcase</p>
+          <h2 id="projects-title">Projects with public traction</h2>
+          <p>
+            Draft descriptions below are based on public project pages and should be
+            checked for precise dates, ownership, and preferred wording before launch.
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card featured">
+            <div>
+              <p class="tag">Open source · Python · 10k+ GitHub stars</p>
+              <h3>Hydra</h3>
+              <p>
+                A framework for elegantly configuring complex applications. Hydra is
+                especially visible in research and ML workflows, where command-line
+                overrides, composable config, and multi-run launches matter.
+              </p>
+            </div>
+            <a href="https://github.com/facebookresearch/hydra">Repository</a>
+          </article>
+
+          <article class="project-card featured">
+            <div>
+              <p class="tag">Open source · Python · 2k+ GitHub stars</p>
+              <h3>OmegaConf</h3>
+              <p>
+                A hierarchical configuration system that supports YAML, dataclasses,
+                CLI input, interpolation, and merging through a consistent API.
+              </p>
+            </div>
+            <a href="https://github.com/omry/omegaconf">Repository</a>
+          </article>
+
+          <article class="project-card">
+            <div>
+              <p class="tag">Current project · personal finance</p>
+              <h3>HoodleFinance</h3>
+              <p>
+                Public profile and contributor-license activity identify
+                HoodleFinance as an active project by Omry. This card is intentionally
+                conservative until product details are finalized.
+              </p>
+            </div>
+            <a href="https://gist.github.com/omry">Public activity</a>
+          </article>
+
+          <article class="project-card">
+            <div>
+              <p class="tag">Project details needed</p>
+              <h3>Rakia</h3>
+              <p>
+                Placeholder for the Rakia project. Add the canonical link, one-line
+                positioning, screenshots, and status once the source of truth is chosen.
+              </p>
+            </div>
+            <a href="mailto:omry@yadan.net?subject=Rakia%20details">Add details</a>
+          </article>
+
+          <article class="project-card">
+            <div>
+              <p class="tag">Publication · deep learning</p>
+              <h3>Multi-GPU Training of ConvNets</h3>
+              <p>
+                A research publication evaluating approaches to parallelizing
+                convolutional-network computation across multiple GPUs.
+              </p>
+            </div>
+            <a href="https://arxiv.org/abs/1312.5853">Paper</a>
+          </article>
+
+          <article class="project-card">
+            <div>
+              <p class="tag">Package ecosystem</p>
+              <h3>Hydra plugins and OmegaConf tooling</h3>
+              <p>
+                Public PyPI history includes hydra-core, Hydra launcher/sweeper
+                plugins, OmegaConf, and omegaconf-pydevd.
+              </p>
+            </div>
+            <a href="https://pypi.org/user/omry/">PyPI profile</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="cv" aria-labelledby="cv-title">
+        <div class="section-heading">
+          <p class="eyebrow">CV draft</p>
+          <h2 id="cv-title">A lightweight résumé section for context, not recruiting.</h2>
+        </div>
+        <div class="timeline">
+          <article>
+            <span>Open source</span>
+            <h3>Maintainer and author</h3>
+            <p>
+              Author of OmegaConf, Hydra, and HoodleFinance, with public maintenance
+              across Python configuration libraries and related plugins.
+            </p>
+          </article>
+          <article>
+            <span>Former role</span>
+            <h3>Research Engineer at Facebook</h3>
+            <p>
+              Public Stack Overflow profile lists a former Research Engineer role at
+              Facebook. Exact dates and scope should be supplied from the authoritative CV.
+            </p>
+          </article>
+          <article>
+            <span>Community</span>
+            <h3>Stack Overflow and support</h3>
+            <p>
+              Long-running Q&amp;A activity around Python, Hydra, Java, MySQL, and general
+              programming, with millions of people reached through public answers.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Keep it simple.</h2>
+          <p>
+            Replace these draft links with the preferred channels before launch. The
+            site does not need a backend contact form unless spam-resistant messaging
+            becomes important later.
+          </p>
+        </div>
+        <div class="contact-card">
+          <a href="mailto:omry@yadan.net">omry@yadan.net</a>
+          <a href="https://github.com/omry">GitHub</a>
+          <a href="https://stackoverflow.com/users/1930838/omry-yadan">Stack Overflow</a>
+          <a href="https://twitter.com/omry">X / Twitter</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year">2026</span> Omry Yadan. Built as a static Apache-friendly site.</p>
+      <a href="#top">Back to top</a>
+    </footer>
+  </body>
+</html>
