@@ -9,14 +9,10 @@ function ContactForm({formId, recaptchaSiteKey}) {
   const formEndpoint = formReady ? `https://formspree.io/f/${formId}` : undefined;
   const recaptchaEnabled = Boolean(recaptchaSiteKey);
   const formRef = React.useRef(null);
-  const [captchaError, setCaptchaError] = React.useState(false);
+  const [submitState, setSubmitState] = React.useState('idle');
 
   const handleSubmit = React.useCallback(
-    (event) => {
-      if (!recaptchaEnabled) {
-        return;
-      }
-
+    async (event) => {
       event.preventDefault();
 
       const form = formRef.current;
@@ -24,29 +20,48 @@ function ContactForm({formId, recaptchaSiteKey}) {
         return;
       }
 
-      const grecaptcha =
-        typeof window !== 'undefined' ? window.grecaptcha : undefined;
+      setSubmitState('submitting');
 
-      if (!grecaptcha?.ready || !grecaptcha?.execute) {
-        setCaptchaError(true);
-        return;
-      }
+      try {
+        const formData = new FormData(form);
 
-      setCaptchaError(false);
-      grecaptcha.ready(() => {
-        grecaptcha
-          .execute(recaptchaSiteKey, {action: 'contact'})
-          .then((token) => {
-            const tokenInput = form.elements['g-recaptcha-response'];
-            if (tokenInput) {
-              tokenInput.value = token;
-            }
-            form.submit();
-          })
-          .catch(() => {
-            setCaptchaError(true);
+        if (recaptchaEnabled) {
+          const grecaptcha =
+            typeof window !== 'undefined' ? window.grecaptcha : undefined;
+
+          if (!grecaptcha?.ready || !grecaptcha?.execute) {
+            throw new Error('reCAPTCHA is not ready');
+          }
+
+          const token = await new Promise((resolve, reject) => {
+            grecaptcha.ready(() => {
+              grecaptcha
+                .execute(recaptchaSiteKey, {action: 'submit'})
+                .then(resolve)
+                .catch(reject);
+            });
           });
-      });
+
+          formData.set('g-recaptcha-response', token);
+        }
+
+        const response = await fetch(form.action, {
+          body: formData,
+          headers: {
+            Accept: 'application/json',
+          },
+          method: form.method,
+        });
+
+        if (!response.ok) {
+          throw new Error('Formspree rejected the submission');
+        }
+
+        form.reset();
+        setSubmitState('success');
+      } catch {
+        setSubmitState('error');
+      }
     },
     [recaptchaEnabled, recaptchaSiteKey],
   );
@@ -100,11 +115,17 @@ function ContactForm({formId, recaptchaSiteKey}) {
           <textarea name="message" required rows="6" />
         </label>
 
+        {recaptchaEnabled ? (
+          <p className={styles.recaptchaNotice}>
+            This site is protected by reCAPTCHA.
+          </p>
+        ) : null}
+
         <button
           className={`${styles.button} ${styles.primary}`}
-          disabled={!formReady}
+          disabled={!formReady || submitState === 'submitting'}
           type="submit">
-          Send message
+          {submitState === 'submitting' ? 'Sending...' : 'Send message'}
         </button>
 
         {!formReady ? (
@@ -113,9 +134,15 @@ function ContactForm({formId, recaptchaSiteKey}) {
           </p>
         ) : null}
 
-        {captchaError ? (
+        {submitState === 'success' ? (
+          <p className={`${styles.formStatus} ${styles.success}`} role="status">
+            Message sent. Thank you.
+          </p>
+        ) : null}
+
+        {submitState === 'error' ? (
           <p className={`${styles.formStatus} ${styles.error}`} role="status">
-            Could not verify this submission. Please try again.
+            Could not send this message. Please try again.
           </p>
         ) : null}
       </form>

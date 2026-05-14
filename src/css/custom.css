@@ -98,6 +98,10 @@ html {
   scrollbar-gutter: stable;
 }
 
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
 body {
   background:
     linear-gradient(90deg, var(--site-page-grid) 1px, transparent 1px),
