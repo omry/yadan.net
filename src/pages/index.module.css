@@ -333,6 +333,9 @@
 }
 
 .projectIntroBubble {
+  position: sticky;
+  top: var(--ifm-navbar-height);
+  z-index: 90;
   display: flex;
   flex-wrap: wrap;
   gap: 0.65rem 0.85rem;
@@ -342,7 +345,7 @@
   padding: 0.85rem 1rem;
   border: 1px solid var(--site-line);
   border-radius: 8px;
-  background: var(--site-card-bg);
+  background: #1e293b;
   box-shadow: var(--site-shadow);
 }
 
@@ -645,7 +648,7 @@
   grid-template-rows: auto 1fr auto;
   gap: 1rem;
   padding: 1rem;
-  scroll-margin-top: calc(var(--ifm-navbar-height) + 1rem);
+  scroll-margin-top: calc(var(--ifm-navbar-height) + 5.5rem);
 }
 
 .projectBubble.noStats {
