@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <rect
+    x="4"
+    y="8"
+    width="24"
+    height="17"
+    rx="2"
+    fill="none"
+    stroke="#dbeafe"
+    stroke-linejoin="round"
+    stroke-width="3" />
+  <path
+    d="M6 10.5 16 18l10-7.5"
+    fill="none"
+    stroke="#dbeafe"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="3" />
+  <path
+    d="M8 23 14 17.8M24 23l-6-5.2"
+    fill="none"
+    stroke="#60a5fa"
+    stroke-linecap="round"
+    stroke-width="2.4" />
+</svg>

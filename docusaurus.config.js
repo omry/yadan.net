@@ -87,7 +87,7 @@ const config = {
         },
       ],
       navbar: {
-        title: null,
+        title: 'Home',
         logo: {
           alt: 'OY logo',
           src: 'img/oy-logo-night-v2.svg',
@@ -96,11 +96,30 @@ const config = {
           height: 32,
         },
         items: [
-          {to: '/', label: 'Home', position: 'left', activeBaseRegex: '^/$'},
-          {to: '/projects', label: 'Projects', position: 'left'},
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {to: '/about', label: 'About', position: 'left'},
-          {to: '/contact', label: 'Contact', position: 'left'},
+          {
+            to: '/projects',
+            label: 'Projects',
+            position: 'left',
+            className: 'mobileShortcut mobileShortcutProjects',
+          },
+          {
+            to: '/blog',
+            label: 'Blog',
+            position: 'left',
+            className: 'mobileShortcut mobileShortcutBlog',
+          },
+          {
+            to: '/about',
+            label: 'About',
+            position: 'left',
+            className: 'mobileShortcut mobileShortcutAbout',
+          },
+          {
+            to: '/contact',
+            label: 'Contact',
+            position: 'left',
+            className: 'mobileShortcut mobileShortcutContact',
+          },
         ],
       },
     }),

@@ -18,17 +18,23 @@ function HomeProjectList({projects}) {
     <ul className={styles.homeProjectList}>
       {projects.map((project) => (
         <li key={project.title}>
-          <Link
-            className={styles.homeProjectBody}
-            to={`/projects/#${projectAnchor(project)}`}>
+          <div className={styles.homeProjectBody}>
             <div className={styles.homeProjectCopy}>
-              <span className={styles.projectTitleLine}>
+              <Link
+                className={styles.projectTitleLine}
+                to={`/projects/#${projectAnchor(project)}`}>
                 <ProjectMark project={project} />
                 <span className={styles.projectTitleText}>{project.title}</span>
-              </span>
+              </Link>
               <p>{project.tagline}</p>
             </div>
-          </Link>
+            <Link
+              className={styles.homeProjectCta}
+              aria-label={`More details about ${project.title}`}
+              to={`/projects/#${projectAnchor(project)}`}>
+              More details
+            </Link>
+          </div>
         </li>
       ))}
     </ul>
