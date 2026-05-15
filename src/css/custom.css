@@ -189,6 +189,10 @@ h3 {
   --site-shortcut-icon: url('/img/icons/tool-equipment.svg');
 }
 
+.mobileShortcutHome {
+  --site-shortcut-icon: url('/img/oy-logo-night-v2.svg');
+}
+
 .mobileShortcutBlog {
   --site-shortcut-icon: url('/img/icons/blog-write.svg');
 }
@@ -286,7 +290,7 @@ h3 {
     margin-right: 0;
     border: 1px solid var(--site-line);
     border-radius: 8px;
-    background: var(--site-link-button-bg);
+    background: transparent;
     transition:
       border-color 160ms ease,
       background-color 160ms ease,
@@ -294,7 +298,8 @@ h3 {
   }
 
   .navbar__brand:hover,
-  .navbar__brand:focus-visible {
+  .navbar__brand:focus-visible,
+  .navbar__brand--active {
     border-color: var(--site-line-strong);
     background: var(--site-link-button-hover-bg);
     color: var(--site-ink);
@@ -307,6 +312,10 @@ h3 {
   }
 
   .navbar__brand .navbar__title {
+    display: none;
+  }
+
+  .navbar-sidebar__brand .navbar__brand {
     display: none;
   }
 
@@ -334,7 +343,7 @@ h3 {
     padding: 0.38rem 0.5rem;
     border: 1px solid var(--site-line);
     border-radius: 8px;
-    background: var(--site-link-button-bg);
+    background: transparent;
     color: var(--site-ink);
     font-size: 0.78rem;
     font-weight: 850;

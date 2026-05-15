@@ -7,7 +7,7 @@ export const featuredProjects = [
     tag: 'Current project',
     logo: {src: '/img/projects/rakia/logo.svg'},
     embed: {
-      src: 'https://rakia.earth/?t=2461252.87839&ts=604800&f=moon&l=moon&bi=0&co=7740.648%2C2472.167%2C-495.928&s=1',
+      src: 'https://beta.rakia.earth/?t=2461252.87839&ts=604800&f=moon&l=moon&bi=0&co=7740.648%2C2472.167%2C-495.928&s=1&embed=1',
       title: 'Interactive Rakia Moon view',
     },
     tagline:
@@ -25,7 +25,7 @@ export const featuredProjects = [
         src: '/img/projects/omegaconf/interpolation-770x770.png',
         previewSize: '770x770',
         fullSrc: '/img/projects/omegaconf/raw/interpolation-example.png',
-        fullSize: '770x770',
+        fullSize: '770x770',sl st
         alt: 'OmegaConf interpolation example',
       },
     ],
