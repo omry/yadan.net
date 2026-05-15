@@ -25,7 +25,7 @@ export const featuredProjects = [
         src: '/img/projects/omegaconf/interpolation-770x770.png',
         previewSize: '770x770',
         fullSrc: '/img/projects/omegaconf/raw/interpolation-example.png',
-        fullSize: '770x770',sl st
+        fullSize: '770x770',
         alt: 'OmegaConf interpolation example',
       },
     ],
