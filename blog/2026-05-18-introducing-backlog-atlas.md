@@ -6,9 +6,14 @@ tags: [engineering, projects, open-source]
 description: A short introduction to Backlog Atlas, a self-hosted backlog dashboard for GitHub maintainers.
 ---
 
-Backlog Atlas started from a maintainer problem I kept running into across
-Hydra, OmegaConf, and related projects: the backlog was too large to hold in my
-head, and GitHub made it hard to decide what to prioritize across repositories.
+Backlog Atlas started from a maintainer problem I ran into when I recently
+started maintaining OmegaConf and Hydra again. Both projects are widely used,
+but they had been under-maintained for years. Over time, issues accumulated,
+pull requests piled up, and the backlog became hard to reason about.
+
+With hundreds of issues and pull requests across both repositories, tackling the
+work directly felt almost impossible. Backlog Atlas came from needing a way to
+make that backlog visible enough to act on.
 
 <!-- truncate -->
 
@@ -27,9 +32,12 @@ list. It is part of the project surface. Contributors look at it to understand
 what is happening, users look at it to guess whether something is alive, and I
 look at it when deciding where attention should go next.
 
-Backlog Atlas generates that view as static files. It collects repository issue
-and pull request metadata, commits snapshots into the repositories that own
-them, and publishes a small dashboard through GitHub Pages. There is no server
+Backlog Atlas collects open issues and pull requests from one or more GitHub
+repositories and turns them into a searchable dashboard. It shows what is
+waiting, what changed recently, how issues are distributed across bugs,
+enhancements, and other categories, and which pull requests need attention.
+
+It publishes that view as static files through GitHub Pages. There is no server
 to run, no database to maintain, and no hosted product account in the middle.
 
 That shape is deliberate. For open-source maintenance, boring deployment is a
