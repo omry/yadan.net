@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import ProjectBubble from '../components/ProjectBubble';
 import ProjectMark from '../components/ProjectMark';
-import {featuredProjects, projectAnchor, secondaryProjects} from '../data/siteContent';
+import {featuredProjects, projectAnchor} from '../data/siteContent';
 import styles from './index.module.css';
 
 function ProjectShortcuts({projects}) {
@@ -22,16 +22,14 @@ function ProjectShortcuts({projects}) {
 }
 
 export default function Projects() {
-  const allProjects = [...featuredProjects, ...secondaryProjects];
-
   return (
     <Layout
       title="Projects"
-      description="Selected public projects and archive work from Omry Yadan.">
+      description="Selected public projects from Omry Yadan.">
       <main>
         <header className={styles.projectIntroBubble}>
           <h1>Projects</h1>
-          <ProjectShortcuts projects={allProjects} />
+          <ProjectShortcuts projects={featuredProjects} />
         </header>
 
         <section className={`${styles.section} ${styles.projectSection} ${styles.projectListSection}`}>
@@ -41,17 +39,6 @@ export default function Projects() {
             ))}
           </div>
         </section>
-
-        {secondaryProjects.length ? (
-          <section className={styles.section}>
-            <p className={styles.projectSectionLabel}>Archive</p>
-            <div className={styles.projectBubbleGrid}>
-              {secondaryProjects.map((project) => (
-                <ProjectBubble key={project.title} project={project} />
-              ))}
-            </div>
-          </section>
-        ) : null}
       </main>
     </Layout>
   );

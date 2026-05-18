@@ -117,6 +117,58 @@ export const featuredProjects = [
     ],
   },
   {
+    title: 'Backlog Atlas',
+    tag: 'Open source - Python',
+    logo: {src: '/img/projects/backlog-atlas/logo.svg'},
+    screenshots: [
+      {
+        src: '/img/projects/backlog-atlas/dashboard.png',
+        previewSize: '2386x1126',
+        fullSrc: '/img/projects/backlog-atlas/dashboard.png',
+        fullSize: '2386x1126',
+        alt:
+          'Backlog Atlas dashboard showing backlog summary tables, filters, issue rows, and recent activity',
+      },
+    ],
+    tagline:
+      'Self-hosted backlog snapshots and static dashboards for GitHub maintainers.',
+    description:
+      'Backlog Atlas turns GitHub issue and pull request metadata into versioned repository snapshots and a static dashboard. It is designed for maintainers who need a public, low-maintenance way to prioritize work across one or more repositories without running a hosted service.',
+    stats: [
+      {
+        label: 'PyPI package',
+        value: 'backlog-atlas',
+        badge: {
+          src: 'https://img.shields.io/pypi/v/backlog-atlas?style=flat&logo=pypi&label=pypi',
+          href: 'https://pypi.org/project/backlog-atlas/',
+        },
+      },
+      {
+        type: 'github-stars',
+        label: 'GitHub stars',
+        value: 'omry/backlog-atlas',
+        badge: {
+          src: 'https://img.shields.io/github/stars/omry/backlog-atlas?style=flat&logo=github&label=stars',
+          href: 'https://github.com/omry/backlog-atlas/stargazers',
+        },
+      },
+    ],
+    links: [
+      {
+        type: 'website',
+        label: 'Dashboard',
+        href: 'https://omry.github.io/backlog-atlas/',
+      },
+      {type: 'github', label: 'GitHub', href: 'https://github.com/omry/backlog-atlas'},
+      {type: 'package', label: 'PyPI', href: 'https://pypi.org/project/backlog-atlas/'},
+      {
+        type: 'docs',
+        label: 'Guide',
+        href: 'https://github.com/omry/backlog-atlas/blob/main/USER-GUIDE.md',
+      },
+    ],
+  },
+  {
     title: 'HoodleFinance',
     tag: 'Personal tools',
     logo: {src: '/img/projects/hoodlefinance/logo.svg'},
@@ -174,8 +226,6 @@ export function projectAnchor(project) {
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-|-$/g, '');
 }
-
-export const secondaryProjects = [];
 
 export const blogTopics = [
   {
