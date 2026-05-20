@@ -8,8 +8,10 @@ import styles from '../pages/index.module.css';
 const screenshotLayoutClasses = {
   grid: styles.gridScreenshots,
   horizontal: styles.horizontalScreenshots,
+  panoramic: styles.panoramicScreenshot,
   single: styles.singleScreenshot,
   vertical: styles.verticalScreenshots,
+  wide: styles.wideScreenshot,
 };
 
 function getScreenshotLayout(project, screenshotCount) {
@@ -102,18 +104,25 @@ function ProjectMedia({project, screenshots, screenshotClassName}) {
 
   return (
     <div className={screenshotClassName}>
-      {screenshots.map((screenshot) => (
-        <div className={styles.projectScreenshot} key={screenshot.src}>
-          <a
-            className={styles.projectScreenshotLink}
-            href={screenshot.fullSrc ?? screenshot.src}
-            rel="noopener noreferrer"
-            target="_blank"
-            title={getScreenshotTitle(screenshot)}>
-            <img alt={screenshot.alt} src={screenshot.src} />
-          </a>
-        </div>
-      ))}
+      {screenshots.map((screenshot) => {
+        const screenshotClassNames = [styles.projectScreenshot];
+        if (screenshot.fit === 'contain') {
+          screenshotClassNames.push(styles.containScreenshot);
+        }
+
+        return (
+          <div className={screenshotClassNames.join(' ')} key={screenshot.src}>
+            <a
+              className={styles.projectScreenshotLink}
+              href={screenshot.fullSrc ?? screenshot.src}
+              rel="noopener noreferrer"
+              target="_blank"
+              title={getScreenshotTitle(screenshot)}>
+              <img alt={screenshot.alt} src={screenshot.src} />
+            </a>
+          </div>
+        );
+      })}
     </div>
   );
 }

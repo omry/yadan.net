@@ -128,8 +128,10 @@ export const featuredProjects = [
         fullSize: '2386x1126',
         alt:
           'Backlog Atlas dashboard showing backlog summary tables, filters, issue rows, and recent activity',
+        fit: 'contain',
       },
     ],
+    screenshotLayout: 'panoramic',
     tagline:
       'Self-hosted backlog snapshots and static dashboards for GitHub maintainers.',
     description:
@@ -159,6 +161,11 @@ export const featuredProjects = [
         label: 'Dashboard',
         href: 'https://omry.github.io/backlog-atlas/',
       },
+      {
+        type: 'website',
+        label: 'Blog',
+        href: '/blog/introducing-backlog-atlas/',
+      },
       {type: 'github', label: 'GitHub', href: 'https://github.com/omry/backlog-atlas'},
       {type: 'package', label: 'PyPI', href: 'https://pypi.org/project/backlog-atlas/'},
       {
@@ -166,6 +173,55 @@ export const featuredProjects = [
         label: 'Guide',
         href: 'https://github.com/omry/backlog-atlas/blob/main/USER-GUIDE.md',
       },
+    ],
+  },
+  {
+    title: 'Agent Skill Installer',
+    tag: 'Open source - Python',
+    logo: {initials: 'ASI'},
+    screenshots: [
+      {
+        src: '/img/projects/agent-skill-installer/ui-install.png',
+        previewSize: '1359x987',
+        fullSrc: '/img/projects/agent-skill-installer/ui-install.png',
+        fullSize: '1359x987',
+        alt: 'Agent Skill Installer interactive source picker',
+        fit: 'contain',
+      },
+    ],
+    screenshotLayout: 'wide',
+    tagline:
+      'Pleasant installs for Codex and Claude Code skills from GitHub, PyPI, local checkouts, and wheel files.',
+    description:
+      'Agent Skill Installer is a small Python tool for installing Codex and Claude Code skills from GitHub, PyPI, local checkouts, or local wheel files. It supports global and repository-specific installs, writes discoverability blocks, records enough install state to safely upgrade or uninstall what it owns, and validates agent-specific installer metadata.',
+    stats: [
+      {
+        label: 'PyPI package',
+        value: 'agent-skill-installer',
+        badge: {
+          src: 'https://img.shields.io/pypi/v/agent-skill-installer?style=flat&logo=pypi&label=pypi',
+          href: 'https://pypi.org/project/agent-skill-installer/',
+        },
+      },
+      {
+        type: 'github-stars',
+        label: 'GitHub stars',
+        value: 'omry/agent-skill-installer',
+        badge: {
+          src: 'https://img.shields.io/github/stars/omry/agent-skill-installer?style=flat&logo=github&label=stars',
+          href: 'https://github.com/omry/agent-skill-installer/stargazers',
+        },
+      },
+    ],
+    links: [
+      {
+        type: 'website',
+        label: 'Blog',
+        href: '/blog/introducing-agent-skill-installer/',
+      },
+      {type: 'github', label: 'GitHub', href: 'https://github.com/omry/agent-skill-installer'},
+      {type: 'package', label: 'PyPI', href: 'https://pypi.org/project/agent-skill-installer/'},
+      {type: 'docs', label: 'Docs', href: 'https://github.com/omry/agent-skill-installer#readme'},
     ],
   },
   {

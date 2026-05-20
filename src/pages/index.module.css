@@ -673,6 +673,14 @@
   grid-template-rows: 1fr;
 }
 
+.panoramicScreenshot {
+  aspect-ratio: 2 / 1;
+}
+
+.wideScreenshot {
+  aspect-ratio: 4 / 3;
+}
+
 .horizontalScreenshots {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-rows: 1fr;
@@ -689,11 +697,17 @@
 }
 
 .projectScreenshot {
+  box-sizing: border-box;
   overflow: hidden;
   min-height: 0;
   border: 1px solid var(--site-line);
   border-radius: 8px;
   background: var(--ifm-background-surface-color);
+}
+
+.containScreenshot {
+  padding: 0.45rem;
+  background: #050914;
 }
 
 .projectScreenshotLink {
@@ -713,6 +727,10 @@
   height: 100%;
   object-fit: cover;
   transition: transform 160ms ease;
+}
+
+.containScreenshot img {
+  object-fit: contain;
 }
 
 .projectEmbed {
@@ -1355,6 +1373,14 @@
     height: auto;
     min-height: 0;
     margin: 0 0 0.85rem 1rem;
+  }
+
+  .projectScreenshots.panoramicScreenshot {
+    aspect-ratio: 2 / 1;
+  }
+
+  .projectScreenshots.wideScreenshot {
+    aspect-ratio: 4 / 3;
   }
 
   .homeFeaturedList .projectScreenshots {
