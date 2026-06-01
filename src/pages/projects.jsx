@@ -1,8 +1,9 @@
 import React from 'react';
 import Layout from '@theme/Layout';
+import Link from '@docusaurus/Link';
 import ProjectBubble from '../components/ProjectBubble';
 import ProjectMark from '../components/ProjectMark';
-import {featuredProjects, projectAnchor} from '../data/siteContent';
+import {featuredProjects, projectAnchor, smallProjects} from '../data/siteContent';
 import styles from './index.module.css';
 
 function ProjectShortcuts({projects}) {
@@ -18,6 +19,35 @@ function ProjectShortcuts({projects}) {
         </a>
       ))}
     </nav>
+  );
+}
+
+function SmallProjects({projects}) {
+  if (!projects.length) {
+    return null;
+  }
+
+  return (
+    <section className={`${styles.section} ${styles.smallProjectsSection}`}>
+      <h2>Small projects</h2>
+      <ul className={styles.smallProjectList}>
+        {projects.map((project) => (
+          <li key={project.title}>
+            <div>
+              <strong>{project.title}</strong>
+              <p>{project.summary}</p>
+            </div>
+            <div className={styles.smallProjectLinks}>
+              {project.links.map((link) => (
+                <Link key={link.href} to={link.href}>
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
 
@@ -39,6 +69,8 @@ export default function Projects() {
             ))}
           </div>
         </section>
+
+        <SmallProjects projects={smallProjects} />
       </main>
     </Layout>
   );

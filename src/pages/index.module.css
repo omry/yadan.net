@@ -604,6 +604,59 @@
   padding-top: 1rem;
 }
 
+.smallProjectsSection {
+  padding: 0 0 2.5rem;
+}
+
+.smallProjectsSection h2 {
+  margin: 0 0 0.6rem;
+  color: var(--site-muted);
+  font-size: 0.95rem;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.smallProjectList {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--site-line);
+  list-style: none;
+}
+
+.smallProjectList li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--site-line);
+}
+
+.smallProjectList strong {
+  color: var(--site-ink);
+}
+
+.smallProjectList p {
+  margin: 0.18rem 0 0;
+  color: var(--site-muted);
+  font-size: 0.88rem;
+}
+
+.smallProjectLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  justify-content: flex-end;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.smallProjectLinks a {
+  white-space: nowrap;
+}
+
 .projectSection h2,
 .projectSection h3 {
   color: var(--site-ink);
@@ -1349,6 +1402,15 @@
 
   .projectBubbleGrid {
     grid-template-columns: 1fr;
+  }
+
+  .smallProjectList li {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .smallProjectLinks {
+    justify-content: flex-start;
   }
 
   .projectBubble {

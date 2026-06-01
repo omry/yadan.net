@@ -276,6 +276,19 @@ export const homeProjectListProjects = featuredProjects.filter(
   (project) => !homeFeaturedProjectTitles.has(project.title),
 );
 
+export const smallProjects = [
+  {
+    title: 'llm-auth',
+    summary:
+      'Local auth surfaces for LLM developer tools: API keys, ChatGPT OAuth, status checks, tests, and safer `.env` handling.',
+    links: [
+      {label: 'GitHub', href: 'https://github.com/omry/llm-auth'},
+      {label: 'PyPI', href: 'https://pypi.org/project/llm-auth/'},
+      {label: 'Blog', href: '/blog/introducing-llm-auth/'},
+    ],
+  },
+];
+
 export function projectAnchor(project) {
   return project.title
     .toLowerCase()
