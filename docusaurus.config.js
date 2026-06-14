@@ -14,6 +14,12 @@ const config = {
   customFields: {
     formspreeFormId: 'xdabvpjd',
     recaptchaSiteKey: process.env.RECAPTCHA_SITE_KEY || recaptchaSiteKey,
+    giscus: {
+      repo: 'omry/yadan.net',
+      repoId: 'R_kgDOSdD6eA',
+      category: 'Announcements',
+      categoryId: 'DIC_kwDOSdD6eM4C_IzD',
+    },
   },
   trailingSlash: true,
   onBrokenLinks: 'throw',
