@@ -1,0 +1,8 @@
+{
+  "ignore_dirs": [
+    ".cache-loader",
+    ".docusaurus",
+    "build",
+    "node_modules"
+  ]
+}

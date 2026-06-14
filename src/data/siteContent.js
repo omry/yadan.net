@@ -278,6 +278,19 @@ export const homeProjectListProjects = featuredProjects.filter(
 
 export const smallProjects = [
   {
+    title: 'Stale Buffer Guard',
+    summary:
+      'Stops open VS Code tabs from showing old text after version control, formatters, or agents change files on disk; warns when unsaved edits are based on an older version.',
+    links: [
+      {label: 'GitHub', href: 'https://github.com/omry/stale-buffer-guard'},
+      {
+        label: 'Marketplace',
+        href: 'https://marketplace.visualstudio.com/items?itemName=omry.stale-buffer-guard',
+      },
+      {label: 'Blog', href: '/blog/introducing-stale-buffer-guard/'},
+    ],
+  },
+  {
     title: 'llm-auth',
     summary:
       'Local auth surfaces for LLM developer tools: API keys, ChatGPT OAuth, status checks, tests, and safer `.env` handling.',
