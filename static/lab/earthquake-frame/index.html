@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <title>Detached Wall Earthquake Simulator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header>
+        <p class="eyebrow">STRUCTURAL MOTION DEMONSTRATOR</p>
+        <h1>Two-storey detached walls under lateral earthquake motion</h1>
+        <p class="subtitle">
+          A conceptual two-storey frame model. Dimensions are drawn to scale;
+          deformation remains true-scale until the frame reaches the selected gap.
+        </p>
+      </header>
+
+      <section class="dashboard">
+        <div class="stage-card">
+          <canvas id="frameCanvas" aria-label="Animated structural frame"></canvas>
+          <div class="legend" aria-hidden="true">
+            <span><i class="frame-key"></i>Frame</span>
+            <span><i class="wall-key"></i>Detached walls</span>
+            <span><i class="contact-key"></i>Contact</span>
+          </div>
+        </div>
+
+        <aside class="controls-card">
+          <div class="status-row">
+            <span id="statusBadge" class="badge ready">READY</span>
+            <span id="timeReadout">0.00 s</span>
+          </div>
+
+          <div class="readouts">
+            <div>
+              <span>Roof displacement</span>
+              <strong id="driftReadout">0.0 mm</strong>
+            </div>
+            <div>
+              <span>Minimum clear gap</span>
+              <strong id="gapReadout">100 mm</strong>
+            </div>
+            <div>
+              <span>Peak roof displacement</span>
+              <strong id="peakReadout">0.0 mm</strong>
+            </div>
+            <div>
+              <span>Active contacts</span>
+              <strong id="contactReadout">None</strong>
+            </div>
+            <div>
+              <span>Storey 1 wall damage</span>
+              <strong id="damageReadout1">0% · Intact</strong>
+              <progress id="damageMeter1" max="100" value="0">0%</progress>
+            </div>
+            <div>
+              <span>Storey 2 wall damage</span>
+              <strong id="damageReadout2">0% · Intact</strong>
+              <progress id="damageMeter2" max="100" value="0">0%</progress>
+            </div>
+          </div>
+
+          <label class="control">
+            <span>
+              <b>Gap width</b>
+              <span class="number-input"><input id="gapWidth" aria-label="Gap width in millimetres" type="number" min="0" max="1000" step="1" value="100" /><em>mm</em></span>
+            </span>
+          </label>
+
+          <label class="control">
+            <span>
+              <b>Earthquake magnitude</b>
+              <span class="number-input"><input id="magnitude" aria-label="Earthquake magnitude" type="number" min="3" max="9.5" step="0.1" value="7.0" /><em>Mw</em></span>
+            </span>
+            <small id="intensityEstimate">Conceptual shaking: 0.34 g</small>
+          </label>
+
+          <label class="control">
+            <span>
+              <b>Earthquake duration</b>
+              <span class="number-input"><input id="duration" aria-label="Earthquake duration in seconds" type="number" min="1" max="120" step="1" value="10" /><em>s</em></span>
+            </span>
+          </label>
+
+          <label class="control">
+            <span><b>Frequency</b><output id="frequencyOutput">1.20 Hz</output></span>
+            <input id="frequency" aria-label="Shaking frequency" type="range" min="0.40" max="3.00" step="0.05" value="1.20" />
+          </label>
+
+          <label class="control">
+            <span><b>Damping</b><output id="dampingOutput">5%</output></span>
+            <input id="damping" aria-label="Damping ratio" type="range" min="1" max="20" step="1" value="5" />
+          </label>
+
+          <div class="buttons">
+            <button id="startButton" class="primary">Start earthquake</button>
+            <button id="resetButton">Reset</button>
+          </div>
+
+          <p class="recording-disclaimer">
+            <strong>Concept only:</strong> magnitude-to-shaking and wall cracking are
+            visual illustrations. Neither is physically modeled or calibrated.
+          </p>
+
+          <p class="model-note">
+            The frame is represented by a damped two-degree-of-freedom oscillator.
+            Each wall moves with its supporting floor and resists inter-storey drift only after contact.
+            Each storey has an identical detached wall using the configured gap.
+            Impacts accumulate conceptual cracking independently and reduce that wall's contact stiffness.
+            Magnitude-to-shaking and wall cracking are conceptual illustrations;
+            neither is a calibrated physical model or a site-specific engineering estimate.
+          </p>
+        </aside>
+      </section>
+
+      <section class="dimensions four-items" aria-label="Model dimensions">
+        <div><span>Storey height</span><strong>3.00 m × 2</strong></div>
+        <div><span>Column width</span><strong>0.50 m</strong></div>
+        <div><span>Beam span</span><strong>5.00 m</strong></div>
+        <div><span>Wall clearance</span><strong id="dimensionGap">0.100 m</strong></div>
+      </section>
+    </main>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
