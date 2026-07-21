@@ -548,3 +548,23 @@ h3 {
 .blogCommentsFrame {
   min-height: 10rem;
 }
+
+.video-player {
+  overflow: hidden;
+  margin: 1.5rem 0;
+  border: 1px solid var(--site-line);
+  border-radius: 8px;
+  background: #0c0f15;
+  box-shadow: var(--site-shadow);
+}
+
+.video-player cast-player-embed,
+.video-player iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+}
+
+.video-player iframe {
+  border: 0;
+}

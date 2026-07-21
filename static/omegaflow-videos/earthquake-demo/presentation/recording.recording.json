@@ -1,0 +1,19 @@
+{
+  "capture_fingerprint": "de766d3a220201729a76e5dbe83ad9b62f13304b2e1a7dc6131644b89b7dc0be",
+  "dependencies": [
+    {
+      "path": "recordings/earthquake-demo/index.md",
+      "sha256": "6601f729189c79161721b1fc8fb4bcbcdc200e07277e2f1f09417a731c5f4af3"
+    }
+  ],
+  "presentation_fingerprint": "74b41020a9df80be2d6e9ba4cf112ca9582e3a7754a21269b9d2744871e7c64f",
+  "recording": "earthquake-demo",
+  "version": 1,
+  "versions": {
+    "compiler": "presentation-v1",
+    "renderer": "payload-v1"
+  },
+  "warnings": [
+    "NARRATION_TIMING_LOW_CONFIDENCE"
+  ]
+}

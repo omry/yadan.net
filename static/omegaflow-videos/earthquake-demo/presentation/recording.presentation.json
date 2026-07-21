@@ -1,0 +1,101 @@
+{
+  "assets": {
+    "clip-35eb884df8df84a5a2149464bdb264be2d336ec5c3fa7a8cb6dae70cb351e12a": {
+      "bytes": 1047697,
+      "media_type": "video/mp4",
+      "path": "media/35eb884df8df84a5a2149464bdb264be2d336ec5c3fa7a8cb6dae70cb351e12a.mp4",
+      "sha256": "35eb884df8df84a5a2149464bdb264be2d336ec5c3fa7a8cb6dae70cb351e12a"
+    },
+    "state-2aef56a11cebdfcb7303117a13c548cefcc8b7f3845f4e703ffa7b8993196a0f": {
+      "bytes": 64486,
+      "media_type": "image/webp",
+      "path": "media/c4034928e896e54cd5834a98bf48c901199405dbd9a963c8f7d9d3fcfb7aea40.webp",
+      "sha256": "c4034928e896e54cd5834a98bf48c901199405dbd9a963c8f7d9d3fcfb7aea40"
+    },
+    "state-6ce2237e1f132ab59d652562b3378dbc47272528711ed40e2aa151934f733a77": {
+      "bytes": 64548,
+      "media_type": "image/webp",
+      "path": "media/613d1fafc81b07cff903e93eb68fe4ef8ec5d44b0386a8a725c75d41e0b1b470.webp",
+      "sha256": "613d1fafc81b07cff903e93eb68fe4ef8ec5d44b0386a8a725c75d41e0b1b470"
+    },
+    "state-b491595fa18162afc3512cc4f0c9f81e06959508826a22d087d124cf6856b1ba": {
+      "bytes": 64490,
+      "media_type": "image/webp",
+      "path": "media/2eabbf22f2cfa3046223a8e40fc6294b8dbce4f1c52277747f44e0f733de4d65.webp",
+      "sha256": "2eabbf22f2cfa3046223a8e40fc6294b8dbce4f1c52277747f44e0f733de4d65"
+    },
+    "state-c12e5becaccc9bedc1aabf21cceb65cd7aabf901dca308961709b0dd4303e2fc": {
+      "bytes": 72,
+      "media_type": "image/webp",
+      "path": "media/614b5ee1afed63f25e050f95738db636ce16d075bf81940c3926848389e4e689.webp",
+      "sha256": "614b5ee1afed63f25e050f95738db636ce16d075bf81940c3926848389e4e689"
+    },
+    "state-c435de1f589591511c450b0db222c63a01a2c29144f8190134ad56ffc2b11f06": {
+      "bytes": 69572,
+      "media_type": "image/webp",
+      "path": "media/37627e4c72ca579ef60a524544c2d6f76c1656ff9aa5bb6da6d2ac60c30192ed.webp",
+      "sha256": "37627e4c72ca579ef60a524544c2d6f76c1656ff9aa5bb6da6d2ac60c30192ed"
+    },
+    "state-e2180b366322aaf1a6d6ad88215ddc1d0a12af8484dc462531067563832c8739": {
+      "bytes": 64530,
+      "media_type": "image/webp",
+      "path": "media/d921f9291e62608ac683492556ded2415be67c7b240feee2c0a780fcc40d737e.webp",
+      "sha256": "d921f9291e62608ac683492556ded2415be67c7b240feee2c0a780fcc40d737e"
+    },
+    "state-f2b28a0ef8699de66a3e4aefe0bc8f61f645d34cd8374760ed7bddae18bb60c1": {
+      "bytes": 64478,
+      "media_type": "image/webp",
+      "path": "media/71badf5bcbeeaaa7aa7a48373ed1bcee1f932c31552955d28beaa0e9194ad465.webp",
+      "sha256": "71badf5bcbeeaaa7aa7a48373ed1bcee1f932c31552955d28beaa0e9194ad465"
+    }
+  },
+  "audio": {
+    "intervals": [
+      {
+        "presentation_end_ms": 34752,
+        "presentation_start_ms": 0,
+        "source_end_ms": 34752,
+        "source_start_ms": 0
+      }
+    ],
+    "metadata": "audio.json"
+  },
+  "beats": [
+    {
+      "browser": null,
+      "duration_ms": 35352,
+      "guide": null,
+      "heading": "Shake the two-storey frame",
+      "id": "shake-frame",
+      "offset_ms": 0,
+      "payload": "beats/shake-frame.browser.json",
+      "player": null,
+      "renderer": "browser",
+      "transition_in": "fade"
+    }
+  ],
+  "manifest_version": 1,
+  "presentation": {
+    "browser": {
+      "chrome": {
+        "mode": "hidden"
+      },
+      "window": {
+        "mode": "none",
+        "theme": "kde-breeze",
+        "title": null
+      }
+    },
+    "guided": false
+  },
+  "recording": {
+    "duration_ms": 35352,
+    "id": "earthquake-demo",
+    "title": "Two-storey Earthquake Frame Demo"
+  },
+  "renderers": {
+    "browser": {
+      "payload_version": 1
+    }
+  }
+}

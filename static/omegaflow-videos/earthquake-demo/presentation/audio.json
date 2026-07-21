@@ -1,0 +1,27 @@
+{
+  "duration_ms": 34752,
+  "recording": "earthquake-demo",
+  "takes": [
+    {
+      "id": "__beat__:shake-frame",
+      "members": [
+        {
+          "beat_id": "shake-frame",
+          "text": "This visualization shows how the beams and columns of a building frame move relative to detached walls during an earthquake. It does not model real earthquake physics or structural damage. Each detached wall is configured with a one hundred millimeter clearance from the frame. This demonstration uses magnitude seven point four with a ten second duration and five percent damping. Start the earthquake. Each floor now moves independently. Orange flashes mark wall contact, while the two damage bars show conceptual cracking. Open the simulation link above the video to try it in your browser.",
+          "text_end": 593,
+          "text_start": 0
+        }
+      ],
+      "playback_end_ms": 34752,
+      "playback_sha256": "afe16c7a088d27966c0030e6d91d8e285f3ef3f5d8583e7386e8051738cea46a",
+      "playback_src": "audio/__beat__-shake-frame-afe16c7a088d27966c0030e6d91d8e285f3ef3f5d8583e7386e8051738cea46a.mp3",
+      "playback_start_ms": 0,
+      "sha256": "afe16c7a088d27966c0030e6d91d8e285f3ef3f5d8583e7386e8051738cea46a",
+      "source_end_ms": 34752,
+      "source_start_ms": 0,
+      "src": "audio/__beat__-shake-frame-afe16c7a088d27966c0030e6d91d8e285f3ef3f5d8583e7386e8051738cea46a.mp3",
+      "timestamps": "timestamps/__beat__-shake-frame.json"
+    }
+  ],
+  "version": 3
+}

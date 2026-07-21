@@ -37,7 +37,7 @@ let accumulator = 0;
 
 function controlValues() {
   const gapMm = clampedValue(controls.gap, 0, 1000, 100);
-  const magnitude = clampedValue(controls.magnitude, 3, 9.5, 7);
+  const magnitude = clampedValue(controls.magnitude, 3, 9.5, 7.4);
   return {
     gap: gapMm / 1000,
     magnitude,
