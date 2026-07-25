@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reference Code Generator</title>
+    <script>
+        const CONFIG = {
+            towers: [
+                { name: "MAIN LOBBY", code: "A" },
+                { name: "VERANDA LOBBY", code: "A" },
+                { name: "BELIZE", code: "B" },
+                { name: "CALLERY", code: "C" },
+                { name: "DOLCE", code: "D" },
+                { name: "ENCINO", code: "E" },
+                { name: "ASTON", code: "F" },
+                { name: "RED OAK", code: "G" },
+                { name: "MERANTI", code: "H" },
+                { name: "SEQUOIA", code: "I" }
+            ],
+            paymentTypes: [
+                { name: "Associations Dues", code: "AD" },
+                { name: "Water", code: "WA" },
+                { name: "Electricity", code: "EL" },
+                { name: "RFID/EAC/Pet ID", code: "ID" },
+                { name: "Function Room", code: "FR" },
+                { name: "Citation/Violation", code: "CI" }
+            ]
+        };
+    </script>
+    <style>
+        body {
+            font-family: "Segoe UI", sans-serif;
+            background: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        h2 {
+            color: #1a237e;
+            margin-top: 0;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        .field {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-size: 11px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #666;
+            letter-spacing: 0.5px;
+        }
+        input,
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            box-sizing: border-box;
+            outline: none;
+            transition: border 0.2s;
+        }
+        input:focus,
+        select:focus {
+            border-color: #1a237e;
+        }
+        .output {
+            background: #1a237e;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 20px;
+            position: relative;
+        }
+        .output small {
+            display: block;
+            font-size: 10px;
+            opacity: 0.7;
+            margin-bottom: 5px;
+        }
+        #refDisplay {
+            font-family: "Courier New", monospace;
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+        .status {
+            font-size: 10px;
+            color: #4caf50;
+            margin-top: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h2>Reference Generator</h2>
+
+    <div class="field">
+        <label for="unitNum">UNIT NUMBER</label>
+        <input type="text" id="unitNum" placeholder="0111" maxlength="4">
+    </div>
+
+    <div class="field">
+        <label for="towerSelect">TOWER</label>
+        <select id="towerSelect"></select>
+    </div>
+
+    <div class="field">
+        <label for="typeSelect">PAYMENT TYPE</label>
+        <select id="typeSelect"></select>
+    </div>
+
+    <div class="output">
+        <small>FINAL REFERENCE CODE</small>
+        <div id="refDisplay">0000AAD</div>
+    </div>
+    <div class="status">✓ Auto-saved to browser storage</div>
+</div>
+
+<script>
+    const towerDropdown = document.getElementById("towerSelect");
+    const typeDropdown = document.getElementById("typeSelect");
+    const unitInput = document.getElementById("unitNum");
+    const display = document.getElementById("refDisplay");
+
+    CONFIG.towers.forEach((tower) => {
+        const option = document.createElement("option");
+        option.value = tower.code;
+        option.textContent = `${tower.name} (${tower.code})`;
+        towerDropdown.appendChild(option);
+    });
+
+    CONFIG.paymentTypes.forEach((paymentType) => {
+        const option = document.createElement("option");
+        option.value = paymentType.code;
+        option.textContent = `${paymentType.name} (${paymentType.code})`;
+        typeDropdown.appendChild(option);
+    });
+
+    function updateCode() {
+        const rawUnit = unitInput.value.replace(/\D/g, "");
+        const unit = rawUnit.padStart(4, "0").substring(0, 4);
+        display.textContent = `${unit}${towerDropdown.value}${typeDropdown.value}`;
+
+        localStorage.setItem("ref_unit", rawUnit);
+        localStorage.setItem("ref_tower_index", towerDropdown.selectedIndex);
+        localStorage.setItem("ref_type", typeDropdown.value);
+    }
+
+    window.addEventListener("load", () => {
+        const savedUnit = localStorage.getItem("ref_unit");
+        const savedTowerIndex = localStorage.getItem("ref_tower_index");
+        const savedType = localStorage.getItem("ref_type");
+
+        if (savedUnit) {
+            unitInput.value = savedUnit;
+        }
+        if (savedTowerIndex) {
+            towerDropdown.selectedIndex = Number(savedTowerIndex);
+        }
+        if (savedType) {
+            typeDropdown.value = savedType;
+        }
+        updateCode();
+    });
+
+    [unitInput, towerDropdown, typeDropdown].forEach((element) => {
+        element.addEventListener("input", updateCode);
+    });
+</script>
+</body>
+</html>
