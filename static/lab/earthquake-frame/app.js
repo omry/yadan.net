@@ -6,6 +6,7 @@ const model = new FrameModel();
 
 const controls = {
   gap: document.querySelector("#gapWidth"),
+  connectorMode: document.querySelector("#connectorMode"),
   magnitude: document.querySelector("#magnitude"),
   duration: document.querySelector("#duration"),
   frequency: document.querySelector("#frequency"),
@@ -25,21 +26,65 @@ const readouts = {
   frequency: document.querySelector("#frequencyOutput"),
   damping: document.querySelector("#dampingOutput"),
   dimensionGap: document.querySelector("#dimensionGap"),
+  connectorDescription: document.querySelector("#connectorDescription"),
 };
 
 const startButton = document.querySelector("#startButton");
 const resetButton = document.querySelector("#resetButton");
-const recordingMode = new URLSearchParams(window.location.search).get("recording") === "1";
+const initialUrlParameters = new URLSearchParams(window.location.search);
+applyUrlParameters(initialUrlParameters);
+const recordingMode = initialUrlParameters.get("recording") === "1";
 document.body.classList.toggle("recording-mode", recordingMode);
 let running = false;
 let lastTimestamp = 0;
 let accumulator = 0;
+let animationFrameId = null;
+
+function applyUrlParameters(parameters) {
+  const numericParameters = [
+    ["gap", controls.gap, 0, 1000],
+    ["magnitude", controls.magnitude, 3, 9.5],
+    ["duration", controls.duration, 1, 120],
+    ["frequency", controls.frequency, 0.4, 3],
+    ["damping", controls.damping, 1, 20],
+  ];
+
+  numericParameters.forEach(([name, control, minimum, maximum]) => {
+    const rawValue = parameters.get(name);
+    if (rawValue === null || rawValue.trim() === "") return;
+    const value = Number.parseFloat(rawValue);
+    if (!Number.isFinite(value)) return;
+    control.value = String(Math.min(maximum, Math.max(minimum, value)));
+  });
+
+  const restraint = parameters.get("restraint");
+  if (["gap", "base", "sleeved"].includes(restraint)) {
+    controls.connectorMode.value = restraint;
+  }
+}
+
+function parameterValue(value) {
+  return Number.parseFloat(value.toFixed(4)).toString();
+}
+
+function syncUrlFromControls() {
+  const values = controlValues();
+  const url = new URL(window.location.href);
+  url.searchParams.set("gap", parameterValue(values.gap * 1000));
+  url.searchParams.set("restraint", values.connectorMode);
+  url.searchParams.set("magnitude", parameterValue(values.magnitude));
+  url.searchParams.set("duration", parameterValue(values.duration));
+  url.searchParams.set("frequency", parameterValue(values.frequency));
+  url.searchParams.set("damping", parameterValue(values.damping * 100));
+  window.history.replaceState(window.history.state, "", url);
+}
 
 function controlValues() {
   const gapMm = clampedValue(controls.gap, 0, 1000, 100);
   const magnitude = clampedValue(controls.magnitude, 3, 9.5, 7.4);
   return {
     gap: gapMm / 1000,
+    connectorMode: controls.connectorMode.value,
     magnitude,
     duration: clampedValue(controls.duration, 1, 120, 10),
     frequency: clampedValue(controls.frequency, 0.4, 3, 1.2),
@@ -54,10 +99,16 @@ function clampedValue(control, minimum, maximum, fallback) {
 
 function updateControlLabels() {
   const values = controlValues();
+  const connectorDescriptions = {
+    gap: "No restraint connector shown.",
+    base: "Anchoring dowels connect each wall to its supporting beam.",
+    sleeved: "Base dowels plus unbonded side bars; no top connectors.",
+  };
   readouts.intensity.textContent = `Conceptual shaking: ${magnitudeToIntensityG(values.magnitude).toFixed(2)} g`;
   readouts.frequency.value = `${values.frequency.toFixed(2)} Hz`;
   readouts.damping.value = `${controls.damping.value}%`;
   readouts.dimensionGap.textContent = `${values.gap.toFixed(3)} m`;
+  readouts.connectorDescription.textContent = connectorDescriptions[values.connectorMode];
 }
 
 function fitCanvas() {
@@ -194,15 +245,158 @@ function drawWallDamage(ctx, left, top, right, bottom, damage) {
   ctx.restore();
 }
 
+function drawBaseConnectors(ctx, bounds, lowerY, beamDepth, scale) {
+  const connectorCount = 7;
+  const wallEmbedment = 0.38 * scale;
+  const beamEmbedment = Math.min(beamDepth * 0.7, 0.24 * scale);
+  const hookLength = Math.max(5, 0.08 * scale);
+
+  ctx.save();
+  ctx.strokeStyle = "#315f9d";
+  ctx.fillStyle = "#315f9d";
+  ctx.lineWidth = Math.max(1.5, scale * 0.018);
+  ctx.lineCap = "round";
+  ctx.lineJoin = "round";
+
+  for (let index = 1; index <= connectorCount; index += 1) {
+    const x = bounds.left + ((bounds.right - bounds.left) * index) / (connectorCount + 1);
+    ctx.beginPath();
+    ctx.moveTo(x, lowerY - wallEmbedment);
+    ctx.lineTo(x, lowerY + beamEmbedment);
+    ctx.lineTo(x + (index % 2 === 0 ? hookLength : -hookLength), lowerY + beamEmbedment);
+    ctx.stroke();
+  }
+
+  ctx.font = "800 9px system-ui, sans-serif";
+  ctx.textAlign = "center";
+  ctx.fillText("BASE DOWELS", (bounds.left + bounds.right) / 2, lowerY - 8);
+  ctx.restore();
+}
+
+function drawSlideArrow(ctx, x1, x2, y) {
+  const head = 4;
+  ctx.save();
+  ctx.strokeStyle = "#315f9d";
+  ctx.fillStyle = "#315f9d";
+  ctx.lineWidth = 1;
+  line(ctx, x1, y, x2, y);
+  for (const [x, direction] of [[x1, -1], [x2, 1]]) {
+    ctx.beginPath();
+    ctx.moveTo(x, y);
+    ctx.lineTo(x - direction * head, y - head);
+    ctx.lineTo(x - direction * head, y + head);
+    ctx.closePath();
+    ctx.fill();
+  }
+  ctx.font = "800 8px system-ui, sans-serif";
+  ctx.textAlign = "center";
+  ctx.fillText("AXIAL SLIDE", (x1 + x2) / 2, y - 7);
+  ctx.restore();
+}
+
+function drawSleevedSideConnectors(
+  ctx,
+  bounds,
+  storey,
+  frameLeft,
+  frameRight,
+  columnWidth,
+  gapPx,
+  scale,
+  compactLabels,
+) {
+  const levels = [0.2, 0.4, 0.6, 0.8];
+  const sleeveLength = Math.min(0.78 * scale, (bounds.right - bounds.left) * 0.22);
+  const sleeveHalfHeight = Math.max(5, 0.075 * scale);
+  const barLength = gapPx + 0.64 * scale;
+  const columnEmbedment = Math.min(columnWidth * 0.55, 0.22 * scale);
+  const hookLength = Math.min(0.24 * scale, (storey.lowerY - storey.upperY) * 0.09);
+
+  ctx.save();
+  ctx.lineCap = "round";
+  ctx.lineJoin = "round";
+
+  levels.forEach((level, levelIndex) => {
+    const y = storey.lowerY - (storey.lowerY - storey.upperY) * level;
+    const frameShift =
+      storey.lowerShift + (storey.upperShift - storey.lowerShift) * level;
+    const leftColumnFace = frameLeft + frameShift + columnWidth;
+    const rightColumnFace = frameRight + frameShift - columnWidth;
+
+    const sleeves = [
+      { start: bounds.left, end: bounds.left + sleeveLength, entry: bounds.left },
+      { start: bounds.right - sleeveLength, end: bounds.right, entry: bounds.right },
+    ];
+
+    ctx.fillStyle = "rgba(49, 95, 157, 0.10)";
+    ctx.strokeStyle = "rgba(49, 95, 157, 0.72)";
+    ctx.lineWidth = 1.2;
+    sleeves.forEach((sleeve) => {
+      roundedRect(
+        ctx,
+        sleeve.start,
+        y - sleeveHalfHeight,
+        sleeve.end - sleeve.start,
+        sleeveHalfHeight * 2,
+        2,
+      );
+      ctx.fill();
+      ctx.stroke();
+
+      // The tall, narrow entrance represents the preferred vertical rectangular sleeve.
+      ctx.fillStyle = "rgba(49, 95, 157, 0.24)";
+      ctx.fillRect(sleeve.entry - 2.5, y - sleeveHalfHeight, 5, sleeveHalfHeight * 2);
+      ctx.fillStyle = "rgba(49, 95, 157, 0.10)";
+    });
+
+    ctx.strokeStyle = "#315f9d";
+    ctx.lineWidth = Math.max(1.6, scale * 0.018);
+    const leftHookX = leftColumnFace - columnEmbedment;
+    const rightHookX = rightColumnFace + columnEmbedment;
+    line(ctx, leftHookX, y, leftColumnFace + barLength, y);
+    line(ctx, leftHookX, y, leftHookX, y + hookLength);
+    line(ctx, rightHookX, y, rightColumnFace - barLength, y);
+    line(ctx, rightHookX, y, rightHookX, y + hookLength);
+
+    ctx.fillStyle = "#315f9d";
+    for (const x of [leftColumnFace + barLength, rightColumnFace - barLength]) {
+      ctx.beginPath();
+      ctx.arc(x, y, Math.max(1.8, scale * 0.016), 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (levelIndex === 0) {
+      drawSlideArrow(ctx, bounds.left + 10, bounds.left + sleeveLength - 10, y - sleeveHalfHeight - 8);
+    }
+  });
+
+  ctx.fillStyle = "#315f9d";
+  ctx.font = "800 9px system-ui, sans-serif";
+  ctx.textAlign = "center";
+  ctx.fillText(
+    compactLabels
+      ? "SIDE SLEEVES · NO TOP"
+      : "UNBONDED SIDE SLEEVES · NO TOP CONNECTORS",
+    (bounds.left + bounds.right) / 2,
+    bounds.top + 36,
+  );
+  ctx.restore();
+}
+
 function draw() {
   const rect = fitCanvas();
   const width = rect.width;
   const height = rect.height;
   context.clearRect(0, 0, width, height);
 
-  const sideSpace = recordingMode ? Math.max(32, width * 0.06) : Math.max(44, width * 0.12);
-  const topSpace = recordingMode ? 40 : Math.max(64, height * 0.13);
-  const bottomSpace = recordingMode ? 78 : Math.max(85, height * 0.17);
+  const narrowLayout = !recordingMode && width <= 540;
+  const sideSpace = recordingMode
+    ? Math.max(32, width * 0.06)
+    : narrowLayout
+      ? 36
+      : Math.max(44, width * 0.12);
+  const topSpace = recordingMode ? 40 : narrowLayout ? 30 : 40;
+  const bottomSpace = recordingMode ? 78 : narrowLayout ? 70 : 82;
   const usableWidth = width - sideSpace * 2;
   const usableHeight = height - topSpace - bottomSpace;
   const fullWidthM = DIMENSIONS.beamSpan + DIMENSIONS.columnWidth;
@@ -235,7 +429,8 @@ function draw() {
   context.restore();
 
   // Each wall moves with its supporting floor and is detached from the frame above it.
-  const gap = controlValues().gap;
+  const values = controlValues();
+  const gap = values.gap;
   const gapPx = gap * scale;
   const storeys = [
     {
@@ -269,7 +464,22 @@ function draw() {
     context.fillStyle = "#168a46";
     context.font = "800 10px system-ui, sans-serif";
     context.textAlign = "center";
-    context.fillText(`STOREY ${storyIndex + 1} DETACHED WALL`, (wallLeft + wallRight) / 2, wallTop + 18);
+    const wallLabels = narrowLayout
+      ? {
+          gap: "WALL · GAP ONLY",
+          base: "WALL · BASE CONNECTED",
+          sleeved: "WALL · SLEEVED RESTRAINT",
+        }
+      : {
+          gap: "GAP-ISOLATED WALL",
+          base: "BASE-CONNECTED WALL",
+          sleeved: "SLEEVED WALL RESTRAINT",
+        };
+    context.fillText(
+      `STOREY ${storyIndex + 1} ${wallLabels[values.connectorMode]}`,
+      (wallLeft + wallRight) / 2,
+      wallTop + 18,
+    );
     context.restore();
   });
 
@@ -309,6 +519,28 @@ function draw() {
   context.strokeRect(frameLeft + floorShifts[1], roofUnderside - beamDepth, beamWidth, beamDepth);
   context.restore();
 
+  if (values.connectorMode !== "gap") {
+    wallBounds.forEach((bounds, storyIndex) => {
+      drawBaseConnectors(context, bounds, storeys[storyIndex].lowerY, beamDepth, scale);
+    });
+  }
+
+  if (values.connectorMode === "sleeved") {
+    wallBounds.forEach((bounds, storyIndex) => {
+      drawSleevedSideConnectors(
+        context,
+        bounds,
+        storeys[storyIndex],
+        frameLeft,
+        frameRight,
+        columnWidth,
+        gapPx,
+        scale,
+        narrowLayout,
+      );
+    });
+  }
+
   // Contact flashes are independent for the two walls.
   model.contacts.forEach((contact, storyIndex) => {
     if (!contact) return;
@@ -332,12 +564,14 @@ function draw() {
   doubleArrow(context, frameLeft, bottomY + 67, frameRight, bottomY + 67, "5.00 m BEAM SPAN", -12);
   doubleArrow(context, frameLeft - 24, baseTop, frameLeft - 24, middleUnderside, "3.00 m", -13);
   doubleArrow(context, frameLeft - 24, middleTop, frameLeft - 24, roofUnderside, "3.00 m", -13);
-  wallBounds.forEach((bounds) => {
-    const innerColumnFace = bounds.left - gapPx;
-    doubleArrow(context, innerColumnFace, bounds.top + 42, bounds.left, bounds.top + 42, `${Math.round(gap * 1000)} mm`, -9);
-  });
+  if (!narrowLayout) {
+    wallBounds.forEach((bounds) => {
+      const innerColumnFace = bounds.left - gapPx;
+      doubleArrow(context, innerColumnFace, bounds.top + 42, bounds.left, bounds.top + 42, `${Math.round(gap * 1000)} mm`, -9);
+    });
+  }
 
-  // Floor-level arrows show each absolute floor displacement.
+  // Keep displacement arrows outside the frame so they cannot obscure wall connectors.
   const arrowLevels = [middleTop - 14, roofUnderside - beamDepth - 16];
   floorShifts.forEach((shift, floorIndex) => {
     if (Math.abs(shift) <= 0.4) return;
@@ -347,8 +581,9 @@ function draw() {
     context.strokeStyle = "#ee7d39";
     context.fillStyle = "#ee7d39";
     context.lineWidth = 2;
-    const x1 = baseCenterX;
-    const x2 = baseCenterX + shift;
+    const outsideFrameX = frameRight + Math.max(0, ...floorShifts) + 16;
+    const x1 = direction > 0 ? outsideFrameX : outsideFrameX - shift;
+    const x2 = direction > 0 ? outsideFrameX + shift : outsideFrameX;
     line(context, x1, arrowY, x2, arrowY);
     context.beginPath();
     context.moveTo(x2 + direction * 7, arrowY);
@@ -384,6 +619,7 @@ function updateReadouts() {
 }
 
 function animate(timestamp) {
+  animationFrameId = null;
   if (!lastTimestamp) lastTimestamp = timestamp;
   const frameTime = Math.min((timestamp - lastTimestamp) / 1000, 0.05);
   lastTimestamp = timestamp;
@@ -407,7 +643,7 @@ function animate(timestamp) {
 
   updateReadouts();
   draw();
-  requestAnimationFrame(animate);
+  if (running) animationFrameId = requestAnimationFrame(animate);
 }
 
 startButton.addEventListener("click", () => {
@@ -420,6 +656,9 @@ startButton.addEventListener("click", () => {
   readouts.status.textContent = running ? "SHAKING" : "PAUSED";
   readouts.status.className = `badge ${running ? "running" : "paused"}`;
   lastTimestamp = 0;
+  if (running && animationFrameId === null) {
+    animationFrameId = requestAnimationFrame(animate);
+  }
 });
 
 resetButton.addEventListener("click", () => {
@@ -433,8 +672,16 @@ resetButton.addEventListener("click", () => {
   draw();
 });
 
-Object.values(controls).forEach((control) => control.addEventListener("input", updateControlLabels));
+function handleControlInput() {
+  updateControlLabels();
+  updateReadouts();
+  syncUrlFromControls();
+  draw();
+}
+
+Object.values(controls).forEach((control) => control.addEventListener("input", handleControlInput));
 window.addEventListener("resize", draw);
 updateControlLabels();
 updateReadouts();
-requestAnimationFrame(animate);
+syncUrlFromControls();
+draw();
