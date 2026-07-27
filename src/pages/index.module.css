@@ -20,7 +20,7 @@
 .homeLeftColumn {
   display: grid;
   min-height: 0;
-  grid-template-rows: auto minmax(0, 1fr);
+  grid-template-rows: auto minmax(0, 1fr) auto;
   gap: 1rem;
 }
 
@@ -75,7 +75,7 @@
   padding: 1.25rem;
 }
 
-.homeBlogCard {
+.homePostsCard {
   min-height: 0;
 }
 

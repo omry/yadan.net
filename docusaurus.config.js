@@ -144,16 +144,16 @@ const config = {
             className: 'mobileShortcut mobileShortcutProjects',
           },
           {
-            to: '/writing',
-            label: 'Writing',
-            position: 'left',
-            className: 'mobileShortcut mobileShortcutWriting',
-          },
-          {
             to: '/blog',
             label: 'Blog',
             position: 'left',
             className: 'mobileShortcut mobileShortcutBlog',
+          },
+          {
+            to: '/writing',
+            label: 'Writing',
+            position: 'left',
+            className: 'mobileShortcut mobileShortcutWriting',
           },
           {
             to: '/about',

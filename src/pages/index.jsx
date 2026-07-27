@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import blogPostList from '~blog/default/blog-post-list-prop-default.json';
+import writingPostList from '~blog/writing/blog-post-list-prop-writing.json';
 import ProjectBubble from '../components/ProjectBubble';
 import ProjectMark from '../components/ProjectMark';
 import {
@@ -11,7 +12,7 @@ import {
 } from '../data/siteContent';
 import styles from './index.module.css';
 
-const HOME_BLOG_LIMIT = 3;
+const HOME_POST_LIMIT = 3;
 
 function HomeProjectList({projects}) {
   return (
@@ -50,10 +51,10 @@ function formatBlogDate(date) {
   }).format(new Date(date));
 }
 
-function RecentBlogPosts() {
-  const posts = blogPostList.items
+function RecentPosts({postList}) {
+  const posts = postList.items
     .filter((post) => !post.unlisted)
-    .slice(0, HOME_BLOG_LIMIT);
+    .slice(0, HOME_POST_LIMIT);
 
   return (
     <ul className={styles.homeBlogList}>
@@ -72,7 +73,7 @@ export default function Home() {
     <Layout
       noFooter
       title="Omry Yadan"
-      description="Personal website for Omry Yadan: projects and blog.">
+      description="Personal website for Omry Yadan: projects, blog, and writing.">
       <main className={styles.homeMain}>
         <section className={styles.homeFrame} aria-labelledby="home-title">
           <div className={styles.homeGrid} aria-label="Site surfaces">
@@ -85,12 +86,21 @@ export default function Home() {
                 <p className={styles.homeLede}>May your sockets never timeout.</p>
               </header>
 
-              <article className={`${styles.homeCard} ${styles.homeBlogCard}`}>
+              <article className={`${styles.homeCard} ${styles.homePostsCard}`}>
                 <div>
                   <Link className={`${styles.eyebrow} ${styles.surfaceLink}`} to="/blog">
                     Blog
                   </Link>
-                  <RecentBlogPosts />
+                  <RecentPosts postList={blogPostList} />
+                </div>
+              </article>
+
+              <article className={`${styles.homeCard} ${styles.homePostsCard}`}>
+                <div>
+                  <Link className={`${styles.eyebrow} ${styles.surfaceLink}`} to="/writing">
+                    Writing
+                  </Link>
+                  <RecentPosts postList={writingPostList} />
                 </div>
               </article>
             </div>

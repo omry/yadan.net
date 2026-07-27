@@ -473,6 +473,14 @@ h3 {
   max-width: 12rem;
 }
 
+html.plugin-id-writing.blog-post-page
+  .main-wrapper
+  > .container
+  > .row
+  > .col--2 {
+  display: none;
+}
+
 :is(.blog-list-page, .blog-post-page, .theme-blog-list-page, .theme-blog-post-page) article {
   border: 1px solid var(--site-line);
   border-radius: 8px;

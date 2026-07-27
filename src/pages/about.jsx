@@ -39,6 +39,9 @@ export default function About() {
               <Link className={styles.aboutLink} to="/blog">
                 Blog
               </Link>
+              <Link className={styles.aboutLink} to="/writing">
+                Writing
+              </Link>
               <Link className={styles.aboutLink} to="/contact">
                 Contact
               </Link>
