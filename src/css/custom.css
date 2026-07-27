@@ -481,6 +481,12 @@ html.plugin-id-writing.blog-post-page
   display: none;
 }
 
+html.plugin-id-writing.blog-post-page article > div h2 {
+  max-width: none;
+  font-size: 2rem;
+  line-height: 1.15;
+}
+
 :is(.blog-list-page, .blog-post-page, .theme-blog-list-page, .theme-blog-post-page) article {
   border: 1px solid var(--site-line);
   border-radius: 8px;
@@ -527,6 +533,10 @@ html.plugin-id-writing.blog-post-page
 @media (max-width: 580px) {
   h1 {
     font-size: 3rem;
+  }
+
+  html.plugin-id-writing.blog-post-page article > div h2 {
+    font-size: 1.65rem;
   }
 
   :is(
