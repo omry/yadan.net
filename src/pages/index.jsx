@@ -88,19 +88,19 @@ export default function Home() {
 
               <article className={`${styles.homeCard} ${styles.homePostsCard}`}>
                 <div>
-                  <Link className={`${styles.eyebrow} ${styles.surfaceLink}`} to="/blog">
-                    Blog
+                  <Link className={`${styles.eyebrow} ${styles.surfaceLink}`} to="/writing">
+                    Writing
                   </Link>
-                  <RecentPosts postList={blogPostList} />
+                  <RecentPosts postList={writingPostList} />
                 </div>
               </article>
 
               <article className={`${styles.homeCard} ${styles.homePostsCard}`}>
                 <div>
-                  <Link className={`${styles.eyebrow} ${styles.surfaceLink}`} to="/writing">
-                    Writing
+                  <Link className={`${styles.eyebrow} ${styles.surfaceLink}`} to="/blog">
+                    Blog
                   </Link>
-                  <RecentPosts postList={writingPostList} />
+                  <RecentPosts postList={blogPostList} />
                 </div>
               </article>
             </div>
