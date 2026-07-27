@@ -4,7 +4,18 @@ title: AI Doesn't Get Annoyed
 authors: [omry]
 tags: [engineering, ai]
 description: Compilers exist because humans got tired of writing machine code. What shared concepts will remain implicit when AI can generate the implementation forever?
+image: /img/ai-doesnt-get-annoyed-social-card.png
 ---
+
+import Head from '@docusaurus/Head';
+
+<Head>
+  <title>AI Doesn't Get Annoyed</title>
+  <meta property="og:title" content="AI Doesn't Get Annoyed" />
+  <meta name="twitter:title" content="AI Doesn't Get Annoyed" />
+  <meta property="og:image:alt" content="AI Doesn't Get Annoyed by Omry Yadan on Yadan.net." />
+  <meta name="twitter:image:alt" content="AI Doesn't Get Annoyed by Omry Yadan on Yadan.net." />
+</Head>
 
 *Compilers exist because humans got tired of writing machine code. What shared
 concepts will remain implicit when AI can generate the implementation forever?*
