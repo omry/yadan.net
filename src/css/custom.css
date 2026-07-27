@@ -197,6 +197,10 @@ h3 {
   --site-shortcut-icon: url('/img/icons/blog-write.svg');
 }
 
+.mobileShortcutWriting {
+  --site-shortcut-icon: url('/img/icons/blog-write.svg');
+}
+
 .mobileShortcutAbout {
   --site-shortcut-icon: url('/img/icons/info-mark.svg');
 }

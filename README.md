@@ -2,8 +2,8 @@
 
 Personal website for Omry Yadan, published at <https://yadan.net>.
 
-The site is a small Docusaurus app with project context, a blog section, short
-background context, and a standalone contact form.
+The site is a small Docusaurus app with project context, blog and writing
+sections, short background context, and a standalone contact form.
 
 ## Stack
 
@@ -12,6 +12,7 @@ background context, and a standalone contact form.
 - Shared content data in `src/data/siteContent.js`
 - Shared styling in `src/css/custom.css` and `src/pages/index.module.css`
 - Blog posts in `blog/`
+- Longer-form articles in `writing/`
 - Static assets in `static/`
 - GitHub Pages deployment through GitHub Actions
 

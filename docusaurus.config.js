@@ -33,6 +33,41 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+  plugins: [
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'writing',
+        path: 'writing',
+        routeBasePath: 'writing',
+        blogTitle: 'Writing',
+        blogDescription: 'Longer-form writing from Omry Yadan.',
+        showReadingTime: true,
+        feedOptions: {
+          type: ['rss', 'atom'],
+          xslt: true,
+        },
+        authorsMapPath: '../blog/authors.yml',
+        onInlineTags: 'warn',
+        onInlineAuthors: 'warn',
+        onUntruncatedBlogPosts: 'warn',
+      },
+    ],
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            from: [
+              '/blog/ai-doesnt-get-annoyed',
+              '/blog/writing/ai-doesnt-get-annoyed',
+            ],
+            to: '/writing/ai-doesnt-get-annoyed',
+          },
+        ],
+      },
+    ],
+  ],
   presets: [
     [
       'classic',
@@ -107,6 +142,12 @@ const config = {
             label: 'Projects',
             position: 'left',
             className: 'mobileShortcut mobileShortcutProjects',
+          },
+          {
+            to: '/writing',
+            label: 'Writing',
+            position: 'left',
+            className: 'mobileShortcut mobileShortcutWriting',
           },
           {
             to: '/blog',
