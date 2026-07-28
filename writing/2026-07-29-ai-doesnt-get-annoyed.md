@@ -3,7 +3,8 @@ slug: ai-doesnt-get-annoyed
 title: AI Doesn't Get Annoyed
 authors: [omry]
 tags: [engineering, ai]
-description: Compilers exist because humans got tired of writing machine code. What shared concepts will remain implicit when AI can generate the implementation forever?
+date: 2026-07-29
+description: Compilers exist because humans got tired of writing machine code. What shared concepts will remain implicit when AI can keep generating implementations forever?
 image: /img/ai-doesnt-get-annoyed-social-card.png
 ---
 
@@ -18,7 +19,8 @@ import Head from '@docusaurus/Head';
 </Head>
 
 *Compilers exist because humans got tired of writing machine code. What shared
-concepts will remain implicit when AI can generate the implementation forever?*
+concepts will remain implicit when AI can keep generating implementations
+forever?*
 
 ## The next compiler
 
@@ -61,10 +63,11 @@ better tools are born.
 Sometimes that instinct leads nowhere. But sometimes annoyance is a
 wrong-abstraction detector.
 
-It can tell us that we are repeatedly restating durable information. That
-several decisions from different layers have been collapsed into one operation.
-That the same idea appears in many slightly different forms. That a component
-is doing work which logically belongs somewhere else.
+Necessity invents a solution. Annoyance invents a system.  
+Annoyance can tell us that we are repeatedly restating durable information.
+That several decisions from different layers have been collapsed into one
+operation. That the same idea appears in many slightly different forms. That a
+component is doing work which logically belongs somewhere else.
 
 In those cases, the irritation is not just about effort. It is evidence that
 the system lacks a useful concept.
@@ -81,7 +84,10 @@ recognize patterns, propose interfaces, and help design systems. The question
 is what it is being asked to optimize. When AI is given a ticket-sized or
 case-specific objective, another working implementation is usually a successful
 outcome. The fact that humans would hate maintaining fifty such solutions may
-never enter the task.
+never enter the task.  
+This is not primarily a limitation of model capability. Even an agent with
+perfect knowledge of the codebase, given a ticket-sized objective, has little
+reason to pay the upfront cost of an abstraction the task never asked for.
 
 AI can identify maintenance burden, but in most current workflows that
 accumulated cost sits outside the task it has been given. It does not spend six
@@ -165,7 +171,9 @@ value of a durable, declarative infrastructure model was familiar to me.
 Existing tools could encode parts of the workflow. Puppet and Chef, for example,
 model the desired state of machines and nodes rather than presenting the
 portable application lifecycle - stage, change, test, and install - as the
-object being manipulated.
+object being manipulated.  
+The service no longer needed to know how to install itself; Reploy owned that
+lifecycle.
 
 As I pulled the logic out, other uses gradually came into view: portable
 development environments, repeatable build environments, AI-agent runtimes,
@@ -193,10 +201,10 @@ AI may therefore reduce the value of abstractions whose main purpose is to
 avoid rewriting similar implementations. If the code is easy to regenerate,
 compression through reuse is less valuable than it used to be.
 
-But many abstractions do more than save implementation effort. They define what
-an object means, who owns a behavior, which invariants must hold, how
-compatibility is maintained, where security and failure are reasoned about, and
-what users and other systems can rely on.
+But many abstractions do more than save implementation effort. They make shared
+concepts explicit: what an object means, who owns a behavior, which invariants
+must hold, how compatibility is maintained, how security and failure are
+handled, and what users and other systems can rely on.
 
 Generated code may reduce the cost of duplication, but it does not eliminate
 the need for shared meaning.
@@ -208,20 +216,21 @@ around a shared model are not.
 
 Code can be regenerated from a prompt. The expectations surrounding it are not
 regenerated with it. When AI produces a working solution, the question is
-therefore not only whether the code should be reused. It is whether the solution
-reveals a concept that needs a name, an owner, and a durable model.
+therefore not only whether it solves the immediate problem. It is whether the
+solution has exposed a concept that should become explicit in the system -
+given a name, an owner, and an appropriate durable representation.
 
-AI systems may eventually be given enough scope and continuity to notice these
-patterns for themselves. A system that observes years of maintenance, repeated
-implementations, and failures across many projects may conclude that the next
-piece of code is evidence of a missing abstraction.
+AI does not eliminate annoyance. It moves it. The code may be effortless to
+regenerate, but the requirements must be restated, the results rechecked, and
+the inconsistencies reconciled. That new friction is the same signal in another
+form: the system still lacks a shared concept.  
+That suggests a practical test. If only the implementation repeats,
+regeneration may be fine. But if the requirements, invariants, ownership, or
+compatibility expectations must be reconstructed each time, the duplication is
+carrying meaning. That meaning needs a shared model.
 
-But that is not how most AI-assisted work is framed today. Today, the model is
-rewarded for making the next case work.
-
-That is why annoyance still matters. It is the residue left when the
-implementation succeeds but the design is wrong. It tells us that the code
-works, yet the concept is missing.
-
-If AI can make the wrong level of work feel effortless, what will force us to
-invent the level above it?
+Compilers did not make human creativity obsolete. AI will not either. It will
+give it unprecedented leverage. AI can generate working solutions endlessly,
+but creativity begins when someone sees beyond the answer, imagines a
+possibility that does not yet exist, decides that it matters, and brings it into
+the world.
