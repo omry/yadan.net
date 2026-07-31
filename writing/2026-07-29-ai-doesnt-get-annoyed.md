@@ -22,6 +22,16 @@ import Head from '@docusaurus/Head';
 concepts will remain implicit when AI can keep generating implementations
 forever?*
 
+<p>
+  <a href="/img/ai-doesnt-get-annoyed-illustration.png">
+    <img
+      src="/img/ai-doesnt-get-annoyed-illustration.png"
+      alt="An automated fabrication machine produces many different adapters for the same two plugs while an engineer studies the growing pile."
+      width="720"
+    />
+  </a>
+</p>
+
 ## The next compiler
 
 Linus Torvalds made a comparison that I found useful. He objected to describing
