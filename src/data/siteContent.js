@@ -36,7 +36,6 @@ export const featuredProjects = [
       {
         type: 'github-stars',
         label: 'GitHub stars',
-        value: '2,385',
         badge: {
           src: 'https://img.shields.io/github/stars/omry/omegaconf?style=flat&logo=github&label=stars',
           href: 'https://github.com/omry/omegaconf/stargazers',
@@ -88,10 +87,9 @@ export const featuredProjects = [
       {
         type: 'github-stars',
         label: 'GitHub stars',
-        value: '10,362',
         badge: {
-          src: 'https://img.shields.io/github/stars/facebookresearch/hydra?style=flat&logo=github&label=stars',
-          href: 'https://github.com/facebookresearch/hydra/stargazers',
+          src: 'https://img.shields.io/github/stars/hydra-ecosystem/hydra?style=flat&logo=github&label=stars',
+          href: 'https://github.com/hydra-ecosystem/hydra/stargazers',
         },
       },
       {
@@ -113,7 +111,7 @@ export const featuredProjects = [
     ],
     links: [
       {type: 'website', label: 'Website', href: 'https://hydra.cc/'},
-      {type: 'github', label: 'GitHub', href: 'https://github.com/facebookresearch/hydra'},
+      {type: 'github', label: 'GitHub', href: 'https://github.com/hydra-ecosystem/hydra'},
     ],
   },
   {
@@ -148,7 +146,6 @@ export const featuredProjects = [
       {
         type: 'github-stars',
         label: 'GitHub stars',
-        value: 'omry/backlog-atlas',
         badge: {
           src: 'https://img.shields.io/github/stars/omry/backlog-atlas?style=flat&logo=github&label=stars',
           href: 'https://github.com/omry/backlog-atlas/stargazers',
@@ -206,7 +203,6 @@ export const featuredProjects = [
       {
         type: 'github-stars',
         label: 'GitHub stars',
-        value: 'omry/agent-skill-installer',
         badge: {
           src: 'https://img.shields.io/github/stars/omry/agent-skill-installer?style=flat&logo=github&label=stars',
           href: 'https://github.com/omry/agent-skill-installer/stargazers',
@@ -252,7 +248,6 @@ export const featuredProjects = [
       {
         type: 'github-stars',
         label: 'GitHub stars',
-        value: '2',
         badge: {
           src: 'https://img.shields.io/github/stars/omry/hoodlefinance?style=flat&logo=github&label=stars',
           href: 'https://github.com/omry/hoodlefinance/stargazers',

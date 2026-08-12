@@ -61,15 +61,16 @@ function StatIcon({type}) {
 
 function ProjectStatValue({stat}) {
   if (stat.badge) {
+    const description = stat.value ? `${stat.label}: ${stat.value}` : stat.label;
     return (
       <a
         className={styles.projectStatBadgeLink}
         href={stat.badge.href}
         rel="noopener noreferrer"
         target="_blank"
-        title={`${stat.label}: ${stat.value}`}>
+        title={description}>
         <img
-          alt={`${stat.label}: ${stat.value}`}
+          alt={description}
           className={styles.projectStatBadge}
           loading="lazy"
           src={stat.badge.src}
