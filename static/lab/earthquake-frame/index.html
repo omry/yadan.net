@@ -13,9 +13,9 @@
         <p class="eyebrow">STRUCTURAL MOTION DEMONSTRATOR</p>
         <h1>Two-storey ICF walls under lateral earthquake motion</h1>
         <p class="subtitle">
-          Compare gap-only, base-connector, and sleeved side-connector concepts.
-          Dimensions are drawn to scale; deformation remains true-scale until
-          the frame reaches the selected gap.
+          Compare gap-only, base-connector, sleeved side-connector, and
+          continuous-cable top-restraint concepts. Dimensions are drawn to scale;
+          deformation remains true-scale until the frame reaches the selected gap.
         </p>
       </header>
 
@@ -40,6 +40,7 @@
                 <option value="gap">Gap only · reference</option>
                 <option value="base">Base connectors</option>
                 <option value="sleeved">Base + sleeved side connectors</option>
+                <option value="cable">Base + continuous T1→W→T2 cables</option>
               </select>
             </span>
             <small id="connectorDescription">No restraint connector shown.</small>
@@ -127,8 +128,10 @@
             Each storey has an identical detached wall using the configured gap.
             Impacts accumulate conceptual cracking independently and reduce that wall's contact stiffness.
             Connector selections change the drawing only: base dowels and unbonded
-            sleeved bars represent possible out-of-plane restraint details while
-            preserving in-plane movement.
+            sleeved bars or repeated continuous T1→W→T2 cables represent
+            possible out-of-plane restraint details. Each cable can redistribute
+            through its W guide as the wall moves in plane. Cable tension, guide
+            friction, wear, stiffness, and anchorage forces are not modeled.
             Magnitude-to-shaking and wall cracking are conceptual illustrations;
             neither is a calibrated physical model or a site-specific engineering estimate.
           </p>

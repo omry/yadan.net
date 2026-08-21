@@ -58,7 +58,7 @@ function applyUrlParameters(parameters) {
   });
 
   const restraint = parameters.get("restraint");
-  if (["gap", "base", "sleeved"].includes(restraint)) {
+  if (["gap", "base", "sleeved", "cable"].includes(restraint)) {
     controls.connectorMode.value = restraint;
   }
 }
@@ -103,6 +103,7 @@ function updateControlLabels() {
     gap: "No restraint connector shown.",
     base: "Anchoring dowels connect each wall to its supporting beam.",
     sleeved: "Base dowels plus unbonded side bars; no top connectors.",
+    cable: "Repeated continuous cables run T1→W→T2 and slide through each wall guide during in-plane drift.",
   };
   readouts.intensity.textContent = `Conceptual shaking: ${magnitudeToIntensityG(values.magnitude).toFixed(2)} g`;
   readouts.frequency.value = `${values.frequency.toFixed(2)} Hz`;
@@ -383,6 +384,77 @@ function drawSleevedSideConnectors(
   ctx.restore();
 }
 
+function drawContinuousCableTopConnectors(ctx, bounds, storey, compactLabels) {
+  const wallWidth = bounds.right - bounds.left;
+  const connectionCount = compactLabels ? 3 : 5;
+  const centerStart = compactLabels ? 0.24 : 0.20;
+  const centerEnd = 1 - centerStart;
+  const halfSpan = wallWidth * (compactLabels ? 0.22 : 0.18);
+  const relativeDrift = storey.upperShift - storey.lowerShift;
+  const topAnchorY = storey.upperY + 1;
+  const wallGuideY = bounds.top;
+  const representativeIndex = Math.floor(connectionCount / 2);
+
+  ctx.save();
+  ctx.strokeStyle = "rgba(49, 95, 157, 0.78)";
+  ctx.fillStyle = "#315f9d";
+  ctx.lineWidth = Math.max(1.5, wallWidth * 0.0045);
+  ctx.lineCap = "round";
+
+  for (let index = 0; index < connectionCount; index += 1) {
+    const fraction = connectionCount === 1
+      ? 0.5
+      : centerStart + ((centerEnd - centerStart) * index) / (connectionCount - 1);
+    const wallGuideX = bounds.left + wallWidth * fraction;
+    const topCenterX = wallGuideX + relativeDrift;
+    const topAnchor1X = topCenterX - halfSpan;
+    const topAnchor2X = topCenterX + halfSpan;
+
+    // One continuous cable follows T1 -> W -> T2. W is a guide, not a
+    // termination, so in-plane drift shortens one leg while lengthening the other.
+    ctx.beginPath();
+    ctx.moveTo(topAnchor1X, topAnchorY);
+    ctx.lineTo(wallGuideX, wallGuideY);
+    ctx.lineTo(topAnchor2X, topAnchorY);
+    ctx.stroke();
+
+    for (const anchorX of [topAnchor1X, topAnchor2X]) {
+      ctx.beginPath();
+      ctx.arc(anchorX, topAnchorY, 2.4, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    ctx.beginPath();
+    ctx.arc(wallGuideX, wallGuideY, 4.1, 0, Math.PI * 2);
+    ctx.fillStyle = "#fffdf7";
+    ctx.fill();
+    ctx.strokeStyle = "#315f9d";
+    ctx.lineWidth = 1.8;
+    ctx.stroke();
+    ctx.fillStyle = "#315f9d";
+    ctx.strokeStyle = "rgba(49, 95, 157, 0.78)";
+    ctx.lineWidth = Math.max(1.5, wallWidth * 0.0045);
+
+    if (index === representativeIndex && !compactLabels) {
+      ctx.font = "800 8px system-ui, sans-serif";
+      ctx.textAlign = "center";
+      ctx.fillText("T1", topAnchor1X, topAnchorY - 7);
+      ctx.fillText("T2", topAnchor2X, topAnchorY - 7);
+      ctx.fillText("W1", wallGuideX, wallGuideY + 13);
+    }
+  }
+
+  ctx.fillStyle = "#315f9d";
+  ctx.font = `800 ${compactLabels ? 7 : 8}px system-ui, sans-serif`;
+  ctx.textAlign = "center";
+  ctx.fillText(
+    compactLabels ? "CABLE SLIDES THROUGH W" : "OVERLAPPING CONTINUOUS CABLES · T1 → W → T2",
+    (bounds.left + bounds.right) / 2,
+    bounds.top + (compactLabels ? 28 : 32),
+  );
+  ctx.restore();
+}
+
 function draw() {
   const rect = fitCanvas();
   const width = rect.width;
@@ -469,16 +541,18 @@ function draw() {
           gap: "WALL · GAP ONLY",
           base: "WALL · BASE CONNECTED",
           sleeved: "WALL · SLEEVED RESTRAINT",
+          cable: "WALL · CONTINUOUS CABLES",
         }
       : {
           gap: "GAP-ISOLATED WALL",
           base: "BASE-CONNECTED WALL",
           sleeved: "SLEEVED WALL RESTRAINT",
+          cable: "CONTINUOUS-CABLE TOP RESTRAINT",
         };
     context.fillText(
       `STOREY ${storyIndex + 1} ${wallLabels[values.connectorMode]}`,
       (wallLeft + wallRight) / 2,
-      wallTop + 18,
+      wallTop + (values.connectorMode === "cable" ? (narrowLayout ? 46 : 52) : 18),
     );
     context.restore();
   });
@@ -538,6 +612,12 @@ function draw() {
         scale,
         narrowLayout,
       );
+    });
+  }
+
+  if (values.connectorMode === "cable") {
+    wallBounds.forEach((bounds, storyIndex) => {
+      drawContinuousCableTopConnectors(context, bounds, storeys[storyIndex], narrowLayout);
     });
   }
 
