@@ -175,7 +175,7 @@ They were operations on a portable description of an application, its
 environment, and its lifecycle. The locally correct solution had the wrong
 owner.
 
-I extracted that logic into [Reploy](https://reploy.yadan.net/), which is
+I extracted that logic into [Reploy](https://reploy.cli.dev/), which is
 unreleased and still evolving. I had previously used Puppet and Chef, so the
 value of a durable, declarative infrastructure model was familiar to me.
 Existing tools could encode parts of the workflow. Puppet and Chef, for example,
