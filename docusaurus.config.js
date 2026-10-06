@@ -141,6 +141,11 @@ const config = {
         },
         items: [
           {
+            to: '/lab',
+            label: 'Lab',
+            position: 'left',
+          },
+          {
             to: '/projects',
             label: 'Projects',
             position: 'left',
