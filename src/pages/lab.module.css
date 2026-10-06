@@ -1,0 +1,18 @@
+.main {
+  width: var(--site-content-measure);
+  margin: 0 auto;
+  padding: var(--site-page-top-gap) 0 2rem;
+}
+
+.experiment {
+  max-width: 48rem;
+  padding: 1.5rem;
+  border: 1px solid var(--site-line);
+  border-radius: 8px;
+  background: var(--site-card-bg);
+}
+
+.experiment p {
+  color: var(--site-lede);
+  line-height: 1.65;
+}

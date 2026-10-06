@@ -6,7 +6,9 @@
     "start": "NO_UPDATE_NOTIFIER=1 docusaurus start",
     "build": "NO_UPDATE_NOTIFIER=1 docusaurus build",
     "serve": "NO_UPDATE_NOTIFIER=1 docusaurus serve",
-    "clear": "NO_UPDATE_NOTIFIER=1 docusaurus clear"
+    "clear": "NO_UPDATE_NOTIFIER=1 docusaurus clear",
+    "prestart": "node scripts/prepare-lab.mjs",
+    "prebuild": "node scripts/prepare-lab.mjs"
   },
   "dependencies": {
     "@docusaurus/core": "3.10.1",
