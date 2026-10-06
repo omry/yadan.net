@@ -1,0 +1,12 @@
+from_airport,to_airport,minutes,aircraft,aircraft_code
+"LHR","CDG","75","Airbus A220-300",""
+"LHR","FRA","100","Airbus A321neo family",""
+"LHR","JFK","480","Boeing 777-300ER",""
+"LHR","DXB","450","Boeing 787-8 Dreamliner",""
+"CDG","FRA","80","Embraer E190",""
+"CDG","JFK","495","Boeing 777-200",""
+"CDG","DXB","415","Boeing 777-300ER",""
+"FRA","JFK","520","Airbus A330-900neo",""
+"FRA","DXB","375","Airbus A350-900",""
+"JFK","DXB","765","Airbus A380-800",""
+"JFK","LHR","425","Boeing 777-300ER",""

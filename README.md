@@ -68,3 +68,11 @@ override it locally or while rotating keys, build the site with:
 ```bash
 RECAPTCHA_SITE_KEY=your-public-site-key npm run build
 ```
+
+## Lab
+
+`/lab/` lists the interactive experiments. Airport Time / Space is maintained in
+`lab/airport-time-space/` and published at `/lab/airport-time-space/`. The existing
+start and build commands prepare its static files automatically. See the
+[app README](lab/airport-time-space/README.md) for standalone use, tests, CSV
+format, and data provenance.

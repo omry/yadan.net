@@ -1,0 +1,2425 @@
+{
+  "date": "2026-10-06",
+  "airport": "SSA",
+  "name": "Salvador",
+  "method": "Exact production SpaceSolver, jets only, minimum four edges, original times, no duration cutoff, no geographic or sphere forces. Free 3D starts 71\u201373 run until stable or 30,000 steps. Radius ratio is only a diagnostic, not validation of geography.",
+  "findings": [
+    "The verification-index builder incorrectly parsed digit-bearing airline codes. G31682 must be G3 + 1682, yielding GLO1682; the old parser read G + 31682 and failed to find independent flight-route evidence.",
+    "Correcting code parsing recovers 115 independently cross-checked observations involving SSA. SSA now has 159 observations and 12 edges rather than 44 observations and 7 edges.",
+    "Recovered SSA edges: BSB, FOR, GRU, EZE and MVD. All restored observations still require consecutive airports in independent flight sequences; known stopovers remain excluded.",
+    "The default corrected seed 71 still puts SSA and other Brazilian airports inward, with SSA local error 10.22% and radius ratio 0.538. Seed 72 reaches local error 3.84% and radius ratio 0.872 using exactly the same corrected constraints.",
+    "With the earlier snapshot, optimizing SSA alone from both its original position and its reflection returned to the same placement when neighbors were fixed. The bad fit affects the surrounding cloud, not just one movable airport.",
+    "Independent checks corroborate real nonstop services and plausible scheduled times for AF465 SSA\u2013CDG, TP26 SSA\u2013LIS, CM753 SSA\u2013PTY and G31621 SSA\u2013GRU. The audit did not independently certify every retained flight.",
+    "No single obvious stopped-flight or universally too-fast-time error explains the current pocket. Missing links from a parsing bug and larger local minima explain the observed instability. Flight duration versus straight-line-distance model mismatch remains an additional limitation."
+  ],
+  "recovery": {
+    "restored": 2788,
+    "removed": 0,
+    "restoredCarriers": {
+      "P4": 12,
+      "J2": 116,
+      "D7": 37,
+      "A3": 172,
+      "R5": 6,
+      "F3": 87,
+      "D8": 208,
+      "B6": 695,
+      "U2": 144,
+      "A9": 5,
+      "W6": 29,
+      "G3": 365,
+      "F9": 731,
+      "W4": 16,
+      "Z2": 20,
+      "B3": 3,
+      "E5": 7,
+      "G5": 3,
+      "Z0": 12,
+      "Y4": 43,
+      "Q6": 10,
+      "H9": 14,
+      "I2": 1,
+      "B0": 4,
+      "N3": 12,
+      "H2": 18,
+      "W9": 2,
+      "E9": 7,
+      "U8": 5,
+      "B7": 4
+    },
+    "SSARecoveredRecords": 115
+  },
+  "before": [
+    {
+      "seed": 71,
+      "globalError": 0.06494566083473581,
+      "stable": true,
+      "iterations": 10896,
+      "SSA": {
+        "airport": "SSA",
+        "name": "Salvador",
+        "edges": 7,
+        "localError": 0.09753032832331315,
+        "rmse": 0.6441060286552,
+        "meanError": 0.09879909909468733,
+        "maxPositive": {
+          "a": "LIS",
+          "b": "SSA",
+          "target": 8.479166666666666,
+          "fitted": 9.349850890024468,
+          "error": 0.8706842233578023,
+          "relativeError": 0.10268511725104303,
+          "twoWay": true,
+          "records": 3
+        },
+        "maxNegative": {
+          "a": "CDG",
+          "b": "SSA",
+          "target": 9.916666666666666,
+          "fitted": 8.774174387453522,
+          "error": -1.142492279213144,
+          "relativeError": -0.11520930546687166,
+          "twoWay": true,
+          "records": 2
+        },
+        "maxRelative": {
+          "a": "GIG",
+          "b": "SSA",
+          "target": 2.0833333333333335,
+          "fitted": 2.6291560292020457,
+          "error": 0.5458226958687122,
+          "relativeError": 0.26199489401698184,
+          "twoWay": true,
+          "records": 3
+        },
+        "radiusRatio": 0.41440864406254585
+      },
+      "constraints": [
+        {
+          "a": "CDG",
+          "b": "SSA",
+          "target": 9.916666666666666,
+          "fitted": 8.774174387453522,
+          "error": -1.142492279213144,
+          "relativeError": -0.11520930546687166,
+          "twoWay": true,
+          "records": 2
+        },
+        {
+          "a": "CNF",
+          "b": "SSA",
+          "target": 1.7458333333333333,
+          "fitted": 1.6348454703035749,
+          "error": -0.1109878630297585,
+          "relativeError": -0.06357300030344162,
+          "twoWay": true,
+          "records": 18
+        },
+        {
+          "a": "GIG",
+          "b": "SSA",
+          "target": 2.0833333333333335,
+          "fitted": 2.6291560292020457,
+          "error": 0.5458226958687122,
+          "relativeError": 0.26199489401698184,
+          "twoWay": true,
+          "records": 3
+        },
+        {
+          "a": "LIS",
+          "b": "SSA",
+          "target": 8.479166666666666,
+          "fitted": 9.349850890024468,
+          "error": 0.8706842233578023,
+          "relativeError": 0.10268511725104303,
+          "twoWay": true,
+          "records": 3
+        },
+        {
+          "a": "MAD",
+          "b": "SSA",
+          "target": 8.708333333333334,
+          "fitted": 9.420330359716,
+          "error": 0.7119970263826669,
+          "relativeError": 0.08176042408222012,
+          "twoWay": true,
+          "records": 4
+        },
+        {
+          "a": "PTY",
+          "b": "SSA",
+          "target": 7.066666666666666,
+          "fitted": 6.916966187060019,
+          "error": -0.149700479606647,
+          "relativeError": -0.021184030133016087,
+          "twoWay": true,
+          "records": 2
+        },
+        {
+          "a": "REC",
+          "b": "SSA",
+          "target": 1.380952380952381,
+          "fitted": 1.3472227508555603,
+          "error": -0.03372963009682062,
+          "relativeError": -0.0244249045528701,
+          "twoWay": true,
+          "records": 12
+        }
+      ],
+      "BrazilNeighbors": [
+        {
+          "airport": "GRU",
+          "name": "Sao Paulo",
+          "edges": 37,
+          "localError": 0.15226514294139445,
+          "rmse": 1.5095900893721335,
+          "meanError": 0.1866090686919411,
+          "maxPositive": {
+            "a": "GRU",
+            "b": "JNB",
+            "target": 9.791666666666666,
+            "fitted": 14.135275579318197,
+            "error": 4.343608912651531,
+            "relativeError": 0.44360261235590104,
+            "twoWay": true,
+            "records": 2
+          },
+          "maxNegative": {
+            "a": "DXB",
+            "b": "GRU",
+            "target": 15.041666666666666,
+            "fitted": 12.446157693929287,
+            "error": -2.5955089727373792,
+            "relativeError": -0.17255461314597537,
+            "twoWay": true,
+            "records": 2
+          },
+          "maxRelative": {
+            "a": "GRU",
+            "b": "EZE",
+            "target": 2.7916666666666665,
+            "fitted": 4.818782862050519,
+            "error": 2.027116195383852,
+            "relativeError": 0.7261311744658575,
+            "twoWay": true,
+            "records": 6
+          },
+          "radiusRatio": 0.6033127480934097
+        },
+        {
+          "airport": "GIG",
+          "name": "Rio de Janeiro",
+          "edges": 21,
+          "localError": 0.11054911362457868,
+          "rmse": 0.9677681202416536,
+          "meanError": -0.04267789943082971,
+          "maxPositive": {
+            "a": "LIS",
+            "b": "GIG",
+            "target": 9.863888888888887,
+            "fitted": 11.696852227862289,
+            "error": 1.8329633389734017,
+            "relativeError": 0.18582562715585038,
+            "twoWay": true,
+            "records": 8
+          },
+          "maxNegative": {
+            "a": "DXB",
+            "b": "GIG",
+            "target": 14.708333333333334,
+            "fitted": 12.854641606183074,
+            "error": -1.8536917271502595,
+            "relativeError": -0.12603003244081085,
+            "twoWay": true,
+            "records": 2
+          },
+          "maxRelative": {
+            "a": "GIG",
+            "b": "CNF",
+            "target": 1.0833333333333333,
+            "fitted": 1.4136593651917047,
+            "error": 0.3303260318583714,
+            "relativeError": 0.30491633710003513,
+            "twoWay": true,
+            "records": 13
+          },
+          "radiusRatio": 0.6950058429651909
+        },
+        {
+          "airport": "FOR",
+          "name": "Fortaleza",
+          "edges": 6,
+          "localError": 0.09724049834509894,
+          "rmse": 0.5897405355690488,
+          "meanError": 0.1260004748637533,
+          "maxPositive": {
+            "a": "LIS",
+            "b": "FOR",
+            "target": 7.513888888888889,
+            "fitted": 8.381705983308196,
+            "error": 0.8678170944193067,
+            "relativeError": 0.1154950661704068,
+            "twoWay": true,
+            "records": 5
+          },
+          "maxNegative": {
+            "a": "CDG",
+            "b": "FOR",
+            "target": 8.875,
+            "fitted": 7.9801572545534185,
+            "error": -0.8948427454465815,
+            "relativeError": -0.10082735159961481,
+            "twoWay": true,
+            "records": 4
+          },
+          "maxRelative": {
+            "a": "GIG",
+            "b": "FOR",
+            "target": 3.25,
+            "fitted": 3.7917372849226907,
+            "error": 0.5417372849226907,
+            "relativeError": 0.1666883953608279,
+            "twoWay": false,
+            "records": 1
+          },
+          "radiusRatio": 0.35384510078068215
+        },
+        {
+          "airport": "CNF",
+          "name": "Belo Horizonte",
+          "edges": 10,
+          "localError": 0.07030915189585422,
+          "rmse": 0.34885582044741753,
+          "meanError": 0.15185261793136012,
+          "maxPositive": {
+            "a": "LIS",
+            "b": "CNF",
+            "target": 9.5,
+            "fitted": 10.339515848222394,
+            "error": 0.8395158482223941,
+            "relativeError": 0.0883700892865678,
+            "twoWay": true,
+            "records": 2
+          },
+          "maxNegative": {
+            "a": "CNF",
+            "b": "MCO",
+            "target": 8.833333333333334,
+            "fitted": 8.604962670476654,
+            "error": -0.22837066285667973,
+            "relativeError": -0.025853282587548647,
+            "twoWay": true,
+            "records": 2
+          },
+          "maxRelative": {
+            "a": "GRU",
+            "b": "CNF",
+            "target": 1.25,
+            "fitted": 1.7230696436374373,
+            "error": 0.4730696436374373,
+            "relativeError": 0.37845571490994984,
+            "twoWay": true,
+            "records": 10
+          },
+          "radiusRatio": 0.5696154334553722
+        },
+        {
+          "airport": "REC",
+          "name": "Recife",
+          "edges": 10,
+          "localError": 0.06773721338279369,
+          "rmse": 0.34163312968386245,
+          "meanError": 0.0759731588443796,
+          "maxPositive": {
+            "a": "LIS",
+            "b": "REC",
+            "target": 7.675,
+            "fitted": 8.362905070010344,
+            "error": 0.687905070010344,
+            "relativeError": 0.08962932508278097,
+            "twoWay": true,
+            "records": 10
+          },
+          "maxNegative": {
+            "a": "OPO",
+            "b": "REC",
+            "target": 8.083333333333334,
+            "fitted": 7.8037840392807505,
+            "error": -0.27954929405258344,
+            "relativeError": -0.034583417820938156,
+            "twoWay": true,
+            "records": 2
+          },
+          "maxRelative": {
+            "a": "GIG",
+            "b": "REC",
+            "target": 2.866071428571429,
+            "fitted": 3.4692186970803998,
+            "error": 0.6031472685089709,
+            "relativeError": 0.21044390676948516,
+            "twoWay": true,
+            "records": 13
+          },
+          "radiusRatio": 0.4716715134820256
+        },
+        {
+          "airport": "BSB",
+          "name": "Brasilia",
+          "edges": 4,
+          "localError": 0.03817903691041348,
+          "rmse": 0.22209585016686256,
+          "meanError": 0.08035343904468356,
+          "maxPositive": {
+            "a": "LIS",
+            "b": "BSB",
+            "target": 9.395833333333334,
+            "fitted": 9.633147567253301,
+            "error": 0.23731423391996742,
+            "relativeError": 0.025257390749796976,
+            "twoWay": true,
+            "records": 3
+          },
+          "maxNegative": {
+            "a": "BSB",
+            "b": "REC",
+            "target": 2.6354166666666665,
+            "fitted": 2.365179164197843,
+            "error": -0.2702375024688237,
+            "relativeError": -0.10254071239923747,
+            "twoWay": true,
+            "records": 8
+          },
+          "maxRelative": {
+            "a": "BSB",
+            "b": "CNF",
+            "target": 1.340277777777778,
+            "fitted": 1.568350856426715,
+            "error": 0.2280730786489371,
+            "relativeError": 0.17016851463962146,
+            "twoWay": true,
+            "records": 12
+          },
+          "radiusRatio": 0.6540985490220016
+        }
+      ]
+    },
+    {
+      "seed": 72,
+      "globalError": 0.06260784358272692,
+      "stable": true,
+      "iterations": 7272,
+      "SSA": {
+        "airport": "SSA",
+        "name": "Salvador",
+        "edges": 7,
+        "localError": 0.02975876003677721,
+        "rmse": 0.19653165404560488,
+        "meanError": 0.038686733306314655,
+        "maxPositive": {
+          "a": "MAD",
+          "b": "SSA",
+          "target": 8.708333333333334,
+          "fitted": 8.92523430379004,
+          "error": 0.21690097045670598,
+          "relativeError": 0.024907288473497335,
+          "twoWay": true,
+          "records": 4
+        },
+        "maxNegative": {
+          "a": "CDG",
+          "b": "SSA",
+          "target": 9.916666666666666,
+          "fitted": 9.533133700142224,
+          "error": -0.3835329665244416,
+          "relativeError": -0.0386755932629689,
+          "twoWay": true,
+          "records": 2
+        },
+        "maxRelative": {
+          "a": "GIG",
+          "b": "SSA",
+          "target": 2.0833333333333335,
+          "fitted": 2.2093161892099342,
+          "error": 0.12598285587660074,
+          "relativeError": 0.06047177082076835,
+          "twoWay": true,
+          "records": 3
+        },
+        "radiusRatio": 0.9008884556178375
+      },
+      "constraints": [
+        {
+          "a": "CDG",
+          "b": "SSA",
+          "target": 9.916666666666666,
+          "fitted": 9.533133700142224,
+          "error": -0.3835329665244416,
+          "relativeError": -0.0386755932629689,
+          "twoWay": true,
+          "records": 2
+        },
+        {
+          "a": "CNF",
+          "b": "SSA",
+          "target": 1.7458333333333333,
+          "fitted": 1.6860860782059561,
+          "error": -0.05974725512737722,
+          "relativeError": -0.03422277143334256,
+          "twoWay": true,
+          "records": 18
+        },
+        {
+          "a": "GIG",
+          "b": "SSA",
+          "target": 2.0833333333333335,
+          "fitted": 2.2093161892099342,
+          "error": 0.12598285587660074,
+          "relativeError": 0.06047177082076835,
+          "twoWay": true,
+          "records": 3
+        },
+        {
+          "a": "LIS",
+          "b": "SSA",
+          "target": 8.479166666666666,
+          "fitted": 8.667890806233858,
+          "error": 0.18872413956719214,
+          "relativeError": 0.022257392381388755,
+          "twoWay": true,
+          "records": 3
+        },
+        {
+          "a": "MAD",
+          "b": "SSA",
+          "target": 8.708333333333334,
+          "fitted": 8.92523430379004,
+          "error": 0.21690097045670598,
+          "relativeError": 0.024907288473497335,
+          "twoWay": true,
+          "records": 4
+        },
+        {
+          "a": "PTY",
+          "b": "SSA",
+          "target": 7.066666666666666,
+          "fitted": 7.205454709592114,
+          "error": 0.138788042925448,
+          "relativeError": 0.019639817395110566,
+          "twoWay": true,
+          "records": 2
+        },
+        {
+          "a": "REC",
+          "b": "SSA",
+          "target": 1.380952380952381,
+          "fitted": 1.4246437269224554,
+          "error": 0.04369134597007451,
+          "relativeError": 0.031638560874881545,
+          "twoWay": true,
+          "records": 12
+        }
+      ],
+      "BrazilNeighbors": [
+        {
+          "airport": "GRU",
+          "name": "Sao Paulo",
+          "edges": 37,
+          "localError": 0.07164867665258305,
+          "rmse": 0.7103407260649134,
+          "meanError": -0.028059467086290764,
+          "maxPositive": {
+            "a": "GRU",
+            "b": "PTY",
+            "target": 6.920833333333333,
+            "fitted": 8.281566012993736,
+            "error": 1.3607326796604022,
+            "relativeError": 0.1966139934488239,
+            "twoWay": true,
+            "records": 16
+          },
+          "maxNegative": {
+            "a": "DXB",
+            "b": "GRU",
+            "target": 15.041666666666666,
+            "fitted": 13.1744981555512,
+            "error": -1.867168511115466,
+            "relativeError": -0.12413308661155452,
+            "twoWay": true,
+            "records": 2
+          },
+          "maxRelative": {
+            "a": "GRU",
+            "b": "PTY",
+            "target": 6.920833333333333,
+            "fitted": 8.281566012993736,
+            "error": 1.3607326796604022,
+            "relativeError": 0.1966139934488239,
+            "twoWay": true,
+            "records": 16
+          },
+          "radiusRatio": 0.9704430902388159
+        },
+        {
+          "airport": "GIG",
+          "name": "Rio de Janeiro",
+          "edges": 21,
+          "localError": 0.07065831468850704,
+          "rmse": 0.6185564238692944,
+          "meanError": -0.04037027859878638,
+          "maxPositive": {
+            "a": "PTY",
+            "b": "GIG",
+            "target": 7.173333333333333,
+            "fitted": 8.121582513291884,
+            "error": 0.9482491799585508,
+            "relativeError": 0.13219087081206565,
+            "twoWay": true,
+            "records": 9
+          },
+          "maxNegative": {
+            "a": "GIG",
+            "b": "IAH",
+            "target": 10.416666666666666,
+            "fitted": 8.748738627932099,
+            "error": -1.6679280387345674,
+            "relativeError": -0.1601210917185185,
+            "twoWay": true,
+            "records": 2
+          },
+          "maxRelative": {
+            "a": "GIG",
+            "b": "IAH",
+            "target": 10.416666666666666,
+            "fitted": 8.748738627932099,
+            "error": -1.6679280387345674,
+            "relativeError": -0.1601210917185185,
+            "twoWay": true,
+            "records": 2
+          },
+          "radiusRatio": 0.9915530382488675
+        },
+        {
+          "airport": "REC",
+          "name": "Recife",
+          "edges": 10,
+          "localError": 0.04155217987566399,
+          "rmse": 0.20956872223084097,
+          "meanError": -0.027933649309619456,
+          "maxPositive": {
+            "a": "LIS",
+            "b": "REC",
+            "target": 7.675,
+            "fitted": 8.007451331013765,
+            "error": 0.33245133101376556,
+            "relativeError": 0.04331613433404111,
+            "twoWay": true,
+            "records": 10
+          },
+          "maxNegative": {
+            "a": "OPO",
+            "b": "REC",
+            "target": 8.083333333333334,
+            "fitted": 7.591791727725017,
+            "error": -0.49154160560831706,
+            "relativeError": -0.0608092707969052,
+            "twoWay": true,
+            "records": 2
+          },
+          "maxRelative": {
+            "a": "GIG",
+            "b": "REC",
+            "target": 2.866071428571429,
+            "fitted": 2.662686901785594,
+            "error": -0.20338452678583474,
+            "relativeError": -0.07096282554521337,
+            "twoWay": true,
+            "records": 13
+          },
+          "radiusRatio": 0.8963606167616188
+        },
+        {
+          "airport": "CNF",
+          "name": "Belo Horizonte",
+          "edges": 10,
+          "localError": 0.03446072106000642,
+          "rmse": 0.17098518179262817,
+          "meanError": 0.04882992535876207,
+          "maxPositive": {
+            "a": "LIS",
+            "b": "CNF",
+            "target": 9.5,
+            "fitted": 9.808695441397557,
+            "error": 0.3086954413975569,
+            "relativeError": 0.03249425698921651,
+            "twoWay": true,
+            "records": 2
+          },
+          "maxNegative": {
+            "a": "CNF",
+            "b": "REC",
+            "target": 2.500291375291375,
+            "fitted": 2.3590389331536357,
+            "error": -0.14125244213773946,
+            "relativeError": -0.056494392427073985,
+            "twoWay": true,
+            "records": 24
+          },
+          "maxRelative": {
+            "a": "GRU",
+            "b": "CNF",
+            "target": 1.25,
+            "fitted": 1.4786467373148975,
+            "error": 0.22864673731489749,
+            "relativeError": 0.182917389851918,
+            "twoWay": true,
+            "records": 10
+          },
+          "radiusRatio": 0.8507569708750313
+        },
+        {
+          "airport": "BSB",
+          "name": "Brasilia",
+          "edges": 4,
+          "localError": 0.017870898923619795,
+          "rmse": 0.10395894739306097,
+          "meanError": -0.013375505246876529,
+          "maxPositive": {
+            "a": "BSB",
+            "b": "REC",
+            "target": 2.6354166666666665,
+            "fitted": 2.772512737811172,
+            "error": 0.1370960711445055,
+            "relativeError": 0.052020643596334105,
+            "twoWay": true,
+            "records": 8
+          },
+          "maxNegative": {
+            "a": "LIS",
+            "b": "BSB",
+            "target": 9.395833333333334,
+            "fitted": 9.278122555108167,
+            "error": -0.11771077822516673,
+            "relativeError": -0.012527976396470073,
+            "twoWay": true,
+            "records": 3
+          },
+          "maxRelative": {
+            "a": "BSB",
+            "b": "CNF",
+            "target": 1.340277777777778,
+            "fitted": 1.2408960136301377,
+            "error": -0.09938176414764022,
+            "relativeError": -0.07415012454538958,
+            "twoWay": true,
+            "records": 12
+          },
+          "radiusRatio": 0.6914282772636893
+        },
+        {
+          "airport": "FOR",
+          "name": "Fortaleza",
+          "edges": 6,
+          "localError": 0.015711986030267282,
+          "rmse": 0.09528946492498366,
+          "meanError": 0.011415121366183131,
+          "maxPositive": {
+            "a": "LIS",
+            "b": "FOR",
+            "target": 7.513888888888889,
+            "fitted": 7.709332972829946,
+            "error": 0.19544408394105695,
+            "relativeError": 0.026011042594743253,
+            "twoWay": true,
+            "records": 5
+          },
+          "maxNegative": {
+            "a": "CDG",
+            "b": "FOR",
+            "target": 8.875,
+            "fitted": 8.775718388972264,
+            "error": -0.09928161102773636,
+            "relativeError": -0.011186660397491421,
+            "twoWay": true,
+            "records": 4
+          },
+          "maxRelative": {
+            "a": "LIS",
+            "b": "FOR",
+            "target": 7.513888888888889,
+            "fitted": 7.709332972829946,
+            "error": 0.19544408394105695,
+            "relativeError": 0.026011042594743253,
+            "twoWay": true,
+            "records": 5
+          },
+          "radiusRatio": 0.933845107301578
+        }
+      ]
+    },
+    {
+      "seed": 73,
+      "globalError": 0.0629142219409016,
+      "stable": true,
+      "iterations": 18364,
+      "SSA": {
+        "airport": "SSA",
+        "name": "Salvador",
+        "edges": 7,
+        "localError": 0.07464338563342829,
+        "rmse": 0.492956965410253,
+        "meanError": 0.0428328054732431,
+        "maxPositive": {
+          "a": "MAD",
+          "b": "SSA",
+          "target": 8.708333333333334,
+          "fitted": 9.342165723532284,
+          "error": 0.6338323901989504,
+          "relativeError": 0.07278458069270244,
+          "twoWay": true,
+          "records": 4
+        },
+        "maxNegative": {
+          "a": "CDG",
+          "b": "SSA",
+          "target": 9.916666666666666,
+          "fitted": 9.008547127628578,
+          "error": -0.9081195390380881,
+          "relativeError": -0.09157507956686603,
+          "twoWay": true,
+          "records": 2
+        },
+        "maxRelative": {
+          "a": "GIG",
+          "b": "SSA",
+          "target": 2.0833333333333335,
+          "fitted": 2.5257666631041333,
+          "error": 0.44243332977079985,
+          "relativeError": 0.21236799828998393,
+          "twoWay": true,
+          "records": 3
+        },
+        "radiusRatio": 0.7088293903840244
+      },
+      "constraints": [
+        {
+          "a": "CDG",
+          "b": "SSA",
+          "target": 9.916666666666666,
+          "fitted": 9.008547127628578,
+          "error": -0.9081195390380881,
+          "relativeError": -0.09157507956686603,
+          "twoWay": true,
+          "records": 2
+        },
+        {
+          "a": "CNF",
+          "b": "SSA",
+          "target": 1.7458333333333333,
+          "fitted": 1.4960889031807723,
+          "error": -0.2497444301525611,
+          "relativeError": -0.14305170223535718,
+          "twoWay": true,
+          "records": 18
+        },
+        {
+          "a": "GIG",
+          "b": "SSA",
+          "target": 2.0833333333333335,
+          "fitted": 2.5257666631041333,
+          "error": 0.44243332977079985,
+          "relativeError": 0.21236799828998393,
+          "twoWay": true,
+          "records": 3
+        },
+        {
+          "a": "LIS",
+          "b": "SSA",
+          "target": 8.479166666666666,
+          "fitted": 8.821059406811957,
+          "error": 0.3418927401452905,
+          "relativeError": 0.04032150252327751,
+          "twoWay": true,
+          "records": 3
+        },
+        {
+          "a": "MAD",
+          "b": "SSA",
+          "target": 8.708333333333334,
+          "fitted": 9.342165723532284,
+          "error": 0.6338323901989504,
+          "relativeError": 0.07278458069270244,
+          "twoWay": true,
+          "records": 4
+        },
+        {
+          "a": "PTY",
+          "b": "SSA",
+          "target": 7.066666666666666,
+          "fitted": 6.864139727619879,
+          "error": -0.20252693904678765,
+          "relativeError": -0.028659472506620893,
+          "twoWay": true,
+          "records": 2
+        },
+        {
+          "a": "REC",
+          "b": "SSA",
+          "target": 1.380952380952381,
+          "fitted": 1.6230144673874787,
+          "error": 0.24206208643509775,
+          "relativeError": 0.17528633845300182,
+          "twoWay": true,
+          "records": 12
+        }
+      ],
+      "BrazilNeighbors": [
+        {
+          "airport": "GIG",
+          "name": "Rio de Janeiro",
+          "edges": 21,
+          "localError": 0.09053771707670195,
+          "rmse": 0.7925845209744842,
+          "meanError": -0.08110556081417024,
+          "maxPositive": {
+            "a": "MAD",
+            "b": "GIG",
+            "target": 10,
+            "fitted": 11.674590288337225,
+            "error": 1.6745902883372246,
+            "relativeError": 0.16745902883372246,
+            "twoWay": true,
+            "records": 2
+          },
+          "maxNegative": {
+            "a": "DXB",
+            "b": "GIG",
+            "target": 14.708333333333334,
+            "fitted": 12.35656557635675,
+            "error": -2.3517677569765834,
+            "relativeError": -0.159893558547983,
+            "twoWay": true,
+            "records": 2
+          },
+          "maxRelative": {
+            "a": "GIG",
+            "b": "SSA",
+            "target": 2.0833333333333335,
+            "fitted": 2.5257666631041333,
+            "error": 0.44243332977079985,
+            "relativeError": 0.21236799828998393,
+            "twoWay": true,
+            "records": 3
+          },
+          "radiusRatio": 0.9990254858908414
+        },
+        {
+          "airport": "GRU",
+          "name": "Sao Paulo",
+          "edges": 37,
+          "localError": 0.07389094840859264,
+          "rmse": 0.7325711010224567,
+          "meanError": 0.0035773769590029085,
+          "maxPositive": {
+            "a": "GRU",
+            "b": "BCN",
+            "target": 10.75,
+            "fitted": 12.264811071345575,
+            "error": 1.5148110713455747,
+            "relativeError": 0.14091265779958834,
+            "twoWay": true,
+            "records": 5
+          },
+          "maxNegative": {
+            "a": "DXB",
+            "b": "GRU",
+            "target": 15.041666666666666,
+            "fitted": 12.864952174832796,
+            "error": -2.17671449183387,
+            "relativeError": -0.1447123207867393,
+            "twoWay": true,
+            "records": 2
+          },
+          "maxRelative": {
+            "a": "GRU",
+            "b": "CNF",
+            "target": 1.25,
+            "fitted": 1.4727456781923691,
+            "error": 0.22274567819236912,
+            "relativeError": 0.1781965425538953,
+            "twoWay": true,
+            "records": 10
+          },
+          "radiusRatio": 1.0433104347438098
+        },
+        {
+          "airport": "REC",
+          "name": "Recife",
+          "edges": 10,
+          "localError": 0.06766974278237017,
+          "rmse": 0.34129284121858305,
+          "meanError": 0.04696481729407165,
+          "maxPositive": {
+            "a": "LIS",
+            "b": "REC",
+            "target": 7.675,
+            "fitted": 8.17704179446111,
+            "error": 0.5020417944611095,
+            "relativeError": 0.06541261165617063,
+            "twoWay": true,
+            "records": 10
+          },
+          "maxNegative": {
+            "a": "OPO",
+            "b": "REC",
+            "target": 8.083333333333334,
+            "fitted": 7.455482001830036,
+            "error": -0.6278513315032983,
+            "relativeError": -0.07767232967051113,
+            "twoWay": true,
+            "records": 2
+          },
+          "maxRelative": {
+            "a": "REC",
+            "b": "SSA",
+            "target": 1.380952380952381,
+            "fitted": 1.6230144673874787,
+            "error": 0.24206208643509775,
+            "relativeError": 0.17528633845300182,
+            "twoWay": true,
+            "records": 12
+          },
+          "radiusRatio": 0.7809166318397182
+        },
+        {
+          "airport": "FOR",
+          "name": "Fortaleza",
+          "edges": 6,
+          "localError": 0.06114351219032685,
+          "rmse": 0.37082088470717334,
+          "meanError": 0.04155026909597733,
+          "maxPositive": {
+            "a": "LIS",
+            "b": "FOR",
+            "target": 7.513888888888889,
+            "fitted": 7.883236675693559,
+            "error": 0.36934778680466973,
+            "relativeError": 0.04915534316069541,
+            "twoWay": true,
+            "records": 5
+          },
+          "maxNegative": {
+            "a": "CDG",
+            "b": "FOR",
+            "target": 8.875,
+            "fitted": 8.213154254580004,
+            "error": -0.6618457454199955,
+            "relativeError": -0.07457416849802767,
+            "twoWay": true,
+            "records": 4
+          },
+          "maxRelative": {
+            "a": "REC",
+            "b": "FOR",
+            "target": 1.344047619047619,
+            "fitted": 1.49217362480271,
+            "error": 0.14812600575509105,
+            "relativeError": 0.11020889710741939,
+            "twoWay": true,
+            "records": 12
+          },
+          "radiusRatio": 0.6534332517749515
+        },
+        {
+          "airport": "CNF",
+          "name": "Belo Horizonte",
+          "edges": 10,
+          "localError": 0.05604596937515925,
+          "rmse": 0.27808559912802616,
+          "meanError": 0.01059977578884661,
+          "maxPositive": {
+            "a": "LIS",
+            "b": "CNF",
+            "target": 9.5,
+            "fitted": 10.181434786619073,
+            "error": 0.6814347866190733,
+            "relativeError": 0.07172997753884983,
+            "twoWay": true,
+            "records": 2
+          },
+          "maxNegative": {
+            "a": "CNF",
+            "b": "REC",
+            "target": 2.500291375291375,
+            "fitted": 2.2499913865805437,
+            "error": -0.2502999887108315,
+            "relativeError": -0.10010832784705438,
+            "twoWay": true,
+            "records": 24
+          },
+          "maxRelative": {
+            "a": "GRU",
+            "b": "CNF",
+            "target": 1.25,
+            "fitted": 1.4727456781923691,
+            "error": 0.22274567819236912,
+            "relativeError": 0.1781965425538953,
+            "twoWay": true,
+            "records": 10
+          },
+          "radiusRatio": 0.8844664809546164
+        },
+        {
+          "airport": "BSB",
+          "name": "Brasilia",
+          "edges": 4,
+          "localError": 0.026271986164241104,
+          "rmse": 0.15282991858623046,
+          "meanError": 0.04588840601885957,
+          "maxPositive": {
+            "a": "LIS",
+            "b": "BSB",
+            "target": 9.395833333333334,
+            "fitted": 9.567750026025113,
+            "error": 0.171916692691779,
+            "relativeError": 0.018297120286486456,
+            "twoWay": true,
+            "records": 3
+          },
+          "maxNegative": {
+            "a": "BSB",
+            "b": "REC",
+            "target": 2.6354166666666665,
+            "fitted": 2.440309043527146,
+            "error": -0.19510762313952057,
+            "relativeError": -0.07403293210037144,
+            "twoWay": true,
+            "records": 8
+          },
+          "maxRelative": {
+            "a": "BSB",
+            "b": "CNF",
+            "target": 1.340277777777778,
+            "fitted": 1.4907348021161468,
+            "error": 0.15045702433836894,
+            "relativeError": 0.11225809069805764,
+            "twoWay": true,
+            "records": 12
+          },
+          "radiusRatio": 0.7509630321421967
+        }
+      ]
+    }
+  ],
+  "corrected": [
+    {
+      "seed": 71,
+      "globalError": 0.06521133777378203,
+      "stable": true,
+      "iterations": 25230,
+      "SSA": {
+        "airport": "SSA",
+        "name": "Salvador",
+        "edges": 12,
+        "localError": 0.10224435658393144,
+        "rmse": 0.5589383739964283,
+        "meanError": -0.025683584394399845,
+        "maxPositive": {
+          "a": "LIS",
+          "b": "SSA",
+          "target": 8.479166666666666,
+          "fitted": 9.366151654176251,
+          "error": 0.8869849875095852,
+          "relativeError": 0.10460756609449655,
+          "twoWay": true,
+          "records": 3
+        },
+        "maxNegative": {
+          "a": "CDG",
+          "b": "SSA",
+          "target": 9.916666666666666,
+          "fitted": 8.518426187802449,
+          "error": -1.398240478864217,
+          "relativeError": -0.14099903988546728,
+          "twoWay": true,
+          "records": 2
+        },
+        "maxRelative": {
+          "a": "CNF",
+          "b": "SSA",
+          "target": 1.7351851851851852,
+          "fitted": 1.261906474096658,
+          "error": -0.47327871108852726,
+          "relativeError": -0.27275400639039993,
+          "twoWay": true,
+          "records": 33
+        },
+        "radiusRatio": 0.5382355840717699
+      },
+      "constraints": [
+        {
+          "a": "BSB",
+          "b": "SSA",
+          "target": 1.9583333333333333,
+          "fitted": 1.8574024776827573,
+          "error": -0.10093085565057591,
+          "relativeError": -0.051539160332208976,
+          "twoWay": true,
+          "records": 13
+        },
+        {
+          "a": "CDG",
+          "b": "SSA",
+          "target": 9.916666666666666,
+          "fitted": 8.518426187802449,
+          "error": -1.398240478864217,
+          "relativeError": -0.14099903988546728,
+          "twoWay": true,
+          "records": 2
+        },
+        {
+          "a": "CNF",
+          "b": "SSA",
+          "target": 1.7351851851851852,
+          "fitted": 1.261906474096658,
+          "error": -0.47327871108852726,
+          "relativeError": -0.27275400639039993,
+          "twoWay": true,
+          "records": 33
+        },
+        {
+          "a": "EZE",
+          "b": "SSA",
+          "target": 4.625,
+          "fitted": 4.962971981730915,
+          "error": 0.3379719817309148,
+          "relativeError": 0.07307502307695456,
+          "twoWay": true,
+          "records": 2
+        },
+        {
+          "a": "FOR",
+          "b": "SSA",
+          "target": 1.8277777777777777,
+          "fitted": 1.9513447027493689,
+          "error": 0.12356692497159116,
+          "relativeError": 0.06760500454372768,
+          "twoWay": true,
+          "records": 11
+        },
+        {
+          "a": "GIG",
+          "b": "SSA",
+          "target": 2.0992063492063493,
+          "fitted": 2.4181989115358395,
+          "error": 0.31899256232949025,
+          "relativeError": 0.15195864972973827,
+          "twoWay": true,
+          "records": 42
+        },
+        {
+          "a": "GRU",
+          "b": "SSA",
+          "target": 2.428030303030303,
+          "fitted": 2.586135729641927,
+          "error": 0.15810542661162375,
+          "relativeError": 0.06511674356547374,
+          "twoWay": true,
+          "records": 22
+        },
+        {
+          "a": "LIS",
+          "b": "SSA",
+          "target": 8.479166666666666,
+          "fitted": 9.366151654176251,
+          "error": 0.8869849875095852,
+          "relativeError": 0.10460756609449655,
+          "twoWay": true,
+          "records": 3
+        },
+        {
+          "a": "MAD",
+          "b": "SSA",
+          "target": 8.708333333333334,
+          "fitted": 9.28267826268471,
+          "error": 0.5743449293513763,
+          "relativeError": 0.06595348471020589,
+          "twoWay": true,
+          "records": 4
+        },
+        {
+          "a": "SSA",
+          "b": "MVD",
+          "target": 4.333333333333333,
+          "fitted": 4.024898176991055,
+          "error": -0.308435156342278,
+          "relativeError": -0.07117734377129493,
+          "twoWay": true,
+          "records": 2
+        },
+        {
+          "a": "PTY",
+          "b": "SSA",
+          "target": 7.066666666666666,
+          "fitted": 6.838726697913609,
+          "error": -0.22793996875305744,
+          "relativeError": -0.03225565595562134,
+          "twoWay": true,
+          "records": 2
+        },
+        {
+          "a": "REC",
+          "b": "SSA",
+          "target": 1.3964646464646464,
+          "fitted": 1.1971199919259226,
+          "error": -0.19934465453872385,
+          "relativeError": -0.14274951753586737,
+          "twoWay": true,
+          "records": 23
+        }
+      ],
+      "BrazilNeighbors": [
+        {
+          "airport": "GRU",
+          "name": "Sao Paulo",
+          "edges": 43,
+          "localError": 0.15343144537775977,
+          "rmse": 1.4234374667959133,
+          "meanError": 0.16584265296980336,
+          "maxPositive": {
+            "a": "GRU",
+            "b": "JNB",
+            "target": 9.791666666666666,
+            "fitted": 14.274892357364777,
+            "error": 4.483225690698111,
+            "relativeError": 0.4578613471351263,
+            "twoWay": true,
+            "records": 2
+          },
+          "maxNegative": {
+            "a": "DXB",
+            "b": "GRU",
+            "target": 15.041666666666666,
+            "fitted": 12.417616935930594,
+            "error": -2.624049730736072,
+            "relativeError": -0.1744520596611239,
+            "twoWay": true,
+            "records": 2
+          },
+          "maxRelative": {
+            "a": "GRU",
+            "b": "EZE",
+            "target": 2.7916666666666665,
+            "fitted": 4.690532276951149,
+            "error": 1.8988656102844828,
+            "relativeError": 0.680190666370561,
+            "twoWay": true,
+            "records": 6
+          },
+          "radiusRatio": 0.6275703512409964
+        },
+        {
+          "airport": "GIG",
+          "name": "Rio de Janeiro",
+          "edges": 25,
+          "localError": 0.1079616850243566,
+          "rmse": 0.895367602583269,
+          "meanError": -0.0676683411694423,
+          "maxPositive": {
+            "a": "LIS",
+            "b": "GIG",
+            "target": 9.870833333333334,
+            "fitted": 11.734039997482665,
+            "error": 1.863206664149331,
+            "relativeError": 0.18875880092690564,
+            "twoWay": true,
+            "records": 9
+          },
+          "maxNegative": {
+            "a": "DXB",
+            "b": "GIG",
+            "target": 14.708333333333334,
+            "fitted": 12.767789024182097,
+            "error": -1.940544309151237,
+            "relativeError": -0.13193502385164219,
+            "twoWay": true,
+            "records": 2
+          },
+          "maxRelative": {
+            "a": "GIG",
+            "b": "ASU",
+            "target": 2.5138888888888884,
+            "fitted": 1.8528495889407937,
+            "error": -0.6610392999480947,
+            "relativeError": -0.2629548596478609,
+            "twoWay": true,
+            "records": 5
+          },
+          "radiusRatio": 0.7176965098378829
+        },
+        {
+          "airport": "FOR",
+          "name": "Fortaleza",
+          "edges": 10,
+          "localError": 0.09258759485136708,
+          "rmse": 0.48368306307478093,
+          "meanError": 0.007156134961266658,
+          "maxPositive": {
+            "a": "LIS",
+            "b": "FOR",
+            "target": 7.513888888888889,
+            "fitted": 8.28701013956506,
+            "error": 0.7731212506761711,
+            "relativeError": 0.1028922921417455,
+            "twoWay": true,
+            "records": 5
+          },
+          "maxNegative": {
+            "a": "CDG",
+            "b": "FOR",
+            "target": 8.875,
+            "fitted": 7.793604285950627,
+            "error": -1.081395714049373,
+            "relativeError": -0.12184740439992936,
+            "twoWay": true,
+            "records": 4
+          },
+          "maxRelative": {
+            "a": "BSB",
+            "b": "FOR",
+            "target": 2.653935185185185,
+            "fitted": 2.1853085943632826,
+            "error": -0.4686265908219025,
+            "relativeError": -0.1765780089272236,
+            "twoWay": true,
+            "records": 13
+          },
+          "radiusRatio": 0.5244699537927355
+        },
+        {
+          "airport": "BSB",
+          "name": "Brasilia",
+          "edges": 11,
+          "localError": 0.07964576841000497,
+          "rmse": 0.4198258981851763,
+          "meanError": -0.028008872807031914,
+          "maxPositive": {
+            "a": "LIS",
+            "b": "BSB",
+            "target": 9.395833333333334,
+            "fitted": 10.394995038094116,
+            "error": 0.9991617047607821,
+            "relativeError": 0.10634093531822071,
+            "twoWay": true,
+            "records": 3
+          },
+          "maxNegative": {
+            "a": "MIA",
+            "b": "BSB",
+            "target": 7.75,
+            "fitted": 7.154627915685908,
+            "error": -0.5953720843140919,
+            "relativeError": -0.07682220442762476,
+            "twoWay": true,
+            "records": 2
+          },
+          "maxRelative": {
+            "a": "BSB",
+            "b": "FOR",
+            "target": 2.653935185185185,
+            "fitted": 2.1853085943632826,
+            "error": -0.4686265908219025,
+            "relativeError": -0.1765780089272236,
+            "twoWay": true,
+            "records": 13
+          },
+          "radiusRatio": 0.5823313496135688
+        },
+        {
+          "airport": "CNF",
+          "name": "Belo Horizonte",
+          "edges": 10,
+          "localError": 0.07804356463048619,
+          "rmse": 0.387302073979066,
+          "meanError": 0.04503834947616878,
+          "maxPositive": {
+            "a": "LIS",
+            "b": "CNF",
+            "target": 9.5,
+            "fitted": 10.5541451205091,
+            "error": 1.0541451205090997,
+            "relativeError": 0.11096264426411576,
+            "twoWay": true,
+            "records": 2
+          },
+          "maxNegative": {
+            "a": "CNF",
+            "b": "SSA",
+            "target": 1.7351851851851852,
+            "fitted": 1.261906474096658,
+            "error": -0.47327871108852726,
+            "relativeError": -0.27275400639039993,
+            "twoWay": true,
+            "records": 33
+          },
+          "maxRelative": {
+            "a": "CNF",
+            "b": "SSA",
+            "target": 1.7351851851851852,
+            "fitted": 1.261906474096658,
+            "error": -0.47327871108852726,
+            "relativeError": -0.27275400639039993,
+            "twoWay": true,
+            "records": 33
+          },
+          "radiusRatio": 0.6020655771693577
+        },
+        {
+          "airport": "REC",
+          "name": "Recife",
+          "edges": 10,
+          "localError": 0.06351966119510051,
+          "rmse": 0.3205145182596844,
+          "meanError": 0.05726372032344673,
+          "maxPositive": {
+            "a": "GIG",
+            "b": "REC",
+            "target": 2.8778379772961817,
+            "fitted": 3.4858169579682334,
+            "error": 0.6079789806720517,
+            "relativeError": 0.21126240791473147,
+            "twoWay": true,
+            "records": 36
+          },
+          "maxNegative": {
+            "a": "OPO",
+            "b": "REC",
+            "target": 8.083333333333334,
+            "fitted": 7.805469332754683,
+            "error": -0.277864000578651,
+            "relativeError": -0.03437492790663724,
+            "twoWay": true,
+            "records": 2
+          },
+          "maxRelative": {
+            "a": "GIG",
+            "b": "REC",
+            "target": 2.8778379772961817,
+            "fitted": 3.4858169579682334,
+            "error": 0.6079789806720517,
+            "relativeError": 0.21126240791473147,
+            "twoWay": true,
+            "records": 36
+          },
+          "radiusRatio": 0.44107955302993695
+        }
+      ]
+    },
+    {
+      "seed": 72,
+      "globalError": 0.06302482163670611,
+      "stable": true,
+      "iterations": 5803,
+      "SSA": {
+        "airport": "SSA",
+        "name": "Salvador",
+        "edges": 12,
+        "localError": 0.03840773796921031,
+        "rmse": 0.2099632618037825,
+        "meanError": -0.0049445068823982434,
+        "maxPositive": {
+          "a": "GRU",
+          "b": "SSA",
+          "target": 2.428030303030303,
+          "fitted": 2.6956006614966297,
+          "error": 0.2675703584663265,
+          "relativeError": 0.11020058445415006,
+          "twoWay": true,
+          "records": 22
+        },
+        "maxNegative": {
+          "a": "CDG",
+          "b": "SSA",
+          "target": 9.916666666666666,
+          "fitted": 9.497765794232507,
+          "error": -0.4189008724341594,
+          "relativeError": -0.042242104783276585,
+          "twoWay": true,
+          "records": 2
+        },
+        "maxRelative": {
+          "a": "CNF",
+          "b": "SSA",
+          "target": 1.7351851851851852,
+          "fitted": 1.485195614000686,
+          "error": -0.24998957118449927,
+          "relativeError": -0.14407083077868688,
+          "twoWay": true,
+          "records": 33
+        },
+        "radiusRatio": 0.8720525629302196
+      },
+      "constraints": [
+        {
+          "a": "BSB",
+          "b": "SSA",
+          "target": 1.9583333333333333,
+          "fitted": 1.8038562962614024,
+          "error": -0.15447703707193083,
+          "relativeError": -0.07888189127077319,
+          "twoWay": true,
+          "records": 13
+        },
+        {
+          "a": "CDG",
+          "b": "SSA",
+          "target": 9.916666666666666,
+          "fitted": 9.497765794232507,
+          "error": -0.4189008724341594,
+          "relativeError": -0.042242104783276585,
+          "twoWay": true,
+          "records": 2
+        },
+        {
+          "a": "CNF",
+          "b": "SSA",
+          "target": 1.7351851851851852,
+          "fitted": 1.485195614000686,
+          "error": -0.24998957118449927,
+          "relativeError": -0.14407083077868688,
+          "twoWay": true,
+          "records": 33
+        },
+        {
+          "a": "EZE",
+          "b": "SSA",
+          "target": 4.625,
+          "fitted": 4.468496476917617,
+          "error": -0.15650352308238258,
+          "relativeError": -0.03383859958538002,
+          "twoWay": true,
+          "records": 2
+        },
+        {
+          "a": "FOR",
+          "b": "SSA",
+          "target": 1.8277777777777777,
+          "fitted": 1.9571037676778573,
+          "error": 0.1293259899000796,
+          "relativeError": 0.07075586073560586,
+          "twoWay": true,
+          "records": 11
+        },
+        {
+          "a": "GIG",
+          "b": "SSA",
+          "target": 2.0992063492063493,
+          "fitted": 2.0882959909397587,
+          "error": -0.010910358266590592,
+          "relativeError": -0.00519737293606962,
+          "twoWay": true,
+          "records": 42
+        },
+        {
+          "a": "GRU",
+          "b": "SSA",
+          "target": 2.428030303030303,
+          "fitted": 2.6956006614966297,
+          "error": 0.2675703584663265,
+          "relativeError": 0.11020058445415006,
+          "twoWay": true,
+          "records": 22
+        },
+        {
+          "a": "LIS",
+          "b": "SSA",
+          "target": 8.479166666666666,
+          "fitted": 8.630779307073034,
+          "error": 0.15161264040636802,
+          "relativeError": 0.017880606239571658,
+          "twoWay": true,
+          "records": 3
+        },
+        {
+          "a": "MAD",
+          "b": "SSA",
+          "target": 8.708333333333334,
+          "fitted": 8.897992466051445,
+          "error": 0.18965913271811097,
+          "relativeError": 0.021779039163802215,
+          "twoWay": true,
+          "records": 4
+        },
+        {
+          "a": "SSA",
+          "b": "MVD",
+          "target": 4.333333333333333,
+          "fitted": 4.523004245438069,
+          "error": 0.1896709121047362,
+          "relativeError": 0.04377021048570835,
+          "twoWay": true,
+          "records": 2
+        },
+        {
+          "a": "PTY",
+          "b": "SSA",
+          "target": 7.066666666666666,
+          "fitted": 7.240675512319178,
+          "error": 0.1740088456525113,
+          "relativeError": 0.02462389325271386,
+          "twoWay": true,
+          "records": 2
+        },
+        {
+          "a": "REC",
+          "b": "SSA",
+          "target": 1.3964646464646464,
+          "fitted": 1.2260640466672976,
+          "error": -0.17040059979734878,
+          "relativeError": -0.12202285265777599,
+          "twoWay": true,
+          "records": 23
+        }
+      ],
+      "BrazilNeighbors": [
+        {
+          "airport": "GRU",
+          "name": "Sao Paulo",
+          "edges": 43,
+          "localError": 0.07177685157449354,
+          "rmse": 0.6658990895134531,
+          "meanError": -0.03178981328652069,
+          "maxPositive": {
+            "a": "GRU",
+            "b": "PTY",
+            "target": 6.920833333333333,
+            "fitted": 8.206115745638826,
+            "error": 1.2852824123054924,
+            "relativeError": 0.18571208847279844,
+            "twoWay": true,
+            "records": 16
+          },
+          "maxNegative": {
+            "a": "DXB",
+            "b": "GRU",
+            "target": 15.041666666666666,
+            "fitted": 13.136079460489157,
+            "error": -1.9055872061775094,
+            "relativeError": -0.12668723808382334,
+            "twoWay": true,
+            "records": 2
+          },
+          "maxRelative": {
+            "a": "GRU",
+            "b": "GIG",
+            "target": 1.167824074074074,
+            "fitted": 0.8776754144957657,
+            "error": -0.29014865957830827,
+            "relativeError": -0.24845237054079125,
+            "twoWay": true,
+            "records": 21
+          },
+          "radiusRatio": 0.9569248015001358
+        },
+        {
+          "airport": "GIG",
+          "name": "Rio de Janeiro",
+          "edges": 25,
+          "localError": 0.06909308456790646,
+          "rmse": 0.573015412557638,
+          "meanError": -0.04960882782878681,
+          "maxPositive": {
+            "a": "PTY",
+            "b": "GIG",
+            "target": 7.173333333333333,
+            "fitted": 8.126640428533674,
+            "error": 0.9533070952003415,
+            "relativeError": 0.1328959705204937,
+            "twoWay": true,
+            "records": 9
+          },
+          "maxNegative": {
+            "a": "GIG",
+            "b": "IAH",
+            "target": 10.416666666666666,
+            "fitted": 8.757641593501964,
+            "error": -1.6590250731647025,
+            "relativeError": -0.15926640702381145,
+            "twoWay": true,
+            "records": 2
+          },
+          "maxRelative": {
+            "a": "GRU",
+            "b": "GIG",
+            "target": 1.167824074074074,
+            "fitted": 0.8776754144957657,
+            "error": -0.29014865957830827,
+            "relativeError": -0.24845237054079125,
+            "twoWay": true,
+            "records": 21
+          },
+          "radiusRatio": 0.9911373507935948
+        },
+        {
+          "airport": "REC",
+          "name": "Recife",
+          "edges": 10,
+          "localError": 0.04392971652986532,
+          "rmse": 0.2216654129751612,
+          "meanError": -0.005577918440256946,
+          "maxPositive": {
+            "a": "LIS",
+            "b": "REC",
+            "target": 7.675,
+            "fitted": 8.062497991585163,
+            "error": 0.38749799158516307,
+            "relativeError": 0.0504883376658193,
+            "twoWay": true,
+            "records": 10
+          },
+          "maxNegative": {
+            "a": "OPO",
+            "b": "REC",
+            "target": 8.083333333333334,
+            "fitted": 7.665281443578575,
+            "error": -0.41805188975475893,
+            "relativeError": -0.05171775955728976,
+            "twoWay": true,
+            "records": 2
+          },
+          "maxRelative": {
+            "a": "REC",
+            "b": "SSA",
+            "target": 1.3964646464646464,
+            "fitted": 1.2260640466672976,
+            "error": -0.17040059979734878,
+            "relativeError": -0.12202285265777599,
+            "twoWay": true,
+            "records": 23
+          },
+          "radiusRatio": 0.9289664985880461
+        },
+        {
+          "airport": "CNF",
+          "name": "Belo Horizonte",
+          "edges": 10,
+          "localError": 0.0424155036911133,
+          "rmse": 0.21049285262936065,
+          "meanError": 0.014949323721623076,
+          "maxPositive": {
+            "a": "LIS",
+            "b": "CNF",
+            "target": 9.5,
+            "fitted": 9.884200954981768,
+            "error": 0.3842009549817682,
+            "relativeError": 0.04044220578755455,
+            "twoWay": true,
+            "records": 2
+          },
+          "maxNegative": {
+            "a": "BSB",
+            "b": "CNF",
+            "target": 1.35,
+            "fitted": 1.0544098596413436,
+            "error": -0.2955901403586565,
+            "relativeError": -0.21895565952493073,
+            "twoWay": true,
+            "records": 20
+          },
+          "maxRelative": {
+            "a": "BSB",
+            "b": "CNF",
+            "target": 1.35,
+            "fitted": 1.0544098596413436,
+            "error": -0.2955901403586565,
+            "relativeError": -0.21895565952493073,
+            "twoWay": true,
+            "records": 20
+          },
+          "radiusRatio": 0.8702678342462494
+        },
+        {
+          "airport": "BSB",
+          "name": "Brasilia",
+          "edges": 11,
+          "localError": 0.039070579311755484,
+          "rmse": 0.2059474267073857,
+          "meanError": 0.07607738104613192,
+          "maxPositive": {
+            "a": "GIG",
+            "b": "BSB",
+            "target": 1.7367424242424243,
+            "fitted": 2.0476853045153818,
+            "error": 0.31094288027295747,
+            "relativeError": 0.1790379943120191,
+            "twoWay": true,
+            "records": 25
+          },
+          "maxNegative": {
+            "a": "BSB",
+            "b": "CNF",
+            "target": 1.35,
+            "fitted": 1.0544098596413436,
+            "error": -0.2955901403586565,
+            "relativeError": -0.21895565952493073,
+            "twoWay": true,
+            "records": 20
+          },
+          "maxRelative": {
+            "a": "BSB",
+            "b": "CNF",
+            "target": 1.35,
+            "fitted": 1.0544098596413436,
+            "error": -0.2955901403586565,
+            "relativeError": -0.21895565952493073,
+            "twoWay": true,
+            "records": 20
+          },
+          "radiusRatio": 0.7318651265257912
+        },
+        {
+          "airport": "FOR",
+          "name": "Fortaleza",
+          "edges": 10,
+          "localError": 0.02972667716977653,
+          "rmse": 0.15529391698309541,
+          "meanError": -0.04493969668182278,
+          "maxPositive": {
+            "a": "BSB",
+            "b": "FOR",
+            "target": 2.653935185185185,
+            "fitted": 2.8287548497469253,
+            "error": 0.17481966456174014,
+            "relativeError": 0.06587186662945638,
+            "twoWay": true,
+            "records": 13
+          },
+          "maxNegative": {
+            "a": "CDG",
+            "b": "FOR",
+            "target": 8.875,
+            "fitted": 8.63947856210532,
+            "error": -0.23552143789468083,
+            "relativeError": -0.02653762680503446,
+            "twoWay": true,
+            "records": 4
+          },
+          "maxRelative": {
+            "a": "REC",
+            "b": "FOR",
+            "target": 1.344047619047619,
+            "fitted": 1.184526266565935,
+            "error": -0.15952135248168386,
+            "relativeError": -0.11868727731143884,
+            "twoWay": true,
+            "records": 12
+          },
+          "radiusRatio": 0.8416662065577228
+        }
+      ]
+    },
+    {
+      "seed": 73,
+      "globalError": 0.06465830379778482,
+      "stable": true,
+      "iterations": 10121,
+      "SSA": {
+        "airport": "SSA",
+        "name": "Salvador",
+        "edges": 12,
+        "localError": 0.03315237754737792,
+        "rmse": 0.1812338266830003,
+        "meanError": -0.10945243864887588,
+        "maxPositive": {
+          "a": "PTY",
+          "b": "SSA",
+          "target": 7.066666666666666,
+          "fitted": 7.241233666043927,
+          "error": 0.1745669993772605,
+          "relativeError": 0.024702877270367053,
+          "twoWay": true,
+          "records": 2
+        },
+        "maxNegative": {
+          "a": "CDG",
+          "b": "SSA",
+          "target": 9.916666666666666,
+          "fitted": 9.608767959856067,
+          "error": -0.30789870681059917,
+          "relativeError": -0.031048609090144456,
+          "twoWay": true,
+          "records": 2
+        },
+        "maxRelative": {
+          "a": "CNF",
+          "b": "SSA",
+          "target": 1.7351851851851852,
+          "fitted": 1.4540447350025851,
+          "error": -0.28114045018260003,
+          "relativeError": -0.1620233117381046,
+          "twoWay": true,
+          "records": 33
+        },
+        "radiusRatio": 0.5958040562510392
+      },
+      "constraints": [
+        {
+          "a": "BSB",
+          "b": "SSA",
+          "target": 1.9583333333333333,
+          "fitted": 1.810907766967938,
+          "error": -0.14742556636539517,
+          "relativeError": -0.07528114027169115,
+          "twoWay": true,
+          "records": 13
+        },
+        {
+          "a": "CDG",
+          "b": "SSA",
+          "target": 9.916666666666666,
+          "fitted": 9.608767959856067,
+          "error": -0.30789870681059917,
+          "relativeError": -0.031048609090144456,
+          "twoWay": true,
+          "records": 2
+        },
+        {
+          "a": "CNF",
+          "b": "SSA",
+          "target": 1.7351851851851852,
+          "fitted": 1.4540447350025851,
+          "error": -0.28114045018260003,
+          "relativeError": -0.1620233117381046,
+          "twoWay": true,
+          "records": 33
+        },
+        {
+          "a": "EZE",
+          "b": "SSA",
+          "target": 4.625,
+          "fitted": 4.651675755208543,
+          "error": 0.026675755208542817,
+          "relativeError": 0.00576773085590115,
+          "twoWay": true,
+          "records": 2
+        },
+        {
+          "a": "FOR",
+          "b": "SSA",
+          "target": 1.8277777777777777,
+          "fitted": 1.6776965431063855,
+          "error": -0.15008123467139223,
+          "relativeError": -0.08211131380197752,
+          "twoWay": true,
+          "records": 11
+        },
+        {
+          "a": "GIG",
+          "b": "SSA",
+          "target": 2.0992063492063493,
+          "fitted": 1.9734604988259263,
+          "error": -0.12574585038042296,
+          "relativeError": -0.05990161492602379,
+          "twoWay": true,
+          "records": 42
+        },
+        {
+          "a": "GRU",
+          "b": "SSA",
+          "target": 2.428030303030303,
+          "fitted": 2.2032222047199874,
+          "error": -0.22480809831031578,
+          "relativeError": -0.09258867075495064,
+          "twoWay": true,
+          "records": 22
+        },
+        {
+          "a": "LIS",
+          "b": "SSA",
+          "target": 8.479166666666666,
+          "fitted": 8.27968785742529,
+          "error": -0.1994788092413753,
+          "relativeError": -0.02352575637244721,
+          "twoWay": true,
+          "records": 3
+        },
+        {
+          "a": "MAD",
+          "b": "SSA",
+          "target": 8.708333333333334,
+          "fitted": 8.771917097832393,
+          "error": 0.06358376449905911,
+          "relativeError": 0.0073014849185522425,
+          "twoWay": true,
+          "records": 4
+        },
+        {
+          "a": "SSA",
+          "b": "MVD",
+          "target": 4.333333333333333,
+          "fitted": 4.373493311078724,
+          "error": 0.04015997774539137,
+          "relativeError": 0.009267687172013395,
+          "twoWay": true,
+          "records": 2
+        },
+        {
+          "a": "PTY",
+          "b": "SSA",
+          "target": 7.066666666666666,
+          "fitted": 7.241233666043927,
+          "error": 0.1745669993772605,
+          "relativeError": 0.024702877270367053,
+          "twoWay": true,
+          "records": 2
+        },
+        {
+          "a": "REC",
+          "b": "SSA",
+          "target": 1.3964646464646464,
+          "fitted": 1.2146276018099826,
+          "error": -0.18183704465466377,
+          "relativeError": -0.1302124225736833,
+          "twoWay": true,
+          "records": 23
+        }
+      ],
+      "BrazilNeighbors": [
+        {
+          "airport": "GRU",
+          "name": "Sao Paulo",
+          "edges": 43,
+          "localError": 0.1444507999807676,
+          "rmse": 1.3401208617635274,
+          "meanError": 0.20910737642816812,
+          "maxPositive": {
+            "a": "GRU",
+            "b": "JNB",
+            "target": 9.791666666666666,
+            "fitted": 14.844743224715327,
+            "error": 5.0530765580486605,
+            "relativeError": 0.5160588825241186,
+            "twoWay": true,
+            "records": 2
+          },
+          "maxNegative": {
+            "a": "DXB",
+            "b": "GRU",
+            "target": 15.041666666666666,
+            "fitted": 12.363920629916649,
+            "error": -2.677746036750017,
+            "relativeError": -0.17802189718005657,
+            "twoWay": true,
+            "records": 2
+          },
+          "maxRelative": {
+            "a": "GRU",
+            "b": "EZE",
+            "target": 2.7916666666666665,
+            "fitted": 4.864319810834627,
+            "error": 2.0726531441679605,
+            "relativeError": 0.7424429173138963,
+            "twoWay": true,
+            "records": 6
+          },
+          "radiusRatio": 0.6457381160156126
+        },
+        {
+          "airport": "GIG",
+          "name": "Rio de Janeiro",
+          "edges": 25,
+          "localError": 0.06159068967251716,
+          "rmse": 0.5107951783180353,
+          "meanError": -0.06041871823112168,
+          "maxPositive": {
+            "a": "GRU",
+            "b": "GIG",
+            "target": 1.167824074074074,
+            "fitted": 1.8036128762844963,
+            "error": 0.6357888022104223,
+            "relativeError": 0.5444217295439098,
+            "twoWay": true,
+            "records": 21
+          },
+          "maxNegative": {
+            "a": "DXB",
+            "b": "GIG",
+            "target": 14.708333333333334,
+            "fitted": 12.845502676678896,
+            "error": -1.8628306566544381,
+            "relativeError": -0.12665137608982016,
+            "twoWay": true,
+            "records": 2
+          },
+          "maxRelative": {
+            "a": "GRU",
+            "b": "GIG",
+            "target": 1.167824074074074,
+            "fitted": 1.8036128762844963,
+            "error": 0.6357888022104223,
+            "relativeError": 0.5444217295439098,
+            "twoWay": true,
+            "records": 21
+          },
+          "radiusRatio": 0.7980098617680624
+        },
+        {
+          "airport": "BSB",
+          "name": "Brasilia",
+          "edges": 11,
+          "localError": 0.04281097670758402,
+          "rmse": 0.22566367438283594,
+          "meanError": -0.08057084953563,
+          "maxPositive": {
+            "a": "GRU",
+            "b": "BSB",
+            "target": 1.7934027777777777,
+            "fitted": 2.06523336423004,
+            "error": 0.2718305864522623,
+            "relativeError": 0.15157252448838635,
+            "twoWay": true,
+            "records": 14
+          },
+          "maxNegative": {
+            "a": "GIG",
+            "b": "BSB",
+            "target": 1.7367424242424243,
+            "fitted": 1.2665579483842044,
+            "error": -0.4701844758582199,
+            "relativeError": -0.27072781161738285,
+            "twoWay": true,
+            "records": 25
+          },
+          "maxRelative": {
+            "a": "GIG",
+            "b": "BSB",
+            "target": 1.7367424242424243,
+            "fitted": 1.2665579483842044,
+            "error": -0.4701844758582199,
+            "relativeError": -0.27072781161738285,
+            "twoWay": true,
+            "records": 25
+          },
+          "radiusRatio": 0.7497737743790139
+        },
+        {
+          "airport": "FOR",
+          "name": "Fortaleza",
+          "edges": 10,
+          "localError": 0.032713898412685065,
+          "rmse": 0.17089933716029662,
+          "meanError": -0.044709848432946564,
+          "maxPositive": {
+            "a": "GRU",
+            "b": "FOR",
+            "target": 3.539814814814815,
+            "fitted": 3.8190737459209383,
+            "error": 0.2792589311061233,
+            "relativeError": 0.07889083065514339,
+            "twoWay": true,
+            "records": 14
+          },
+          "maxNegative": {
+            "a": "GIG",
+            "b": "FOR",
+            "target": 3.2446338383838387,
+            "fitted": 2.971731204544325,
+            "error": -0.2729026338395135,
+            "relativeError": -0.08410891565362183,
+            "twoWay": true,
+            "records": 23
+          },
+          "maxRelative": {
+            "a": "GIG",
+            "b": "FOR",
+            "target": 3.2446338383838387,
+            "fitted": 2.971731204544325,
+            "error": -0.2729026338395135,
+            "relativeError": -0.08410891565362183,
+            "twoWay": true,
+            "records": 23
+          },
+          "radiusRatio": 0.7050948144667384
+        },
+        {
+          "airport": "CNF",
+          "name": "Belo Horizonte",
+          "edges": 10,
+          "localError": 0.031412662778378654,
+          "rmse": 0.15588972006691992,
+          "meanError": -0.05411619266480714,
+          "maxPositive": {
+            "a": "PTY",
+            "b": "CNF",
+            "target": 6.804166666666666,
+            "fitted": 6.975558641949959,
+            "error": 0.17139197528329309,
+            "relativeError": 0.025189267647269042,
+            "twoWay": true,
+            "records": 4
+          },
+          "maxNegative": {
+            "a": "CNF",
+            "b": "SSA",
+            "target": 1.7351851851851852,
+            "fitted": 1.4540447350025851,
+            "error": -0.28114045018260003,
+            "relativeError": -0.1620233117381046,
+            "twoWay": true,
+            "records": 33
+          },
+          "maxRelative": {
+            "a": "BSB",
+            "b": "CNF",
+            "target": 1.35,
+            "fitted": 1.0777116644619755,
+            "error": -0.27228833553802456,
+            "relativeError": -0.20169506336149967,
+            "twoWay": true,
+            "records": 20
+          },
+          "radiusRatio": 0.6740684692727623
+        },
+        {
+          "airport": "REC",
+          "name": "Recife",
+          "edges": 10,
+          "localError": 0.030279694645021567,
+          "rmse": 0.15278862575148652,
+          "meanError": 0.004568955650645257,
+          "maxPositive": {
+            "a": "LIS",
+            "b": "REC",
+            "target": 7.675,
+            "fitted": 7.922652357962335,
+            "error": 0.24765235796233487,
+            "relativeError": 0.03226740820356155,
+            "twoWay": true,
+            "records": 10
+          },
+          "maxNegative": {
+            "a": "OPO",
+            "b": "REC",
+            "target": 8.083333333333334,
+            "fitted": 7.833125354787786,
+            "error": -0.2502079785455482,
+            "relativeError": -0.030953564356150293,
+            "twoWay": true,
+            "records": 2
+          },
+          "maxRelative": {
+            "a": "REC",
+            "b": "SSA",
+            "target": 1.3964646464646464,
+            "fitted": 1.2146276018099826,
+            "error": -0.18183704465466377,
+            "relativeError": -0.1302124225736833,
+            "twoWay": true,
+            "records": 23
+          },
+          "radiusRatio": 0.6239710024296247
+        }
+      ]
+    }
+  ],
+  "correctedFromEarlierGoodCloud": {
+    "edges": 12,
+    "localError": 0.04619310905554103,
+    "radiusRatio": 0.8772909196344464,
+    "constraints": [
+      {
+        "other": "BSB",
+        "target": 1.9583333333333333,
+        "fitted": 1.7500602284075513,
+        "relativeError": -0.10635222379188868
+      },
+      {
+        "other": "CDG",
+        "target": 9.916666666666666,
+        "fitted": 9.504289984816305,
+        "relativeError": -0.041584203211801125
+      },
+      {
+        "other": "CNF",
+        "target": 1.7351851851851852,
+        "fitted": 1.4574760852832065,
+        "relativeError": -0.16004579930316806
+      },
+      {
+        "other": "EZE",
+        "target": 4.625,
+        "fitted": 4.438328854658729,
+        "relativeError": -0.04036132872243699
+      },
+      {
+        "other": "FOR",
+        "target": 1.8277777777777777,
+        "fitted": 1.3708162221595728,
+        "relativeError": -0.2500093617364039
+      },
+      {
+        "other": "GIG",
+        "target": 2.0992063492063493,
+        "fitted": 2.0523409675848754,
+        "relativeError": -0.02232528576297056
+      },
+      {
+        "other": "GRU",
+        "target": 2.428030303030303,
+        "fitted": 2.648749618201006,
+        "relativeError": 0.0909046789470601
+      },
+      {
+        "other": "LIS",
+        "target": 8.479166666666666,
+        "fitted": 8.652344362837624,
+        "relativeError": 0.020423905199523317
+      },
+      {
+        "other": "MAD",
+        "target": 8.708333333333334,
+        "fitted": 8.918111387087167,
+        "relativeError": 0.02408934588560766
+      },
+      {
+        "other": "MVD",
+        "target": 4.333333333333333,
+        "fitted": 4.468927226353327,
+        "relativeError": 0.031290898389229396
+      },
+      {
+        "other": "PTY",
+        "target": 7.066666666666666,
+        "fitted": 7.253261685419406,
+        "relativeError": 0.026404955483878223
+      },
+      {
+        "other": "REC",
+        "target": 1.3964646464646464,
+        "fitted": 1.6264399879312328,
+        "relativeError": 0.1646839696578087
+      }
+    ]
+  },
+  "externalChecks": [
+    {
+      "flight": "AF465",
+      "scheduledDuration": "9h 45m",
+      "source": "https://www.flight.info/AF465"
+    },
+    {
+      "flight": "TP26",
+      "scheduledDuration": "8h 15m",
+      "source": "https://www.planemapper.com/flights/TP26"
+    },
+    {
+      "flight": "CM753",
+      "scheduledDuration": "about 7h 01m to 7h 03m",
+      "source": "https://www.flight.info/CM753"
+    },
+    {
+      "flight": "G31621",
+      "scheduledDuration": "roughly 2h 25m to 2h 40m, varies by date",
+      "source": "https://www.flightradar24.com/data/flights/g31621"
+    }
+  ]
+}

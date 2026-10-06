@@ -1,0 +1,38 @@
+{
+  "retrieved": "2026-10-06",
+  "provider": "2LNR published flight schedules",
+  "timeBasis": "published scheduled nonstop duration",
+  "date_window": {
+    "from": "2026-10-03",
+    "to": "2026-10-10"
+  },
+  "airports": 203,
+  "observations": 42086,
+  "pairs": 3890,
+  "collectedDirections": 7625,
+  "inputObservations": 52506,
+  "quarantinedObservations": 10420,
+  "quarantineReasons": {
+    "no independent flight-route evidence": 3828,
+    "flight-route mismatch": 6506,
+    "nonadjacent airports in flight sequence": 76,
+    "independently confirmed stopover": 10
+  },
+  "nonstopVerification": {
+    "method": "independent flight-route adjacency",
+    "provider": "Virtual Radar Server standing-data flight route sequences",
+    "snapshot": "02f542fb377ba0f47a780e33a9cf38716bed1d5c",
+    "retrieved": "2026-10-06",
+    "source": "https://github.com/vradarserver/standing-data",
+    "unmatched_policy": "exclude",
+    "individualReviews": {
+      "date": "2026-10-06",
+      "observations": 8,
+      "durationCorrections": 5
+    },
+    "limitation": "The independent route database is crowdsourced and can be stale. Matching is a stronger schedule check, not certification of an actual flown flight."
+  },
+  "everyObservationIndependentlyCrossChecked": true,
+  "coordinatesRetained": false,
+  "unmatchedRecordsAssumedConnecting": false
+}

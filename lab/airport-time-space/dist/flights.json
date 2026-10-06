@@ -1,0 +1,860 @@
+{
+  "title": "Flight-route cross-checked nonstop schedules",
+  "provider": "2LNR published flight schedules",
+  "retrieved": "2026-10-05",
+  "date_window": {
+    "from": "2026-10-03",
+    "to": "2026-10-10"
+  },
+  "duration_basis": "scheduled",
+  "nonstop_only": true,
+  "description": "Aircraft-specific scheduled durations, retained only when the flight number and direction match consecutive airports in an independent flight-route sequence. Known stopovers and every unmatched or conflicting observation are excluded before aircraft filtering and directional averaging. Individual dated schedule reviews repair identified stale index entries and conflicting durations, retaining original provider minutes and correction sources. The route index is crowdsourced and may be stale; these are cross-checked schedules, not certified actual flight measurements. No geographic coordinates or inferred path sums are supplied.",
+  "airports": [
+    {
+      "id": "LHR",
+      "name": "London"
+    },
+    {
+      "id": "JFK",
+      "name": "New York"
+    },
+    {
+      "id": "DXB",
+      "name": "Dubai"
+    },
+    {
+      "id": "SIN",
+      "name": "Singapore"
+    },
+    {
+      "id": "LAX",
+      "name": "Los Angeles"
+    },
+    {
+      "id": "HND",
+      "name": "Tokyo"
+    },
+    {
+      "id": "SYD",
+      "name": "Sydney"
+    },
+    {
+      "id": "GRU",
+      "name": "Sao Paulo"
+    },
+    {
+      "id": "JNB",
+      "name": "Johannesburg"
+    },
+    {
+      "id": "CDG",
+      "name": "Paris"
+    },
+    {
+      "id": "FRA",
+      "name": "Frankfurt"
+    },
+    {
+      "id": "AMS",
+      "name": "Amsterdam"
+    },
+    {
+      "id": "IST",
+      "name": "Istanbul"
+    },
+    {
+      "id": "DOH",
+      "name": "Doha"
+    },
+    {
+      "id": "HKG",
+      "name": "Hong Kong"
+    },
+    {
+      "id": "ICN",
+      "name": "Seoul"
+    },
+    {
+      "id": "DEL",
+      "name": "Delhi"
+    },
+    {
+      "id": "BKK",
+      "name": "Bangkok"
+    },
+    {
+      "id": "YYZ",
+      "name": "Toronto"
+    },
+    {
+      "id": "MEX",
+      "name": "Mexico City"
+    },
+    {
+      "id": "SFO",
+      "name": "San Francisco"
+    },
+    {
+      "id": "AKL",
+      "name": "Auckland"
+    },
+    {
+      "id": "ADD",
+      "name": "Addis Ababa"
+    },
+    {
+      "id": "CAI",
+      "name": "Cairo"
+    },
+    {
+      "id": "PEK",
+      "name": "Beijing"
+    },
+    {
+      "id": "PVG",
+      "name": "Shanghai"
+    },
+    {
+      "id": "CAN",
+      "name": "Guangzhou"
+    },
+    {
+      "id": "TPE",
+      "name": "Taipei"
+    },
+    {
+      "id": "KUL",
+      "name": "Kuala Lumpur"
+    },
+    {
+      "id": "CGK",
+      "name": "Jakarta"
+    },
+    {
+      "id": "MNL",
+      "name": "Manila"
+    },
+    {
+      "id": "SGN",
+      "name": "Ho Chi Minh City"
+    },
+    {
+      "id": "BOM",
+      "name": "Mumbai"
+    },
+    {
+      "id": "ATL",
+      "name": "Atlanta"
+    },
+    {
+      "id": "ORD",
+      "name": "Chicago"
+    },
+    {
+      "id": "MIA",
+      "name": "Miami"
+    },
+    {
+      "id": "DFW",
+      "name": "Dallas"
+    },
+    {
+      "id": "BOS",
+      "name": "Boston"
+    },
+    {
+      "id": "SEA",
+      "name": "Seattle"
+    },
+    {
+      "id": "YVR",
+      "name": "Vancouver"
+    },
+    {
+      "id": "PTY",
+      "name": "Panama City"
+    },
+    {
+      "id": "BOG",
+      "name": "Bogota"
+    },
+    {
+      "id": "SCL",
+      "name": "Santiago"
+    },
+    {
+      "id": "EZE",
+      "name": "Buenos Aires"
+    },
+    {
+      "id": "CPT",
+      "name": "Cape Town"
+    },
+    {
+      "id": "NBO",
+      "name": "Nairobi"
+    },
+    {
+      "id": "CMN",
+      "name": "Casablanca"
+    },
+    {
+      "id": "LOS",
+      "name": "Lagos"
+    },
+    {
+      "id": "AUH",
+      "name": "Abu Dhabi"
+    },
+    {
+      "id": "RUH",
+      "name": "Riyadh"
+    },
+    {
+      "id": "MAD",
+      "name": "Madrid"
+    },
+    {
+      "id": "FCO",
+      "name": "Rome"
+    },
+    {
+      "id": "ZRH",
+      "name": "Zurich"
+    },
+    {
+      "id": "MUC",
+      "name": "Munich"
+    },
+    {
+      "id": "HEL",
+      "name": "Helsinki"
+    },
+    {
+      "id": "CPH",
+      "name": "Copenhagen"
+    },
+    {
+      "id": "DUB",
+      "name": "Dublin"
+    },
+    {
+      "id": "MEL",
+      "name": "Melbourne"
+    },
+    {
+      "id": "PER",
+      "name": "Perth"
+    },
+    {
+      "id": "NRT",
+      "name": "Tokyo"
+    },
+    {
+      "id": "KIX",
+      "name": "Osaka"
+    },
+    {
+      "id": "NGO",
+      "name": "Nagoya"
+    },
+    {
+      "id": "CTS",
+      "name": "Sapporo"
+    },
+    {
+      "id": "FUK",
+      "name": "Fukuoka"
+    },
+    {
+      "id": "OKA",
+      "name": "Okinawa"
+    },
+    {
+      "id": "PUS",
+      "name": "Busan"
+    },
+    {
+      "id": "HAN",
+      "name": "Hanoi"
+    },
+    {
+      "id": "DAD",
+      "name": "Da Nang"
+    },
+    {
+      "id": "DPS",
+      "name": "Denpasar"
+    },
+    {
+      "id": "SUB",
+      "name": "Surabaya"
+    },
+    {
+      "id": "CEB",
+      "name": "Cebu"
+    },
+    {
+      "id": "KTM",
+      "name": "Kathmandu"
+    },
+    {
+      "id": "CMB",
+      "name": "Colombo"
+    },
+    {
+      "id": "MLE",
+      "name": "Male"
+    },
+    {
+      "id": "BLR",
+      "name": "Bangalore"
+    },
+    {
+      "id": "HYD",
+      "name": "Hyderabad"
+    },
+    {
+      "id": "MAA",
+      "name": "Chennai"
+    },
+    {
+      "id": "CCU",
+      "name": "Kolkata"
+    },
+    {
+      "id": "COK",
+      "name": "Kochi"
+    },
+    {
+      "id": "AMD",
+      "name": "Ahmedabad"
+    },
+    {
+      "id": "ISB",
+      "name": "Islamabad"
+    },
+    {
+      "id": "KHI",
+      "name": "Karachi"
+    },
+    {
+      "id": "LHE",
+      "name": "Lahore"
+    },
+    {
+      "id": "BAH",
+      "name": "Manama"
+    },
+    {
+      "id": "MCT",
+      "name": "Muscat"
+    },
+    {
+      "id": "JED",
+      "name": "Jeddah"
+    },
+    {
+      "id": "DMM",
+      "name": "Dammam"
+    },
+    {
+      "id": "TLV",
+      "name": "Tel Aviv"
+    },
+    {
+      "id": "AMM",
+      "name": "Amman"
+    },
+    {
+      "id": "BEY",
+      "name": "Beirut"
+    },
+    {
+      "id": "IKA",
+      "name": "Tehran"
+    },
+    {
+      "id": "SVO",
+      "name": "Moscow"
+    },
+    {
+      "id": "DME",
+      "name": "Moscow"
+    },
+    {
+      "id": "LED",
+      "name": "St. Petersburg"
+    },
+    {
+      "id": "WAW",
+      "name": "Warsaw"
+    },
+    {
+      "id": "PRG",
+      "name": "Prague"
+    },
+    {
+      "id": "BUD",
+      "name": "Budapest"
+    },
+    {
+      "id": "VIE",
+      "name": "Vienna"
+    },
+    {
+      "id": "BRU",
+      "name": "Brussels"
+    },
+    {
+      "id": "LIS",
+      "name": "Lisbon"
+    },
+    {
+      "id": "OPO",
+      "name": "Porto"
+    },
+    {
+      "id": "BCN",
+      "name": "Barcelona"
+    },
+    {
+      "id": "MXP",
+      "name": "Milan"
+    },
+    {
+      "id": "ATH",
+      "name": "Athens"
+    },
+    {
+      "id": "ARN",
+      "name": "Stockholm"
+    },
+    {
+      "id": "OSL",
+      "name": "Oslo"
+    },
+    {
+      "id": "KEF",
+      "name": "Reykjavik"
+    },
+    {
+      "id": "MAN",
+      "name": "Manchester"
+    },
+    {
+      "id": "LGW",
+      "name": "London"
+    },
+    {
+      "id": "EDI",
+      "name": "Edinburgh"
+    },
+    {
+      "id": "DUS",
+      "name": "Dusseldorf"
+    },
+    {
+      "id": "HAM",
+      "name": "Hamburg"
+    },
+    {
+      "id": "GVA",
+      "name": "Geneva"
+    },
+    {
+      "id": "NCE",
+      "name": "Nice, Alpes-Maritimes"
+    },
+    {
+      "id": "GIG",
+      "name": "Rio de Janeiro"
+    },
+    {
+      "id": "BSB",
+      "name": "Brasilia"
+    },
+    {
+      "id": "CNF",
+      "name": "Belo Horizonte"
+    },
+    {
+      "id": "REC",
+      "name": "Recife"
+    },
+    {
+      "id": "FOR",
+      "name": "Fortaleza"
+    },
+    {
+      "id": "SSA",
+      "name": "Salvador"
+    },
+    {
+      "id": "ASU",
+      "name": "Asuncion"
+    },
+    {
+      "id": "MVD",
+      "name": "Montevideo"
+    },
+    {
+      "id": "UIO",
+      "name": "Quito"
+    },
+    {
+      "id": "GYE",
+      "name": "Guayaquil"
+    },
+    {
+      "id": "CCS",
+      "name": "Caracas"
+    },
+    {
+      "id": "SJO",
+      "name": "San Jose"
+    },
+    {
+      "id": "GUA",
+      "name": "Guatemala City"
+    },
+    {
+      "id": "SAL",
+      "name": "San Salvador"
+    },
+    {
+      "id": "HAV",
+      "name": "Havana"
+    },
+    {
+      "id": "PUJ",
+      "name": "Punta Cana"
+    },
+    {
+      "id": "SJU",
+      "name": "San Juan"
+    },
+    {
+      "id": "CUN",
+      "name": "Cancun"
+    },
+    {
+      "id": "YUL",
+      "name": "Montreal"
+    },
+    {
+      "id": "YYC",
+      "name": "Calgary"
+    },
+    {
+      "id": "YEG",
+      "name": "Edmonton"
+    },
+    {
+      "id": "YOW",
+      "name": "Ottawa"
+    },
+    {
+      "id": "YHZ",
+      "name": "Halifax"
+    },
+    {
+      "id": "IAH",
+      "name": "Houston"
+    },
+    {
+      "id": "DTW",
+      "name": "Detroit"
+    },
+    {
+      "id": "MSP",
+      "name": "Minneapolis"
+    },
+    {
+      "id": "PHL",
+      "name": "Philadelphia"
+    },
+    {
+      "id": "IAD",
+      "name": "Washington"
+    },
+    {
+      "id": "EWR",
+      "name": "Newark"
+    },
+    {
+      "id": "CLT",
+      "name": "Charlotte"
+    },
+    {
+      "id": "DEN",
+      "name": "Denver"
+    },
+    {
+      "id": "PHX",
+      "name": "Phoenix"
+    },
+    {
+      "id": "LAS",
+      "name": "Las Vegas"
+    },
+    {
+      "id": "SAN",
+      "name": "San Diego"
+    },
+    {
+      "id": "MCO",
+      "name": "Orlando"
+    },
+    {
+      "id": "TPA",
+      "name": "Tampa"
+    },
+    {
+      "id": "FLL",
+      "name": "Fort Lauderdale"
+    },
+    {
+      "id": "SLC",
+      "name": "Salt Lake City"
+    },
+    {
+      "id": "PDX",
+      "name": "Portland"
+    },
+    {
+      "id": "HNL",
+      "name": "Honolulu"
+    },
+    {
+      "id": "ANC",
+      "name": "Anchorage"
+    },
+    {
+      "id": "BNE",
+      "name": "Brisbane"
+    },
+    {
+      "id": "ADL",
+      "name": "Adelaide"
+    },
+    {
+      "id": "CHC",
+      "name": "Christchurch"
+    },
+    {
+      "id": "WLG",
+      "name": "Wellington"
+    },
+    {
+      "id": "NAN",
+      "name": "Nadi"
+    },
+    {
+      "id": "POM",
+      "name": "Port Moresby"
+    },
+    {
+      "id": "NOU",
+      "name": "Noumea"
+    },
+    {
+      "id": "ALG",
+      "name": "Algiers"
+    },
+    {
+      "id": "TUN",
+      "name": "Tunis"
+    },
+    {
+      "id": "ACC",
+      "name": "Accra"
+    },
+    {
+      "id": "ABJ",
+      "name": "Abidjan"
+    },
+    {
+      "id": "DAR",
+      "name": "Dar es Salaam"
+    },
+    {
+      "id": "EBB",
+      "name": "Entebbe"
+    },
+    {
+      "id": "KGL",
+      "name": "Kigali"
+    },
+    {
+      "id": "MRU",
+      "name": "Port Louis"
+    },
+    {
+      "id": "SEZ",
+      "name": "Cascade"
+    },
+    {
+      "id": "DUR",
+      "name": "Durban"
+    },
+    {
+      "id": "FIH",
+      "name": "Kinshasa"
+    },
+    {
+      "id": "WDH",
+      "name": "Windhoek"
+    },
+    {
+      "id": "RAK",
+      "name": "Marrakech"
+    },
+    {
+      "id": "HKT",
+      "name": "Phuket"
+    },
+    {
+      "id": "CNX",
+      "name": "Chiang Mai"
+    },
+    {
+      "id": "SZX",
+      "name": "Shenzhen"
+    },
+    {
+      "id": "XMN",
+      "name": "Xiamen"
+    },
+    {
+      "id": "CTU",
+      "name": "Chengdu"
+    },
+    {
+      "id": "CKG",
+      "name": "Chongqing"
+    },
+    {
+      "id": "XIY",
+      "name": "Xi'an"
+    },
+    {
+      "id": "WUH",
+      "name": "Wuhan"
+    },
+    {
+      "id": "KMG",
+      "name": "Kunming"
+    },
+    {
+      "id": "HGH",
+      "name": "Hangzhou"
+    },
+    {
+      "id": "NKG",
+      "name": "Nanjing"
+    },
+    {
+      "id": "TSN",
+      "name": "Tianjin"
+    },
+    {
+      "id": "TAO",
+      "name": "Qingdao"
+    },
+    {
+      "id": "DLC",
+      "name": "Dalian"
+    },
+    {
+      "id": "URC",
+      "name": "Ürümqi"
+    },
+    {
+      "id": "SHA",
+      "name": "Shanghai"
+    },
+    {
+      "id": "CSX",
+      "name": "Changsha"
+    },
+    {
+      "id": "FOC",
+      "name": "Fuzhou"
+    },
+    {
+      "id": "CGO",
+      "name": "Zhengzhou"
+    },
+    {
+      "id": "PEN",
+      "name": "Penang"
+    },
+    {
+      "id": "BKI",
+      "name": "Kota Kinabalu"
+    },
+    {
+      "id": "VTE",
+      "name": "Vientiane"
+    },
+    {
+      "id": "RGN",
+      "name": "Yangon"
+    },
+    {
+      "id": "TAS",
+      "name": "Tashkent"
+    },
+    {
+      "id": "ALA",
+      "name": "Almaty"
+    },
+    {
+      "id": "GYD",
+      "name": "Baku"
+    },
+    {
+      "id": "TBS",
+      "name": "Tbilisi"
+    },
+    {
+      "id": "EVN",
+      "name": "Yerevan"
+    }
+  ],
+  "routes": [],
+  "route_files": [
+    "flight-observations-001.json",
+    "flight-observations-002.json",
+    "flight-observations-003.json",
+    "flight-observations-004.json",
+    "flight-observations-005.json",
+    "flight-observations-006.json",
+    "flight-observations-007.json",
+    "flight-observations-008.json",
+    "flight-observations-009.json",
+    "flight-observations-010.json",
+    "flight-observations-011.json",
+    "flight-observations-012.json",
+    "flight-observations-013.json",
+    "flight-observations-014.json",
+    "flight-observations-015.json",
+    "flight-observations-016.json",
+    "flight-observations-017.json"
+  ],
+  "nonstop_verification": {
+    "method": "independent flight-route adjacency",
+    "provider": "Virtual Radar Server standing-data flight route sequences",
+    "snapshot": "02f542fb377ba0f47a780e33a9cf38716bed1d5c",
+    "retrieved": "2026-10-06",
+    "source": "https://github.com/vradarserver/standing-data",
+    "unmatched_policy": "exclude",
+    "individualReviews": {
+      "date": "2026-10-06",
+      "observations": 8,
+      "durationCorrections": 5
+    },
+    "limitation": "The independent route database is crowdsourced and can be stale. Matching is a stronger schedule check, not certification of an actual flown flight."
+  }
+}

@@ -1,0 +1,2380 @@
+{
+  "date": "2026-10-06",
+  "scope": {
+    "aircraft": "jets",
+    "minimumConnections": 4,
+    "durationCutoff": 0,
+    "overheadMinutes": 0,
+    "airports": 201,
+    "edges": 3880,
+    "observations": 41894,
+    "twoWayEdges": 3726,
+    "oneWayEdges": 154
+  },
+  "fixed": {
+    "reviews": {
+      "reviewed_at": "2026-10-06",
+      "scope": "Individual immutable observation IDs only. Exact source fields must match; changed rows require another audit. No blanket route exceptions or hour adjustment. Unmatched future schedules are not automatically accepted.",
+      "observations": {
+        "c355830b9e9ade6a3810": {
+          "expected": {
+            "from_airport": "TAO",
+            "to_airport": "YVR",
+            "flight_number": "JD471",
+            "date": "2026-10-09",
+            "minutes": 680,
+            "departure_local": "12:20",
+            "arrival_local": "08:40",
+            "aircraft": "Airbus A330-300",
+            "source": "https://2lnr.com/routes/tao-yvr"
+          },
+          "airports": [
+            "HGH",
+            "TAO",
+            "YVR"
+          ],
+          "source": "https://www.aeroroutes.com/eng/260815-jdoct26yvr",
+          "basis": "Published 2026-08-15: JD471 HGH\u2192TAO\u2192YVR from 2026-10-02, Fridays. TAO 12:20 \u2192 YVR 08:40, 11h20, A330-300. Only the adjacent TAO\u2192YVR leg is accepted."
+        },
+        "783e6bbcc5928a9afef8": {
+          "expected": {
+            "from_airport": "HKT",
+            "to_airport": "TLV",
+            "flight_number": "LY88",
+            "date": "2026-10-03",
+            "minutes": 655,
+            "departure_local": "22:30",
+            "arrival_local": "05:25",
+            "aircraft": "Boeing 787-9 Dreamliner",
+            "source": "https://2lnr.com/routes/hkt-tlv"
+          },
+          "airports": [
+            "HKT",
+            "TLV"
+          ],
+          "source": "https://www.flight.info/LY88",
+          "basis": "Current dated nonstop HKT\u2192TLV schedule matches aircraft family, departure, arrival and 10h55 duration. Supersedes old HKT\u2192BKK\u2192TLV index for this observation only."
+        },
+        "30f9f3347abb8e651249": {
+          "expected": {
+            "from_airport": "HKT",
+            "to_airport": "TLV",
+            "flight_number": "LY88",
+            "date": "2026-10-07",
+            "minutes": 655,
+            "departure_local": "13:40",
+            "arrival_local": "20:35",
+            "aircraft": "777",
+            "source": "https://2lnr.com/routes/hkt-tlv"
+          },
+          "airports": [
+            "HKT",
+            "TLV"
+          ],
+          "source": "https://www.flight.info/LY88",
+          "basis": "Current dated nonstop HKT\u2192TLV schedule matches aircraft family, departure, arrival and 10h55 duration. Supersedes old HKT\u2192BKK\u2192TLV index for this observation only."
+        },
+        "81a0ac0244d1c6b85913": {
+          "expected": {
+            "from_airport": "RAK",
+            "to_airport": "FRA",
+            "flight_number": "4Y203",
+            "date": "2026-10-04",
+            "minutes": 285,
+            "departure_local": "07:30",
+            "arrival_local": "13:15",
+            "aircraft": "Airbus A320",
+            "source": "https://2lnr.com/routes/rak-fra"
+          },
+          "airports": [
+            "RAK",
+            "FRA"
+          ],
+          "source": "https://data.flightradar24.com/data/flights/4y203",
+          "basis": "4Y203 scheduled duration for the matching date. October 4 UTC schedule 07:30\u219211:15 = 3h45; October 6 independent explicit duration 3h50. Airline also publishes approximately 3h45.",
+          "minutes": 225,
+          "duration_source": "https://data.flightradar24.com/data/flights/4y203",
+          "duration_basis": "Explicit scheduled duration independently cross-checked for this flight and date; no uniform overhead subtraction."
+        },
+        "2bf990cb8a2c908a0905": {
+          "expected": {
+            "from_airport": "RAK",
+            "to_airport": "FRA",
+            "flight_number": "4Y203",
+            "date": "2026-10-06",
+            "minutes": 290,
+            "departure_local": "07:25",
+            "arrival_local": "13:15",
+            "aircraft": "Airbus A320",
+            "source": "https://2lnr.com/routes/rak-fra"
+          },
+          "airports": [
+            "RAK",
+            "FRA"
+          ],
+          "source": "https://www.flight.info/4Y203",
+          "basis": "4Y203 scheduled duration for the matching date. October 4 UTC schedule 07:30\u219211:15 = 3h45; October 6 independent explicit duration 3h50. Airline also publishes approximately 3h45.",
+          "minutes": 230,
+          "duration_source": "https://www.flight.info/4Y203",
+          "duration_basis": "Explicit scheduled duration independently cross-checked for this flight and date; no uniform overhead subtraction."
+        },
+        "cfe0d885aee061a76b8b": {
+          "expected": {
+            "from_airport": "FRA",
+            "to_airport": "RAK",
+            "flight_number": "4Y202",
+            "date": "2026-10-04",
+            "minutes": 170,
+            "departure_local": "04:50",
+            "arrival_local": "06:40",
+            "aircraft": "Airbus A320",
+            "source": "https://2lnr.com/routes/fra-rak"
+          },
+          "airports": [
+            "FRA",
+            "RAK"
+          ],
+          "source": "https://www.flight.info/4Y202",
+          "basis": "4Y202 nonstop dated schedule matches A320 and local clocks: October 4 04:50\u219206:40, 3h50; October 6 04:50\u219206:35, 3h45. Restores return record absent from route index and replaces the contradictory provider duration.",
+          "minutes": 230,
+          "duration_source": "https://www.flight.info/4Y202",
+          "duration_basis": "Explicit scheduled duration independently cross-checked for this flight and date; no uniform overhead subtraction."
+        },
+        "0780b01f2dee1604757f": {
+          "expected": {
+            "from_airport": "FRA",
+            "to_airport": "RAK",
+            "flight_number": "4Y202",
+            "date": "2026-10-06",
+            "minutes": 165,
+            "departure_local": "04:50",
+            "arrival_local": "06:35",
+            "aircraft": "Airbus A320",
+            "source": "https://2lnr.com/routes/fra-rak"
+          },
+          "airports": [
+            "FRA",
+            "RAK"
+          ],
+          "source": "https://www.flight.info/4Y202",
+          "basis": "4Y202 nonstop dated schedule matches A320 and local clocks: October 4 04:50\u219206:40, 3h50; October 6 04:50\u219206:35, 3h45. Restores return record absent from route index and replaces the contradictory provider duration.",
+          "minutes": 225,
+          "duration_source": "https://www.flight.info/4Y202",
+          "duration_basis": "Explicit scheduled duration independently cross-checked for this flight and date; no uniform overhead subtraction."
+        },
+        "2258bad95128e6c9ba84": {
+          "expected": {
+            "from_airport": "MXP",
+            "to_airport": "RAK",
+            "flight_number": "FR7422",
+            "date": "2026-10-05",
+            "minutes": 145,
+            "departure_local": "22:50",
+            "arrival_local": "00:15",
+            "aircraft": "Boeing 737-800",
+            "source": "https://2lnr.com/routes/mxp-rak"
+          },
+          "airports": [
+            "MXP",
+            "RAK"
+          ],
+          "source": "https://www.flight.info/FR7422",
+          "basis": "Monday October 5 FR7422 MXP 22:50 \u2192 RAK 00:15, Boeing 737-800; explicit duration 3h25 also corroborated by the dated Trip.com schedule.",
+          "minutes": 205,
+          "duration_source": "https://www.flight.info/FR7422",
+          "duration_basis": "Explicit scheduled duration independently cross-checked for this flight and date; no uniform overhead subtraction."
+        }
+      }
+    },
+    "restoredReturnObservations": 5,
+    "correctedDurations": 5,
+    "optimizer": "Seeded basin annealing with jitter or reflections of groups selected by measured graph times or fitted XYZ proximity. Sixty-four proposals per start, 400 local relaxation steps per proposal, decreasing Metropolis temperature and one fresh seeded 3D restart. Keep the best fit visible; no airport geography or sphere forces.",
+    "additional": "Faster degree-normalized descent with error-decreasing backtracking, cached edge degrees and loss, and bounded animation work."
+  },
+  "runs": [
+    {
+      "seed": 71,
+      "localOnly": {
+        "stress": 0.06500696991728082,
+        "rmse": 0.45765642014697483,
+        "iterations": 3053,
+        "stable": true
+      },
+      "annealing": {
+        "stress": 0.045741338993440635,
+        "rmse": 0.3220241996066706,
+        "iterations": 56313,
+        "stable": true,
+        "radialVariation": 0.08374803043055912,
+        "annealing": {
+          "attempt": 128,
+          "trials": 128,
+          "restarts": 1,
+          "accepted": 123,
+          "uphillAccepted": 36,
+          "improvements": 12975,
+          "initialCost": 812.663667738768,
+          "temperature": 2.1727149744342054,
+          "finished": true
+        }
+      }
+    },
+    {
+      "seed": 72,
+      "localOnly": {
+        "stress": 0.06239150081874077,
+        "rmse": 0.43924322189814097,
+        "iterations": 1621,
+        "stable": true
+      },
+      "annealing": {
+        "stress": 0.04574133900452571,
+        "rmse": 0.32202419968471085,
+        "iterations": 56284,
+        "stable": true,
+        "radialVariation": 0.0837476700825796,
+        "annealing": {
+          "attempt": 128,
+          "trials": 128,
+          "restarts": 1,
+          "accepted": 123,
+          "uphillAccepted": 41,
+          "improvements": 6665,
+          "initialCost": 748.5862789758228,
+          "temperature": 4.2001242557047,
+          "finished": true
+        }
+      }
+    },
+    {
+      "seed": 73,
+      "localOnly": {
+        "stress": 0.06438078882192949,
+        "rmse": 0.4532480344180775,
+        "iterations": 2521,
+        "stable": true
+      },
+      "annealing": {
+        "stress": 0.04588657698777224,
+        "rmse": 0.3230466915123802,
+        "iterations": 55940,
+        "stable": true,
+        "radialVariation": 0.07478088763006077,
+        "annealing": {
+          "attempt": 128,
+          "trials": 128,
+          "restarts": 1,
+          "accepted": 124,
+          "uphillAccepted": 36,
+          "improvements": 16639,
+          "initialCost": 797.083069130941,
+          "temperature": 2.1896115528508626,
+          "finished": true
+        }
+      }
+    }
+  ],
+  "defaultAirportScores": [
+    {
+      "airport": "SHA",
+      "edges": 18,
+      "localError": 0.08996261317873312,
+      "radiusRatio": 1.0638495651992719,
+      "name": "Shanghai"
+    },
+    {
+      "airport": "TSN",
+      "edges": 21,
+      "localError": 0.08793435790870369,
+      "radiusRatio": 0.9311302668810149,
+      "name": "Tianjin"
+    },
+    {
+      "airport": "RGN",
+      "edges": 18,
+      "localError": 0.08052447982392928,
+      "radiusRatio": 1.0638371266906215,
+      "name": "Yangon"
+    },
+    {
+      "airport": "GYD",
+      "edges": 30,
+      "localError": 0.07656928926994279,
+      "radiusRatio": 1.1105882194769017,
+      "name": "Baku"
+    },
+    {
+      "airport": "CTU",
+      "edges": 19,
+      "localError": 0.07385885722707093,
+      "radiusRatio": 1.0887450375784906,
+      "name": "Chengdu"
+    },
+    {
+      "airport": "HYD",
+      "edges": 27,
+      "localError": 0.07291670306847581,
+      "radiusRatio": 1.0161031283105852,
+      "name": "Hyderabad"
+    },
+    {
+      "airport": "KTM",
+      "edges": 19,
+      "localError": 0.07235786498907189,
+      "radiusRatio": 1.0756911325109706,
+      "name": "Kathmandu"
+    },
+    {
+      "airport": "OKA",
+      "edges": 12,
+      "localError": 0.0723043792716811,
+      "radiusRatio": 0.8683638153641978,
+      "name": "Okinawa"
+    },
+    {
+      "airport": "KMG",
+      "edges": 36,
+      "localError": 0.0721794520260061,
+      "radiusRatio": 1.1308147188880877,
+      "name": "Kunming"
+    },
+    {
+      "airport": "RAK",
+      "edges": 25,
+      "localError": 0.07212497901805034,
+      "radiusRatio": 0.892017311798914,
+      "name": "Marrakech"
+    },
+    {
+      "airport": "HKT",
+      "edges": 33,
+      "localError": 0.07067196378899744,
+      "radiusRatio": 1.060679735833828,
+      "name": "Phuket"
+    },
+    {
+      "airport": "AMD",
+      "edges": 17,
+      "localError": 0.07062576762016194,
+      "radiusRatio": 1.1396640266871694,
+      "name": "Ahmedabad"
+    },
+    {
+      "airport": "TAO",
+      "edges": 36,
+      "localError": 0.07056541031980271,
+      "radiusRatio": 1.1012650486289997,
+      "name": "Qingdao"
+    },
+    {
+      "airport": "BLR",
+      "edges": 34,
+      "localError": 0.06917752090554112,
+      "radiusRatio": 1.0090865725453122,
+      "name": "Bangalore"
+    },
+    {
+      "airport": "PEK",
+      "edges": 83,
+      "localError": 0.06812120191066028,
+      "radiusRatio": 1.0560673649139158,
+      "name": "Beijing"
+    },
+    {
+      "airport": "TLV",
+      "edges": 45,
+      "localError": 0.06768191179400412,
+      "radiusRatio": 1.0404411948451615,
+      "name": "Tel Aviv"
+    },
+    {
+      "airport": "DEL",
+      "edges": 62,
+      "localError": 0.0673242471728602,
+      "radiusRatio": 1.1398089413584618,
+      "name": "Delhi"
+    },
+    {
+      "airport": "ARN",
+      "edges": 44,
+      "localError": 0.067202903803715,
+      "radiusRatio": 1.0300503473542586,
+      "name": "Stockholm"
+    },
+    {
+      "airport": "YOW",
+      "edges": 12,
+      "localError": 0.06717831679930196,
+      "radiusRatio": 1.0858808101096102,
+      "name": "Ottawa"
+    },
+    {
+      "airport": "FOC",
+      "edges": 29,
+      "localError": 0.06692440156328736,
+      "radiusRatio": 1.0467503614323228,
+      "name": "Fuzhou"
+    },
+    {
+      "airport": "TAS",
+      "edges": 36,
+      "localError": 0.06537567144915293,
+      "radiusRatio": 1.0288551936567607,
+      "name": "Tashkent"
+    },
+    {
+      "airport": "EVN",
+      "edges": 20,
+      "localError": 0.06472057126968854,
+      "radiusRatio": 1.054815698945795,
+      "name": "Yerevan"
+    },
+    {
+      "airport": "DUS",
+      "edges": 34,
+      "localError": 0.06467351248887818,
+      "radiusRatio": 0.8768402836476518,
+      "name": "Dusseldorf"
+    },
+    {
+      "airport": "PEN",
+      "edges": 19,
+      "localError": 0.0645843352691174,
+      "radiusRatio": 0.9437381334242936,
+      "name": "Penang"
+    },
+    {
+      "airport": "TBS",
+      "edges": 23,
+      "localError": 0.06455524082715346,
+      "radiusRatio": 1.0834453732753428,
+      "name": "Tbilisi"
+    },
+    {
+      "airport": "FLL",
+      "edges": 32,
+      "localError": 0.06375384084517799,
+      "radiusRatio": 1.133067369465585,
+      "name": "Fort Lauderdale"
+    },
+    {
+      "airport": "XIY",
+      "edges": 32,
+      "localError": 0.06367082265387114,
+      "radiusRatio": 1.1063538954368193,
+      "name": "Xi'an"
+    },
+    {
+      "airport": "DMM",
+      "edges": 23,
+      "localError": 0.06227457254313132,
+      "radiusRatio": 1.0793433072659786,
+      "name": "Dammam"
+    },
+    {
+      "airport": "BAH",
+      "edges": 38,
+      "localError": 0.06222352007263669,
+      "radiusRatio": 1.0177100941626314,
+      "name": "Manama"
+    },
+    {
+      "airport": "DLC",
+      "edges": 22,
+      "localError": 0.061548103670955985,
+      "radiusRatio": 1.0509471807464088,
+      "name": "Dalian"
+    },
+    {
+      "airport": "EDI",
+      "edges": 39,
+      "localError": 0.061155834748460085,
+      "radiusRatio": 1.0118569428948043,
+      "name": "Edinburgh"
+    },
+    {
+      "airport": "TUN",
+      "edges": 26,
+      "localError": 0.061152352886441344,
+      "radiusRatio": 0.9798271710201929,
+      "name": "Tunis"
+    },
+    {
+      "airport": "HAM",
+      "edges": 27,
+      "localError": 0.06113960384026052,
+      "radiusRatio": 0.8888776281180611,
+      "name": "Hamburg"
+    },
+    {
+      "airport": "SJU",
+      "edges": 21,
+      "localError": 0.060974101144795304,
+      "radiusRatio": 1.175730002404954,
+      "name": "San Juan"
+    },
+    {
+      "airport": "WAW",
+      "edges": 50,
+      "localError": 0.06091166014802244,
+      "radiusRatio": 1.0540820977605159,
+      "name": "Warsaw"
+    },
+    {
+      "airport": "MAA",
+      "edges": 23,
+      "localError": 0.060569125165265025,
+      "radiusRatio": 1.0895858969959424,
+      "name": "Chennai"
+    },
+    {
+      "airport": "CCU",
+      "edges": 18,
+      "localError": 0.05947755375193919,
+      "radiusRatio": 1.15056149926806,
+      "name": "Kolkata"
+    },
+    {
+      "airport": "CTS",
+      "edges": 12,
+      "localError": 0.059232392237022244,
+      "radiusRatio": 0.8464033016676502,
+      "name": "Sapporo"
+    },
+    {
+      "airport": "CMN",
+      "edges": 38,
+      "localError": 0.05920440714002212,
+      "radiusRatio": 0.8715619312713656,
+      "name": "Casablanca"
+    },
+    {
+      "airport": "CSX",
+      "edges": 25,
+      "localError": 0.057934484386699216,
+      "radiusRatio": 0.9209831020815025,
+      "name": "Changsha"
+    },
+    {
+      "airport": "PRG",
+      "edges": 36,
+      "localError": 0.057649291573144974,
+      "radiusRatio": 1.0302776942832255,
+      "name": "Prague"
+    },
+    {
+      "airport": "OSL",
+      "edges": 38,
+      "localError": 0.0575816845350843,
+      "radiusRatio": 0.9572126886572587,
+      "name": "Oslo"
+    },
+    {
+      "airport": "MCT",
+      "edges": 42,
+      "localError": 0.05751447303613123,
+      "radiusRatio": 0.8886495295047029,
+      "name": "Muscat"
+    },
+    {
+      "airport": "PHX",
+      "edges": 35,
+      "localError": 0.056879400672299976,
+      "radiusRatio": 0.833974759343383,
+      "name": "Phoenix"
+    },
+    {
+      "airport": "GVA",
+      "edges": 47,
+      "localError": 0.056718199386608555,
+      "radiusRatio": 1.0105038769230272,
+      "name": "Geneva"
+    },
+    {
+      "airport": "NCE",
+      "edges": 39,
+      "localError": 0.05661523907284603,
+      "radiusRatio": 0.8768917234510305,
+      "name": "Nice, Alpes-Maritimes"
+    },
+    {
+      "airport": "NGO",
+      "edges": 19,
+      "localError": 0.05633849915645533,
+      "radiusRatio": 0.9608330043108053,
+      "name": "Nagoya"
+    },
+    {
+      "airport": "BEY",
+      "edges": 28,
+      "localError": 0.05608953448040519,
+      "radiusRatio": 1.0316710944692853,
+      "name": "Beirut"
+    },
+    {
+      "airport": "PUS",
+      "edges": 26,
+      "localError": 0.05601230481234281,
+      "radiusRatio": 0.9223662288370521,
+      "name": "Busan"
+    },
+    {
+      "airport": "HEL",
+      "edges": 38,
+      "localError": 0.05538290995575407,
+      "radiusRatio": 1.1193732189074246,
+      "name": "Helsinki"
+    },
+    {
+      "airport": "DUB",
+      "edges": 52,
+      "localError": 0.055271212470969555,
+      "radiusRatio": 1.0314587491901266,
+      "name": "Dublin"
+    },
+    {
+      "airport": "DAD",
+      "edges": 13,
+      "localError": 0.055213463797269165,
+      "radiusRatio": 0.880219570256299,
+      "name": "Da Nang"
+    },
+    {
+      "airport": "ANC",
+      "edges": 13,
+      "localError": 0.05504623076573687,
+      "radiusRatio": 1.0488715655010834,
+      "name": "Anchorage"
+    },
+    {
+      "airport": "ALA",
+      "edges": 26,
+      "localError": 0.055023339009835574,
+      "radiusRatio": 1.1394052812405362,
+      "name": "Almaty"
+    },
+    {
+      "airport": "FUK",
+      "edges": 17,
+      "localError": 0.054760614142377956,
+      "radiusRatio": 0.8619803631404153,
+      "name": "Fukuoka"
+    },
+    {
+      "airport": "CNX",
+      "edges": 16,
+      "localError": 0.054537849080134905,
+      "radiusRatio": 0.9449830517659282,
+      "name": "Chiang Mai"
+    },
+    {
+      "airport": "ATH",
+      "edges": 60,
+      "localError": 0.054511329456978556,
+      "radiusRatio": 0.9976953242824818,
+      "name": "Athens"
+    },
+    {
+      "airport": "WUH",
+      "edges": 31,
+      "localError": 0.05438433694605557,
+      "radiusRatio": 0.9548574372446126,
+      "name": "Wuhan"
+    },
+    {
+      "airport": "CLT",
+      "edges": 39,
+      "localError": 0.054370177174701474,
+      "radiusRatio": 0.9283260016814285,
+      "name": "Charlotte"
+    },
+    {
+      "airport": "GUA",
+      "edges": 17,
+      "localError": 0.054336091348597335,
+      "radiusRatio": 1.0544968287385168,
+      "name": "Guatemala City"
+    },
+    {
+      "airport": "CGK",
+      "edges": 38,
+      "localError": 0.05409817703879281,
+      "radiusRatio": 1.0433658868109146,
+      "name": "Jakarta"
+    },
+    {
+      "airport": "DEN",
+      "edges": 43,
+      "localError": 0.053624218182227325,
+      "radiusRatio": 0.863282198088617,
+      "name": "Denver"
+    },
+    {
+      "airport": "HND",
+      "edges": 53,
+      "localError": 0.05361366608101819,
+      "radiusRatio": 0.9690174669657884,
+      "name": "Tokyo"
+    },
+    {
+      "airport": "EBB",
+      "edges": 16,
+      "localError": 0.053606206502838157,
+      "radiusRatio": 0.8403024200724886,
+      "name": "Entebbe"
+    },
+    {
+      "airport": "BOM",
+      "edges": 49,
+      "localError": 0.053565419161132694,
+      "radiusRatio": 1.0266283357887929,
+      "name": "Mumbai"
+    },
+    {
+      "airport": "BOS",
+      "edges": 60,
+      "localError": 0.053371842032406115,
+      "radiusRatio": 1.0831265643283743,
+      "name": "Boston"
+    },
+    {
+      "airport": "MAN",
+      "edges": 48,
+      "localError": 0.053320108022909186,
+      "radiusRatio": 0.9235359249135774,
+      "name": "Manchester"
+    },
+    {
+      "airport": "LAS",
+      "edges": 38,
+      "localError": 0.05331167165423991,
+      "radiusRatio": 0.8806562730077372,
+      "name": "Las Vegas"
+    },
+    {
+      "airport": "VIE",
+      "edges": 61,
+      "localError": 0.05327780274027416,
+      "radiusRatio": 0.970257295935855,
+      "name": "Vienna"
+    },
+    {
+      "airport": "CUN",
+      "edges": 44,
+      "localError": 0.053224745539824106,
+      "radiusRatio": 0.9664754629348882,
+      "name": "Cancun"
+    },
+    {
+      "airport": "CPH",
+      "edges": 57,
+      "localError": 0.05288201156266324,
+      "radiusRatio": 0.9694271189356883,
+      "name": "Copenhagen"
+    },
+    {
+      "airport": "AMM",
+      "edges": 44,
+      "localError": 0.05275999015477712,
+      "radiusRatio": 0.9355606132046221,
+      "name": "Amman"
+    },
+    {
+      "airport": "NRT",
+      "edges": 70,
+      "localError": 0.052418762837143855,
+      "radiusRatio": 0.9894117384319462,
+      "name": "Tokyo"
+    },
+    {
+      "airport": "LHE",
+      "edges": 18,
+      "localError": 0.052348702402327654,
+      "radiusRatio": 0.9793702488710297,
+      "name": "Lahore"
+    },
+    {
+      "airport": "SLC",
+      "edges": 34,
+      "localError": 0.05181014292079409,
+      "radiusRatio": 0.9976041727708658,
+      "name": "Salt Lake City"
+    },
+    {
+      "airport": "HGH",
+      "edges": 38,
+      "localError": 0.05178813461684947,
+      "radiusRatio": 1.0670247039003227,
+      "name": "Hangzhou"
+    },
+    {
+      "airport": "MSP",
+      "edges": 42,
+      "localError": 0.051746854483935865,
+      "radiusRatio": 1.0133130390199134,
+      "name": "Minneapolis"
+    },
+    {
+      "airport": "URC",
+      "edges": 29,
+      "localError": 0.05152688453471179,
+      "radiusRatio": 1.102573475414627,
+      "name": "\u00dcr\u00fcmqi"
+    },
+    {
+      "airport": "KIX",
+      "edges": 41,
+      "localError": 0.05124423760928491,
+      "radiusRatio": 0.9993249876178599,
+      "name": "Osaka"
+    },
+    {
+      "airport": "TPA",
+      "edges": 32,
+      "localError": 0.05066720126352907,
+      "radiusRatio": 1.0687440150154388,
+      "name": "Tampa"
+    },
+    {
+      "airport": "RUH",
+      "edges": 47,
+      "localError": 0.05061733787352803,
+      "radiusRatio": 0.9949809628360141,
+      "name": "Riyadh"
+    },
+    {
+      "airport": "HAN",
+      "edges": 53,
+      "localError": 0.05053280165883969,
+      "radiusRatio": 1.0257974870847444,
+      "name": "Hanoi"
+    },
+    {
+      "airport": "PUJ",
+      "edges": 28,
+      "localError": 0.050382500309171324,
+      "radiusRatio": 1.0987928315621338,
+      "name": "Punta Cana"
+    },
+    {
+      "airport": "TPE",
+      "edges": 64,
+      "localError": 0.050025082868613235,
+      "radiusRatio": 1.0501742987797058,
+      "name": "Taipei"
+    },
+    {
+      "airport": "DPS",
+      "edges": 29,
+      "localError": 0.049941784238640104,
+      "radiusRatio": 0.9865919774850331,
+      "name": "Denpasar"
+    },
+    {
+      "airport": "ORD",
+      "edges": 71,
+      "localError": 0.04925850218053807,
+      "radiusRatio": 0.9990984499806066,
+      "name": "Chicago"
+    },
+    {
+      "airport": "NKG",
+      "edges": 27,
+      "localError": 0.04908043576113196,
+      "radiusRatio": 0.9503927641547081,
+      "name": "Nanjing"
+    },
+    {
+      "airport": "YVR",
+      "edges": 52,
+      "localError": 0.0482380669431415,
+      "radiusRatio": 0.9678272730141422,
+      "name": "Vancouver"
+    },
+    {
+      "airport": "PER",
+      "edges": 22,
+      "localError": 0.04794974064182185,
+      "radiusRatio": 1.120840552178347,
+      "name": "Perth"
+    },
+    {
+      "airport": "SAN",
+      "edges": 31,
+      "localError": 0.04770882571791719,
+      "radiusRatio": 0.9209636040480775,
+      "name": "San Diego"
+    },
+    {
+      "airport": "KEF",
+      "edges": 39,
+      "localError": 0.04752956635514956,
+      "radiusRatio": 1.0566991556477388,
+      "name": "Reykjavik"
+    },
+    {
+      "airport": "BRU",
+      "edges": 61,
+      "localError": 0.047406867210634675,
+      "radiusRatio": 0.9082803972434101,
+      "name": "Brussels"
+    },
+    {
+      "airport": "CKG",
+      "edges": 47,
+      "localError": 0.047320525012256184,
+      "radiusRatio": 1.061499916289566,
+      "name": "Chongqing"
+    },
+    {
+      "airport": "NBO",
+      "edges": 30,
+      "localError": 0.0471687720567826,
+      "radiusRatio": 0.962020689361295,
+      "name": "Nairobi"
+    },
+    {
+      "airport": "XMN",
+      "edges": 40,
+      "localError": 0.04686954094869155,
+      "radiusRatio": 0.9352475543284977,
+      "name": "Xiamen"
+    },
+    {
+      "airport": "HAV",
+      "edges": 5,
+      "localError": 0.046691418708598394,
+      "radiusRatio": 0.8825271943397174,
+      "name": "Havana"
+    },
+    {
+      "airport": "EWR",
+      "edges": 70,
+      "localError": 0.04665596637608237,
+      "radiusRatio": 1.0622274413497235,
+      "name": "Newark"
+    },
+    {
+      "airport": "DTW",
+      "edges": 41,
+      "localError": 0.046630505954628046,
+      "radiusRatio": 1.0152162890448522,
+      "name": "Detroit"
+    },
+    {
+      "airport": "VTE",
+      "edges": 14,
+      "localError": 0.046578376575572705,
+      "radiusRatio": 0.9795101731689649,
+      "name": "Vientiane"
+    },
+    {
+      "airport": "MNL",
+      "edges": 47,
+      "localError": 0.046480698288833125,
+      "radiusRatio": 1.0159471059298082,
+      "name": "Manila"
+    },
+    {
+      "airport": "LGW",
+      "edges": 57,
+      "localError": 0.04645972047542474,
+      "radiusRatio": 0.8974350537162172,
+      "name": "London"
+    },
+    {
+      "airport": "OPO",
+      "edges": 33,
+      "localError": 0.04643484528119935,
+      "radiusRatio": 1.05516030659073,
+      "name": "Porto"
+    },
+    {
+      "airport": "MCO",
+      "edges": 48,
+      "localError": 0.04638332223536171,
+      "radiusRatio": 1.0661230367350025,
+      "name": "Orlando"
+    },
+    {
+      "airport": "SGN",
+      "edges": 50,
+      "localError": 0.04606688353825349,
+      "radiusRatio": 0.9822660181625399,
+      "name": "Ho Chi Minh City"
+    },
+    {
+      "airport": "BKK",
+      "edges": 82,
+      "localError": 0.04604385335291475,
+      "radiusRatio": 1.0090564461561984,
+      "name": "Bangkok"
+    },
+    {
+      "airport": "ADD",
+      "edges": 57,
+      "localError": 0.04600866358316222,
+      "radiusRatio": 0.9223083855386135,
+      "name": "Addis Ababa"
+    },
+    {
+      "airport": "HNL",
+      "edges": 26,
+      "localError": 0.045999749145556115,
+      "radiusRatio": 0.9400614096742527,
+      "name": "Honolulu"
+    },
+    {
+      "airport": "DXB",
+      "edges": 119,
+      "localError": 0.04506762010446458,
+      "radiusRatio": 0.987253475703882,
+      "name": "Dubai"
+    },
+    {
+      "airport": "DME",
+      "edges": 9,
+      "localError": 0.044833339223792734,
+      "radiusRatio": 0.9826893446931358,
+      "name": "Moscow"
+    },
+    {
+      "airport": "SIN",
+      "edges": 94,
+      "localError": 0.04410303513002334,
+      "radiusRatio": 1.050025635063824,
+      "name": "Singapore"
+    },
+    {
+      "airport": "JED",
+      "edges": 52,
+      "localError": 0.04404695897199129,
+      "radiusRatio": 0.9063994477285426,
+      "name": "Jeddah"
+    },
+    {
+      "airport": "IAD",
+      "edges": 66,
+      "localError": 0.0439708854451834,
+      "radiusRatio": 1.0088104249054446,
+      "name": "Washington"
+    },
+    {
+      "airport": "IAH",
+      "edges": 57,
+      "localError": 0.04380424022307298,
+      "radiusRatio": 0.9744725094581326,
+      "name": "Houston"
+    },
+    {
+      "airport": "BUD",
+      "edges": 43,
+      "localError": 0.043544561893556655,
+      "radiusRatio": 1.0102841220750272,
+      "name": "Budapest"
+    },
+    {
+      "airport": "MUC",
+      "edges": 81,
+      "localError": 0.04344939110226115,
+      "radiusRatio": 0.9185090185563927,
+      "name": "Munich"
+    },
+    {
+      "airport": "AMS",
+      "edges": 107,
+      "localError": 0.04338232061051098,
+      "radiusRatio": 0.9426517457994258,
+      "name": "Amsterdam"
+    },
+    {
+      "airport": "BKI",
+      "edges": 15,
+      "localError": 0.04328877077100459,
+      "radiusRatio": 0.8411830436625932,
+      "name": "Kota Kinabalu"
+    },
+    {
+      "airport": "MIA",
+      "edges": 57,
+      "localError": 0.0432394318125698,
+      "radiusRatio": 1.0125185128121243,
+      "name": "Miami"
+    },
+    {
+      "airport": "DOH",
+      "edges": 115,
+      "localError": 0.043207893221200215,
+      "radiusRatio": 0.9842181472470504,
+      "name": "Doha"
+    },
+    {
+      "airport": "KGL",
+      "edges": 13,
+      "localError": 0.04318942105348544,
+      "radiusRatio": 0.7648931596240318,
+      "name": "Kigali"
+    },
+    {
+      "airport": "YEG",
+      "edges": 15,
+      "localError": 0.04317310383982374,
+      "radiusRatio": 0.9755948563538711,
+      "name": "Edmonton"
+    },
+    {
+      "airport": "AUH",
+      "edges": 72,
+      "localError": 0.043079650574033235,
+      "radiusRatio": 0.9635688924347814,
+      "name": "Abu Dhabi"
+    },
+    {
+      "airport": "CAI",
+      "edges": 62,
+      "localError": 0.04297264324574092,
+      "radiusRatio": 0.9257379825318695,
+      "name": "Cairo"
+    },
+    {
+      "airport": "PTY",
+      "edges": 43,
+      "localError": 0.0428465051318818,
+      "radiusRatio": 1.0838927590745422,
+      "name": "Panama City"
+    },
+    {
+      "airport": "LHR",
+      "edges": 116,
+      "localError": 0.0428321709984514,
+      "radiusRatio": 0.9737596485672464,
+      "name": "London"
+    },
+    {
+      "airport": "ZRH",
+      "edges": 73,
+      "localError": 0.04256510946627707,
+      "radiusRatio": 0.9420072906708664,
+      "name": "Zurich"
+    },
+    {
+      "airport": "MXP",
+      "edges": 66,
+      "localError": 0.04244478078735483,
+      "radiusRatio": 0.9862173910906787,
+      "name": "Milan"
+    },
+    {
+      "airport": "IST",
+      "edges": 94,
+      "localError": 0.04225761726144375,
+      "radiusRatio": 0.9914590421871968,
+      "name": "Istanbul"
+    },
+    {
+      "airport": "ICN",
+      "edges": 92,
+      "localError": 0.04217398952914535,
+      "radiusRatio": 1.057260030394205,
+      "name": "Seoul"
+    },
+    {
+      "airport": "SEA",
+      "edges": 50,
+      "localError": 0.04180837109005455,
+      "radiusRatio": 0.9951494329566486,
+      "name": "Seattle"
+    },
+    {
+      "airport": "ALG",
+      "edges": 28,
+      "localError": 0.04157002912946259,
+      "radiusRatio": 1.0417684955173387,
+      "name": "Algiers"
+    },
+    {
+      "airport": "DAR",
+      "edges": 13,
+      "localError": 0.04152076995408388,
+      "radiusRatio": 0.9100622777811727,
+      "name": "Dar es Salaam"
+    },
+    {
+      "airport": "SFO",
+      "edges": 67,
+      "localError": 0.04129640963448387,
+      "radiusRatio": 0.9918096283412684,
+      "name": "San Francisco"
+    },
+    {
+      "airport": "LIS",
+      "edges": 60,
+      "localError": 0.04112203920195006,
+      "radiusRatio": 1.039706343177607,
+      "name": "Lisbon"
+    },
+    {
+      "airport": "SAL",
+      "edges": 12,
+      "localError": 0.04097527710604763,
+      "radiusRatio": 0.9385287818045966,
+      "name": "San Salvador"
+    },
+    {
+      "airport": "JFK",
+      "edges": 93,
+      "localError": 0.04021560512045405,
+      "radiusRatio": 1.056398849697645,
+      "name": "New York"
+    },
+    {
+      "airport": "ACC",
+      "edges": 20,
+      "localError": 0.04020523686898567,
+      "radiusRatio": 0.9521529466900949,
+      "name": "Accra"
+    },
+    {
+      "airport": "DFW",
+      "edges": 59,
+      "localError": 0.040159221851292705,
+      "radiusRatio": 1.020753641659648,
+      "name": "Dallas"
+    },
+    {
+      "airport": "CDG",
+      "edges": 118,
+      "localError": 0.04013634009965891,
+      "radiusRatio": 0.954256834974457,
+      "name": "Paris"
+    },
+    {
+      "airport": "REC",
+      "edges": 10,
+      "localError": 0.04002694487458507,
+      "radiusRatio": 0.9880887459640085,
+      "name": "Recife"
+    },
+    {
+      "airport": "KUL",
+      "edges": 69,
+      "localError": 0.04001265331955427,
+      "radiusRatio": 1.0427629542326133,
+      "name": "Kuala Lumpur"
+    },
+    {
+      "airport": "FRA",
+      "edges": 112,
+      "localError": 0.039906500186398866,
+      "radiusRatio": 0.9412866602554921,
+      "name": "Frankfurt"
+    },
+    {
+      "airport": "CGO",
+      "edges": 22,
+      "localError": 0.03986753132606967,
+      "radiusRatio": 0.9356785466286798,
+      "name": "Zhengzhou"
+    },
+    {
+      "airport": "CAN",
+      "edges": 79,
+      "localError": 0.03973448424773813,
+      "radiusRatio": 1.029516039526902,
+      "name": "Guangzhou"
+    },
+    {
+      "airport": "LAX",
+      "edges": 76,
+      "localError": 0.03950384669481978,
+      "radiusRatio": 0.9751342908566429,
+      "name": "Los Angeles"
+    },
+    {
+      "airport": "BCN",
+      "edges": 71,
+      "localError": 0.03945736101972181,
+      "radiusRatio": 0.947700948872499,
+      "name": "Barcelona"
+    },
+    {
+      "airport": "MEX",
+      "edges": 50,
+      "localError": 0.039305332958570964,
+      "radiusRatio": 0.9849412077058868,
+      "name": "Mexico City"
+    },
+    {
+      "airport": "YUL",
+      "edges": 57,
+      "localError": 0.039271182300867444,
+      "radiusRatio": 0.9794445432518533,
+      "name": "Montreal"
+    },
+    {
+      "airport": "CMB",
+      "edges": 33,
+      "localError": 0.03896908083410445,
+      "radiusRatio": 0.9577968515700833,
+      "name": "Colombo"
+    },
+    {
+      "airport": "JNB",
+      "edges": 32,
+      "localError": 0.03840832809170752,
+      "radiusRatio": 1.061285520244685,
+      "name": "Johannesburg"
+    },
+    {
+      "airport": "PHL",
+      "edges": 42,
+      "localError": 0.03838410515970847,
+      "radiusRatio": 1.026645003838721,
+      "name": "Philadelphia"
+    },
+    {
+      "airport": "HKG",
+      "edges": 87,
+      "localError": 0.03783469488404311,
+      "radiusRatio": 1.0326657891031523,
+      "name": "Hong Kong"
+    },
+    {
+      "airport": "FIH",
+      "edges": 11,
+      "localError": 0.03780653896194047,
+      "radiusRatio": 0.648061532836863,
+      "name": "Kinshasa"
+    },
+    {
+      "airport": "SSA",
+      "edges": 12,
+      "localError": 0.037781892554188394,
+      "radiusRatio": 1.0176405101684243,
+      "name": "Salvador"
+    },
+    {
+      "airport": "MAD",
+      "edges": 89,
+      "localError": 0.03768887397028375,
+      "radiusRatio": 0.9859184406837775,
+      "name": "Madrid"
+    },
+    {
+      "airport": "ADL",
+      "edges": 12,
+      "localError": 0.03764580195336785,
+      "radiusRatio": 1.0062029804207242,
+      "name": "Adelaide"
+    },
+    {
+      "airport": "YYC",
+      "edges": 40,
+      "localError": 0.037407546469695956,
+      "radiusRatio": 0.8920365822863965,
+      "name": "Calgary"
+    },
+    {
+      "airport": "SEZ",
+      "edges": 14,
+      "localError": 0.03733458948958926,
+      "radiusRatio": 1.0913957399146128,
+      "name": "Cascade"
+    },
+    {
+      "airport": "ATL",
+      "edges": 69,
+      "localError": 0.03706285583996129,
+      "radiusRatio": 1.00848657499803,
+      "name": "Atlanta"
+    },
+    {
+      "airport": "ISB",
+      "edges": 19,
+      "localError": 0.03702727598982993,
+      "radiusRatio": 1.0448487386693746,
+      "name": "Islamabad"
+    },
+    {
+      "airport": "FCO",
+      "edges": 80,
+      "localError": 0.03648508506771468,
+      "radiusRatio": 0.9776611144453037,
+      "name": "Rome"
+    },
+    {
+      "airport": "SZX",
+      "edges": 52,
+      "localError": 0.03638952552526344,
+      "radiusRatio": 1.0422386800714523,
+      "name": "Shenzhen"
+    },
+    {
+      "airport": "MRU",
+      "edges": 19,
+      "localError": 0.03638089852987325,
+      "radiusRatio": 1.04145216769968,
+      "name": "Port Louis"
+    },
+    {
+      "airport": "PVG",
+      "edges": 94,
+      "localError": 0.036080014222525957,
+      "radiusRatio": 1.0402598734833508,
+      "name": "Shanghai"
+    },
+    {
+      "airport": "PDX",
+      "edges": 26,
+      "localError": 0.03564923739187437,
+      "radiusRatio": 0.8749286379872575,
+      "name": "Portland"
+    },
+    {
+      "airport": "CNF",
+      "edges": 10,
+      "localError": 0.03534014543920551,
+      "radiusRatio": 0.9926655345670615,
+      "name": "Belo Horizonte"
+    },
+    {
+      "airport": "MLE",
+      "edges": 20,
+      "localError": 0.03533188730251988,
+      "radiusRatio": 0.9423552375739905,
+      "name": "Male"
+    },
+    {
+      "airport": "COK",
+      "edges": 18,
+      "localError": 0.035228080460547796,
+      "radiusRatio": 1.0800439892624718,
+      "name": "Kochi"
+    },
+    {
+      "airport": "AKL",
+      "edges": 29,
+      "localError": 0.0350112140438597,
+      "radiusRatio": 1.0343199328281292,
+      "name": "Auckland"
+    },
+    {
+      "airport": "BOG",
+      "edges": 38,
+      "localError": 0.03498445408545755,
+      "radiusRatio": 1.0879821748887275,
+      "name": "Bogota"
+    },
+    {
+      "airport": "GYE",
+      "edges": 8,
+      "localError": 0.03493975332629128,
+      "radiusRatio": 1.0139754571266388,
+      "name": "Guayaquil"
+    },
+    {
+      "airport": "NAN",
+      "edges": 15,
+      "localError": 0.0347929569964808,
+      "radiusRatio": 0.955151439563651,
+      "name": "Nadi"
+    },
+    {
+      "airport": "BSB",
+      "edges": 11,
+      "localError": 0.03436087030022831,
+      "radiusRatio": 0.8886897340030634,
+      "name": "Brasilia"
+    },
+    {
+      "airport": "YHZ",
+      "edges": 17,
+      "localError": 0.03424397605532907,
+      "radiusRatio": 1.1276102070953022,
+      "name": "Halifax"
+    },
+    {
+      "airport": "ASU",
+      "edges": 7,
+      "localError": 0.03358516139577017,
+      "radiusRatio": 1.1485558400752898,
+      "name": "Asuncion"
+    },
+    {
+      "airport": "CEB",
+      "edges": 13,
+      "localError": 0.033581435104458664,
+      "radiusRatio": 0.8970223772527726,
+      "name": "Cebu"
+    },
+    {
+      "airport": "CPT",
+      "edges": 17,
+      "localError": 0.03349019269183992,
+      "radiusRatio": 1.0623951649821872,
+      "name": "Cape Town"
+    },
+    {
+      "airport": "FOR",
+      "edges": 10,
+      "localError": 0.03302225047475816,
+      "radiusRatio": 0.8627367207192475,
+      "name": "Fortaleza"
+    },
+    {
+      "airport": "SYD",
+      "edges": 46,
+      "localError": 0.03288534579620738,
+      "radiusRatio": 1.0745688848847472,
+      "name": "Sydney"
+    },
+    {
+      "airport": "GRU",
+      "edges": 43,
+      "localError": 0.032643278325920615,
+      "radiusRatio": 1.0861662039575468,
+      "name": "Sao Paulo"
+    },
+    {
+      "airport": "ABJ",
+      "edges": 14,
+      "localError": 0.03150073122472285,
+      "radiusRatio": 0.8679147138999873,
+      "name": "Abidjan"
+    },
+    {
+      "airport": "KHI",
+      "edges": 16,
+      "localError": 0.03139753731408518,
+      "radiusRatio": 1.039593308886265,
+      "name": "Karachi"
+    },
+    {
+      "airport": "YYZ",
+      "edges": 76,
+      "localError": 0.03051946551176579,
+      "radiusRatio": 0.9898060795747942,
+      "name": "Toronto"
+    },
+    {
+      "airport": "BNE",
+      "edges": 28,
+      "localError": 0.02966940397360089,
+      "radiusRatio": 1.0530196361296682,
+      "name": "Brisbane"
+    },
+    {
+      "airport": "LOS",
+      "edges": 20,
+      "localError": 0.029558197558891667,
+      "radiusRatio": 1.0057684202011858,
+      "name": "Lagos"
+    },
+    {
+      "airport": "SJO",
+      "edges": 20,
+      "localError": 0.029246021137138888,
+      "radiusRatio": 0.988764416283604,
+      "name": "San Jose"
+    },
+    {
+      "airport": "MEL",
+      "edges": 37,
+      "localError": 0.028092346144710987,
+      "radiusRatio": 1.0724501382260045,
+      "name": "Melbourne"
+    },
+    {
+      "airport": "SCL",
+      "edges": 22,
+      "localError": 0.027255370306768605,
+      "radiusRatio": 1.0896318911911071,
+      "name": "Santiago"
+    },
+    {
+      "airport": "GIG",
+      "edges": 25,
+      "localError": 0.026694943689611242,
+      "radiusRatio": 1.1080669264248595,
+      "name": "Rio de Janeiro"
+    },
+    {
+      "airport": "CCS",
+      "edges": 7,
+      "localError": 0.024028912872405394,
+      "radiusRatio": 1.1419271228354353,
+      "name": "Caracas"
+    },
+    {
+      "airport": "POM",
+      "edges": 7,
+      "localError": 0.023963887097410614,
+      "radiusRatio": 0.6851356543701626,
+      "name": "Port Moresby"
+    },
+    {
+      "airport": "CHC",
+      "edges": 6,
+      "localError": 0.02385576375263322,
+      "radiusRatio": 0.968116287606711,
+      "name": "Christchurch"
+    },
+    {
+      "airport": "UIO",
+      "edges": 8,
+      "localError": 0.023684805566858213,
+      "radiusRatio": 1.0111188179447257,
+      "name": "Quito"
+    },
+    {
+      "airport": "SUB",
+      "edges": 8,
+      "localError": 0.023597266459792467,
+      "radiusRatio": 0.8837871230905548,
+      "name": "Surabaya"
+    },
+    {
+      "airport": "EZE",
+      "edges": 20,
+      "localError": 0.02296527103299401,
+      "radiusRatio": 1.1263063368481268,
+      "name": "Buenos Aires"
+    },
+    {
+      "airport": "NOU",
+      "edges": 6,
+      "localError": 0.02148973657276727,
+      "radiusRatio": 0.9945957711951474,
+      "name": "Noumea"
+    },
+    {
+      "airport": "SVO",
+      "edges": 15,
+      "localError": 0.020688422842410067,
+      "radiusRatio": 0.9446920713767831,
+      "name": "Moscow"
+    },
+    {
+      "airport": "WLG",
+      "edges": 5,
+      "localError": 0.020516485086976448,
+      "radiusRatio": 1.0653380898032745,
+      "name": "Wellington"
+    },
+    {
+      "airport": "MVD",
+      "edges": 11,
+      "localError": 0.020064654832872616,
+      "radiusRatio": 1.1327168328157133,
+      "name": "Montevideo"
+    },
+    {
+      "airport": "LED",
+      "edges": 8,
+      "localError": 0.01625093890579791,
+      "radiusRatio": 0.9217296281771558,
+      "name": "St. Petersburg"
+    },
+    {
+      "airport": "WDH",
+      "edges": 5,
+      "localError": 0.015552043095532814,
+      "radiusRatio": 0.8468117809088426,
+      "name": "Windhoek"
+    }
+  ],
+  "defaultLargestPositiveResiduals": [
+    {
+      "a": "LAX",
+      "b": "HEL",
+      "target": 10.833333333333334,
+      "fitted": 11.967988565530764,
+      "error": 1.1346552321974297,
+      "relativeError": 0.10473740604899351,
+      "twoWay": true
+    },
+    {
+      "a": "ICN",
+      "b": "ADD",
+      "target": 11.416666666666666,
+      "fitted": 12.43875743317759,
+      "error": 1.0220907665109245,
+      "relativeError": 0.08952619852650434,
+      "twoWay": true
+    },
+    {
+      "a": "PEK",
+      "b": "MAD",
+      "target": 11.50625,
+      "fitted": 12.494026313721811,
+      "error": 0.9877763137218114,
+      "relativeError": 0.0858469365537696,
+      "twoWay": true
+    },
+    {
+      "a": "PEK",
+      "b": "WAW",
+      "target": 8.991666666666667,
+      "fitted": 9.976936227324554,
+      "error": 0.985269560657887,
+      "relativeError": 0.1095758547534258,
+      "twoWay": true
+    },
+    {
+      "a": "DEL",
+      "b": "MUC",
+      "target": 7.916666666666667,
+      "fitted": 8.856303711439507,
+      "error": 0.9396370447728399,
+      "relativeError": 0.11869099512920082,
+      "twoWay": true
+    },
+    {
+      "a": "CDG",
+      "b": "XIY",
+      "target": 10.458333333333334,
+      "fitted": 11.380491577399031,
+      "error": 0.922158244065697,
+      "relativeError": 0.08817449345648098,
+      "twoWay": true
+    },
+    {
+      "a": "HND",
+      "b": "DEL",
+      "target": 8.63888888888889,
+      "fitted": 9.556374596707894,
+      "error": 0.9174857078190044,
+      "relativeError": 0.10620413338097799,
+      "twoWay": true
+    },
+    {
+      "a": "TLV",
+      "b": "EWR",
+      "target": 11.105654761904763,
+      "fitted": 12.010561935241485,
+      "error": 0.9049071733367224,
+      "relativeError": 0.08148165891495075,
+      "twoWay": true
+    },
+    {
+      "a": "CDG",
+      "b": "IAH",
+      "target": 9.333333333333334,
+      "fitted": 10.23245519658493,
+      "error": 0.8991218632515956,
+      "relativeError": 0.09633448534838523,
+      "twoWay": false
+    },
+    {
+      "a": "PVG",
+      "b": "ATH",
+      "target": 10.75,
+      "fitted": 11.631884936609811,
+      "error": 0.8818849366098114,
+      "relativeError": 0.08203580805672664,
+      "twoWay": true
+    },
+    {
+      "a": "BOS",
+      "b": "TLV",
+      "target": 10.791666666666666,
+      "fitted": 11.660871448448642,
+      "error": 0.8692047817819759,
+      "relativeError": 0.08054407244311747,
+      "twoWay": true
+    },
+    {
+      "a": "DXB",
+      "b": "KIX",
+      "target": 9.541666666666666,
+      "fitted": 10.400268546112413,
+      "error": 0.8586018794457466,
+      "relativeError": 0.08998447644846254,
+      "twoWay": true
+    },
+    {
+      "a": "MXP",
+      "b": "ALA",
+      "target": 6.983333333333333,
+      "fitted": 7.826047334740207,
+      "error": 0.8427140014068737,
+      "relativeError": 0.1206750360009843,
+      "twoWay": false
+    },
+    {
+      "a": "DEL",
+      "b": "WAW",
+      "target": 7.833333333333333,
+      "fitted": 8.67298868456889,
+      "error": 0.8396553512355576,
+      "relativeError": 0.10719004483858183,
+      "twoWay": true
+    },
+    {
+      "a": "ICN",
+      "b": "ALA",
+      "target": 6.361111111111112,
+      "fitted": 7.197709959170962,
+      "error": 0.8365988480598503,
+      "relativeError": 0.1315177228391031,
+      "twoWay": true
+    },
+    {
+      "a": "ICN",
+      "b": "MEX",
+      "target": 13.916666666666666,
+      "fitted": 14.733068880264184,
+      "error": 0.8164022135975184,
+      "relativeError": 0.058663632114791746,
+      "twoWay": false
+    },
+    {
+      "a": "NRT",
+      "b": "KTM",
+      "target": 7.25,
+      "fitted": 8.065090614216428,
+      "error": 0.8150906142164285,
+      "relativeError": 0.1124262916160591,
+      "twoWay": true
+    },
+    {
+      "a": "DOH",
+      "b": "DUB",
+      "target": 7.291666666666667,
+      "fitted": 8.106135569852746,
+      "error": 0.8144689031860795,
+      "relativeError": 0.11169859243694803,
+      "twoWay": true
+    },
+    {
+      "a": "PEK",
+      "b": "GVA",
+      "target": 10.479166666666666,
+      "fitted": 11.286150935035364,
+      "error": 0.8069842683686979,
+      "relativeError": 0.07700843912862326,
+      "twoWay": true
+    },
+    {
+      "a": "NRT",
+      "b": "BLR",
+      "target": 8.833333333333334,
+      "fitted": 9.633930776684231,
+      "error": 0.8005974433508971,
+      "relativeError": 0.09063367283217702,
+      "twoWay": true
+    }
+  ],
+  "defaultLargestNegativeResiduals": [
+    {
+      "a": "PEK",
+      "b": "IAD",
+      "target": 16.145833333333332,
+      "fitted": 14.120389455423963,
+      "error": -2.0254438779093693,
+      "relativeError": -0.1254468466318061,
+      "twoWay": true
+    },
+    {
+      "a": "DEL",
+      "b": "YVR",
+      "target": 16.333333333333332,
+      "fitted": 14.60246038877052,
+      "error": -1.7308729445628117,
+      "relativeError": -0.10597181293241704,
+      "twoWay": true
+    },
+    {
+      "a": "JFK",
+      "b": "PEK",
+      "target": 16.069444444444446,
+      "fitted": 14.360355722251578,
+      "error": -1.7090887221928686,
+      "relativeError": -0.10635642869307392,
+      "twoWay": true
+    },
+    {
+      "a": "PEK",
+      "b": "BOS",
+      "target": 15.708333333333334,
+      "fitted": 14.107880234328986,
+      "error": -1.6004530990043477,
+      "relativeError": -0.10188560842467996,
+      "twoWay": true
+    },
+    {
+      "a": "HND",
+      "b": "ARN",
+      "target": 13.75,
+      "fitted": 12.160860543077328,
+      "error": -1.5891394569226716,
+      "relativeError": -0.1155737786852852,
+      "twoWay": true
+    },
+    {
+      "a": "JFK",
+      "b": "SIN",
+      "target": 18.958333333333332,
+      "fitted": 17.386855209799393,
+      "error": -1.5714781235339395,
+      "relativeError": -0.08289115376882318,
+      "twoWay": true
+    },
+    {
+      "a": "SIN",
+      "b": "EWR",
+      "target": 18.958333333333332,
+      "fitted": 17.407720059283072,
+      "error": -1.55061327405026,
+      "relativeError": -0.08179059027957417,
+      "twoWay": true
+    },
+    {
+      "a": "BKK",
+      "b": "TLV",
+      "target": 11.267045454545455,
+      "fitted": 9.73516222968087,
+      "error": -1.5318832248645844,
+      "relativeError": -0.13596139565111792,
+      "twoWay": true
+    },
+    {
+      "a": "NRT",
+      "b": "BRU",
+      "target": 13.916666666666666,
+      "fitted": 12.452069301783267,
+      "error": -1.4645973648833994,
+      "relativeError": -0.1052405292131784,
+      "twoWay": true
+    },
+    {
+      "a": "DXB",
+      "b": "LAX",
+      "target": 16.708333333333332,
+      "fitted": 15.264828320177136,
+      "error": -1.4435050131561962,
+      "relativeError": -0.0863943150018671,
+      "twoWay": true
+    },
+    {
+      "a": "DEL",
+      "b": "SFO",
+      "target": 17.25,
+      "fitted": 15.936300721806813,
+      "error": -1.3136992781931873,
+      "relativeError": -0.07615647989525724,
+      "twoWay": false
+    },
+    {
+      "a": "TLV",
+      "b": "HKT",
+      "target": 11.291666666666666,
+      "fitted": 10.005702803308377,
+      "error": -1.2859638633582886,
+      "relativeError": -0.11388609859999604,
+      "twoWay": true
+    },
+    {
+      "a": "YVR",
+      "b": "TAO",
+      "target": 12.666666666666666,
+      "fitted": 11.42442615296282,
+      "error": -1.2422405137038464,
+      "relativeError": -0.09807161950293525,
+      "twoWay": true
+    },
+    {
+      "a": "DXB",
+      "b": "SFO",
+      "target": 16.375,
+      "fitted": 15.141308607776594,
+      "error": -1.233691392223406,
+      "relativeError": -0.07533993234952098,
+      "twoWay": true
+    },
+    {
+      "a": "DEL",
+      "b": "CPH",
+      "target": 10.25,
+      "fitted": 9.073125670353226,
+      "error": -1.1768743296467736,
+      "relativeError": -0.11481700777041694,
+      "twoWay": true
+    },
+    {
+      "a": "ICN",
+      "b": "CPH",
+      "target": 12.541666666666666,
+      "fitted": 11.431236030053121,
+      "error": -1.110430636613545,
+      "relativeError": -0.08853931986287403,
+      "twoWay": true
+    },
+    {
+      "a": "AMS",
+      "b": "NRT",
+      "target": 13.708333333333334,
+      "fitted": 12.628559339155418,
+      "error": -1.0797739941779163,
+      "relativeError": -0.07876770778197566,
+      "twoWay": true
+    },
+    {
+      "a": "PEK",
+      "b": "YVR",
+      "target": 12.041666666666666,
+      "fitted": 11.014004585624544,
+      "error": -1.0276620810421218,
+      "relativeError": -0.08534217974052223,
+      "twoWay": true
+    },
+    {
+      "a": "AMS",
+      "b": "PEK",
+      "target": 11.666666666666666,
+      "fitted": 10.644610285251062,
+      "error": -1.022056381415604,
+      "relativeError": -0.08760483269276606,
+      "twoWay": true
+    },
+    {
+      "a": "FRA",
+      "b": "NRT",
+      "target": 13.625,
+      "fitted": 12.603724246535936,
+      "error": -1.0212757534640637,
+      "relativeError": -0.07495601860286706,
+      "twoWay": true
+    }
+  ],
+  "triangleAudit": {
+    "triangles": 34782,
+    "violations": 82,
+    "worst": [
+      {
+        "airports": [
+          "DXB",
+          "TLV",
+          "HKT"
+        ],
+        "longestEdge": [
+          "TLV",
+          "HKT"
+        ],
+        "longestHours": 11.291666666666666,
+        "otherHours": 9.838807189542484,
+        "excessHours": 1.4528594771241825
+      },
+      {
+        "airports": [
+          "AUH",
+          "TLV",
+          "HKT"
+        ],
+        "longestEdge": [
+          "TLV",
+          "HKT"
+        ],
+        "longestHours": 11.291666666666666,
+        "otherHours": 9.888141025641026,
+        "excessHours": 1.4035256410256398
+      },
+      {
+        "airports": [
+          "DXB",
+          "BKK",
+          "TLV"
+        ],
+        "longestEdge": [
+          "BKK",
+          "TLV"
+        ],
+        "longestHours": 11.267045454545455,
+        "otherHours": 9.901307189542484,
+        "excessHours": 1.3657382650029715
+      },
+      {
+        "airports": [
+          "BKK",
+          "AUH",
+          "TLV"
+        ],
+        "longestEdge": [
+          "BKK",
+          "TLV"
+        ],
+        "longestHours": 11.267045454545455,
+        "otherHours": 9.918498168498168,
+        "excessHours": 1.3485472860472862
+      },
+      {
+        "airports": [
+          "ICN",
+          "PEK",
+          "CPH"
+        ],
+        "longestEdge": [
+          "ICN",
+          "CPH"
+        ],
+        "longestHours": 12.541666666666666,
+        "otherHours": 11.434325396825397,
+        "excessHours": 1.1073412698412683
+      },
+      {
+        "airports": [
+          "HND",
+          "PEK",
+          "ARN"
+        ],
+        "longestEdge": [
+          "HND",
+          "ARN"
+        ],
+        "longestHours": 13.75,
+        "otherHours": 12.684027777777779,
+        "excessHours": 1.0659722222222223
+      },
+      {
+        "airports": [
+          "AMS",
+          "PEK",
+          "CPH"
+        ],
+        "longestEdge": [
+          "AMS",
+          "PEK"
+        ],
+        "longestHours": 11.666666666666666,
+        "otherHours": 10.682692307692308,
+        "excessHours": 0.9839743589743579
+      },
+      {
+        "airports": [
+          "DEL",
+          "CPH",
+          "WAW"
+        ],
+        "longestEdge": [
+          "DEL",
+          "CPH"
+        ],
+        "longestHours": 10.25,
+        "otherHours": 9.271008403361344,
+        "excessHours": 0.9789915966386558
+      },
+      {
+        "airports": [
+          "DEL",
+          "VIE",
+          "GYD"
+        ],
+        "longestEdge": [
+          "DEL",
+          "VIE"
+        ],
+        "longestHours": 9.375,
+        "otherHours": 8.458333333333332,
+        "excessHours": 0.916666666666667
+      },
+      {
+        "airports": [
+          "PEK",
+          "TPE",
+          "PRG"
+        ],
+        "longestEdge": [
+          "TPE",
+          "PRG"
+        ],
+        "longestHours": 13.979166666666666,
+        "otherHours": 13.075462962962963,
+        "excessHours": 0.903703703703703
+      },
+      {
+        "airports": [
+          "LHR",
+          "ICN",
+          "PEK"
+        ],
+        "longestEdge": [
+          "LHR",
+          "ICN"
+        ],
+        "longestHours": 13.569444444444445,
+        "otherHours": 12.67738095238095,
+        "excessHours": 0.8920634920634933
+      },
+      {
+        "airports": [
+          "ICN",
+          "PEK",
+          "WAW"
+        ],
+        "longestEdge": [
+          "ICN",
+          "WAW"
+        ],
+        "longestHours": 12,
+        "otherHours": 11.155158730158732,
+        "excessHours": 0.8448412698412691
+      },
+      {
+        "airports": [
+          "YYZ",
+          "PEK",
+          "BOS"
+        ],
+        "longestEdge": [
+          "PEK",
+          "BOS"
+        ],
+        "longestHours": 15.708333333333334,
+        "otherHours": 14.930454545454545,
+        "excessHours": 0.7778787878787885
+      },
+      {
+        "airports": [
+          "FRA",
+          "ICN",
+          "PEK"
+        ],
+        "longestEdge": [
+          "FRA",
+          "ICN"
+        ],
+        "longestHours": 12.791666666666666,
+        "otherHours": 12.02113095238095,
+        "excessHours": 0.7705357142857148
+      },
+      {
+        "airports": [
+          "LHR",
+          "TPE",
+          "WUH"
+        ],
+        "longestEdge": [
+          "LHR",
+          "TPE"
+        ],
+        "longestHours": 14.416666666666666,
+        "otherHours": 13.666666666666668,
+        "excessHours": 0.7499999999999987
+      },
+      {
+        "airports": [
+          "DEL",
+          "MUC",
+          "CPH"
+        ],
+        "longestEdge": [
+          "DEL",
+          "CPH"
+        ],
+        "longestHours": 10.25,
+        "otherHours": 9.524305555555555,
+        "excessHours": 0.725694444444444
+      },
+      {
+        "airports": [
+          "FRA",
+          "DEL",
+          "MUC"
+        ],
+        "longestEdge": [
+          "FRA",
+          "DEL"
+        ],
+        "longestHours": 9.611111111111112,
+        "otherHours": 8.916666666666668,
+        "excessHours": 0.6944444444444455
+      },
+      {
+        "airports": [
+          "AMS",
+          "PEK",
+          "ARN"
+        ],
+        "longestEdge": [
+          "AMS",
+          "PEK"
+        ],
+        "longestHours": 11.666666666666666,
+        "otherHours": 10.975,
+        "excessHours": 0.691666666666666
+      },
+      {
+        "airports": [
+          "AMS",
+          "PEK",
+          "WAW"
+        ],
+        "longestEdge": [
+          "AMS",
+          "PEK"
+        ],
+        "longestHours": 11.666666666666666,
+        "otherHours": 10.999107142857143,
+        "excessHours": 0.6675595238095227
+      },
+      {
+        "airports": [
+          "AMS",
+          "PEK",
+          "OSL"
+        ],
+        "longestEdge": [
+          "AMS",
+          "PEK"
+        ],
+        "longestHours": 11.666666666666666,
+        "otherHours": 11.016666666666667,
+        "excessHours": 0.6499999999999988
+      }
+    ]
+  },
+  "remaining": [
+    {
+      "issue": "Incompatible time constraints",
+      "status": "Unresolved",
+      "evidence": "82 of 34,782 fully observed triangles violate the triangle inequality by more than 0.001h. No arrangement of Euclidean points can satisfy such a triangle exactly.",
+      "interpretation": "Travel times include route-dependent wind, performance, routing and schedule overhead. The exact cause of each remaining inconsistency has not been measured."
+    },
+    {
+      "issue": "Short-flight overhead",
+      "status": "Unresolved",
+      "evidence": {
+        "below3Hours": {
+          "edges": 1060,
+          "normalizedError": 0.14483419889857274,
+          "meanSignedMinutes": -12.687885990113978
+        },
+        "atLeast3Hours": {
+          "edges": 2820,
+          "normalizedError": 0.039850992078344326,
+          "meanSignedMinutes": -0.4485998041402916
+        }
+      },
+      "interpretation": "Short-flight residuals remain proportionately larger. There is no new cutoff or uniform time subtraction."
+    },
+    {
+      "issue": "Verification coverage",
+      "status": "Partially corrected",
+      "evidence": "Five return observations recovered using exact dated independent evidence. 10,420 original observations remain quarantined, including ten confirmed stopped journeys. Exclusion means insufficient or conflicting evidence, not necessarily a connecting flight.",
+      "interpretation": "The independent crowdsourced index can be stale. Unknown records are not assumed nonstop."
+    },
+    {
+      "issue": "Conflicting LY88 October 6 schedule",
+      "status": "Still quarantined",
+      "evidence": "Raw source reports departure 13:40 and duration 10h40; the currently published independent dated schedule reports departure 13:25 and duration 10h55. The two matching October 3 and 7 return records are restored.",
+      "interpretation": "The conflicting source observation is not guessed into the dataset."
+    },
+    {
+      "issue": "Global optimality and ambiguous shape",
+      "status": "Mitigated, not guaranteed",
+      "evidence": "All three tested starts reach 4.57\u20134.59% error with two annealing chains, versus 6.24\u20136.50% without annealing. Other seeds, datasets and sparse airports can still have worse or ambiguous fits.",
+      "interpretation": "A settled fit means the bounded search ended and local movement is negligible. It does not certify a global minimum or a sphere."
+    }
+  ],
+  "errorDefinition": "sqrt(sum((fittedHours-targetHours)^2)/sum(targetHours^2)). Airport scores use every incident edge. Positive residual means fitted separation is greater than the time target. Total edges count distinct neighboring airports."
+}

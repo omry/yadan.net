@@ -1,0 +1,12 @@
+{
+  "name": "airport-time-space",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --check dist/optimization-progress.js && node --check dist/app.js && node --check dist/constraint-policy.js && node --check dist/engine.js && node --check dist/observations.js && node --check dist/benchmark.js && node --check dist/hull.js && node --check dist/view-geometry.js && node --check dist/airport-flags.js && node --check dist/airport-view.js && node --check dist/camera.js && node --check dist/airport-surface.js",
+    "test": "node scripts/test-constraint-policy.mjs && node scripts/test-engine.mjs && node scripts/test-observations.mjs && node scripts/test-space.mjs && node scripts/benchmark-plane.mjs && node scripts/test-view.mjs && node scripts/test-airport-view.mjs && node scripts/test-camera.mjs && node scripts/test-airport-surface.mjs && PYTHONDONTWRITEBYTECODE=1 python scripts/test-collector.py",
+    "start": "python -m http.server 3000 --directory dist",
+    "benchmark": "node scripts/benchmark-sphere.mjs",
+    "benchmark:plane": "node scripts/benchmark-plane.mjs"
+  }
+}

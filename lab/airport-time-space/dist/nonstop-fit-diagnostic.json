@@ -1,0 +1,3395 @@
+{
+  "date": "2026-10-06",
+  "dataset": "Flight-route cross-checked nonstop schedules",
+  "method": "Six exact production SpaceSolver fits: random seeds 71, 72 and 73; free 3D initial points; minEdges=4, no duration cutoff, no time subtraction, up to 30,000 steps. No geographic or sphere constraints.",
+  "findings": [
+    "SJO retains five European neighbors in wide-body mode, with radius ratio 1.15\u20132.05 despite local error about 1.2%. Low residual does not uniquely locate it.",
+    "Wide-body mode removes nearby regional constraints from Vancouver and Calgary. Their shortest retained measured links are Toronto at 4.66h and 4.20h.",
+    "All-aircraft mode adds regional constraints. In seed 72, YVR, YYC and YEG have radius ratios 0.98, 0.94 and 0.97, but other starts still put them inward.",
+    "Canada\u2013US proximity is often plausible: Toronto and Montr\u00e9al cluster with eastern US airports; Vancouver clusters with Seattle and Portland. Some west-Canada inward placement remains dependent on the local minimum and the mismatch between travel times and straight-line distances.",
+    "All-aircraft and wide-body errors use different observations and are not directly comparable. Airport adjacency verification uses a crowdsourced route index, not certification of actual operated flights."
+  ],
+  "runs": [
+    {
+      "aircraft": "widebody",
+      "seed": 71,
+      "airports": 161,
+      "edges": 1851,
+      "iterations": 30000,
+      "stable": false,
+      "normalizedDistanceError": 0.04327494013395142,
+      "inspectedAirports": [
+        {
+          "airport": "SJO",
+          "edges": 5,
+          "localError": 0.012570364681965243,
+          "radiusRatio": 2.051179549726199,
+          "nearestFittedAirports": [
+            {
+              "airport": "MCO",
+              "separationHours": 6.983489799851677
+            },
+            {
+              "airport": "JFK",
+              "separationHours": 9.542384247723987
+            },
+            {
+              "airport": "BOS",
+              "separationHours": 9.589743393318392
+            },
+            {
+              "airport": "EWR",
+              "separationHours": 9.611535213257268
+            },
+            {
+              "airport": "YUL",
+              "separationHours": 9.655800310393705
+            },
+            {
+              "airport": "IAD",
+              "separationHours": 9.995696437005186
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "MAD",
+              "b": "SJO",
+              "target": 10.875,
+              "fitted": 10.884979120115187,
+              "error": 0.009979120115186646,
+              "relativeError": 0.0009176202404769329,
+              "twoWay": true,
+              "records": 4
+            },
+            {
+              "a": "AMS",
+              "b": "SJO",
+              "target": 10.958333333333334,
+              "fitted": 11.036819817534395,
+              "error": 0.0784864842010613,
+              "relativeError": 0.007162264717967571,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "CDG",
+              "b": "SJO",
+              "target": 10.958333333333334,
+              "fitted": 10.90784119789456,
+              "error": -0.05049213543877329,
+              "relativeError": -0.004607647340420376,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "ZRH",
+              "b": "SJO",
+              "target": 11.375,
+              "fitted": 11.567157223726081,
+              "error": 0.19215722372608113,
+              "relativeError": 0.016892942745149988,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "FRA",
+              "b": "SJO",
+              "target": 11.666666666666666,
+              "fitted": 11.43675943039691,
+              "error": -0.2299072362697565,
+              "relativeError": -0.0197063345374077,
+              "twoWay": true,
+              "records": 2
+            }
+          ],
+          "linksBelowThreeHours": 0
+        },
+        {
+          "airport": "YYZ",
+          "edges": 50,
+          "localError": 0.02474207518847721,
+          "radiusRatio": 1.0135643890569088,
+          "nearestFittedAirports": [
+            {
+              "airport": "EWR",
+              "separationHours": 0.7387807292387534
+            },
+            {
+              "airport": "IAD",
+              "separationHours": 0.9633451132150004
+            },
+            {
+              "airport": "DTW",
+              "separationHours": 1.0893862981685227
+            },
+            {
+              "airport": "JFK",
+              "separationHours": 1.0914859150762972
+            },
+            {
+              "airport": "PHL",
+              "separationHours": 1.1431778112287683
+            },
+            {
+              "airport": "YUL",
+              "separationHours": 1.3607693146928692
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "YYZ",
+              "b": "YUL",
+              "target": 1.4208333333333334,
+              "fitted": 1.3607693146928692,
+              "error": -0.06006401864046418,
+              "relativeError": -0.04227379611059062,
+              "twoWay": true,
+              "records": 5
+            },
+            {
+              "a": "YYZ",
+              "b": "YYC",
+              "target": 4.2,
+              "fitted": 4.1546849285708145,
+              "error": -0.04531507142918567,
+              "relativeError": -0.010789302721234684,
+              "twoWay": false,
+              "records": 1
+            },
+            {
+              "a": "YYZ",
+              "b": "YVR",
+              "target": 4.660714285714286,
+              "fitted": 4.4095550091812665,
+              "error": -0.25115927653301906,
+              "relativeError": -0.053888580405551986,
+              "twoWay": true,
+              "records": 15
+            },
+            {
+              "a": "YYZ",
+              "b": "MEX",
+              "target": 4.666666666666667,
+              "fitted": 4.214976523083111,
+              "error": -0.45169014358355586,
+              "relativeError": -0.0967907450536191,
+              "twoWay": false,
+              "records": 1
+            },
+            {
+              "a": "LAX",
+              "b": "YYZ",
+              "target": 4.783333333333333,
+              "fitted": 5.302450291487046,
+              "error": 0.5191169581537132,
+              "relativeError": 0.10852619334223969,
+              "twoWay": true,
+              "records": 2
+            }
+          ],
+          "linksBelowThreeHours": 1
+        },
+        {
+          "airport": "YVR",
+          "edges": 30,
+          "localError": 0.04862623436926658,
+          "radiusRatio": 0.8566191947072851,
+          "nearestFittedAirports": [
+            {
+              "airport": "BOG",
+              "separationHours": 1.0635003798733007
+            },
+            {
+              "airport": "SEA",
+              "separationHours": 1.1537178429290857
+            },
+            {
+              "airport": "SLC",
+              "separationHours": 1.1900632052274884
+            },
+            {
+              "airport": "SAN",
+              "separationHours": 1.503310200617945
+            },
+            {
+              "airport": "PUJ",
+              "separationHours": 1.5522626889297964
+            },
+            {
+              "airport": "SFO",
+              "separationHours": 1.5720482933446625
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "YYZ",
+              "b": "YVR",
+              "target": 4.660714285714286,
+              "fitted": 4.4095550091812665,
+              "error": -0.25115927653301906,
+              "relativeError": -0.053888580405551986,
+              "twoWay": true,
+              "records": 15
+            },
+            {
+              "a": "YVR",
+              "b": "YUL",
+              "target": 5.079444444444444,
+              "fitted": 5.10936067386296,
+              "error": 0.02991622941851535,
+              "relativeError": 0.0058896656407445725,
+              "twoWay": true,
+              "records": 11
+            },
+            {
+              "a": "YVR",
+              "b": "EWR",
+              "target": 5.466666666666667,
+              "fitted": 5.001476299417672,
+              "error": -0.46519036724899454,
+              "relativeError": -0.0850957988870112,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "YVR",
+              "b": "DUB",
+              "target": 8.791666666666666,
+              "fitted": 9.149576020797804,
+              "error": 0.357909354131138,
+              "relativeError": 0.04071006871633798,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "YVR",
+              "b": "NRT",
+              "target": 9.333333333333334,
+              "fitted": 10.023388079231424,
+              "error": 0.6900547458980899,
+              "relativeError": 0.07393443706050963,
+              "twoWay": true,
+              "records": 8
+            }
+          ],
+          "linksBelowThreeHours": 0
+        },
+        {
+          "airport": "YUL",
+          "edges": 32,
+          "localError": 0.02985615454684647,
+          "radiusRatio": 1.0466816287506882,
+          "nearestFittedAirports": [
+            {
+              "airport": "EWR",
+              "separationHours": 1.1585007441248913
+            },
+            {
+              "airport": "YYZ",
+              "separationHours": 1.3607693146928692
+            },
+            {
+              "airport": "ORD",
+              "separationHours": 1.9230205659650004
+            },
+            {
+              "airport": "JFK",
+              "separationHours": 2.016739156479459
+            },
+            {
+              "airport": "IAD",
+              "separationHours": 2.16043482444256
+            },
+            {
+              "airport": "BOS",
+              "separationHours": 2.2436289381352768
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "YYZ",
+              "b": "YUL",
+              "target": 1.4208333333333334,
+              "fitted": 1.3607693146928692,
+              "error": -0.06006401864046418,
+              "relativeError": -0.04227379611059062,
+              "twoWay": true,
+              "records": 5
+            },
+            {
+              "a": "YUL",
+              "b": "YYC",
+              "target": 4.308333333333334,
+              "fitted": 4.210335404628326,
+              "error": -0.09799792870500745,
+              "relativeError": -0.022746134322245443,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "MEX",
+              "b": "YUL",
+              "target": 5.05,
+              "fitted": 4.831888632289775,
+              "error": -0.21811136771022444,
+              "relativeError": -0.0431903698436088,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "YVR",
+              "b": "YUL",
+              "target": 5.079444444444444,
+              "fitted": 5.10936067386296,
+              "error": 0.02991622941851535,
+              "relativeError": 0.0058896656407445725,
+              "twoWay": true,
+              "records": 11
+            },
+            {
+              "a": "BOG",
+              "b": "YUL",
+              "target": 6.333333333333333,
+              "fitted": 6.07507778654018,
+              "error": -0.2582555467931531,
+              "relativeError": -0.04077719159891891,
+              "twoWay": true,
+              "records": 2
+            }
+          ],
+          "linksBelowThreeHours": 1
+        },
+        {
+          "airport": "YYC",
+          "edges": 13,
+          "localError": 0.01713208342385737,
+          "radiusRatio": 0.9198028859794073,
+          "nearestFittedAirports": [
+            {
+              "airport": "SEA",
+              "separationHours": 1.631252442698286
+            },
+            {
+              "airport": "DEN",
+              "separationHours": 2.024376580856464
+            },
+            {
+              "airport": "SLC",
+              "separationHours": 2.128647975592764
+            },
+            {
+              "airport": "YVR",
+              "separationHours": 2.3160783424814753
+            },
+            {
+              "airport": "MIA",
+              "separationHours": 2.3418901185495606
+            },
+            {
+              "airport": "MSP",
+              "separationHours": 2.4970083846218967
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "YYZ",
+              "b": "YYC",
+              "target": 4.2,
+              "fitted": 4.1546849285708145,
+              "error": -0.04531507142918567,
+              "relativeError": -0.010789302721234684,
+              "twoWay": false,
+              "records": 1
+            },
+            {
+              "a": "YUL",
+              "b": "YYC",
+              "target": 4.308333333333334,
+              "fitted": 4.210335404628326,
+              "error": -0.09799792870500745,
+              "relativeError": -0.022746134322245443,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "EDI",
+              "b": "YYC",
+              "target": 7.916666666666667,
+              "fitted": 8.04022771600066,
+              "error": 0.12356104933399248,
+              "relativeError": 0.015607711494820101,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "DUB",
+              "b": "YYC",
+              "target": 8.083333333333334,
+              "fitted": 8.209794339376694,
+              "error": 0.1264610060433604,
+              "relativeError": 0.01564466054144665,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "AMS",
+              "b": "YYC",
+              "target": 8.875,
+              "fitted": 8.990031237576302,
+              "error": 0.11503123757630185,
+              "relativeError": 0.01296126620578049,
+              "twoWay": true,
+              "records": 6
+            }
+          ],
+          "linksBelowThreeHours": 0
+        }
+      ]
+    },
+    {
+      "aircraft": "widebody",
+      "seed": 72,
+      "airports": 161,
+      "edges": 1851,
+      "iterations": 30000,
+      "stable": false,
+      "normalizedDistanceError": 0.03587640783820041,
+      "inspectedAirports": [
+        {
+          "airport": "SJO",
+          "edges": 5,
+          "localError": 0.012178869608686641,
+          "radiusRatio": 1.1528536533095821,
+          "nearestFittedAirports": [
+            {
+              "airport": "MIA",
+              "separationHours": 1.7547592491845112
+            },
+            {
+              "airport": "PTY",
+              "separationHours": 2.3842220377169134
+            },
+            {
+              "airport": "IAH",
+              "separationHours": 2.4925087997121227
+            },
+            {
+              "airport": "ATL",
+              "separationHours": 2.532545365041102
+            },
+            {
+              "airport": "MEX",
+              "separationHours": 2.562654112566324
+            },
+            {
+              "airport": "CLT",
+              "separationHours": 2.9957530245993915
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "MAD",
+              "b": "SJO",
+              "target": 10.875,
+              "fitted": 10.857448256629214,
+              "error": -0.017551743370786355,
+              "relativeError": -0.0016139534134056418,
+              "twoWay": true,
+              "records": 4
+            },
+            {
+              "a": "AMS",
+              "b": "SJO",
+              "target": 10.958333333333334,
+              "fitted": 11.030376139565956,
+              "error": 0.07204280623262171,
+              "relativeError": 0.006574248477501601,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "CDG",
+              "b": "SJO",
+              "target": 10.958333333333334,
+              "fitted": 11.04839531214382,
+              "error": 0.0900619788104855,
+              "relativeError": 0.00821858361768689,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "ZRH",
+              "b": "SJO",
+              "target": 11.375,
+              "fitted": 11.487699157902489,
+              "error": 0.11269915790248852,
+              "relativeError": 0.009907618277141848,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "FRA",
+              "b": "SJO",
+              "target": 11.666666666666666,
+              "fitted": 11.409305139671178,
+              "error": -0.25736152699548853,
+              "relativeError": -0.02205955945675616,
+              "twoWay": true,
+              "records": 2
+            }
+          ],
+          "linksBelowThreeHours": 0
+        },
+        {
+          "airport": "YYZ",
+          "edges": 50,
+          "localError": 0.021951841129859675,
+          "radiusRatio": 0.9671488307456733,
+          "nearestFittedAirports": [
+            {
+              "airport": "PHL",
+              "separationHours": 0.07684640779955347
+            },
+            {
+              "airport": "YUL",
+              "separationHours": 0.8249024359078536
+            },
+            {
+              "airport": "IAD",
+              "separationHours": 0.8454129421781583
+            },
+            {
+              "airport": "EWR",
+              "separationHours": 0.9480122244549717
+            },
+            {
+              "airport": "DTW",
+              "separationHours": 1.0265452576465757
+            },
+            {
+              "airport": "ORD",
+              "separationHours": 1.1514152877988166
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "YYZ",
+              "b": "YUL",
+              "target": 1.4208333333333334,
+              "fitted": 0.8249024359078537,
+              "error": -0.5959308974254797,
+              "relativeError": -0.41942350551939916,
+              "twoWay": true,
+              "records": 5
+            },
+            {
+              "a": "YYZ",
+              "b": "YYC",
+              "target": 4.2,
+              "fitted": 4.085690998862103,
+              "error": -0.11430900113789733,
+              "relativeError": -0.027216428842356505,
+              "twoWay": false,
+              "records": 1
+            },
+            {
+              "a": "YYZ",
+              "b": "YVR",
+              "target": 4.660714285714286,
+              "fitted": 4.4325630414303845,
+              "error": -0.2281512442839011,
+              "relativeError": -0.04895199111072208,
+              "twoWay": true,
+              "records": 15
+            },
+            {
+              "a": "YYZ",
+              "b": "MEX",
+              "target": 4.666666666666667,
+              "fitted": 4.374123334085399,
+              "error": -0.29254333258126763,
+              "relativeError": -0.06268785698170021,
+              "twoWay": false,
+              "records": 1
+            },
+            {
+              "a": "LAX",
+              "b": "YYZ",
+              "target": 4.783333333333333,
+              "fitted": 4.836773807146508,
+              "error": 0.05344047381317463,
+              "relativeError": 0.011172224490559155,
+              "twoWay": true,
+              "records": 2
+            }
+          ],
+          "linksBelowThreeHours": 1
+        },
+        {
+          "airport": "YVR",
+          "edges": 30,
+          "localError": 0.04898714826454273,
+          "radiusRatio": 0.9276843805123228,
+          "nearestFittedAirports": [
+            {
+              "airport": "SEA",
+              "separationHours": 0.6048407623817825
+            },
+            {
+              "airport": "LAS",
+              "separationHours": 1.0685752839542362
+            },
+            {
+              "airport": "SLC",
+              "separationHours": 1.1508154680135707
+            },
+            {
+              "airport": "YYC",
+              "separationHours": 1.1937255958439243
+            },
+            {
+              "airport": "PHX",
+              "separationHours": 1.207495544302913
+            },
+            {
+              "airport": "SFO",
+              "separationHours": 1.5996680097139724
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "YYZ",
+              "b": "YVR",
+              "target": 4.660714285714286,
+              "fitted": 4.4325630414303845,
+              "error": -0.2281512442839011,
+              "relativeError": -0.04895199111072208,
+              "twoWay": true,
+              "records": 15
+            },
+            {
+              "a": "YVR",
+              "b": "YUL",
+              "target": 5.079444444444444,
+              "fitted": 4.935783834846342,
+              "error": -0.14366060959810234,
+              "relativeError": -0.02828274059680457,
+              "twoWay": true,
+              "records": 11
+            },
+            {
+              "a": "YVR",
+              "b": "EWR",
+              "target": 5.466666666666667,
+              "fitted": 5.305941237502752,
+              "error": -0.1607254291639144,
+              "relativeError": -0.02940099313974044,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "YVR",
+              "b": "DUB",
+              "target": 8.791666666666666,
+              "fitted": 9.073315495543781,
+              "error": 0.28164882887711506,
+              "relativeError": 0.03203588574905574,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "YVR",
+              "b": "NRT",
+              "target": 9.333333333333334,
+              "fitted": 9.981620965461348,
+              "error": 0.6482876321280138,
+              "relativeError": 0.0694593891565729,
+              "twoWay": true,
+              "records": 8
+            }
+          ],
+          "linksBelowThreeHours": 0
+        },
+        {
+          "airport": "YUL",
+          "edges": 32,
+          "localError": 0.027790143120658355,
+          "radiusRatio": 0.9806335647581553,
+          "nearestFittedAirports": [
+            {
+              "airport": "PHL",
+              "separationHours": 0.800800756158426
+            },
+            {
+              "airport": "YYZ",
+              "separationHours": 0.8249024359078536
+            },
+            {
+              "airport": "EWR",
+              "separationHours": 0.9191195307228984
+            },
+            {
+              "airport": "JFK",
+              "separationHours": 1.108543327640657
+            },
+            {
+              "airport": "IAD",
+              "separationHours": 1.2420328229232214
+            },
+            {
+              "airport": "BOS",
+              "separationHours": 1.4974744444163584
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "YYZ",
+              "b": "YUL",
+              "target": 1.4208333333333334,
+              "fitted": 0.8249024359078537,
+              "error": -0.5959308974254797,
+              "relativeError": -0.41942350551939916,
+              "twoWay": true,
+              "records": 5
+            },
+            {
+              "a": "YUL",
+              "b": "YYC",
+              "target": 4.308333333333334,
+              "fitted": 4.415190957446538,
+              "error": 0.10685762411320443,
+              "relativeError": 0.02480254331447685,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "MEX",
+              "b": "YUL",
+              "target": 5.05,
+              "fitted": 5.190291932850725,
+              "error": 0.14029193285072505,
+              "relativeError": 0.027780580762519814,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "YVR",
+              "b": "YUL",
+              "target": 5.079444444444444,
+              "fitted": 4.935783834846342,
+              "error": -0.14366060959810234,
+              "relativeError": -0.02828274059680457,
+              "twoWay": true,
+              "records": 11
+            },
+            {
+              "a": "BOG",
+              "b": "YUL",
+              "target": 6.333333333333333,
+              "fitted": 6.298501077961165,
+              "error": -0.03483225537216761,
+              "relativeError": -0.005499829795605412,
+              "twoWay": true,
+              "records": 2
+            }
+          ],
+          "linksBelowThreeHours": 1
+        },
+        {
+          "airport": "YYC",
+          "edges": 13,
+          "localError": 0.016106683150923694,
+          "radiusRatio": 0.9356867786899732,
+          "nearestFittedAirports": [
+            {
+              "airport": "YVR",
+              "separationHours": 1.1937255958439243
+            },
+            {
+              "airport": "SEA",
+              "separationHours": 1.239216665620446
+            },
+            {
+              "airport": "DEN",
+              "separationHours": 1.6847810795764802
+            },
+            {
+              "airport": "PHX",
+              "separationHours": 1.8500619050787186
+            },
+            {
+              "airport": "SLC",
+              "separationHours": 1.8612244431947162
+            },
+            {
+              "airport": "LAS",
+              "separationHours": 1.970317978756408
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "YYZ",
+              "b": "YYC",
+              "target": 4.2,
+              "fitted": 4.085690998862103,
+              "error": -0.11430900113789733,
+              "relativeError": -0.027216428842356505,
+              "twoWay": false,
+              "records": 1
+            },
+            {
+              "a": "YUL",
+              "b": "YYC",
+              "target": 4.308333333333334,
+              "fitted": 4.415190957446538,
+              "error": 0.10685762411320443,
+              "relativeError": 0.02480254331447685,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "EDI",
+              "b": "YYC",
+              "target": 7.916666666666667,
+              "fitted": 8.009683246799892,
+              "error": 0.09301658013322456,
+              "relativeError": 0.01174946275367047,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "DUB",
+              "b": "YYC",
+              "target": 8.083333333333334,
+              "fitted": 8.180120968948103,
+              "error": 0.09678763561476877,
+              "relativeError": 0.011973728117290982,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "AMS",
+              "b": "YYC",
+              "target": 8.875,
+              "fitted": 8.906087687457651,
+              "error": 0.031087687457651114,
+              "relativeError": 0.0035028380233973087,
+              "twoWay": true,
+              "records": 6
+            }
+          ],
+          "linksBelowThreeHours": 0
+        }
+      ]
+    },
+    {
+      "aircraft": "widebody",
+      "seed": 73,
+      "airports": 161,
+      "edges": 1851,
+      "iterations": 30000,
+      "stable": false,
+      "normalizedDistanceError": 0.043259446692965345,
+      "inspectedAirports": [
+        {
+          "airport": "SJO",
+          "edges": 5,
+          "localError": 0.012692363121998089,
+          "radiusRatio": 1.2272595909819057,
+          "nearestFittedAirports": [
+            {
+              "airport": "DFW",
+              "separationHours": 1.075736717162772
+            },
+            {
+              "airport": "IAH",
+              "separationHours": 1.227854184301117
+            },
+            {
+              "airport": "PTY",
+              "separationHours": 1.7981879710109119
+            },
+            {
+              "airport": "MEX",
+              "separationHours": 2.023164907930478
+            },
+            {
+              "airport": "ATL",
+              "separationHours": 2.2655868177368976
+            },
+            {
+              "airport": "CLT",
+              "separationHours": 2.448312655853222
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "MAD",
+              "b": "SJO",
+              "target": 10.875,
+              "fitted": 10.82139528181653,
+              "error": -0.05360471818347001,
+              "relativeError": -0.0049291694881351735,
+              "twoWay": true,
+              "records": 4
+            },
+            {
+              "a": "AMS",
+              "b": "SJO",
+              "target": 10.958333333333334,
+              "fitted": 11.001192812676146,
+              "error": 0.042859479342812534,
+              "relativeError": 0.003911131194781372,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "CDG",
+              "b": "SJO",
+              "target": 10.958333333333334,
+              "fitted": 11.05697511467963,
+              "error": 0.09864178134629675,
+              "relativeError": 0.009001531377608828,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "ZRH",
+              "b": "SJO",
+              "target": 11.375,
+              "fitted": 11.53323500894829,
+              "error": 0.15823500894829046,
+              "relativeError": 0.013910770017432128,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "FRA",
+              "b": "SJO",
+              "target": 11.666666666666666,
+              "fitted": 11.419614108369679,
+              "error": -0.24705255829698736,
+              "relativeError": -0.021175933568313203,
+              "twoWay": true,
+              "records": 2
+            }
+          ],
+          "linksBelowThreeHours": 0
+        },
+        {
+          "airport": "YYZ",
+          "edges": 50,
+          "localError": 0.02659534098426689,
+          "radiusRatio": 1.0869077407968886,
+          "nearestFittedAirports": [
+            {
+              "airport": "EWR",
+              "separationHours": 0.6852215021583301
+            },
+            {
+              "airport": "IAD",
+              "separationHours": 0.969505163280892
+            },
+            {
+              "airport": "JFK",
+              "separationHours": 0.9757143123331407
+            },
+            {
+              "airport": "DTW",
+              "separationHours": 1.1289722099463304
+            },
+            {
+              "airport": "PHL",
+              "separationHours": 1.2910176733839074
+            },
+            {
+              "airport": "YUL",
+              "separationHours": 1.2913477736138985
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "YYZ",
+              "b": "YUL",
+              "target": 1.4208333333333334,
+              "fitted": 1.2913477736138985,
+              "error": -0.12948555971943487,
+              "relativeError": -0.09113353176734419,
+              "twoWay": true,
+              "records": 5
+            },
+            {
+              "a": "YYZ",
+              "b": "YYC",
+              "target": 4.2,
+              "fitted": 4.137778927801059,
+              "error": -0.06222107219894113,
+              "relativeError": -0.014814540999747888,
+              "twoWay": false,
+              "records": 1
+            },
+            {
+              "a": "YYZ",
+              "b": "YVR",
+              "target": 4.660714285714286,
+              "fitted": 4.425918139730508,
+              "error": -0.2347961459837773,
+              "relativeError": -0.05037771714594456,
+              "twoWay": true,
+              "records": 15
+            },
+            {
+              "a": "YYZ",
+              "b": "MEX",
+              "target": 4.666666666666667,
+              "fitted": 4.218350890288893,
+              "error": -0.44831577637777364,
+              "relativeError": -0.09606766636666578,
+              "twoWay": false,
+              "records": 1
+            },
+            {
+              "a": "LAX",
+              "b": "YYZ",
+              "target": 4.783333333333333,
+              "fitted": 5.334832246787024,
+              "error": 0.551498913453691,
+              "relativeError": 0.11529594009484828,
+              "twoWay": true,
+              "records": 2
+            }
+          ],
+          "linksBelowThreeHours": 1
+        },
+        {
+          "airport": "YVR",
+          "edges": 30,
+          "localError": 0.04795714927384371,
+          "radiusRatio": 0.8832828357770555,
+          "nearestFittedAirports": [
+            {
+              "airport": "BOG",
+              "separationHours": 1.05477645575526
+            },
+            {
+              "airport": "SLC",
+              "separationHours": 1.238580452029255
+            },
+            {
+              "airport": "SEA",
+              "separationHours": 1.319497721501554
+            },
+            {
+              "airport": "PHX",
+              "separationHours": 1.4826333863919223
+            },
+            {
+              "airport": "PUJ",
+              "separationHours": 1.534769342112789
+            },
+            {
+              "airport": "SFO",
+              "separationHours": 1.547337100427192
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "YYZ",
+              "b": "YVR",
+              "target": 4.660714285714286,
+              "fitted": 4.425918139730508,
+              "error": -0.2347961459837773,
+              "relativeError": -0.05037771714594456,
+              "twoWay": true,
+              "records": 15
+            },
+            {
+              "a": "YVR",
+              "b": "YUL",
+              "target": 5.079444444444444,
+              "fitted": 5.1068344750618815,
+              "error": 0.027390030617437056,
+              "relativeError": 0.005392328022682566,
+              "twoWay": true,
+              "records": 11
+            },
+            {
+              "a": "YVR",
+              "b": "EWR",
+              "target": 5.466666666666667,
+              "fitted": 5.001166342024248,
+              "error": -0.4655003246424192,
+              "relativeError": -0.08515249841019863,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "YVR",
+              "b": "DUB",
+              "target": 8.791666666666666,
+              "fitted": 9.153532182204685,
+              "error": 0.36186551553801927,
+              "relativeError": 0.04116005863939556,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "YVR",
+              "b": "NRT",
+              "target": 9.333333333333334,
+              "fitted": 10.050720545122692,
+              "error": 0.717387211789358,
+              "relativeError": 0.07686291554885978,
+              "twoWay": true,
+              "records": 8
+            }
+          ],
+          "linksBelowThreeHours": 0
+        },
+        {
+          "airport": "YUL",
+          "edges": 32,
+          "localError": 0.030666573116754515,
+          "radiusRatio": 1.1221729677763883,
+          "nearestFittedAirports": [
+            {
+              "airport": "EWR",
+              "separationHours": 1.1286733685586776
+            },
+            {
+              "airport": "YYZ",
+              "separationHours": 1.2913477736138985
+            },
+            {
+              "airport": "JFK",
+              "separationHours": 1.7720788326820587
+            },
+            {
+              "airport": "ORD",
+              "separationHours": 1.901560135852915
+            },
+            {
+              "airport": "IAD",
+              "separationHours": 2.1062472081830346
+            },
+            {
+              "airport": "BOS",
+              "separationHours": 2.193893644744303
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "YYZ",
+              "b": "YUL",
+              "target": 1.4208333333333334,
+              "fitted": 1.2913477736138985,
+              "error": -0.12948555971943487,
+              "relativeError": -0.09113353176734419,
+              "twoWay": true,
+              "records": 5
+            },
+            {
+              "a": "YUL",
+              "b": "YYC",
+              "target": 4.308333333333334,
+              "fitted": 4.226862738044644,
+              "error": -0.08147059528868983,
+              "relativeError": -0.018910002774937675,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "MEX",
+              "b": "YUL",
+              "target": 5.05,
+              "fitted": 4.8509780092101105,
+              "error": -0.19902199078988936,
+              "relativeError": -0.03941029520591868,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "YVR",
+              "b": "YUL",
+              "target": 5.079444444444444,
+              "fitted": 5.1068344750618815,
+              "error": 0.027390030617437056,
+              "relativeError": 0.005392328022682566,
+              "twoWay": true,
+              "records": 11
+            },
+            {
+              "a": "BOG",
+              "b": "YUL",
+              "target": 6.333333333333333,
+              "fitted": 6.067023565032894,
+              "error": -0.26630976830043895,
+              "relativeError": -0.04204891078427984,
+              "twoWay": true,
+              "records": 2
+            }
+          ],
+          "linksBelowThreeHours": 1
+        },
+        {
+          "airport": "YYC",
+          "edges": 13,
+          "localError": 0.01801907035817277,
+          "radiusRatio": 0.9686872668816815,
+          "nearestFittedAirports": [
+            {
+              "airport": "SEA",
+              "separationHours": 1.5157270347863054
+            },
+            {
+              "airport": "DEN",
+              "separationHours": 1.935216998756496
+            },
+            {
+              "airport": "SLC",
+              "separationHours": 2.068683343381314
+            },
+            {
+              "airport": "PHX",
+              "separationHours": 2.257781471080381
+            },
+            {
+              "airport": "YVR",
+              "separationHours": 2.292043922852351
+            },
+            {
+              "airport": "MIA",
+              "separationHours": 2.3241087868265855
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "YYZ",
+              "b": "YYC",
+              "target": 4.2,
+              "fitted": 4.137778927801059,
+              "error": -0.06222107219894113,
+              "relativeError": -0.014814540999747888,
+              "twoWay": false,
+              "records": 1
+            },
+            {
+              "a": "YUL",
+              "b": "YYC",
+              "target": 4.308333333333334,
+              "fitted": 4.226862738044644,
+              "error": -0.08147059528868983,
+              "relativeError": -0.018910002774937675,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "EDI",
+              "b": "YYC",
+              "target": 7.916666666666667,
+              "fitted": 8.060486504900746,
+              "error": 0.14381983823407918,
+              "relativeError": 0.018166716408515263,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "DUB",
+              "b": "YYC",
+              "target": 8.083333333333334,
+              "fitted": 8.29172793531096,
+              "error": 0.20839460197762527,
+              "relativeError": 0.02578077550238663,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "AMS",
+              "b": "YYC",
+              "target": 8.875,
+              "fitted": 9.00839790185831,
+              "error": 0.13339790185830935,
+              "relativeError": 0.015030749505161617,
+              "twoWay": true,
+              "records": 6
+            }
+          ],
+          "linksBelowThreeHours": 0
+        }
+      ]
+    },
+    {
+      "aircraft": "all",
+      "seed": 71,
+      "airports": 201,
+      "edges": 3781,
+      "iterations": 12906,
+      "stable": true,
+      "normalizedDistanceError": 0.06494738622207125,
+      "inspectedAirports": [
+        {
+          "airport": "SJO",
+          "edges": 16,
+          "localError": 0.030939677386067618,
+          "radiusRatio": 1.2173258581420296,
+          "nearestFittedAirports": [
+            {
+              "airport": "SAL",
+              "separationHours": 0.9614546349633873
+            },
+            {
+              "airport": "PTY",
+              "separationHours": 1.0073407439243605
+            },
+            {
+              "airport": "BOG",
+              "separationHours": 1.6905389958449035
+            },
+            {
+              "airport": "GUA",
+              "separationHours": 1.6991229895017899
+            },
+            {
+              "airport": "CUN",
+              "separationHours": 1.7856813696628095
+            },
+            {
+              "airport": "GYE",
+              "separationHours": 1.9471406448653676
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "PTY",
+              "b": "SJO",
+              "target": 1.4083333333333334,
+              "fitted": 1.0073407439243605,
+              "error": -0.400992589408973,
+              "relativeError": -0.28472846585252515,
+              "twoWay": true,
+              "records": 23
+            },
+            {
+              "a": "SJO",
+              "b": "GUA",
+              "target": 1.7,
+              "fitted": 1.69912298950179,
+              "error": -0.0008770104982098736,
+              "relativeError": -0.0005158885283587493,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "MIA",
+              "b": "SJO",
+              "target": 3.0138888888888884,
+              "fitted": 2.704975844501597,
+              "error": -0.3089130443872916,
+              "relativeError": -0.10249649399025346,
+              "twoWay": true,
+              "records": 7
+            },
+            {
+              "a": "MEX",
+              "b": "SJO",
+              "target": 3.2986111111111116,
+              "fitted": 3.0706358967337777,
+              "error": -0.22797521437733392,
+              "relativeError": -0.0691124860428128,
+              "twoWay": true,
+              "records": 5
+            },
+            {
+              "a": "SJO",
+              "b": "IAH",
+              "target": 3.7291666666666665,
+              "fitted": 3.8432816587886056,
+              "error": 0.1141149921219391,
+              "relativeError": 0.03060066827850881,
+              "twoWay": true,
+              "records": 4
+            }
+          ],
+          "linksBelowThreeHours": 2
+        },
+        {
+          "airport": "YYZ",
+          "edges": 76,
+          "localError": 0.035988704595301596,
+          "radiusRatio": 1.0351985103295407,
+          "nearestFittedAirports": [
+            {
+              "airport": "DTW",
+              "separationHours": 0.5631623455491733
+            },
+            {
+              "airport": "YUL",
+              "separationHours": 0.771706848513817
+            },
+            {
+              "airport": "YOW",
+              "separationHours": 0.8426135536307295
+            },
+            {
+              "airport": "PHL",
+              "separationHours": 1.0036912877173636
+            },
+            {
+              "airport": "IAD",
+              "separationHours": 1.0244604019869565
+            },
+            {
+              "airport": "ORD",
+              "separationHours": 1.1187440148957724
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "YYZ",
+              "b": "YOW",
+              "target": 1.111111111111111,
+              "fitted": 0.8426135536307295,
+              "error": -0.2684975574803814,
+              "relativeError": -0.2416478017323433,
+              "twoWay": true,
+              "records": 34
+            },
+            {
+              "a": "YYZ",
+              "b": "YUL",
+              "target": 1.3888390804597701,
+              "fitted": 0.7717068485138169,
+              "error": -0.6171322319459532,
+              "relativeError": -0.44435114235239825,
+              "twoWay": true,
+              "records": 54
+            },
+            {
+              "a": "YYZ",
+              "b": "EWR",
+              "target": 1.625,
+              "fitted": 1.3056839504287843,
+              "error": -0.31931604957121573,
+              "relativeError": -0.19650218435151737,
+              "twoWay": true,
+              "records": 10
+            },
+            {
+              "a": "YYZ",
+              "b": "BOS",
+              "target": 1.8054545454545454,
+              "fitted": 1.3097452116175867,
+              "error": -0.4957093338369587,
+              "relativeError": -0.27456206808693584,
+              "twoWay": true,
+              "records": 21
+            },
+            {
+              "a": "YYZ",
+              "b": "ORD",
+              "target": 1.8577777777777778,
+              "fitted": 1.1187440148957724,
+              "error": -0.7390337628820054,
+              "relativeError": -0.39780525513983545,
+              "twoWay": true,
+              "records": 16
+            }
+          ],
+          "linksBelowThreeHours": 10
+        },
+        {
+          "airport": "YVR",
+          "edges": 51,
+          "localError": 0.05956824590579538,
+          "radiusRatio": 0.8778415395935144,
+          "nearestFittedAirports": [
+            {
+              "airport": "SEA",
+              "separationHours": 0.37593853210970335
+            },
+            {
+              "airport": "PDX",
+              "separationHours": 0.6508002315959601
+            },
+            {
+              "airport": "YYC",
+              "separationHours": 0.9818047566279179
+            },
+            {
+              "airport": "YEG",
+              "separationHours": 1.638088771936033
+            },
+            {
+              "airport": "SLC",
+              "separationHours": 1.9072514018588391
+            },
+            {
+              "airport": "SFO",
+              "separationHours": 2.22301589649374
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "YVR",
+              "b": "YYC",
+              "target": 1.566965663580247,
+              "fitted": 0.9818047566279179,
+              "error": -0.585160906952329,
+              "relativeError": -0.37343569202106003,
+              "twoWay": true,
+              "records": 59
+            },
+            {
+              "a": "YVR",
+              "b": "YEG",
+              "target": 1.6423529411764703,
+              "fitted": 1.638088771936033,
+              "error": -0.0042641692404372655,
+              "relativeError": -0.0025963781191774187,
+              "twoWay": true,
+              "records": 32
+            },
+            {
+              "a": "YVR",
+              "b": "SLC",
+              "target": 2.325,
+              "fitted": 1.9072514018588391,
+              "error": -0.41774859814116105,
+              "relativeError": -0.17967681640480043,
+              "twoWay": true,
+              "records": 3
+            },
+            {
+              "a": "SFO",
+              "b": "YVR",
+              "target": 2.4071428571428575,
+              "fitted": 2.2230158964937403,
+              "error": -0.18412696064911716,
+              "relativeError": -0.07649191243583502,
+              "twoWay": true,
+              "records": 14
+            },
+            {
+              "a": "YVR",
+              "b": "DEN",
+              "target": 2.8558333333333334,
+              "fitted": 2.329535170786965,
+              "error": -0.5262981625463685,
+              "relativeError": -0.18428882260158805,
+              "twoWay": true,
+              "records": 9
+            }
+          ],
+          "linksBelowThreeHours": 7
+        },
+        {
+          "airport": "YUL",
+          "edges": 57,
+          "localError": 0.045735510995585996,
+          "radiusRatio": 1.0237504702077727,
+          "nearestFittedAirports": [
+            {
+              "airport": "YOW",
+              "separationHours": 0.6313170391514658
+            },
+            {
+              "airport": "YYZ",
+              "separationHours": 0.771706848513817
+            },
+            {
+              "airport": "PHL",
+              "separationHours": 0.8131077574649219
+            },
+            {
+              "airport": "BOS",
+              "separationHours": 0.8234419776843923
+            },
+            {
+              "airport": "JFK",
+              "separationHours": 0.9384712429866948
+            },
+            {
+              "airport": "IAD",
+              "separationHours": 1.039350504627455
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "YYZ",
+              "b": "YUL",
+              "target": 1.3888390804597701,
+              "fitted": 0.7717068485138169,
+              "error": -0.6171322319459532,
+              "relativeError": -0.44435114235239825,
+              "twoWay": true,
+              "records": 54
+            },
+            {
+              "a": "BOS",
+              "b": "YUL",
+              "target": 1.4,
+              "fitted": 0.8234419776843924,
+              "error": -0.5765580223156075,
+              "relativeError": -0.4118271587968625,
+              "twoWay": true,
+              "records": 6
+            },
+            {
+              "a": "YUL",
+              "b": "EWR",
+              "target": 1.575,
+              "fitted": 1.0731540552224188,
+              "error": -0.5018459447775812,
+              "relativeError": -0.31863234589052775,
+              "twoWay": true,
+              "records": 4
+            },
+            {
+              "a": "YUL",
+              "b": "YHZ",
+              "target": 1.6572222222222224,
+              "fitted": 1.7677349282593549,
+              "error": 0.11051270603713248,
+              "relativeError": 0.06668550816856804,
+              "twoWay": true,
+              "records": 11
+            },
+            {
+              "a": "ORD",
+              "b": "YUL",
+              "target": 2.4930555555555554,
+              "fitted": 1.8896454968254055,
+              "error": -0.6034100587301499,
+              "relativeError": -0.2420363466772746,
+              "twoWay": true,
+              "records": 5
+            }
+          ],
+          "linksBelowThreeHours": 6
+        },
+        {
+          "airport": "YYC",
+          "edges": 40,
+          "localError": 0.03914999912334673,
+          "radiusRatio": 0.8119762456394571,
+          "nearestFittedAirports": [
+            {
+              "airport": "YEG",
+              "separationHours": 0.8245925540630977
+            },
+            {
+              "airport": "YVR",
+              "separationHours": 0.9818047566279179
+            },
+            {
+              "airport": "PDX",
+              "separationHours": 1.127479320324274
+            },
+            {
+              "airport": "SEA",
+              "separationHours": 1.3383859384082055
+            },
+            {
+              "airport": "SLC",
+              "separationHours": 1.848596803524492
+            },
+            {
+              "airport": "DEN",
+              "separationHours": 2.214136056801081
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "YYC",
+              "b": "YEG",
+              "target": 1,
+              "fitted": 0.8245925540630978,
+              "error": -0.17540744593690216,
+              "relativeError": -0.17540744593690216,
+              "twoWay": true,
+              "records": 25
+            },
+            {
+              "a": "YVR",
+              "b": "YYC",
+              "target": 1.566965663580247,
+              "fitted": 0.9818047566279179,
+              "error": -0.585160906952329,
+              "relativeError": -0.37343569202106003,
+              "twoWay": true,
+              "records": 59
+            },
+            {
+              "a": "SEA",
+              "b": "YYC",
+              "target": 1.7916666666666667,
+              "fitted": 1.3383859384082053,
+              "error": -0.45328072825846144,
+              "relativeError": -0.25299389484193197,
+              "twoWay": true,
+              "records": 9
+            },
+            {
+              "a": "YYC",
+              "b": "DEN",
+              "target": 2.54375,
+              "fitted": 2.214136056801081,
+              "error": -0.3296139431989191,
+              "relativeError": -0.129577962928322,
+              "twoWay": true,
+              "records": 8
+            },
+            {
+              "a": "YYC",
+              "b": "MSP",
+              "target": 2.8234953703703707,
+              "fitted": 2.448566138039713,
+              "error": -0.37492923233065767,
+              "relativeError": -0.13278903739851944,
+              "twoWay": true,
+              "records": 17
+            }
+          ],
+          "linksBelowThreeHours": 7
+        },
+        {
+          "airport": "YEG",
+          "edges": 15,
+          "localError": 0.027619241982794744,
+          "radiusRatio": 0.7125017164581483,
+          "nearestFittedAirports": [
+            {
+              "airport": "YYC",
+              "separationHours": 0.8245925540630977
+            },
+            {
+              "airport": "PDX",
+              "separationHours": 1.535283830863521
+            },
+            {
+              "airport": "YVR",
+              "separationHours": 1.638088771936033
+            },
+            {
+              "airport": "SEA",
+              "separationHours": 2.0095508355072416
+            },
+            {
+              "airport": "SLC",
+              "separationHours": 2.188495715484695
+            },
+            {
+              "airport": "ANC",
+              "separationHours": 2.717248953892932
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "YYC",
+              "b": "YEG",
+              "target": 1,
+              "fitted": 0.8245925540630978,
+              "error": -0.17540744593690216,
+              "relativeError": -0.17540744593690216,
+              "twoWay": true,
+              "records": 25
+            },
+            {
+              "a": "YVR",
+              "b": "YEG",
+              "target": 1.6423529411764703,
+              "fitted": 1.638088771936033,
+              "error": -0.0042641692404372655,
+              "relativeError": -0.0025963781191774187,
+              "twoWay": true,
+              "records": 32
+            },
+            {
+              "a": "YEG",
+              "b": "SLC",
+              "target": 2.3333333333333335,
+              "fitted": 2.188495715484695,
+              "error": -0.14483761784863836,
+              "relativeError": -0.062073264792273576,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "YEG",
+              "b": "DEN",
+              "target": 2.779166666666667,
+              "fitted": 2.7723886074939172,
+              "error": -0.00677805917274954,
+              "relativeError": -0.0024388818612592045,
+              "twoWay": true,
+              "records": 3
+            },
+            {
+              "a": "YEG",
+              "b": "MSP",
+              "target": 2.875,
+              "fitted": 2.830037395632112,
+              "error": -0.044962604367888126,
+              "relativeError": -0.01563916673665674,
+              "twoWay": true,
+              "records": 4
+            }
+          ],
+          "linksBelowThreeHours": 5
+        },
+        {
+          "airport": "YOW",
+          "edges": 14,
+          "localError": 0.06577460658554553,
+          "radiusRatio": 0.9645659182561939,
+          "nearestFittedAirports": [
+            {
+              "airport": "YUL",
+              "separationHours": 0.6313170391514658
+            },
+            {
+              "airport": "YYZ",
+              "separationHours": 0.8426135536307295
+            },
+            {
+              "airport": "IAD",
+              "separationHours": 1.101585071548846
+            },
+            {
+              "airport": "PHL",
+              "separationHours": 1.1443570584858298
+            },
+            {
+              "airport": "DTW",
+              "separationHours": 1.1717602605447242
+            },
+            {
+              "airport": "JFK",
+              "separationHours": 1.278333886205857
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "YYZ",
+              "b": "YOW",
+              "target": 1.111111111111111,
+              "fitted": 0.8426135536307295,
+              "error": -0.2684975574803814,
+              "relativeError": -0.2416478017323433,
+              "twoWay": true,
+              "records": 34
+            },
+            {
+              "a": "BOS",
+              "b": "YOW",
+              "target": 1.4583333333333333,
+              "fitted": 1.4215488560327547,
+              "error": -0.036784477300578544,
+              "relativeError": -0.025223641577539573,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "YOW",
+              "b": "EWR",
+              "target": 1.5833333333333333,
+              "fitted": 1.4186411660396334,
+              "error": -0.16469216729369984,
+              "relativeError": -0.10401610565917885,
+              "twoWay": false,
+              "records": 1
+            },
+            {
+              "a": "YOW",
+              "b": "YHZ",
+              "target": 1.7416666666666667,
+              "fitted": 1.5752414444463019,
+              "error": -0.16642522222036482,
+              "relativeError": -0.09555515151408506,
+              "twoWay": true,
+              "records": 4
+            },
+            {
+              "a": "ORD",
+              "b": "YOW",
+              "target": 2.275,
+              "fitted": 1.7871497072693512,
+              "error": -0.4878502927306487,
+              "relativeError": -0.21443968911237307,
+              "twoWay": true,
+              "records": 2
+            }
+          ],
+          "linksBelowThreeHours": 5
+        },
+        {
+          "airport": "YHZ",
+          "edges": 17,
+          "localError": 0.0392865365823653,
+          "radiusRatio": 0.9748323961843218,
+          "nearestFittedAirports": [
+            {
+              "airport": "YOW",
+              "separationHours": 1.575241444446302
+            },
+            {
+              "airport": "JFK",
+              "separationHours": 1.7305719320805226
+            },
+            {
+              "airport": "CLT",
+              "separationHours": 1.763037161813905
+            },
+            {
+              "airport": "YUL",
+              "separationHours": 1.7677349282593546
+            },
+            {
+              "airport": "IAD",
+              "separationHours": 1.7909394308226991
+            },
+            {
+              "airport": "PHL",
+              "separationHours": 1.8569727614576506
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "YUL",
+              "b": "YHZ",
+              "target": 1.6572222222222224,
+              "fitted": 1.7677349282593549,
+              "error": 0.11051270603713248,
+              "relativeError": 0.06668550816856804,
+              "twoWay": true,
+              "records": 11
+            },
+            {
+              "a": "YOW",
+              "b": "YHZ",
+              "target": 1.7416666666666667,
+              "fitted": 1.5752414444463019,
+              "error": -0.16642522222036482,
+              "relativeError": -0.09555515151408506,
+              "twoWay": true,
+              "records": 4
+            },
+            {
+              "a": "YYZ",
+              "b": "YHZ",
+              "target": 2.282199754901961,
+              "fitted": 2.301094395437452,
+              "error": 0.01889464053549128,
+              "relativeError": 0.008279135292564677,
+              "twoWay": true,
+              "records": 33
+            },
+            {
+              "a": "YHZ",
+              "b": "DTW",
+              "target": 2.75,
+              "fitted": 2.5802766698102513,
+              "error": -0.16972333018974872,
+              "relativeError": -0.06171757461445408,
+              "twoWay": true,
+              "records": 4
+            },
+            {
+              "a": "KEF",
+              "b": "YHZ",
+              "target": 4.583333333333333,
+              "fitted": 4.433427998264461,
+              "error": -0.14990533506887171,
+              "relativeError": -0.032706618560481106,
+              "twoWay": true,
+              "records": 2
+            }
+          ],
+          "linksBelowThreeHours": 4
+        }
+      ]
+    },
+    {
+      "aircraft": "all",
+      "seed": 72,
+      "airports": 201,
+      "edges": 3781,
+      "iterations": 6107,
+      "stable": true,
+      "normalizedDistanceError": 0.06250657078327174,
+      "inspectedAirports": [
+        {
+          "airport": "SJO",
+          "edges": 16,
+          "localError": 0.0563903205376252,
+          "radiusRatio": 1.0128761829177744,
+          "nearestFittedAirports": [
+            {
+              "airport": "SAL",
+              "separationHours": 0.8293071125967345
+            },
+            {
+              "airport": "GUA",
+              "separationHours": 1.4345596568926753
+            },
+            {
+              "airport": "CUN",
+              "separationHours": 1.7813463524218132
+            },
+            {
+              "airport": "PTY",
+              "separationHours": 2.0559849149644354
+            },
+            {
+              "airport": "MIA",
+              "separationHours": 2.531413036007589
+            },
+            {
+              "airport": "FLL",
+              "separationHours": 2.545063577577907
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "PTY",
+              "b": "SJO",
+              "target": 1.4083333333333334,
+              "fitted": 2.0559849149644354,
+              "error": 0.6476515816311019,
+              "relativeError": 0.4598709455368771,
+              "twoWay": true,
+              "records": 23
+            },
+            {
+              "a": "SJO",
+              "b": "GUA",
+              "target": 1.7,
+              "fitted": 1.4345596568926753,
+              "error": -0.26544034310732467,
+              "relativeError": -0.15614137829842628,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "MIA",
+              "b": "SJO",
+              "target": 3.0138888888888884,
+              "fitted": 2.531413036007589,
+              "error": -0.48247585288129935,
+              "relativeError": -0.16008415395139888,
+              "twoWay": true,
+              "records": 7
+            },
+            {
+              "a": "MEX",
+              "b": "SJO",
+              "target": 3.2986111111111116,
+              "fitted": 3.370058801429662,
+              "error": 0.07144769031855036,
+              "relativeError": 0.02165993138078158,
+              "twoWay": true,
+              "records": 5
+            },
+            {
+              "a": "SJO",
+              "b": "IAH",
+              "target": 3.7291666666666665,
+              "fitted": 4.1537894577094026,
+              "error": 0.42462279104273604,
+              "relativeError": 0.11386532944162754,
+              "twoWay": true,
+              "records": 4
+            }
+          ],
+          "linksBelowThreeHours": 2
+        },
+        {
+          "airport": "YYZ",
+          "edges": 76,
+          "localError": 0.03641556613172539,
+          "radiusRatio": 1.089433845254738,
+          "nearestFittedAirports": [
+            {
+              "airport": "DTW",
+              "separationHours": 0.5808314697727478
+            },
+            {
+              "airport": "YOW",
+              "separationHours": 0.7764728492544234
+            },
+            {
+              "airport": "YUL",
+              "separationHours": 0.8825183767246235
+            },
+            {
+              "airport": "PHL",
+              "separationHours": 0.9609403697584334
+            },
+            {
+              "airport": "JFK",
+              "separationHours": 1.0362039269571324
+            },
+            {
+              "airport": "IAD",
+              "separationHours": 1.0590577644621335
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "YYZ",
+              "b": "YOW",
+              "target": 1.111111111111111,
+              "fitted": 0.7764728492544235,
+              "error": -0.33463826185668744,
+              "relativeError": -0.30117443567101876,
+              "twoWay": true,
+              "records": 34
+            },
+            {
+              "a": "YYZ",
+              "b": "YUL",
+              "target": 1.3888390804597701,
+              "fitted": 0.8825183767246234,
+              "error": -0.5063207037351467,
+              "relativeError": -0.3645639807079241,
+              "twoWay": true,
+              "records": 54
+            },
+            {
+              "a": "YYZ",
+              "b": "EWR",
+              "target": 1.625,
+              "fitted": 1.1386837801138914,
+              "error": -0.4863162198861086,
+              "relativeError": -0.299271519929913,
+              "twoWay": true,
+              "records": 10
+            },
+            {
+              "a": "YYZ",
+              "b": "BOS",
+              "target": 1.8054545454545454,
+              "fitted": 1.6411399669419953,
+              "error": -0.16431457851255016,
+              "relativeError": -0.09101008880352728,
+              "twoWay": true,
+              "records": 21
+            },
+            {
+              "a": "YYZ",
+              "b": "ORD",
+              "target": 1.8577777777777778,
+              "fitted": 1.0645535839599418,
+              "error": -0.7932241938178359,
+              "relativeError": -0.42697474547610786,
+              "twoWay": true,
+              "records": 16
+            }
+          ],
+          "linksBelowThreeHours": 10
+        },
+        {
+          "airport": "YVR",
+          "edges": 51,
+          "localError": 0.058930176215667804,
+          "radiusRatio": 0.9769415057984815,
+          "nearestFittedAirports": [
+            {
+              "airport": "SEA",
+              "separationHours": 0.37168028025553507
+            },
+            {
+              "airport": "PDX",
+              "separationHours": 0.6548266238200852
+            },
+            {
+              "airport": "YYC",
+              "separationHours": 0.9765029217397629
+            },
+            {
+              "airport": "YEG",
+              "separationHours": 1.5543482293871582
+            },
+            {
+              "airport": "SLC",
+              "separationHours": 1.7389175278369966
+            },
+            {
+              "airport": "SFO",
+              "separationHours": 2.132061081317352
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "YVR",
+              "b": "YYC",
+              "target": 1.566965663580247,
+              "fitted": 0.9765029217397629,
+              "error": -0.590462741840484,
+              "relativeError": -0.3768191962109611,
+              "twoWay": true,
+              "records": 59
+            },
+            {
+              "a": "YVR",
+              "b": "YEG",
+              "target": 1.6423529411764703,
+              "fitted": 1.5543482293871584,
+              "error": -0.0880047117893119,
+              "relativeError": -0.05358453081727445,
+              "twoWay": true,
+              "records": 32
+            },
+            {
+              "a": "YVR",
+              "b": "SLC",
+              "target": 2.325,
+              "fitted": 1.7389175278369964,
+              "error": -0.5860824721630038,
+              "relativeError": -0.2520784826507543,
+              "twoWay": true,
+              "records": 3
+            },
+            {
+              "a": "SFO",
+              "b": "YVR",
+              "target": 2.4071428571428575,
+              "fitted": 2.132061081317352,
+              "error": -0.2750817758255053,
+              "relativeError": -0.11427729559516539,
+              "twoWay": true,
+              "records": 14
+            },
+            {
+              "a": "YVR",
+              "b": "DEN",
+              "target": 2.8558333333333334,
+              "fitted": 2.691509481321562,
+              "error": -0.16432385201177135,
+              "relativeError": -0.05753972057605066,
+              "twoWay": true,
+              "records": 9
+            }
+          ],
+          "linksBelowThreeHours": 7
+        },
+        {
+          "airport": "YUL",
+          "edges": 57,
+          "localError": 0.0403024226482515,
+          "radiusRatio": 1.0458024017871546,
+          "nearestFittedAirports": [
+            {
+              "airport": "YOW",
+              "separationHours": 0.5976488006394646
+            },
+            {
+              "airport": "PHL",
+              "separationHours": 0.7762303126548925
+            },
+            {
+              "airport": "YYZ",
+              "separationHours": 0.8825183767246235
+            },
+            {
+              "airport": "JFK",
+              "separationHours": 0.9245428819522992
+            },
+            {
+              "airport": "EWR",
+              "separationHours": 0.9828500227850955
+            },
+            {
+              "airport": "BOS",
+              "separationHours": 0.989000386081165
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "YYZ",
+              "b": "YUL",
+              "target": 1.3888390804597701,
+              "fitted": 0.8825183767246234,
+              "error": -0.5063207037351467,
+              "relativeError": -0.3645639807079241,
+              "twoWay": true,
+              "records": 54
+            },
+            {
+              "a": "BOS",
+              "b": "YUL",
+              "target": 1.4,
+              "fitted": 0.989000386081165,
+              "error": -0.4109996139188349,
+              "relativeError": -0.2935711527991678,
+              "twoWay": true,
+              "records": 6
+            },
+            {
+              "a": "YUL",
+              "b": "EWR",
+              "target": 1.575,
+              "fitted": 0.9828500227850955,
+              "error": -0.5921499772149045,
+              "relativeError": -0.37596823950152664,
+              "twoWay": true,
+              "records": 4
+            },
+            {
+              "a": "YUL",
+              "b": "YHZ",
+              "target": 1.6572222222222224,
+              "fitted": 1.5524795036729313,
+              "error": -0.10474271854929107,
+              "relativeError": -0.06320378591643443,
+              "twoWay": true,
+              "records": 11
+            },
+            {
+              "a": "ORD",
+              "b": "YUL",
+              "target": 2.4930555555555554,
+              "fitted": 1.9423201903471417,
+              "error": -0.5507353652084137,
+              "relativeError": -0.22090777880226067,
+              "twoWay": true,
+              "records": 5
+            }
+          ],
+          "linksBelowThreeHours": 6
+        },
+        {
+          "airport": "YYC",
+          "edges": 40,
+          "localError": 0.045160184983771716,
+          "radiusRatio": 0.9425337098114096,
+          "nearestFittedAirports": [
+            {
+              "airport": "YEG",
+              "separationHours": 0.7645395875393898
+            },
+            {
+              "airport": "YVR",
+              "separationHours": 0.9765029217397629
+            },
+            {
+              "airport": "PDX",
+              "separationHours": 1.2410877573509072
+            },
+            {
+              "airport": "SEA",
+              "separationHours": 1.2924407456068874
+            },
+            {
+              "airport": "SLC",
+              "separationHours": 1.6952154278533833
+            },
+            {
+              "airport": "DEN",
+              "separationHours": 2.2977405826730806
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "YYC",
+              "b": "YEG",
+              "target": 1,
+              "fitted": 0.7645395875393898,
+              "error": -0.23546041246061022,
+              "relativeError": -0.23546041246061022,
+              "twoWay": true,
+              "records": 25
+            },
+            {
+              "a": "YVR",
+              "b": "YYC",
+              "target": 1.566965663580247,
+              "fitted": 0.9765029217397629,
+              "error": -0.590462741840484,
+              "relativeError": -0.3768191962109611,
+              "twoWay": true,
+              "records": 59
+            },
+            {
+              "a": "SEA",
+              "b": "YYC",
+              "target": 1.7916666666666667,
+              "fitted": 1.2924407456068874,
+              "error": -0.49922592105977937,
+              "relativeError": -0.27863772338220244,
+              "twoWay": true,
+              "records": 9
+            },
+            {
+              "a": "YYC",
+              "b": "DEN",
+              "target": 2.54375,
+              "fitted": 2.29774058267308,
+              "error": -0.24600941732692005,
+              "relativeError": -0.09671131885087765,
+              "twoWay": true,
+              "records": 8
+            },
+            {
+              "a": "YYC",
+              "b": "MSP",
+              "target": 2.8234953703703707,
+              "fitted": 2.5403312407337215,
+              "error": -0.28316412963664916,
+              "relativeError": -0.10028850502400691,
+              "twoWay": true,
+              "records": 17
+            }
+          ],
+          "linksBelowThreeHours": 7
+        },
+        {
+          "airport": "YEG",
+          "edges": 15,
+          "localError": 0.04725603842607587,
+          "radiusRatio": 0.96639527753602,
+          "nearestFittedAirports": [
+            {
+              "airport": "YYC",
+              "separationHours": 0.7645395875393898
+            },
+            {
+              "airport": "YVR",
+              "separationHours": 1.5543482293871582
+            },
+            {
+              "airport": "SEA",
+              "separationHours": 1.8501481229853756
+            },
+            {
+              "airport": "PDX",
+              "separationHours": 1.965765773031406
+            },
+            {
+              "airport": "FOR",
+              "separationHours": 2.2580758165386934
+            },
+            {
+              "airport": "SLC",
+              "separationHours": 2.2702871283201884
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "YYC",
+              "b": "YEG",
+              "target": 1,
+              "fitted": 0.7645395875393898,
+              "error": -0.23546041246061022,
+              "relativeError": -0.23546041246061022,
+              "twoWay": true,
+              "records": 25
+            },
+            {
+              "a": "YVR",
+              "b": "YEG",
+              "target": 1.6423529411764703,
+              "fitted": 1.5543482293871584,
+              "error": -0.0880047117893119,
+              "relativeError": -0.05358453081727445,
+              "twoWay": true,
+              "records": 32
+            },
+            {
+              "a": "YEG",
+              "b": "SLC",
+              "target": 2.3333333333333335,
+              "fitted": 2.2702871283201884,
+              "error": -0.06304620501314506,
+              "relativeError": -0.02701980214849074,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "YEG",
+              "b": "DEN",
+              "target": 2.779166666666667,
+              "fitted": 2.5567558893531133,
+              "error": -0.22241077731355352,
+              "relativeError": -0.0800278658999293,
+              "twoWay": true,
+              "records": 3
+            },
+            {
+              "a": "YEG",
+              "b": "MSP",
+              "target": 2.875,
+              "fitted": 2.559800896802998,
+              "error": -0.31519910319700184,
+              "relativeError": -0.10963447067721803,
+              "twoWay": true,
+              "records": 4
+            }
+          ],
+          "linksBelowThreeHours": 5
+        },
+        {
+          "airport": "YOW",
+          "edges": 14,
+          "localError": 0.07075724195106177,
+          "radiusRatio": 0.9970215474415408,
+          "nearestFittedAirports": [
+            {
+              "airport": "YUL",
+              "separationHours": 0.5976488006394646
+            },
+            {
+              "airport": "YYZ",
+              "separationHours": 0.7764728492544234
+            },
+            {
+              "airport": "IAD",
+              "separationHours": 1.076985893014378
+            },
+            {
+              "airport": "PHL",
+              "separationHours": 1.0807202233898996
+            },
+            {
+              "airport": "DTW",
+              "separationHours": 1.1204693079503463
+            },
+            {
+              "airport": "EWR",
+              "separationHours": 1.3038442817862437
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "YYZ",
+              "b": "YOW",
+              "target": 1.111111111111111,
+              "fitted": 0.7764728492544235,
+              "error": -0.33463826185668744,
+              "relativeError": -0.30117443567101876,
+              "twoWay": true,
+              "records": 34
+            },
+            {
+              "a": "BOS",
+              "b": "YOW",
+              "target": 1.4583333333333333,
+              "fitted": 1.4451130593663057,
+              "error": -0.013220273967027518,
+              "relativeError": -0.009065330720247441,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "YOW",
+              "b": "EWR",
+              "target": 1.5833333333333333,
+              "fitted": 1.3038442817862437,
+              "error": -0.2794890515470896,
+              "relativeError": -0.17651940097710922,
+              "twoWay": false,
+              "records": 1
+            },
+            {
+              "a": "YOW",
+              "b": "YHZ",
+              "target": 1.7416666666666667,
+              "fitted": 1.6190039634205589,
+              "error": -0.12266270324610784,
+              "relativeError": -0.07042834636140163,
+              "twoWay": true,
+              "records": 4
+            },
+            {
+              "a": "ORD",
+              "b": "YOW",
+              "target": 2.275,
+              "fitted": 1.6768900816359782,
+              "error": -0.5981099183640217,
+              "relativeError": -0.262905458621548,
+              "twoWay": true,
+              "records": 2
+            }
+          ],
+          "linksBelowThreeHours": 5
+        },
+        {
+          "airport": "YHZ",
+          "edges": 17,
+          "localError": 0.044311305670093296,
+          "radiusRatio": 0.9308471647048334,
+          "nearestFittedAirports": [
+            {
+              "airport": "BOS",
+              "separationHours": 1.3329840672404867
+            },
+            {
+              "airport": "YUL",
+              "separationHours": 1.5524795036729315
+            },
+            {
+              "airport": "YOW",
+              "separationHours": 1.6190039634205589
+            },
+            {
+              "airport": "IAD",
+              "separationHours": 1.7190385049137042
+            },
+            {
+              "airport": "PHL",
+              "separationHours": 1.7774382667126358
+            },
+            {
+              "airport": "EWR",
+              "separationHours": 1.8763435354459574
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "YUL",
+              "b": "YHZ",
+              "target": 1.6572222222222224,
+              "fitted": 1.5524795036729313,
+              "error": -0.10474271854929107,
+              "relativeError": -0.06320378591643443,
+              "twoWay": true,
+              "records": 11
+            },
+            {
+              "a": "YOW",
+              "b": "YHZ",
+              "target": 1.7416666666666667,
+              "fitted": 1.6190039634205589,
+              "error": -0.12266270324610784,
+              "relativeError": -0.07042834636140163,
+              "twoWay": true,
+              "records": 4
+            },
+            {
+              "a": "YYZ",
+              "b": "YHZ",
+              "target": 2.282199754901961,
+              "fitted": 2.2647224449226804,
+              "error": -0.01747730997928043,
+              "relativeError": -0.007658098263195732,
+              "twoWay": true,
+              "records": 33
+            },
+            {
+              "a": "YHZ",
+              "b": "DTW",
+              "target": 2.75,
+              "fitted": 2.5621725595122524,
+              "error": -0.18782744048774758,
+              "relativeError": -0.06830088745009003,
+              "twoWay": true,
+              "records": 4
+            },
+            {
+              "a": "KEF",
+              "b": "YHZ",
+              "target": 4.583333333333333,
+              "fitted": 4.487809636809609,
+              "error": -0.09552369652372406,
+              "relativeError": -0.02084153378699434,
+              "twoWay": true,
+              "records": 2
+            }
+          ],
+          "linksBelowThreeHours": 4
+        }
+      ]
+    },
+    {
+      "aircraft": "all",
+      "seed": 73,
+      "airports": 201,
+      "edges": 3781,
+      "iterations": 15709,
+      "stable": true,
+      "normalizedDistanceError": 0.06332059863337111,
+      "inspectedAirports": [
+        {
+          "airport": "SJO",
+          "edges": 16,
+          "localError": 0.03447568088313374,
+          "radiusRatio": 1.2736958135284102,
+          "nearestFittedAirports": [
+            {
+              "airport": "PTY",
+              "separationHours": 0.9572646668485141
+            },
+            {
+              "airport": "SAL",
+              "separationHours": 1.042646351690339
+            },
+            {
+              "airport": "GUA",
+              "separationHours": 1.5538928871570057
+            },
+            {
+              "airport": "CUN",
+              "separationHours": 1.703518025712116
+            },
+            {
+              "airport": "BOG",
+              "separationHours": 1.7974848258479368
+            },
+            {
+              "airport": "GYE",
+              "separationHours": 2.3966241841714906
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "PTY",
+              "b": "SJO",
+              "target": 1.4083333333333334,
+              "fitted": 0.9572646668485141,
+              "error": -0.45106866648481936,
+              "relativeError": -0.3202854436578599,
+              "twoWay": true,
+              "records": 23
+            },
+            {
+              "a": "SJO",
+              "b": "GUA",
+              "target": 1.7,
+              "fitted": 1.5538928871570057,
+              "error": -0.14610711284299427,
+              "relativeError": -0.08594536049587899,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "MIA",
+              "b": "SJO",
+              "target": 3.0138888888888884,
+              "fitted": 2.5873599189705456,
+              "error": -0.42652896991834277,
+              "relativeError": -0.1415211328761322,
+              "twoWay": true,
+              "records": 7
+            },
+            {
+              "a": "MEX",
+              "b": "SJO",
+              "target": 3.2986111111111116,
+              "fitted": 3.220383018531465,
+              "error": -0.0782280925796468,
+              "relativeError": -0.0237154638557245,
+              "twoWay": true,
+              "records": 5
+            },
+            {
+              "a": "SJO",
+              "b": "IAH",
+              "target": 3.7291666666666665,
+              "fitted": 3.9366710338463595,
+              "error": 0.207504367179693,
+              "relativeError": 0.05564362918785064,
+              "twoWay": true,
+              "records": 4
+            }
+          ],
+          "linksBelowThreeHours": 2
+        },
+        {
+          "airport": "YYZ",
+          "edges": 76,
+          "localError": 0.03665066913523085,
+          "radiusRatio": 1.0319612452610476,
+          "nearestFittedAirports": [
+            {
+              "airport": "DTW",
+              "separationHours": 0.5934062121400433
+            },
+            {
+              "airport": "YOW",
+              "separationHours": 0.7795880023759412
+            },
+            {
+              "airport": "YUL",
+              "separationHours": 0.7862148678453372
+            },
+            {
+              "airport": "IAD",
+              "separationHours": 0.9172952570821031
+            },
+            {
+              "airport": "PHL",
+              "separationHours": 0.975835708921426
+            },
+            {
+              "airport": "ORD",
+              "separationHours": 1.158138069980917
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "YYZ",
+              "b": "YOW",
+              "target": 1.111111111111111,
+              "fitted": 0.7795880023759412,
+              "error": -0.33152310873516977,
+              "relativeError": -0.2983707978616528,
+              "twoWay": true,
+              "records": 34
+            },
+            {
+              "a": "YYZ",
+              "b": "YUL",
+              "target": 1.3888390804597701,
+              "fitted": 0.7862148678453371,
+              "error": -0.602624212614433,
+              "relativeError": -0.43390499381320435,
+              "twoWay": true,
+              "records": 54
+            },
+            {
+              "a": "YYZ",
+              "b": "EWR",
+              "target": 1.625,
+              "fitted": 1.3298547471761144,
+              "error": -0.2951452528238856,
+              "relativeError": -0.1816278478916219,
+              "twoWay": true,
+              "records": 10
+            },
+            {
+              "a": "YYZ",
+              "b": "BOS",
+              "target": 1.8054545454545454,
+              "fitted": 1.2314018693966455,
+              "error": -0.5740526760578999,
+              "relativeError": -0.3179546544127341,
+              "twoWay": true,
+              "records": 21
+            },
+            {
+              "a": "YYZ",
+              "b": "ORD",
+              "target": 1.8577777777777778,
+              "fitted": 1.158138069980917,
+              "error": -0.6996397077968608,
+              "relativeError": -0.3766003211825208,
+              "twoWay": true,
+              "records": 16
+            }
+          ],
+          "linksBelowThreeHours": 10
+        },
+        {
+          "airport": "YVR",
+          "edges": 51,
+          "localError": 0.06987789180078875,
+          "radiusRatio": 0.7824730385530164,
+          "nearestFittedAirports": [
+            {
+              "airport": "SEA",
+              "separationHours": 0.6579668255663944
+            },
+            {
+              "airport": "PDX",
+              "separationHours": 0.6826557909070834
+            },
+            {
+              "airport": "YYC",
+              "separationHours": 1.2273321135153257
+            },
+            {
+              "airport": "YEG",
+              "separationHours": 1.4118348273079482
+            },
+            {
+              "airport": "SLC",
+              "separationHours": 1.9973877228248063
+            },
+            {
+              "airport": "DEN",
+              "separationHours": 2.294832675877914
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "YVR",
+              "b": "YYC",
+              "target": 1.566965663580247,
+              "fitted": 1.2273321135153257,
+              "error": -0.33963355006492124,
+              "relativeError": -0.21674600660292517,
+              "twoWay": true,
+              "records": 59
+            },
+            {
+              "a": "YVR",
+              "b": "YEG",
+              "target": 1.6423529411764703,
+              "fitted": 1.4118348273079482,
+              "error": -0.23051811386852217,
+              "relativeError": -0.14035845042137812,
+              "twoWay": true,
+              "records": 32
+            },
+            {
+              "a": "YVR",
+              "b": "SLC",
+              "target": 2.325,
+              "fitted": 1.997387722824806,
+              "error": -0.32761227717519414,
+              "relativeError": -0.14090850631191146,
+              "twoWay": true,
+              "records": 3
+            },
+            {
+              "a": "SFO",
+              "b": "YVR",
+              "target": 2.4071428571428575,
+              "fitted": 2.401435733568983,
+              "error": -0.005707123573874373,
+              "relativeError": -0.0023709118704522613,
+              "twoWay": true,
+              "records": 14
+            },
+            {
+              "a": "YVR",
+              "b": "DEN",
+              "target": 2.8558333333333334,
+              "fitted": 2.294832675877914,
+              "error": -0.5610006574554194,
+              "relativeError": -0.19644026523096098,
+              "twoWay": true,
+              "records": 9
+            }
+          ],
+          "linksBelowThreeHours": 7
+        },
+        {
+          "airport": "YUL",
+          "edges": 57,
+          "localError": 0.0459898145294307,
+          "radiusRatio": 1.0437058719963053,
+          "nearestFittedAirports": [
+            {
+              "airport": "YOW",
+              "separationHours": 0.6828995001126625
+            },
+            {
+              "airport": "PHL",
+              "separationHours": 0.7118926922507699
+            },
+            {
+              "airport": "BOS",
+              "separationHours": 0.7579692511572274
+            },
+            {
+              "airport": "YYZ",
+              "separationHours": 0.7862148678453372
+            },
+            {
+              "airport": "JFK",
+              "separationHours": 0.839166229919014
+            },
+            {
+              "airport": "IAD",
+              "separationHours": 0.9465106796004478
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "YYZ",
+              "b": "YUL",
+              "target": 1.3888390804597701,
+              "fitted": 0.7862148678453371,
+              "error": -0.602624212614433,
+              "relativeError": -0.43390499381320435,
+              "twoWay": true,
+              "records": 54
+            },
+            {
+              "a": "BOS",
+              "b": "YUL",
+              "target": 1.4,
+              "fitted": 0.7579692511572274,
+              "error": -0.6420307488427726,
+              "relativeError": -0.4585933920305519,
+              "twoWay": true,
+              "records": 6
+            },
+            {
+              "a": "YUL",
+              "b": "EWR",
+              "target": 1.575,
+              "fitted": 0.9716709272623603,
+              "error": -0.6033290727376397,
+              "relativeError": -0.38306607792866015,
+              "twoWay": true,
+              "records": 4
+            },
+            {
+              "a": "YUL",
+              "b": "YHZ",
+              "target": 1.6572222222222224,
+              "fitted": 1.6920789411181636,
+              "error": 0.03485671889594122,
+              "relativeError": 0.021033219581861946,
+              "twoWay": true,
+              "records": 11
+            },
+            {
+              "a": "ORD",
+              "b": "YUL",
+              "target": 2.4930555555555554,
+              "fitted": 1.9439048172069873,
+              "error": -0.5491507383485681,
+              "relativeError": -0.2202721624573644,
+              "twoWay": true,
+              "records": 5
+            }
+          ],
+          "linksBelowThreeHours": 6
+        },
+        {
+          "airport": "YYC",
+          "edges": 40,
+          "localError": 0.04697937036322693,
+          "radiusRatio": 0.6907935360533984,
+          "nearestFittedAirports": [
+            {
+              "airport": "YEG",
+              "separationHours": 0.7823636142590573
+            },
+            {
+              "airport": "PDX",
+              "separationHours": 0.932369639640956
+            },
+            {
+              "airport": "YVR",
+              "separationHours": 1.2273321135153257
+            },
+            {
+              "airport": "SEA",
+              "separationHours": 1.46471570093991
+            },
+            {
+              "airport": "SLC",
+              "separationHours": 1.5602264851510468
+            },
+            {
+              "airport": "DEN",
+              "separationHours": 2.352160468503713
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "YYC",
+              "b": "YEG",
+              "target": 1,
+              "fitted": 0.7823636142590573,
+              "error": -0.21763638574094268,
+              "relativeError": -0.21763638574094268,
+              "twoWay": true,
+              "records": 25
+            },
+            {
+              "a": "YVR",
+              "b": "YYC",
+              "target": 1.566965663580247,
+              "fitted": 1.2273321135153257,
+              "error": -0.33963355006492124,
+              "relativeError": -0.21674600660292517,
+              "twoWay": true,
+              "records": 59
+            },
+            {
+              "a": "SEA",
+              "b": "YYC",
+              "target": 1.7916666666666667,
+              "fitted": 1.4647157009399103,
+              "error": -0.3269509657267564,
+              "relativeError": -0.1824842599405152,
+              "twoWay": true,
+              "records": 9
+            },
+            {
+              "a": "YYC",
+              "b": "DEN",
+              "target": 2.54375,
+              "fitted": 2.352160468503713,
+              "error": -0.191589531496287,
+              "relativeError": -0.07531775193957227,
+              "twoWay": true,
+              "records": 8
+            },
+            {
+              "a": "YYC",
+              "b": "MSP",
+              "target": 2.8234953703703707,
+              "fitted": 2.6789101266467163,
+              "error": -0.14458524372365433,
+              "relativeError": -0.051207891197883715,
+              "twoWay": true,
+              "records": 17
+            }
+          ],
+          "linksBelowThreeHours": 7
+        },
+        {
+          "airport": "YEG",
+          "edges": 15,
+          "localError": 0.03627026133777071,
+          "radiusRatio": 0.6540901142609232,
+          "nearestFittedAirports": [
+            {
+              "airport": "YYC",
+              "separationHours": 0.7823636142590573
+            },
+            {
+              "airport": "YVR",
+              "separationHours": 1.4118348273079482
+            },
+            {
+              "airport": "PDX",
+              "separationHours": 1.4285750374186876
+            },
+            {
+              "airport": "SEA",
+              "separationHours": 1.88072827645601
+            },
+            {
+              "airport": "SLC",
+              "separationHours": 2.2659468432012515
+            },
+            {
+              "airport": "MSP",
+              "separationHours": 2.693826267440735
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "YYC",
+              "b": "YEG",
+              "target": 1,
+              "fitted": 0.7823636142590573,
+              "error": -0.21763638574094268,
+              "relativeError": -0.21763638574094268,
+              "twoWay": true,
+              "records": 25
+            },
+            {
+              "a": "YVR",
+              "b": "YEG",
+              "target": 1.6423529411764703,
+              "fitted": 1.4118348273079482,
+              "error": -0.23051811386852217,
+              "relativeError": -0.14035845042137812,
+              "twoWay": true,
+              "records": 32
+            },
+            {
+              "a": "YEG",
+              "b": "SLC",
+              "target": 2.3333333333333335,
+              "fitted": 2.2659468432012515,
+              "error": -0.06738649013208198,
+              "relativeError": -0.028879924342320847,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "YEG",
+              "b": "DEN",
+              "target": 2.779166666666667,
+              "fitted": 2.7324390108203755,
+              "error": -0.04672765584629124,
+              "relativeError": -0.016813549329999844,
+              "twoWay": true,
+              "records": 3
+            },
+            {
+              "a": "YEG",
+              "b": "MSP",
+              "target": 2.875,
+              "fitted": 2.6938262674407345,
+              "error": -0.1811737325592655,
+              "relativeError": -0.0630169504553967,
+              "twoWay": true,
+              "records": 4
+            }
+          ],
+          "linksBelowThreeHours": 5
+        },
+        {
+          "airport": "YOW",
+          "edges": 14,
+          "localError": 0.07022951770912053,
+          "radiusRatio": 0.9780750509467393,
+          "nearestFittedAirports": [
+            {
+              "airport": "YUL",
+              "separationHours": 0.6828995001126625
+            },
+            {
+              "airport": "YYZ",
+              "separationHours": 0.7795880023759412
+            },
+            {
+              "airport": "IAD",
+              "separationHours": 1.0819621420284484
+            },
+            {
+              "airport": "PHL",
+              "separationHours": 1.119811947466113
+            },
+            {
+              "airport": "DTW",
+              "separationHours": 1.2296749410948582
+            },
+            {
+              "airport": "JFK",
+              "separationHours": 1.323405342129099
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "YYZ",
+              "b": "YOW",
+              "target": 1.111111111111111,
+              "fitted": 0.7795880023759412,
+              "error": -0.33152310873516977,
+              "relativeError": -0.2983707978616528,
+              "twoWay": true,
+              "records": 34
+            },
+            {
+              "a": "BOS",
+              "b": "YOW",
+              "target": 1.4583333333333333,
+              "fitted": 1.4347276790605732,
+              "error": -0.023605654272760068,
+              "relativeError": -0.016186734358464048,
+              "twoWay": true,
+              "records": 2
+            },
+            {
+              "a": "YOW",
+              "b": "EWR",
+              "target": 1.5833333333333333,
+              "fitted": 1.3674457873033472,
+              "error": -0.21588754602998605,
+              "relativeError": -0.13635002907157015,
+              "twoWay": false,
+              "records": 1
+            },
+            {
+              "a": "YOW",
+              "b": "YHZ",
+              "target": 1.7416666666666667,
+              "fitted": 1.5851641704457224,
+              "error": -0.15650249622094425,
+              "relativeError": -0.08985789256704933,
+              "twoWay": true,
+              "records": 4
+            },
+            {
+              "a": "ORD",
+              "b": "YOW",
+              "target": 2.275,
+              "fitted": 1.7576134982405802,
+              "error": -0.5173865017594197,
+              "relativeError": -0.22742263813600866,
+              "twoWay": true,
+              "records": 2
+            }
+          ],
+          "linksBelowThreeHours": 5
+        },
+        {
+          "airport": "YHZ",
+          "edges": 17,
+          "localError": 0.0390163866791747,
+          "radiusRatio": 1.0290296071845875,
+          "nearestFittedAirports": [
+            {
+              "airport": "YOW",
+              "separationHours": 1.5851641704457222
+            },
+            {
+              "airport": "EWR",
+              "separationHours": 1.685870684086954
+            },
+            {
+              "airport": "YUL",
+              "separationHours": 1.6920789411181636
+            },
+            {
+              "airport": "PHL",
+              "separationHours": 1.796901918132291
+            },
+            {
+              "airport": "JFK",
+              "separationHours": 1.8106323861877018
+            },
+            {
+              "airport": "IAD",
+              "separationHours": 1.8435347295732778
+            }
+          ],
+          "shortestConstraints": [
+            {
+              "a": "YUL",
+              "b": "YHZ",
+              "target": 1.6572222222222224,
+              "fitted": 1.6920789411181636,
+              "error": 0.03485671889594122,
+              "relativeError": 0.021033219581861946,
+              "twoWay": true,
+              "records": 11
+            },
+            {
+              "a": "YOW",
+              "b": "YHZ",
+              "target": 1.7416666666666667,
+              "fitted": 1.5851641704457224,
+              "error": -0.15650249622094425,
+              "relativeError": -0.08985789256704933,
+              "twoWay": true,
+              "records": 4
+            },
+            {
+              "a": "YYZ",
+              "b": "YHZ",
+              "target": 2.282199754901961,
+              "fitted": 2.2369187483324904,
+              "error": -0.04528100656947043,
+              "relativeError": -0.019840947959183185,
+              "twoWay": true,
+              "records": 33
+            },
+            {
+              "a": "YHZ",
+              "b": "DTW",
+              "target": 2.75,
+              "fitted": 2.6780837901243078,
+              "error": -0.07191620987569225,
+              "relativeError": -0.026151349045706273,
+              "twoWay": true,
+              "records": 4
+            },
+            {
+              "a": "KEF",
+              "b": "YHZ",
+              "target": 4.583333333333333,
+              "fitted": 4.431234645628779,
+              "error": -0.15209868770455426,
+              "relativeError": -0.0331851682264482,
+              "twoWay": true,
+              "records": 2
+            }
+          ],
+          "linksBelowThreeHours": 4
+        }
+      ]
+    }
+  ]
+}

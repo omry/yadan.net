@@ -1,0 +1,174 @@
+{
+  "reviewed_at": "2026-10-06",
+  "scope": "Individual immutable observation IDs only. Exact source fields must match; changed rows require another audit. No blanket route exceptions or hour adjustment. Unmatched future schedules are not automatically accepted.",
+  "observations": {
+    "c355830b9e9ade6a3810": {
+      "expected": {
+        "from_airport": "TAO",
+        "to_airport": "YVR",
+        "flight_number": "JD471",
+        "date": "2026-10-09",
+        "minutes": 680,
+        "departure_local": "12:20",
+        "arrival_local": "08:40",
+        "aircraft": "Airbus A330-300",
+        "source": "https://2lnr.com/routes/tao-yvr"
+      },
+      "airports": [
+        "HGH",
+        "TAO",
+        "YVR"
+      ],
+      "source": "https://www.aeroroutes.com/eng/260815-jdoct26yvr",
+      "basis": "Published 2026-08-15: JD471 HGH\u2192TAO\u2192YVR from 2026-10-02, Fridays. TAO 12:20 \u2192 YVR 08:40, 11h20, A330-300. Only the adjacent TAO\u2192YVR leg is accepted."
+    },
+    "783e6bbcc5928a9afef8": {
+      "expected": {
+        "from_airport": "HKT",
+        "to_airport": "TLV",
+        "flight_number": "LY88",
+        "date": "2026-10-03",
+        "minutes": 655,
+        "departure_local": "22:30",
+        "arrival_local": "05:25",
+        "aircraft": "Boeing 787-9 Dreamliner",
+        "source": "https://2lnr.com/routes/hkt-tlv"
+      },
+      "airports": [
+        "HKT",
+        "TLV"
+      ],
+      "source": "https://www.flight.info/LY88",
+      "basis": "Current dated nonstop HKT\u2192TLV schedule matches aircraft family, departure, arrival and 10h55 duration. Supersedes old HKT\u2192BKK\u2192TLV index for this observation only."
+    },
+    "30f9f3347abb8e651249": {
+      "expected": {
+        "from_airport": "HKT",
+        "to_airport": "TLV",
+        "flight_number": "LY88",
+        "date": "2026-10-07",
+        "minutes": 655,
+        "departure_local": "13:40",
+        "arrival_local": "20:35",
+        "aircraft": "777",
+        "source": "https://2lnr.com/routes/hkt-tlv"
+      },
+      "airports": [
+        "HKT",
+        "TLV"
+      ],
+      "source": "https://www.flight.info/LY88",
+      "basis": "Current dated nonstop HKT\u2192TLV schedule matches aircraft family, departure, arrival and 10h55 duration. Supersedes old HKT\u2192BKK\u2192TLV index for this observation only."
+    },
+    "81a0ac0244d1c6b85913": {
+      "expected": {
+        "from_airport": "RAK",
+        "to_airport": "FRA",
+        "flight_number": "4Y203",
+        "date": "2026-10-04",
+        "minutes": 285,
+        "departure_local": "07:30",
+        "arrival_local": "13:15",
+        "aircraft": "Airbus A320",
+        "source": "https://2lnr.com/routes/rak-fra"
+      },
+      "airports": [
+        "RAK",
+        "FRA"
+      ],
+      "source": "https://data.flightradar24.com/data/flights/4y203",
+      "basis": "4Y203 scheduled duration for the matching date. October 4 UTC schedule 07:30\u219211:15 = 3h45; October 6 independent explicit duration 3h50. Airline also publishes approximately 3h45.",
+      "minutes": 225,
+      "duration_source": "https://data.flightradar24.com/data/flights/4y203",
+      "duration_basis": "Explicit scheduled duration independently cross-checked for this flight and date; no uniform overhead subtraction."
+    },
+    "2bf990cb8a2c908a0905": {
+      "expected": {
+        "from_airport": "RAK",
+        "to_airport": "FRA",
+        "flight_number": "4Y203",
+        "date": "2026-10-06",
+        "minutes": 290,
+        "departure_local": "07:25",
+        "arrival_local": "13:15",
+        "aircraft": "Airbus A320",
+        "source": "https://2lnr.com/routes/rak-fra"
+      },
+      "airports": [
+        "RAK",
+        "FRA"
+      ],
+      "source": "https://www.flight.info/4Y203",
+      "basis": "4Y203 scheduled duration for the matching date. October 4 UTC schedule 07:30\u219211:15 = 3h45; October 6 independent explicit duration 3h50. Airline also publishes approximately 3h45.",
+      "minutes": 230,
+      "duration_source": "https://www.flight.info/4Y203",
+      "duration_basis": "Explicit scheduled duration independently cross-checked for this flight and date; no uniform overhead subtraction."
+    },
+    "cfe0d885aee061a76b8b": {
+      "expected": {
+        "from_airport": "FRA",
+        "to_airport": "RAK",
+        "flight_number": "4Y202",
+        "date": "2026-10-04",
+        "minutes": 170,
+        "departure_local": "04:50",
+        "arrival_local": "06:40",
+        "aircraft": "Airbus A320",
+        "source": "https://2lnr.com/routes/fra-rak"
+      },
+      "airports": [
+        "FRA",
+        "RAK"
+      ],
+      "source": "https://www.flight.info/4Y202",
+      "basis": "4Y202 nonstop dated schedule matches A320 and local clocks: October 4 04:50\u219206:40, 3h50; October 6 04:50\u219206:35, 3h45. Restores return record absent from route index and replaces the contradictory provider duration.",
+      "minutes": 230,
+      "duration_source": "https://www.flight.info/4Y202",
+      "duration_basis": "Explicit scheduled duration independently cross-checked for this flight and date; no uniform overhead subtraction."
+    },
+    "0780b01f2dee1604757f": {
+      "expected": {
+        "from_airport": "FRA",
+        "to_airport": "RAK",
+        "flight_number": "4Y202",
+        "date": "2026-10-06",
+        "minutes": 165,
+        "departure_local": "04:50",
+        "arrival_local": "06:35",
+        "aircraft": "Airbus A320",
+        "source": "https://2lnr.com/routes/fra-rak"
+      },
+      "airports": [
+        "FRA",
+        "RAK"
+      ],
+      "source": "https://www.flight.info/4Y202",
+      "basis": "4Y202 nonstop dated schedule matches A320 and local clocks: October 4 04:50\u219206:40, 3h50; October 6 04:50\u219206:35, 3h45. Restores return record absent from route index and replaces the contradictory provider duration.",
+      "minutes": 225,
+      "duration_source": "https://www.flight.info/4Y202",
+      "duration_basis": "Explicit scheduled duration independently cross-checked for this flight and date; no uniform overhead subtraction."
+    },
+    "2258bad95128e6c9ba84": {
+      "expected": {
+        "from_airport": "MXP",
+        "to_airport": "RAK",
+        "flight_number": "FR7422",
+        "date": "2026-10-05",
+        "minutes": 145,
+        "departure_local": "22:50",
+        "arrival_local": "00:15",
+        "aircraft": "Boeing 737-800",
+        "source": "https://2lnr.com/routes/mxp-rak"
+      },
+      "airports": [
+        "MXP",
+        "RAK"
+      ],
+      "source": "https://www.flight.info/FR7422",
+      "basis": "Monday October 5 FR7422 MXP 22:50 \u2192 RAK 00:15, Boeing 737-800; explicit duration 3h25 also corroborated by the dated Trip.com schedule.",
+      "minutes": 205,
+      "duration_source": "https://www.flight.info/FR7422",
+      "duration_basis": "Explicit scheduled duration independently cross-checked for this flight and date; no uniform overhead subtraction."
+    }
+  }
+}

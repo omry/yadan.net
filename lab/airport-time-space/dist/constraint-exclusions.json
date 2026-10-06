@@ -1,0 +1,1257 @@
+{
+  "policy": {
+    "triangleFilter": true,
+    "shortWeights": true,
+    "toleranceHours": 0.5,
+    "minimumWitnesses": 2,
+    "maximumExclusions": 50,
+    "limitReached": false,
+    "shortFullWeightHours": 3,
+    "before": {
+      "triangles": 34782,
+      "violations": 82,
+      "material": 26
+    },
+    "after": {
+      "triangles": 34646,
+      "violations": 60,
+      "material": 11
+    },
+    "excludedEdges": 5,
+    "excludedObservations": 32,
+    "downweightedEdges": 1060
+  },
+  "airports": 201,
+  "activeEdges": 3875,
+  "eligibleEdges": 3880,
+  "excluded": [
+    {
+      "a": 11,
+      "b": 24,
+      "observations": [
+        {
+          "from_airport": "AMS",
+          "to_airport": "PEK",
+          "aircraft": "Boeing 787-9 Dreamliner",
+          "aircraft_assignment": "scheduled",
+          "airline": "KLM",
+          "flight_number": "KL897",
+          "observation_id": "698c8a6b8dee13952a1a",
+          "date": "2026-10-03",
+          "departure_local": "16:00",
+          "arrival_local": "08:55",
+          "minutes": 655,
+          "time_basis": "published scheduled nonstop duration",
+          "stop_count": 0,
+          "nonstop_verified": true,
+          "verification_basis": "Scheduled departure matches consecutive airports in independent flight sequence: KLM897",
+          "source": "https://2lnr.com/routes/ams-pek",
+          "source_date": "2026-09-27",
+          "retrieved": "2026-10-05",
+          "verification_method": "independent flight-route adjacency",
+          "verification_route": "AMS → PEK",
+          "verification_source": "https://github.com/vradarserver/standing-data/blob/02f542fb377ba0f47a780e33a9cf38716bed1d5c/routes/schema-01/K/KLM-all.csv"
+        },
+        {
+          "from_airport": "PEK",
+          "to_airport": "AMS",
+          "aircraft": "Boeing 787-9 Dreamliner",
+          "aircraft_assignment": "scheduled",
+          "airline": "KLM",
+          "flight_number": "KL898",
+          "observation_id": "1c9b78f87e0d2ba316d2",
+          "date": "2026-10-03",
+          "departure_local": "10:55",
+          "arrival_local": "17:20",
+          "minutes": 745,
+          "time_basis": "published scheduled nonstop duration",
+          "stop_count": 0,
+          "nonstop_verified": true,
+          "verification_basis": "Scheduled departure matches consecutive airports in independent flight sequence: KLM898",
+          "source": "https://2lnr.com/routes/pek-ams",
+          "source_date": "2026-10-04",
+          "retrieved": "2026-10-05",
+          "verification_method": "independent flight-route adjacency",
+          "verification_route": "PEK → AMS",
+          "verification_source": "https://github.com/vradarserver/standing-data/blob/02f542fb377ba0f47a780e33a9cf38716bed1d5c/routes/schema-01/K/KLM-all.csv"
+        }
+      ],
+      "directions": [
+        {
+          "from_airport": "AMS",
+          "to_airport": "PEK",
+          "count": 1,
+          "minutes": 655,
+          "adjustedMinutes": 655
+        },
+        {
+          "from_airport": "PEK",
+          "to_airport": "AMS",
+          "count": 1,
+          "minutes": 745,
+          "adjustedMinutes": 745
+        }
+      ],
+      "twoWay": true,
+      "rawHours": 11.666666666666666,
+      "hours": 11.666666666666666,
+      "weight": 1,
+      "exclusion": {
+        "reason": "Repeated triangle inconsistency",
+        "count": 5,
+        "witnesses": [
+          {
+            "via": "FRA",
+            "excessHours": 0.6483918128654977,
+            "otherHours": [
+              1.1606359649122808,
+              9.857638888888888
+            ]
+          },
+          {
+            "via": "CPH",
+            "excessHours": 0.9839743589743577,
+            "otherHours": [
+              1.4118589743589742,
+              9.270833333333334
+            ]
+          },
+          {
+            "via": "WAW",
+            "excessHours": 0.6675595238095227,
+            "otherHours": [
+              2.0074404761904763,
+              8.991666666666667
+            ]
+          },
+          {
+            "via": "ARN",
+            "excessHours": 0.6916666666666664,
+            "otherHours": [
+              2.0375,
+              8.9375
+            ]
+          },
+          {
+            "via": "OSL",
+            "excessHours": 0.6499999999999986,
+            "otherHours": [
+              1.8083333333333333,
+              9.208333333333334
+            ]
+          }
+        ]
+      },
+      "from_airport": "AMS",
+      "to_airport": "PEK"
+    },
+    {
+      "a": 17,
+      "b": 87,
+      "observations": [
+        {
+          "from_airport": "BKK",
+          "to_airport": "TLV",
+          "aircraft": "Boeing 787-9 Dreamliner",
+          "aircraft_assignment": "scheduled",
+          "airline": "Arkia Israel Airlines",
+          "flight_number": "IZ592",
+          "observation_id": "34548a4bd91c7cb3bbb8",
+          "date": "2026-10-03",
+          "departure_local": "22:30",
+          "arrival_local": "05:20",
+          "minutes": 650,
+          "time_basis": "published scheduled nonstop duration",
+          "stop_count": 0,
+          "nonstop_verified": true,
+          "verification_basis": "Scheduled departure matches consecutive airports in independent flight sequence: AIZ592",
+          "source": "https://2lnr.com/routes/bkk-tlv",
+          "source_date": "2026-09-27",
+          "retrieved": "2026-10-05",
+          "verification_method": "independent flight-route adjacency",
+          "verification_route": "BKK → TLV",
+          "verification_source": "https://github.com/vradarserver/standing-data/blob/02f542fb377ba0f47a780e33a9cf38716bed1d5c/routes/schema-01/A/AIZ-all.csv"
+        },
+        {
+          "from_airport": "BKK",
+          "to_airport": "TLV",
+          "aircraft": "Airbus A330-200",
+          "aircraft_assignment": "scheduled",
+          "airline": "Arkia Israel Airlines",
+          "flight_number": "IZ592",
+          "observation_id": "a99ebb44a2ce30e1d2e1",
+          "date": "2026-10-05",
+          "departure_local": "13:00",
+          "arrival_local": "19:30",
+          "minutes": 630,
+          "time_basis": "published scheduled nonstop duration",
+          "stop_count": 0,
+          "nonstop_verified": true,
+          "verification_basis": "Scheduled departure matches consecutive airports in independent flight sequence: AIZ592",
+          "source": "https://2lnr.com/routes/bkk-tlv",
+          "source_date": "2026-09-27",
+          "retrieved": "2026-10-05",
+          "verification_method": "independent flight-route adjacency",
+          "verification_route": "BKK → TLV",
+          "verification_source": "https://github.com/vradarserver/standing-data/blob/02f542fb377ba0f47a780e33a9cf38716bed1d5c/routes/schema-01/A/AIZ-all.csv"
+        },
+        {
+          "from_airport": "BKK",
+          "to_airport": "TLV",
+          "aircraft": "Airbus A330-200",
+          "aircraft_assignment": "scheduled",
+          "airline": "Arkia Israel Airlines",
+          "flight_number": "IZ592",
+          "observation_id": "3205dd185a967a1a8d0d",
+          "date": "2026-10-10",
+          "departure_local": "22:30",
+          "arrival_local": "06:45",
+          "minutes": 735,
+          "time_basis": "published scheduled nonstop duration",
+          "stop_count": 0,
+          "nonstop_verified": true,
+          "verification_basis": "Scheduled departure matches consecutive airports in independent flight sequence: AIZ592",
+          "source": "https://2lnr.com/routes/bkk-tlv",
+          "source_date": "2026-09-27",
+          "retrieved": "2026-10-05",
+          "verification_method": "independent flight-route adjacency",
+          "verification_route": "BKK → TLV",
+          "verification_source": "https://github.com/vradarserver/standing-data/blob/02f542fb377ba0f47a780e33a9cf38716bed1d5c/routes/schema-01/A/AIZ-all.csv"
+        },
+        {
+          "from_airport": "BKK",
+          "to_airport": "TLV",
+          "aircraft": "777",
+          "aircraft_assignment": "scheduled",
+          "airline": "El Al Israel Airlines",
+          "flight_number": "LY82",
+          "observation_id": "fe0f2aa4add28cd92af4",
+          "date": "2026-10-03",
+          "departure_local": "23:55",
+          "arrival_local": "06:45",
+          "minutes": 650,
+          "time_basis": "published scheduled nonstop duration",
+          "stop_count": 0,
+          "nonstop_verified": true,
+          "verification_basis": "Scheduled departure matches consecutive airports in independent flight sequence: ELY82",
+          "source": "https://2lnr.com/routes/bkk-tlv",
+          "source_date": "2026-09-27",
+          "retrieved": "2026-10-05",
+          "verification_method": "independent flight-route adjacency",
+          "verification_route": "BKK → TLV",
+          "verification_source": "https://github.com/vradarserver/standing-data/blob/02f542fb377ba0f47a780e33a9cf38716bed1d5c/routes/schema-01/E/ELY-all.csv"
+        },
+        {
+          "from_airport": "BKK",
+          "to_airport": "TLV",
+          "aircraft": "Boeing 777-200",
+          "aircraft_assignment": "scheduled",
+          "airline": "El Al Israel Airlines",
+          "flight_number": "LY82",
+          "observation_id": "e2477ab082e616df4aa0",
+          "date": "2026-10-07",
+          "departure_local": "23:55",
+          "arrival_local": "06:45",
+          "minutes": 650,
+          "time_basis": "published scheduled nonstop duration",
+          "stop_count": 0,
+          "nonstop_verified": true,
+          "verification_basis": "Scheduled departure matches consecutive airports in independent flight sequence: ELY82",
+          "source": "https://2lnr.com/routes/bkk-tlv",
+          "source_date": "2026-09-27",
+          "retrieved": "2026-10-05",
+          "verification_method": "independent flight-route adjacency",
+          "verification_route": "BKK → TLV",
+          "verification_source": "https://github.com/vradarserver/standing-data/blob/02f542fb377ba0f47a780e33a9cf38716bed1d5c/routes/schema-01/E/ELY-all.csv"
+        },
+        {
+          "from_airport": "BKK",
+          "to_airport": "TLV",
+          "aircraft": "787",
+          "aircraft_assignment": "scheduled",
+          "airline": "El Al Israel Airlines",
+          "flight_number": "LY82",
+          "observation_id": "c6230821fa9c0ef10380",
+          "date": "2026-10-08",
+          "departure_local": "23:55",
+          "arrival_local": "06:45",
+          "minutes": 650,
+          "time_basis": "published scheduled nonstop duration",
+          "stop_count": 0,
+          "nonstop_verified": true,
+          "verification_basis": "Scheduled departure matches consecutive airports in independent flight sequence: ELY82",
+          "source": "https://2lnr.com/routes/bkk-tlv",
+          "source_date": "2026-09-27",
+          "retrieved": "2026-10-05",
+          "verification_method": "independent flight-route adjacency",
+          "verification_route": "BKK → TLV",
+          "verification_source": "https://github.com/vradarserver/standing-data/blob/02f542fb377ba0f47a780e33a9cf38716bed1d5c/routes/schema-01/E/ELY-all.csv"
+        },
+        {
+          "from_airport": "BKK",
+          "to_airport": "TLV",
+          "aircraft": "787",
+          "aircraft_assignment": "scheduled",
+          "airline": "El Al Israel Airlines",
+          "flight_number": "LY84",
+          "observation_id": "d88c6aef8d55bebde406",
+          "date": "2026-10-04",
+          "departure_local": "17:15",
+          "arrival_local": "00:05",
+          "minutes": 650,
+          "time_basis": "published scheduled nonstop duration",
+          "stop_count": 0,
+          "nonstop_verified": true,
+          "verification_basis": "Scheduled departure matches consecutive airports in independent flight sequence: ELY84",
+          "source": "https://2lnr.com/routes/bkk-tlv",
+          "source_date": "2026-09-27",
+          "retrieved": "2026-10-05",
+          "verification_method": "independent flight-route adjacency",
+          "verification_route": "BKK → TLV",
+          "verification_source": "https://github.com/vradarserver/standing-data/blob/02f542fb377ba0f47a780e33a9cf38716bed1d5c/routes/schema-01/E/ELY-all.csv"
+        },
+        {
+          "from_airport": "BKK",
+          "to_airport": "TLV",
+          "aircraft": "Boeing 787-8 Dreamliner",
+          "aircraft_assignment": "scheduled",
+          "airline": "El Al Israel Airlines",
+          "flight_number": "LY84",
+          "observation_id": "41148be792edd9fc343d",
+          "date": "2026-10-05",
+          "departure_local": "16:05",
+          "arrival_local": "22:55",
+          "minutes": 650,
+          "time_basis": "published scheduled nonstop duration",
+          "stop_count": 0,
+          "nonstop_verified": true,
+          "verification_basis": "Scheduled departure matches consecutive airports in independent flight sequence: ELY84",
+          "source": "https://2lnr.com/routes/bkk-tlv",
+          "source_date": "2026-09-27",
+          "retrieved": "2026-10-05",
+          "verification_method": "independent flight-route adjacency",
+          "verification_route": "BKK → TLV",
+          "verification_source": "https://github.com/vradarserver/standing-data/blob/02f542fb377ba0f47a780e33a9cf38716bed1d5c/routes/schema-01/E/ELY-all.csv"
+        },
+        {
+          "from_airport": "BKK",
+          "to_airport": "TLV",
+          "aircraft": "Boeing 777-200",
+          "aircraft_assignment": "scheduled",
+          "airline": "El Al Israel Airlines",
+          "flight_number": "LY84",
+          "observation_id": "9c8e1842042a9d842503",
+          "date": "2026-10-06",
+          "departure_local": "16:05",
+          "arrival_local": "22:55",
+          "minutes": 650,
+          "time_basis": "published scheduled nonstop duration",
+          "stop_count": 0,
+          "nonstop_verified": true,
+          "verification_basis": "Scheduled departure matches consecutive airports in independent flight sequence: ELY84",
+          "source": "https://2lnr.com/routes/bkk-tlv",
+          "source_date": "2026-09-27",
+          "retrieved": "2026-10-05",
+          "verification_method": "independent flight-route adjacency",
+          "verification_route": "BKK → TLV",
+          "verification_source": "https://github.com/vradarserver/standing-data/blob/02f542fb377ba0f47a780e33a9cf38716bed1d5c/routes/schema-01/E/ELY-all.csv"
+        },
+        {
+          "from_airport": "BKK",
+          "to_airport": "TLV",
+          "aircraft": "777",
+          "aircraft_assignment": "scheduled",
+          "airline": "El Al Israel Airlines",
+          "flight_number": "LY84",
+          "observation_id": "2a8fa41305ef4c43868e",
+          "date": "2026-10-08",
+          "departure_local": "16:05",
+          "arrival_local": "22:55",
+          "minutes": 650,
+          "time_basis": "published scheduled nonstop duration",
+          "stop_count": 0,
+          "nonstop_verified": true,
+          "verification_basis": "Scheduled departure matches consecutive airports in independent flight sequence: ELY84",
+          "source": "https://2lnr.com/routes/bkk-tlv",
+          "source_date": "2026-09-27",
+          "retrieved": "2026-10-05",
+          "verification_method": "independent flight-route adjacency",
+          "verification_route": "BKK → TLV",
+          "verification_source": "https://github.com/vradarserver/standing-data/blob/02f542fb377ba0f47a780e33a9cf38716bed1d5c/routes/schema-01/E/ELY-all.csv"
+        },
+        {
+          "from_airport": "BKK",
+          "to_airport": "TLV",
+          "aircraft": "Boeing 787-8 Dreamliner",
+          "aircraft_assignment": "scheduled",
+          "airline": "El Al Israel Airlines",
+          "flight_number": "LY86",
+          "observation_id": "e3be93dc6ba950567fb4",
+          "date": "2026-10-03",
+          "departure_local": "22:25",
+          "arrival_local": "05:00",
+          "minutes": 635,
+          "time_basis": "published scheduled nonstop duration",
+          "stop_count": 0,
+          "nonstop_verified": true,
+          "verification_basis": "Scheduled departure matches consecutive airports in independent flight sequence: ELY86",
+          "source": "https://2lnr.com/routes/bkk-tlv",
+          "source_date": "2026-09-27",
+          "retrieved": "2026-10-05",
+          "verification_method": "independent flight-route adjacency",
+          "verification_route": "BKK → TLV",
+          "verification_source": "https://github.com/vradarserver/standing-data/blob/02f542fb377ba0f47a780e33a9cf38716bed1d5c/routes/schema-01/E/ELY-all.csv"
+        },
+        {
+          "from_airport": "TLV",
+          "to_airport": "BKK",
+          "aircraft": "Airbus A330-200",
+          "aircraft_assignment": "scheduled",
+          "airline": "Arkia Israel Airlines",
+          "flight_number": "IZ591",
+          "observation_id": "2fad102daa5371e29c04",
+          "date": "2026-10-04",
+          "departure_local": "19:00",
+          "arrival_local": "10:20",
+          "minutes": 680,
+          "time_basis": "published scheduled nonstop duration",
+          "stop_count": 0,
+          "nonstop_verified": true,
+          "verification_basis": "Scheduled departure matches consecutive airports in independent flight sequence: AIZ591",
+          "source": "https://2lnr.com/routes/tlv-bkk",
+          "source_date": "2026-10-04",
+          "retrieved": "2026-10-05",
+          "verification_method": "independent flight-route adjacency",
+          "verification_route": "TLV → BKK",
+          "verification_source": "https://github.com/vradarserver/standing-data/blob/02f542fb377ba0f47a780e33a9cf38716bed1d5c/routes/schema-01/A/AIZ-all.csv"
+        },
+        {
+          "from_airport": "TLV",
+          "to_airport": "BKK",
+          "aircraft": "Airbus A330-200",
+          "aircraft_assignment": "scheduled",
+          "airline": "Arkia Israel Airlines",
+          "flight_number": "IZ591",
+          "observation_id": "99167eff7748a3a95c55",
+          "date": "2026-10-09",
+          "departure_local": "07:10",
+          "arrival_local": "22:45",
+          "minutes": 695,
+          "time_basis": "published scheduled nonstop duration",
+          "stop_count": 0,
+          "nonstop_verified": true,
+          "verification_basis": "Scheduled departure matches consecutive airports in independent flight sequence: AIZ591",
+          "source": "https://2lnr.com/routes/tlv-bkk",
+          "source_date": "2026-10-04",
+          "retrieved": "2026-10-05",
+          "verification_method": "independent flight-route adjacency",
+          "verification_route": "TLV → BKK",
+          "verification_source": "https://github.com/vradarserver/standing-data/blob/02f542fb377ba0f47a780e33a9cf38716bed1d5c/routes/schema-01/A/AIZ-all.csv"
+        },
+        {
+          "from_airport": "TLV",
+          "to_airport": "BKK",
+          "aircraft": "787",
+          "aircraft_assignment": "scheduled",
+          "airline": "El Al Israel Airlines",
+          "flight_number": "LY81",
+          "observation_id": "51104fae42bca9c83a1e",
+          "date": "2026-10-03",
+          "departure_local": "23:30",
+          "arrival_local": "15:10",
+          "minutes": 700,
+          "time_basis": "published scheduled nonstop duration",
+          "stop_count": 0,
+          "nonstop_verified": true,
+          "verification_basis": "Scheduled departure matches consecutive airports in independent flight sequence: ELY81",
+          "source": "https://2lnr.com/routes/tlv-bkk",
+          "source_date": "2026-10-04",
+          "retrieved": "2026-10-05",
+          "verification_method": "independent flight-route adjacency",
+          "verification_route": "TLV → BKK",
+          "verification_source": "https://github.com/vradarserver/standing-data/blob/02f542fb377ba0f47a780e33a9cf38716bed1d5c/routes/schema-01/E/ELY-all.csv"
+        },
+        {
+          "from_airport": "TLV",
+          "to_airport": "BKK",
+          "aircraft": "Boeing 787-8 Dreamliner",
+          "aircraft_assignment": "scheduled",
+          "airline": "El Al Israel Airlines",
+          "flight_number": "LY81",
+          "observation_id": "1c6de4d059aaa19e7f49",
+          "date": "2026-10-04",
+          "departure_local": "20:10",
+          "arrival_local": "11:50",
+          "minutes": 700,
+          "time_basis": "published scheduled nonstop duration",
+          "stop_count": 0,
+          "nonstop_verified": true,
+          "verification_basis": "Scheduled departure matches consecutive airports in independent flight sequence: ELY81",
+          "source": "https://2lnr.com/routes/tlv-bkk",
+          "source_date": "2026-10-04",
+          "retrieved": "2026-10-05",
+          "verification_method": "independent flight-route adjacency",
+          "verification_route": "TLV → BKK",
+          "verification_source": "https://github.com/vradarserver/standing-data/blob/02f542fb377ba0f47a780e33a9cf38716bed1d5c/routes/schema-01/E/ELY-all.csv"
+        },
+        {
+          "from_airport": "TLV",
+          "to_airport": "BKK",
+          "aircraft": "Boeing 777-200",
+          "aircraft_assignment": "scheduled",
+          "airline": "El Al Israel Airlines",
+          "flight_number": "LY81",
+          "observation_id": "f9cbcd6983ca7aa760cc",
+          "date": "2026-10-05",
+          "departure_local": "22:20",
+          "arrival_local": "14:00",
+          "minutes": 700,
+          "time_basis": "published scheduled nonstop duration",
+          "stop_count": 0,
+          "nonstop_verified": true,
+          "verification_basis": "Scheduled departure matches consecutive airports in independent flight sequence: ELY81",
+          "source": "https://2lnr.com/routes/tlv-bkk",
+          "source_date": "2026-10-04",
+          "retrieved": "2026-10-05",
+          "verification_method": "independent flight-route adjacency",
+          "verification_route": "TLV → BKK",
+          "verification_source": "https://github.com/vradarserver/standing-data/blob/02f542fb377ba0f47a780e33a9cf38716bed1d5c/routes/schema-01/E/ELY-all.csv"
+        },
+        {
+          "from_airport": "TLV",
+          "to_airport": "BKK",
+          "aircraft": "777",
+          "aircraft_assignment": "scheduled",
+          "airline": "El Al Israel Airlines",
+          "flight_number": "LY81",
+          "observation_id": "6693e79efbe428f47424",
+          "date": "2026-10-07",
+          "departure_local": "22:20",
+          "arrival_local": "14:00",
+          "minutes": 700,
+          "time_basis": "published scheduled nonstop duration",
+          "stop_count": 0,
+          "nonstop_verified": true,
+          "verification_basis": "Scheduled departure matches consecutive airports in independent flight sequence: ELY81",
+          "source": "https://2lnr.com/routes/tlv-bkk",
+          "source_date": "2026-10-04",
+          "retrieved": "2026-10-05",
+          "verification_method": "independent flight-route adjacency",
+          "verification_route": "TLV → BKK",
+          "verification_source": "https://github.com/vradarserver/standing-data/blob/02f542fb377ba0f47a780e33a9cf38716bed1d5c/routes/schema-01/E/ELY-all.csv"
+        },
+        {
+          "from_airport": "TLV",
+          "to_airport": "BKK",
+          "aircraft": "777",
+          "aircraft_assignment": "scheduled",
+          "airline": "El Al Israel Airlines",
+          "flight_number": "LY83",
+          "observation_id": "424666ba6a4c674e217b",
+          "date": "2026-10-04",
+          "departure_local": "00:55",
+          "arrival_local": "16:35",
+          "minutes": 700,
+          "time_basis": "published scheduled nonstop duration",
+          "stop_count": 0,
+          "nonstop_verified": true,
+          "verification_basis": "Scheduled departure matches consecutive airports in independent flight sequence: ELY83",
+          "source": "https://2lnr.com/routes/tlv-bkk",
+          "source_date": "2026-10-04",
+          "retrieved": "2026-10-05",
+          "verification_method": "independent flight-route adjacency",
+          "verification_route": "TLV → BKK",
+          "verification_source": "https://github.com/vradarserver/standing-data/blob/02f542fb377ba0f47a780e33a9cf38716bed1d5c/routes/schema-01/E/ELY-all.csv"
+        },
+        {
+          "from_airport": "TLV",
+          "to_airport": "BKK",
+          "aircraft": "Boeing 787-8 Dreamliner",
+          "aircraft_assignment": "scheduled",
+          "airline": "El Al Israel Airlines",
+          "flight_number": "LY83",
+          "observation_id": "957de0ac6a5695467696",
+          "date": "2026-10-07",
+          "departure_local": "00:55",
+          "arrival_local": "16:35",
+          "minutes": 700,
+          "time_basis": "published scheduled nonstop duration",
+          "stop_count": 0,
+          "nonstop_verified": true,
+          "verification_basis": "Scheduled departure matches consecutive airports in independent flight sequence: ELY83",
+          "source": "https://2lnr.com/routes/tlv-bkk",
+          "source_date": "2026-10-04",
+          "retrieved": "2026-10-05",
+          "verification_method": "independent flight-route adjacency",
+          "verification_route": "TLV → BKK",
+          "verification_source": "https://github.com/vradarserver/standing-data/blob/02f542fb377ba0f47a780e33a9cf38716bed1d5c/routes/schema-01/E/ELY-all.csv"
+        },
+        {
+          "from_airport": "TLV",
+          "to_airport": "BKK",
+          "aircraft": "787",
+          "aircraft_assignment": "scheduled",
+          "airline": "El Al Israel Airlines",
+          "flight_number": "LY83",
+          "observation_id": "9967d8423b538a04af32",
+          "date": "2026-10-08",
+          "departure_local": "00:55",
+          "arrival_local": "16:35",
+          "minutes": 700,
+          "time_basis": "published scheduled nonstop duration",
+          "stop_count": 0,
+          "nonstop_verified": true,
+          "verification_basis": "Scheduled departure matches consecutive airports in independent flight sequence: ELY83",
+          "source": "https://2lnr.com/routes/tlv-bkk",
+          "source_date": "2026-10-04",
+          "retrieved": "2026-10-05",
+          "verification_method": "independent flight-route adjacency",
+          "verification_route": "TLV → BKK",
+          "verification_source": "https://github.com/vradarserver/standing-data/blob/02f542fb377ba0f47a780e33a9cf38716bed1d5c/routes/schema-01/E/ELY-all.csv"
+        },
+        {
+          "from_airport": "TLV",
+          "to_airport": "BKK",
+          "aircraft": "Boeing 787-8 Dreamliner",
+          "aircraft_assignment": "scheduled",
+          "airline": "El Al Israel Airlines",
+          "flight_number": "LY85",
+          "observation_id": "a424723b88b02f3011b9",
+          "date": "2026-10-04",
+          "departure_local": "00:05",
+          "arrival_local": "15:45",
+          "minutes": 700,
+          "time_basis": "published scheduled nonstop duration",
+          "stop_count": 0,
+          "nonstop_verified": true,
+          "verification_basis": "Scheduled departure matches consecutive airports in independent flight sequence: ELY85",
+          "source": "https://2lnr.com/routes/tlv-bkk",
+          "source_date": "2026-10-04",
+          "retrieved": "2026-10-05",
+          "verification_method": "independent flight-route adjacency",
+          "verification_route": "TLV → BKK",
+          "verification_source": "https://github.com/vradarserver/standing-data/blob/02f542fb377ba0f47a780e33a9cf38716bed1d5c/routes/schema-01/E/ELY-all.csv"
+        }
+      ],
+      "directions": [
+        {
+          "from_airport": "BKK",
+          "to_airport": "TLV",
+          "count": 11,
+          "minutes": 654.5454545454545,
+          "adjustedMinutes": 654.5454545454545
+        },
+        {
+          "from_airport": "TLV",
+          "to_airport": "BKK",
+          "count": 10,
+          "minutes": 697.5,
+          "adjustedMinutes": 697.5
+        }
+      ],
+      "twoWay": true,
+      "rawHours": 11.267045454545455,
+      "hours": 11.267045454545455,
+      "weight": 1,
+      "exclusion": {
+        "reason": "Repeated triangle inconsistency",
+        "count": 3,
+        "witnesses": [
+          {
+            "via": "DXB",
+            "excessHours": 1.365738265002971,
+            "otherHours": [
+              6.375,
+              3.5263071895424836
+            ]
+          },
+          {
+            "via": "DEL",
+            "excessHours": 0.5133417508417502,
+            "otherHours": [
+              4.462037037037037,
+              6.291666666666667
+            ]
+          },
+          {
+            "via": "AUH",
+            "excessHours": 1.3485472860472854,
+            "otherHours": [
+              6.601190476190476,
+              3.3173076923076925
+            ]
+          }
+        ]
+      },
+      "from_airport": "BKK",
+      "to_airport": "TLV"
+    },
+    {
+      "a": 0,
+      "b": 27,
+      "observations": [
+        {
+          "from_airport": "LHR",
+          "to_airport": "TPE",
+          "aircraft": "Airbus A350-900",
+          "aircraft_assignment": "scheduled",
+          "airline": "China Airlines",
+          "flight_number": "CI82",
+          "observation_id": "12b556919bd08fa8dcab",
+          "date": "2026-10-03",
+          "departure_local": "21:10",
+          "arrival_local": "17:50",
+          "minutes": 820,
+          "time_basis": "published scheduled nonstop duration",
+          "stop_count": 0,
+          "nonstop_verified": true,
+          "verification_basis": "Scheduled departure matches consecutive airports in independent flight sequence: CAL82",
+          "source": "https://2lnr.com/routes/lhr-tpe",
+          "source_date": "2026-09-27",
+          "retrieved": "2026-10-05",
+          "verification_method": "independent flight-route adjacency",
+          "verification_route": "LHR → TPE",
+          "verification_source": "https://github.com/vradarserver/standing-data/blob/02f542fb377ba0f47a780e33a9cf38716bed1d5c/routes/schema-01/C/CAL-all.csv"
+        },
+        {
+          "from_airport": "TPE",
+          "to_airport": "LHR",
+          "aircraft": "Airbus A350-900",
+          "aircraft_assignment": "scheduled",
+          "airline": "China Airlines",
+          "flight_number": "CI81",
+          "observation_id": "7455fcad7599f77b19cc",
+          "date": "2026-10-03",
+          "departure_local": "08:20",
+          "arrival_local": "16:30",
+          "minutes": 910,
+          "time_basis": "published scheduled nonstop duration",
+          "stop_count": 0,
+          "nonstop_verified": true,
+          "verification_basis": "Scheduled departure matches consecutive airports in independent flight sequence: CAL81",
+          "source": "https://2lnr.com/routes/tpe-lhr",
+          "source_date": "2026-09-27",
+          "retrieved": "2026-10-05",
+          "verification_method": "independent flight-route adjacency",
+          "verification_route": "TPE → LHR",
+          "verification_source": "https://github.com/vradarserver/standing-data/blob/02f542fb377ba0f47a780e33a9cf38716bed1d5c/routes/schema-01/C/CAL-all.csv"
+        }
+      ],
+      "directions": [
+        {
+          "from_airport": "LHR",
+          "to_airport": "TPE",
+          "count": 1,
+          "minutes": 820,
+          "adjustedMinutes": 820
+        },
+        {
+          "from_airport": "TPE",
+          "to_airport": "LHR",
+          "count": 1,
+          "minutes": 910,
+          "adjustedMinutes": 910
+        }
+      ],
+      "twoWay": true,
+      "rawHours": 14.416666666666666,
+      "hours": 14.416666666666666,
+      "weight": 1,
+      "exclusion": {
+        "reason": "Repeated triangle inconsistency",
+        "count": 3,
+        "witnesses": [
+          {
+            "via": "PEK",
+            "excessHours": 0.577314814814816,
+            "otherHours": [
+              10.513888888888888,
+              3.325462962962963
+            ]
+          },
+          {
+            "via": "XMN",
+            "excessHours": 0.5833333333333321,
+            "otherHours": [
+              12.083333333333334,
+              1.75
+            ]
+          },
+          {
+            "via": "WUH",
+            "excessHours": 0.75,
+            "otherHours": [
+              11.208333333333334,
+              2.4583333333333335
+            ]
+          }
+        ]
+      },
+      "from_airport": "LHR",
+      "to_airport": "TPE"
+    },
+    {
+      "a": 87,
+      "b": 173,
+      "observations": [
+        {
+          "from_airport": "HKT",
+          "to_airport": "TLV",
+          "aircraft": "Boeing 787-9 Dreamliner",
+          "aircraft_assignment": "scheduled",
+          "airline": "El Al Israel Airlines",
+          "flight_number": "LY88",
+          "observation_id": "783e6bbcc5928a9afef8",
+          "date": "2026-10-03",
+          "departure_local": "22:30",
+          "arrival_local": "05:25",
+          "minutes": 655,
+          "time_basis": "published scheduled nonstop duration",
+          "stop_count": 0,
+          "nonstop_verified": true,
+          "verification_basis": "Current dated nonstop HKT→TLV schedule matches aircraft family, departure, arrival and 10h55 duration. Supersedes old HKT→BKK→TLV index for this observation only.",
+          "source": "https://2lnr.com/routes/hkt-tlv",
+          "source_date": "2026-10-04",
+          "retrieved": "2026-10-05",
+          "verification_method": "independent flight-route adjacency",
+          "verification_route": "HKT → TLV",
+          "verification_source": "https://www.flight.info/LY88",
+          "reviewed_at": "2026-10-06"
+        },
+        {
+          "from_airport": "HKT",
+          "to_airport": "TLV",
+          "aircraft": "777",
+          "aircraft_assignment": "scheduled",
+          "airline": "El Al Israel Airlines",
+          "flight_number": "LY88",
+          "observation_id": "30f9f3347abb8e651249",
+          "date": "2026-10-07",
+          "departure_local": "13:40",
+          "arrival_local": "20:35",
+          "minutes": 655,
+          "time_basis": "published scheduled nonstop duration",
+          "stop_count": 0,
+          "nonstop_verified": true,
+          "verification_basis": "Current dated nonstop HKT→TLV schedule matches aircraft family, departure, arrival and 10h55 duration. Supersedes old HKT→BKK→TLV index for this observation only.",
+          "source": "https://2lnr.com/routes/hkt-tlv",
+          "source_date": "2026-10-04",
+          "retrieved": "2026-10-05",
+          "verification_method": "independent flight-route adjacency",
+          "verification_route": "HKT → TLV",
+          "verification_source": "https://www.flight.info/LY88",
+          "reviewed_at": "2026-10-06"
+        },
+        {
+          "from_airport": "TLV",
+          "to_airport": "HKT",
+          "aircraft": "787",
+          "aircraft_assignment": "scheduled",
+          "airline": "El Al Israel Airlines",
+          "flight_number": "LY87",
+          "observation_id": "b2b6f3fc6e76e876fcd4",
+          "date": "2026-10-05",
+          "departure_local": "20:05",
+          "arrival_local": "11:25",
+          "minutes": 680,
+          "time_basis": "published scheduled nonstop duration",
+          "stop_count": 0,
+          "nonstop_verified": true,
+          "verification_basis": "Scheduled departure matches consecutive airports in independent flight sequence: ELY87",
+          "source": "https://2lnr.com/routes/tlv-hkt",
+          "source_date": "2026-10-04",
+          "retrieved": "2026-10-05",
+          "verification_method": "independent flight-route adjacency",
+          "verification_route": "TLV → HKT",
+          "verification_source": "https://github.com/vradarserver/standing-data/blob/02f542fb377ba0f47a780e33a9cf38716bed1d5c/routes/schema-01/E/ELY-all.csv"
+        },
+        {
+          "from_airport": "TLV",
+          "to_airport": "HKT",
+          "aircraft": "777",
+          "aircraft_assignment": "scheduled",
+          "airline": "El Al Israel Airlines",
+          "flight_number": "LY87",
+          "observation_id": "fdbfbaf40475c1742854",
+          "date": "2026-10-06",
+          "departure_local": "19:35",
+          "arrival_local": "11:25",
+          "minutes": 710,
+          "time_basis": "published scheduled nonstop duration",
+          "stop_count": 0,
+          "nonstop_verified": true,
+          "verification_basis": "Scheduled departure matches consecutive airports in independent flight sequence: ELY87",
+          "source": "https://2lnr.com/routes/tlv-hkt",
+          "source_date": "2026-10-04",
+          "retrieved": "2026-10-05",
+          "verification_method": "independent flight-route adjacency",
+          "verification_route": "TLV → HKT",
+          "verification_source": "https://github.com/vradarserver/standing-data/blob/02f542fb377ba0f47a780e33a9cf38716bed1d5c/routes/schema-01/E/ELY-all.csv"
+        },
+        {
+          "from_airport": "TLV",
+          "to_airport": "HKT",
+          "aircraft": "Boeing 787-9 Dreamliner",
+          "aircraft_assignment": "scheduled",
+          "airline": "El Al Israel Airlines",
+          "flight_number": "LY87",
+          "observation_id": "30cfe1dc8d8e75c53613",
+          "date": "2026-10-08",
+          "departure_local": "23:00",
+          "arrival_local": "14:50",
+          "minutes": 710,
+          "time_basis": "published scheduled nonstop duration",
+          "stop_count": 0,
+          "nonstop_verified": true,
+          "verification_basis": "Scheduled departure matches consecutive airports in independent flight sequence: ELY87",
+          "source": "https://2lnr.com/routes/tlv-hkt",
+          "source_date": "2026-10-04",
+          "retrieved": "2026-10-05",
+          "verification_method": "independent flight-route adjacency",
+          "verification_route": "TLV → HKT",
+          "verification_source": "https://github.com/vradarserver/standing-data/blob/02f542fb377ba0f47a780e33a9cf38716bed1d5c/routes/schema-01/E/ELY-all.csv"
+        }
+      ],
+      "directions": [
+        {
+          "from_airport": "TLV",
+          "to_airport": "HKT",
+          "count": 3,
+          "minutes": 700,
+          "adjustedMinutes": 700
+        },
+        {
+          "from_airport": "HKT",
+          "to_airport": "TLV",
+          "count": 2,
+          "minutes": 655,
+          "adjustedMinutes": 655
+        }
+      ],
+      "twoWay": true,
+      "rawHours": 11.291666666666666,
+      "hours": 11.291666666666666,
+      "weight": 1,
+      "exclusion": {
+        "reason": "Repeated triangle inconsistency",
+        "count": 2,
+        "witnesses": [
+          {
+            "via": "DXB",
+            "excessHours": 1.452859477124182,
+            "otherHours": [
+              3.5263071895424836,
+              6.3125
+            ]
+          },
+          {
+            "via": "AUH",
+            "excessHours": 1.4035256410256416,
+            "otherHours": [
+              3.3173076923076925,
+              6.570833333333334
+            ]
+          }
+        ]
+      },
+      "from_airport": "TLV",
+      "to_airport": "HKT"
+    },
+    {
+      "a": 16,
+      "b": 55,
+      "observations": [
+        {
+          "from_airport": "CPH",
+          "to_airport": "DEL",
+          "aircraft": "Boeing 787-8 Dreamliner",
+          "aircraft_assignment": "scheduled",
+          "airline": "Air India Limited",
+          "flight_number": "AI158",
+          "observation_id": "af12778815b833175154",
+          "date": "2026-10-04",
+          "departure_local": "21:10",
+          "arrival_local": "10:50",
+          "minutes": 610,
+          "time_basis": "published scheduled nonstop duration",
+          "stop_count": 0,
+          "nonstop_verified": true,
+          "verification_basis": "Scheduled departure matches consecutive airports in independent flight sequence: AIC158",
+          "source": "https://2lnr.com/routes/cph-del",
+          "source_date": "2026-09-27",
+          "retrieved": "2026-10-05",
+          "verification_method": "independent flight-route adjacency",
+          "verification_route": "CPH → DEL",
+          "verification_source": "https://github.com/vradarserver/standing-data/blob/02f542fb377ba0f47a780e33a9cf38716bed1d5c/routes/schema-01/A/AIC-all.csv"
+        },
+        {
+          "from_airport": "DEL",
+          "to_airport": "CPH",
+          "aircraft": "Boeing 787-8 Dreamliner",
+          "aircraft_assignment": "scheduled",
+          "airline": "Air India Limited",
+          "flight_number": "AI157",
+          "observation_id": "47304c240fd74da79559",
+          "date": "2026-10-04",
+          "departure_local": "12:50",
+          "arrival_local": "19:40",
+          "minutes": 620,
+          "time_basis": "published scheduled nonstop duration",
+          "stop_count": 0,
+          "nonstop_verified": true,
+          "verification_basis": "Scheduled departure matches consecutive airports in independent flight sequence: AIC157",
+          "source": "https://2lnr.com/routes/del-cph",
+          "source_date": "2026-09-27",
+          "retrieved": "2026-10-05",
+          "verification_method": "independent flight-route adjacency",
+          "verification_route": "DEL → CPH",
+          "verification_source": "https://github.com/vradarserver/standing-data/blob/02f542fb377ba0f47a780e33a9cf38716bed1d5c/routes/schema-01/A/AIC-all.csv"
+        }
+      ],
+      "directions": [
+        {
+          "from_airport": "DEL",
+          "to_airport": "CPH",
+          "count": 1,
+          "minutes": 620,
+          "adjustedMinutes": 620
+        },
+        {
+          "from_airport": "CPH",
+          "to_airport": "DEL",
+          "count": 1,
+          "minutes": 610,
+          "adjustedMinutes": 610
+        }
+      ],
+      "twoWay": true,
+      "rawHours": 10.25,
+      "hours": 10.25,
+      "weight": 1,
+      "exclusion": {
+        "reason": "Repeated triangle inconsistency",
+        "count": 2,
+        "witnesses": [
+          {
+            "via": "MUC",
+            "excessHours": 0.7256944444444429,
+            "otherHours": [
+              7.916666666666667,
+              1.607638888888889
+            ]
+          },
+          {
+            "via": "WAW",
+            "excessHours": 0.9789915966386573,
+            "otherHours": [
+              7.833333333333333,
+              1.4376750700280112
+            ]
+          }
+        ]
+      },
+      "from_airport": "DEL",
+      "to_airport": "CPH"
+    }
+  ],
+  "remaining": [
+    {
+      "from_airport": "LHR",
+      "to_airport": "ICN",
+      "hours": 13.569444444444445,
+      "index": 2772,
+      "count": 1,
+      "totalExcess": 0.8920634920634924,
+      "witnesses": [
+        {
+          "via": "PEK",
+          "excessHours": 0.8920634920634924,
+          "otherHours": [
+            10.513888888888888,
+            2.163492063492064
+          ]
+        }
+      ]
+    },
+    {
+      "from_airport": "HND",
+      "to_airport": "ARN",
+      "hours": 13.75,
+      "index": 364,
+      "count": 1,
+      "totalExcess": 1.0659722222222214,
+      "witnesses": [
+        {
+          "via": "PEK",
+          "excessHours": 1.0659722222222214,
+          "otherHours": [
+            3.7465277777777777,
+            8.9375
+          ]
+        }
+      ]
+    },
+    {
+      "from_airport": "FRA",
+      "to_airport": "ICN",
+      "hours": 12.791666666666666,
+      "index": 2308,
+      "count": 1,
+      "totalExcess": 0.7705357142857139,
+      "witnesses": [
+        {
+          "via": "PEK",
+          "excessHours": 0.7705357142857139,
+          "otherHours": [
+            9.857638888888888,
+            2.163492063492064
+          ]
+        }
+      ]
+    },
+    {
+      "from_airport": "FRA",
+      "to_airport": "DEL",
+      "hours": 9.611111111111112,
+      "index": 1674,
+      "count": 1,
+      "totalExcess": 0.6944444444444464,
+      "witnesses": [
+        {
+          "via": "MUC",
+          "excessHours": 0.6944444444444464,
+          "otherHours": [
+            1,
+            7.916666666666667
+          ]
+        }
+      ]
+    },
+    {
+      "from_airport": "ICN",
+      "to_airport": "CPH",
+      "hours": 12.541666666666666,
+      "index": 1516,
+      "count": 1,
+      "totalExcess": 1.1073412698412675,
+      "witnesses": [
+        {
+          "via": "PEK",
+          "excessHours": 1.1073412698412675,
+          "otherHours": [
+            2.163492063492064,
+            9.270833333333334
+          ]
+        }
+      ]
+    },
+    {
+      "from_airport": "ICN",
+      "to_airport": "WAW",
+      "hours": 12,
+      "index": 2803,
+      "count": 1,
+      "totalExcess": 0.8448412698412682,
+      "witnesses": [
+        {
+          "via": "PEK",
+          "excessHours": 0.8448412698412682,
+          "otherHours": [
+            2.163492063492064,
+            8.991666666666667
+          ]
+        }
+      ]
+    },
+    {
+      "from_airport": "DEL",
+      "to_airport": "VIE",
+      "hours": 9.375,
+      "index": 1708,
+      "count": 1,
+      "totalExcess": 0.9166666666666679,
+      "witnesses": [
+        {
+          "via": "GYD",
+          "excessHours": 0.9166666666666679,
+          "otherHours": [
+            4.375,
+            4.083333333333333
+          ]
+        }
+      ]
+    },
+    {
+      "from_airport": "PEK",
+      "to_airport": "BOS",
+      "hours": 15.708333333333334,
+      "index": 938,
+      "count": 1,
+      "totalExcess": 0.7778787878787874,
+      "witnesses": [
+        {
+          "via": "YYZ",
+          "excessHours": 0.7778787878787874,
+          "otherHours": [
+            13.125,
+            1.8054545454545454
+          ]
+        }
+      ]
+    },
+    {
+      "from_airport": "TPE",
+      "to_airport": "PRG",
+      "hours": 13.979166666666666,
+      "index": 3629,
+      "count": 1,
+      "totalExcess": 0.9037037037037017,
+      "witnesses": [
+        {
+          "via": "PEK",
+          "excessHours": 0.9037037037037017,
+          "otherHours": [
+            3.325462962962963,
+            9.75
+          ]
+        }
+      ]
+    },
+    {
+      "from_airport": "NRT",
+      "to_airport": "WAW",
+      "hours": 13.383333333333333,
+      "index": 3516,
+      "count": 1,
+      "totalExcess": 0.6138888888888872,
+      "witnesses": [
+        {
+          "via": "PEK",
+          "excessHours": 0.6138888888888872,
+          "otherHours": [
+            3.777777777777778,
+            8.991666666666667
+          ]
+        }
+      ]
+    },
+    {
+      "from_airport": "ATL",
+      "to_airport": "AUH",
+      "hours": 15.291666666666666,
+      "index": 511,
+      "count": 1,
+      "totalExcess": 0.644166666666667,
+      "witnesses": [
+        {
+          "via": "CLT",
+          "excessHours": 0.644166666666667,
+          "otherHours": [
+            1.2308333333333332,
+            13.416666666666666
+          ]
+        }
+      ]
+    }
+  ]
+}

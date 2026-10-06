@@ -1,0 +1,1028 @@
+{
+  "method": "All reconstructions start from random XYZ and fit only edge distances. Independent reference coordinates are used solely to fabricate control measurements and evaluate models, never to initialize or constrain a reconstruction. No sphere prior or projection is added.",
+  "referenceSource": "https://github.com/jpatokal/openflights/blob/master/data/airports.dat",
+  "airports": 203,
+  "pairs": 1952,
+  "referenceAirports": 200,
+  "referencePairs": 1913,
+  "displayedHubs": [
+    {
+      "index": 2,
+      "id": "DXB",
+      "incoming": 110,
+      "outgoing": 111
+    },
+    {
+      "index": 13,
+      "id": "DOH",
+      "incoming": 107,
+      "outgoing": 109
+    },
+    {
+      "index": 0,
+      "id": "LHR",
+      "incoming": 88,
+      "outgoing": 87
+    },
+    {
+      "index": 12,
+      "id": "IST",
+      "incoming": 87,
+      "outgoing": 84
+    },
+    {
+      "index": 9,
+      "id": "CDG",
+      "incoming": 82,
+      "outgoing": 82
+    },
+    {
+      "index": 10,
+      "id": "FRA",
+      "incoming": 74,
+      "outgoing": 73
+    },
+    {
+      "index": 11,
+      "id": "AMS",
+      "incoming": 71,
+      "outgoing": 71
+    },
+    {
+      "index": 3,
+      "id": "SIN",
+      "incoming": 70,
+      "outgoing": 71
+    },
+    {
+      "index": 15,
+      "id": "ICN",
+      "incoming": 67,
+      "outgoing": 69
+    },
+    {
+      "index": 1,
+      "id": "JFK",
+      "incoming": 67,
+      "outgoing": 68
+    },
+    {
+      "index": 14,
+      "id": "HKG",
+      "incoming": 62,
+      "outgoing": 62
+    },
+    {
+      "index": 17,
+      "id": "BKK",
+      "incoming": 61,
+      "outgoing": 60
+    },
+    {
+      "index": 24,
+      "id": "PEK",
+      "incoming": 61,
+      "outgoing": 62
+    },
+    {
+      "index": 25,
+      "id": "PVG",
+      "incoming": 60,
+      "outgoing": 60
+    },
+    {
+      "index": 60,
+      "id": "NRT",
+      "incoming": 59,
+      "outgoing": 59
+    },
+    {
+      "index": 51,
+      "id": "MAD",
+      "incoming": 58,
+      "outgoing": 59
+    },
+    {
+      "index": 49,
+      "id": "AUH",
+      "incoming": 51,
+      "outgoing": 51
+    },
+    {
+      "index": 4,
+      "id": "LAX",
+      "incoming": 50,
+      "outgoing": 51
+    },
+    {
+      "index": 18,
+      "id": "YYZ",
+      "incoming": 49,
+      "outgoing": 50
+    },
+    {
+      "index": 52,
+      "id": "FCO",
+      "incoming": 46,
+      "outgoing": 46
+    },
+    {
+      "index": 5,
+      "id": "HND",
+      "incoming": 45,
+      "outgoing": 46
+    }
+  ],
+  "runs": [
+    {
+      "seed": 71,
+      "allPoints": {
+        "stress": 0.04591289071145831,
+        "iterations": 30000,
+        "stable": false,
+        "radialVariation": 0.23689220589723808,
+        "radius": 8.061059505913725
+      },
+      "hubPoints": {
+        "stress": 0.04591289071145831,
+        "iterations": 30000,
+        "stable": false,
+        "radialVariation": 0.04942617571543695,
+        "radius": 8.415646937646768
+      },
+      "checkpoints": [
+        {
+          "stress": 0.24618746006620354,
+          "iterations": 100,
+          "stable": false,
+          "radialVariation": 0.2181205229936285,
+          "radius": 6.970558064124677
+        },
+        {
+          "stress": 0.061086614093384936,
+          "iterations": 1000,
+          "stable": false,
+          "radialVariation": 0.04875751986451635,
+          "radius": 8.173820042999548
+        },
+        {
+          "stress": 0.046098691676919594,
+          "iterations": 5000,
+          "stable": false,
+          "radialVariation": 0.048100690211019585,
+          "radius": 8.449425347526754
+        },
+        {
+          "stress": 0.045926193885312466,
+          "iterations": 15000,
+          "stable": false,
+          "radialVariation": 0.04951277152071578,
+          "radius": 8.414386805201465
+        },
+        {
+          "stress": 0.04591289071145831,
+          "iterations": 30000,
+          "stable": false,
+          "radialVariation": 0.04942617571543695,
+          "radius": 8.415646937646768
+        }
+      ],
+      "outliers": [
+        {
+          "airport": "SAL",
+          "degree": 2,
+          "radiusRatio": 2.244821827247756
+        },
+        {
+          "airport": "LOS",
+          "degree": 17,
+          "radiusRatio": 0.2826420970280117
+        },
+        {
+          "airport": "MVD",
+          "degree": 1,
+          "radiusRatio": 1.6837289825694282
+        },
+        {
+          "airport": "PDX",
+          "degree": 3,
+          "radiusRatio": 0.31837799243459597
+        },
+        {
+          "airport": "FOR",
+          "degree": 4,
+          "radiusRatio": 0.3461054580556037
+        },
+        {
+          "airport": "YOW",
+          "degree": 3,
+          "radiusRatio": 0.3694458515242519
+        },
+        {
+          "airport": "DUR",
+          "degree": 2,
+          "radiusRatio": 1.6077274398357502
+        },
+        {
+          "airport": "NOU",
+          "degree": 3,
+          "radiusRatio": 1.5838172896595109
+        },
+        {
+          "airport": "SSA",
+          "degree": 3,
+          "radiusRatio": 1.5670209538544502
+        },
+        {
+          "airport": "BSB",
+          "degree": 1,
+          "radiusRatio": 0.45321041123167355
+        },
+        {
+          "airport": "RGN",
+          "degree": 1,
+          "radiusRatio": 0.4771959693411879
+        },
+        {
+          "airport": "PUJ",
+          "degree": 8,
+          "radiusRatio": 0.47859534017154975
+        },
+        {
+          "airport": "WDH",
+          "degree": 4,
+          "radiusRatio": 1.5105819427355638
+        },
+        {
+          "airport": "SUB",
+          "degree": 1,
+          "radiusRatio": 0.5282085950605662
+        },
+        {
+          "airport": "CTS",
+          "degree": 4,
+          "radiusRatio": 1.4595426782477017
+        }
+      ]
+    },
+    {
+      "seed": 72,
+      "allPoints": {
+        "stress": 0.035188424001658246,
+        "iterations": 30000,
+        "stable": false,
+        "radialVariation": 0.17522228501477832,
+        "radius": 8.570800399327203
+      },
+      "hubPoints": {
+        "stress": 0.035188424001658246,
+        "iterations": 30000,
+        "stable": false,
+        "radialVariation": 0.03169693799633033,
+        "radius": 8.81190799106895
+      },
+      "checkpoints": [
+        {
+          "stress": 0.2258927165233451,
+          "iterations": 100,
+          "stable": false,
+          "radialVariation": 0.18390034550547954,
+          "radius": 6.942983761973633
+        },
+        {
+          "stress": 0.0478078371473383,
+          "iterations": 1000,
+          "stable": false,
+          "radialVariation": 0.047470518840266714,
+          "radius": 9.014661614468814
+        },
+        {
+          "stress": 0.03528498709290291,
+          "iterations": 5000,
+          "stable": false,
+          "radialVariation": 0.03160561910736445,
+          "radius": 8.811932638522311
+        },
+        {
+          "stress": 0.03520003905777703,
+          "iterations": 15000,
+          "stable": false,
+          "radialVariation": 0.031690525780653477,
+          "radius": 8.811794124298443
+        },
+        {
+          "stress": 0.035188424001658246,
+          "iterations": 30000,
+          "stable": false,
+          "radialVariation": 0.03169693799633033,
+          "radius": 8.81190799106895
+        }
+      ],
+      "outliers": [
+        {
+          "airport": "MVD",
+          "degree": 1,
+          "radiusRatio": 1.639270191259928
+        },
+        {
+          "airport": "LAD",
+          "degree": 1,
+          "radiusRatio": 0.37716927537219175
+        },
+        {
+          "airport": "SAL",
+          "degree": 2,
+          "radiusRatio": 0.4792028660586993
+        },
+        {
+          "airport": "ASU",
+          "degree": 1,
+          "radiusRatio": 1.5077216421629014
+        },
+        {
+          "airport": "WDH",
+          "degree": 4,
+          "radiusRatio": 1.4734505493684635
+        },
+        {
+          "airport": "KGL",
+          "degree": 5,
+          "radiusRatio": 1.4512946773430788
+        },
+        {
+          "airport": "FUK",
+          "degree": 3,
+          "radiusRatio": 1.4466215860666947
+        },
+        {
+          "airport": "ANC",
+          "degree": 2,
+          "radiusRatio": 1.4077305505610163
+        },
+        {
+          "airport": "YOW",
+          "degree": 3,
+          "radiusRatio": 0.6300782333520212
+        },
+        {
+          "airport": "NOU",
+          "degree": 3,
+          "radiusRatio": 1.362867818634012
+        },
+        {
+          "airport": "KTM",
+          "degree": 9,
+          "radiusRatio": 0.6386332285151075
+        },
+        {
+          "airport": "BER",
+          "degree": 7,
+          "radiusRatio": 0.6400241176747473
+        },
+        {
+          "airport": "DAD",
+          "degree": 1,
+          "radiusRatio": 0.6416017232686049
+        },
+        {
+          "airport": "LUN",
+          "degree": 3,
+          "radiusRatio": 0.653234830243966
+        },
+        {
+          "airport": "LHE",
+          "degree": 12,
+          "radiusRatio": 0.6581379952638232
+        }
+      ]
+    },
+    {
+      "seed": 73,
+      "allPoints": {
+        "stress": 0.03505591829983667,
+        "iterations": 30000,
+        "stable": false,
+        "radialVariation": 0.24108824031457335,
+        "radius": 8.510262013665482
+      },
+      "hubPoints": {
+        "stress": 0.03505591829983667,
+        "iterations": 30000,
+        "stable": false,
+        "radialVariation": 0.032086208288030584,
+        "radius": 8.735607643357204
+      },
+      "checkpoints": [
+        {
+          "stress": 0.2466003793196892,
+          "iterations": 100,
+          "stable": false,
+          "radialVariation": 0.23357699630824144,
+          "radius": 7.083600359657514
+        },
+        {
+          "stress": 0.05871660411811986,
+          "iterations": 1000,
+          "stable": false,
+          "radialVariation": 0.07997555280376273,
+          "radius": 8.127973937857433
+        },
+        {
+          "stress": 0.035352883339941764,
+          "iterations": 5000,
+          "stable": false,
+          "radialVariation": 0.03141507446059656,
+          "radius": 8.738093679983638
+        },
+        {
+          "stress": 0.03509428720215451,
+          "iterations": 15000,
+          "stable": false,
+          "radialVariation": 0.03196759207830525,
+          "radius": 8.741842892799319
+        },
+        {
+          "stress": 0.03505591829983667,
+          "iterations": 30000,
+          "stable": false,
+          "radialVariation": 0.032086208288030584,
+          "radius": 8.735607643357204
+        }
+      ],
+      "outliers": [
+        {
+          "airport": "GYE",
+          "degree": 2,
+          "radiusRatio": 2.06331446692157
+        },
+        {
+          "airport": "PTY",
+          "degree": 4,
+          "radiusRatio": 1.9001386769175648
+        },
+        {
+          "airport": "SAL",
+          "degree": 2,
+          "radiusRatio": 1.8477253392042527
+        },
+        {
+          "airport": "CNF",
+          "degree": 2,
+          "radiusRatio": 1.658213444481218
+        },
+        {
+          "airport": "ASU",
+          "degree": 1,
+          "radiusRatio": 1.63553504439186
+        },
+        {
+          "airport": "BER",
+          "degree": 7,
+          "radiusRatio": 0.4444921568384582
+        },
+        {
+          "airport": "PUJ",
+          "degree": 8,
+          "radiusRatio": 0.45955597046783003
+        },
+        {
+          "airport": "FUK",
+          "degree": 3,
+          "radiusRatio": 1.5267530712536703
+        },
+        {
+          "airport": "OPO",
+          "degree": 5,
+          "radiusRatio": 1.4493966146189659
+        },
+        {
+          "airport": "EBB",
+          "degree": 6,
+          "radiusRatio": 1.4478980832164021
+        },
+        {
+          "airport": "DUS",
+          "degree": 3,
+          "radiusRatio": 0.5683131109126003
+        },
+        {
+          "airport": "GYD",
+          "degree": 5,
+          "radiusRatio": 0.5707526705636995
+        },
+        {
+          "airport": "DUR",
+          "degree": 2,
+          "radiusRatio": 1.4278113428330046
+        },
+        {
+          "airport": "KEF",
+          "degree": 6,
+          "radiusRatio": 0.5849282923178766
+        },
+        {
+          "airport": "MVD",
+          "degree": 1,
+          "radiusRatio": 1.3982443204680648
+        }
+      ]
+    }
+  ],
+  "controls": [
+    {
+      "kind": "chord",
+      "seed": 71,
+      "stress": 0.00199311595466599,
+      "iterations": 30000,
+      "stable": false,
+      "radialVariation": 0.1676663987221207,
+      "radius": 5.765608873650607,
+      "checkpoints": [
+        {
+          "stress": 0.2582729386625639,
+          "iterations": 100,
+          "stable": false,
+          "radialVariation": 0.3702382982700472,
+          "radius": 4.267802794291662
+        },
+        {
+          "stress": 0.04448323278921719,
+          "iterations": 1000,
+          "stable": false,
+          "radialVariation": 0.24900499654224423,
+          "radius": 5.274175622618385
+        },
+        {
+          "stress": 0.0030102151004241613,
+          "iterations": 5000,
+          "stable": false,
+          "radialVariation": 0.17621715827836898,
+          "radius": 5.705569445086
+        },
+        {
+          "stress": 0.002136953049685155,
+          "iterations": 15000,
+          "stable": false,
+          "radialVariation": 0.17131731553851712,
+          "radius": 5.7372224378800345
+        },
+        {
+          "stress": 0.00199311595466599,
+          "iterations": 30000,
+          "stable": false,
+          "radialVariation": 0.1676663987221207,
+          "radius": 5.765608873650607
+        }
+      ]
+    },
+    {
+      "kind": "chord",
+      "seed": 72,
+      "stress": 0.0021838586153950547,
+      "iterations": 30000,
+      "stable": false,
+      "radialVariation": 0.11968721761479155,
+      "radius": 5.911218792253462,
+      "checkpoints": [
+        {
+          "stress": 0.2342202666686655,
+          "iterations": 100,
+          "stable": false,
+          "radialVariation": 0.3193266613456564,
+          "radius": 4.395056880253212
+        },
+        {
+          "stress": 0.034627730663984266,
+          "iterations": 1000,
+          "stable": false,
+          "radialVariation": 0.22559196264778278,
+          "radius": 5.306048622957535
+        },
+        {
+          "stress": 0.004596097756331921,
+          "iterations": 5000,
+          "stable": false,
+          "radialVariation": 0.14214097836676873,
+          "radius": 5.8166580843148425
+        },
+        {
+          "stress": 0.0022516325657041133,
+          "iterations": 15000,
+          "stable": false,
+          "radialVariation": 0.1238048702091518,
+          "radius": 5.892903197018556
+        },
+        {
+          "stress": 0.0021838586153950547,
+          "iterations": 30000,
+          "stable": false,
+          "radialVariation": 0.11968721761479155,
+          "radius": 5.911218792253462
+        }
+      ]
+    },
+    {
+      "kind": "arc",
+      "seed": 71,
+      "stress": 0.04211469083679398,
+      "iterations": 30000,
+      "stable": false,
+      "radialVariation": 0.17918152995163233,
+      "radius": 6.311992499581531,
+      "checkpoints": [
+        {
+          "stress": 0.22439960745487178,
+          "iterations": 100,
+          "stable": false,
+          "radialVariation": 0.3704962526720847,
+          "radius": 4.752584030925206
+        },
+        {
+          "stress": 0.05453513378885915,
+          "iterations": 1000,
+          "stable": false,
+          "radialVariation": 0.24546887249272473,
+          "radius": 5.86586701548321
+        },
+        {
+          "stress": 0.042185265978014634,
+          "iterations": 5000,
+          "stable": false,
+          "radialVariation": 0.1892353603893819,
+          "radius": 6.225565227855715
+        },
+        {
+          "stress": 0.04212743255545259,
+          "iterations": 15000,
+          "stable": false,
+          "radialVariation": 0.18401831587159945,
+          "radius": 6.244760316045033
+        },
+        {
+          "stress": 0.04211469083679398,
+          "iterations": 30000,
+          "stable": false,
+          "radialVariation": 0.17918152995163233,
+          "radius": 6.311992499581531
+        }
+      ]
+    },
+    {
+      "kind": "arc",
+      "seed": 72,
+      "stress": 0.042291949889356265,
+      "iterations": 30000,
+      "stable": false,
+      "radialVariation": 0.19970561888708555,
+      "radius": 6.310340097177838,
+      "checkpoints": [
+        {
+          "stress": 0.1932034561946523,
+          "iterations": 100,
+          "stable": false,
+          "radialVariation": 0.3525582001043022,
+          "radius": 5.109337443430757
+        },
+        {
+          "stress": 0.04385513835055784,
+          "iterations": 1000,
+          "stable": false,
+          "radialVariation": 0.2418795088880497,
+          "radius": 5.993179841173649
+        },
+        {
+          "stress": 0.04236098813182138,
+          "iterations": 5000,
+          "stable": false,
+          "radialVariation": 0.2072172288933418,
+          "radius": 6.186244430577621
+        },
+        {
+          "stress": 0.042299186990201826,
+          "iterations": 15000,
+          "stable": false,
+          "radialVariation": 0.2028890081218014,
+          "radius": 6.273812319755451
+        },
+        {
+          "stress": 0.042291949889356265,
+          "iterations": 30000,
+          "stable": false,
+          "radialVariation": 0.19970561888708555,
+          "radius": 6.310340097177838
+        }
+      ]
+    }
+  ],
+  "referenceModels": [
+    {
+      "kind": "chord",
+      "normalizedError": 0.06104546646752379,
+      "scale": 8.955110720200624,
+      "outliers": [
+        {
+          "from": "SCL",
+          "to": "EZE",
+          "hours": 3,
+          "expectedHours": 1.5977785475389945,
+          "relativeError": 0.8776068840208181,
+          "observations": 1
+        },
+        {
+          "from": "PVG",
+          "to": "KIX",
+          "hours": 3.25,
+          "expectedHours": 1.834063855433531,
+          "relativeError": 0.7720211814717727,
+          "observations": 1
+        },
+        {
+          "from": "ICN",
+          "to": "WUH",
+          "hours": 3.3333333333333335,
+          "expectedHours": 1.891495214094908,
+          "relativeError": 0.7622742624428759,
+          "observations": 2
+        },
+        {
+          "from": "HKG",
+          "to": "XIY",
+          "hours": 3.2916666666666665,
+          "expectedHours": 2.0204500676235764,
+          "relativeError": 0.629174964238674,
+          "observations": 2
+        },
+        {
+          "from": "ICN",
+          "to": "CTS",
+          "hours": 3.125,
+          "expectedHours": 1.9934057464851536,
+          "relativeError": 0.5676688027563456,
+          "observations": 2
+        },
+        {
+          "from": "SZX",
+          "to": "XIY",
+          "hours": 3,
+          "expectedHours": 1.9670861048783232,
+          "relativeError": 0.5250984654713775,
+          "observations": 3
+        },
+        {
+          "from": "PEK",
+          "to": "CKG",
+          "hours": 3.0833333333333335,
+          "expectedHours": 2.053295036638659,
+          "relativeError": 0.5016513839048166,
+          "observations": 1
+        },
+        {
+          "from": "DEL",
+          "to": "ALA",
+          "hours": 3.4166666666666665,
+          "expectedHours": 2.3045390425847567,
+          "relativeError": 0.48258137680954816,
+          "observations": 1
+        },
+        {
+          "from": "HKG",
+          "to": "TAO",
+          "hours": 3.375,
+          "expectedHours": 2.34406881056118,
+          "relativeError": 0.43980414943194895,
+          "observations": 2
+        },
+        {
+          "from": "HND",
+          "to": "DLC",
+          "hours": 3.3333333333333335,
+          "expectedHours": 2.3201278984119367,
+          "relativeError": 0.43670240576603897,
+          "observations": 1
+        },
+        {
+          "from": "PVG",
+          "to": "MNL",
+          "hours": 3.6666666666666665,
+          "expectedHours": 2.593239580936776,
+          "relativeError": 0.41393286359686365,
+          "observations": 4
+        },
+        {
+          "from": "PEK",
+          "to": "CTU",
+          "hours": 3.0833333333333335,
+          "expectedHours": 2.18177871276117,
+          "relativeError": 0.41322000957246147,
+          "observations": 4
+        }
+      ],
+      "affineComparison": {
+        "slope": 8.682435533627903,
+        "interceptHours": 0.30919437464750565,
+        "normalizedError": 0.059991843717848395,
+        "description": "Validation-only regression allowing a common additive duration; no parameters are used by the reconstruction."
+      }
+    },
+    {
+      "kind": "arc",
+      "normalizedError": 0.07253440446006314,
+      "scale": 8.205428152995205,
+      "outliers": [
+        {
+          "from": "SCL",
+          "to": "EZE",
+          "hours": 3,
+          "expectedHours": 1.4659684276855849,
+          "relativeError": 1.046428792969495,
+          "observations": 1
+        },
+        {
+          "from": "PVG",
+          "to": "KIX",
+          "hours": 3.25,
+          "expectedHours": 1.6834751376773651,
+          "relativeError": 0.9305304410280257,
+          "observations": 1
+        },
+        {
+          "from": "ICN",
+          "to": "WUH",
+          "hours": 3.3333333333333335,
+          "expectedHours": 1.7363855721419499,
+          "relativeError": 0.9196965160344196,
+          "observations": 2
+        },
+        {
+          "from": "HKG",
+          "to": "XIY",
+          "hours": 3.2916666666666665,
+          "expectedHours": 1.8552561576664954,
+          "relativeError": 0.7742383729947351,
+          "observations": 2
+        },
+        {
+          "from": "ICN",
+          "to": "CTS",
+          "hours": 3.125,
+          "expectedHours": 1.8303188109767106,
+          "relativeError": 0.7073528290584581,
+          "observations": 2
+        },
+        {
+          "from": "SZX",
+          "to": "XIY",
+          "hours": 3,
+          "expectedHours": 1.8060537600583675,
+          "relativeError": 0.6610801219466728,
+          "observations": 3
+        },
+        {
+          "from": "PEK",
+          "to": "CKG",
+          "hours": 3.0833333333333335,
+          "expectedHours": 1.8855480263421731,
+          "relativeError": 0.6352451861514116,
+          "observations": 1
+        },
+        {
+          "from": "DEL",
+          "to": "ALA",
+          "hours": 3.4166666666666665,
+          "expectedHours": 2.117483782260583,
+          "relativeError": 0.6135503352092275,
+          "observations": 1
+        },
+        {
+          "from": "HKG",
+          "to": "TAO",
+          "hours": 3.375,
+          "expectedHours": 2.154013213023197,
+          "relativeError": 0.5668427563929035,
+          "observations": 2
+        },
+        {
+          "from": "HND",
+          "to": "DLC",
+          "hours": 3.3333333333333335,
+          "expectedHours": 2.1318881628578032,
+          "relativeError": 0.5635591919910982,
+          "observations": 1
+        },
+        {
+          "from": "PEK",
+          "to": "CTU",
+          "hours": 3.0833333333333335,
+          "expectedHours": 2.0041074364716662,
+          "relativeError": 0.5385070067709044,
+          "observations": 4
+        },
+        {
+          "from": "PVG",
+          "to": "MNL",
+          "hours": 3.6666666666666665,
+          "expectedHours": 2.3845266878456095,
+          "relativeError": 0.537691603686539,
+          "observations": 4
+        }
+      ],
+      "affineComparison": {
+        "slope": 7.2996006551036,
+        "interceptHours": 1.1354119978914685,
+        "normalizedError": 0.0566427926049891,
+        "description": "Validation-only regression allowing a common additive duration; no parameters are used by the reconstruction."
+      }
+    }
+  ],
+  "hubReferenceCoverage": {
+    "zMin": 0.023563080038603145,
+    "zMax": 0.7913153239040152,
+    "southernHubs": [],
+    "latitudeMin": 1.3501900000000002,
+    "latitudeMax": 52.308600999999996
+  },
+  "exactAmbiguityProof": {
+    "description": "Evaluation only: start with independently known sphere points, then rotate each degree-one point around its sole fixed neighbor onto the outward radial ray. Every observed chord length is unchanged. No reconstruction is initialized from these positions.",
+    "airports": 200,
+    "pairs": 1913,
+    "movedAirports": [
+      {
+        "airport": "DAD",
+        "anchor": "ICN",
+        "radiusBefore": 1,
+        "radiusAfter": 1.4636399153739827
+      },
+      {
+        "airport": "SUB",
+        "anchor": "HKG",
+        "radiusBefore": 1,
+        "radiusAfter": 1.5127355114012633
+      },
+      {
+        "airport": "BSB",
+        "anchor": "LIS",
+        "radiusBefore": 1,
+        "radiusAfter": 2.0833032909603997
+      },
+      {
+        "airport": "ASU",
+        "anchor": "MAD",
+        "radiusBefore": 1,
+        "radiusAfter": 2.320534056929506
+      },
+      {
+        "airport": "MVD",
+        "anchor": "MAD",
+        "radiusBefore": 1,
+        "radiusAfter": 2.407424251770906
+      },
+      {
+        "airport": "YEG",
+        "anchor": "AMS",
+        "radiusBefore": 1,
+        "radiusAfter": 2.0381696238084546
+      },
+      {
+        "airport": "LAD",
+        "anchor": "MAD",
+        "radiusBefore": 1,
+        "radiusAfter": 1.8721926586277164
+      },
+      {
+        "airport": "PEN",
+        "anchor": "HKG",
+        "radiusBefore": 1,
+        "radiusAfter": 1.373439844831265
+      },
+      {
+        "airport": "RGN",
+        "anchor": "ICN",
+        "radiusBefore": 1,
+        "radiusAfter": 1.57889418186849
+      }
+    ],
+    "stressBefore": 1.322390031282886e-16,
+    "stressAfter": 1.3342207466540817e-16,
+    "radialVariationBefore": 1.4043333874306802e-16,
+    "radialVariationAfter": 0.22539704300401495
+  },
+  "lowDegreeCounts": {
+    "1": 9,
+    "2": 14,
+    "3": 17
+  },
+  "referenceMissingAirports": [
+    "BER",
+    "TFU",
+    "UBN"
+  ],
+  "findings": [
+    "Previous rendering issue, now corrected: all 21 labeled hubs are north of the equator in an independent reference. The earlier build mistakenly restricted the hull to those hubs. The current hull uses every fitted airport.",
+    "The filtered graph has 9 degree-one, 14 degree-two and 17 degree-three airports. Sparse constraints admit multiple point clouds; additional iterations cannot determine missing distances.",
+    "The same graph with perfect sphere chord targets reaches about 0.2% distance residual but 12–17% radial variation at 30,000 iterations. The exact degree-one construction proves that different shapes can even share zero edge error.",
+    "Flight schedules are not exact Euclidean chords: routing, winds, fixed flight phases and schedule padding alter durations. Averaging directions reduces directional effects but does not remove these differences.",
+    "Three random starts at 30,000 iterations give 3.5–4.6% distance residual, 3.2–4.9% shown-hub radial variation and 17.5–24.1% full-cloud radial variation. Different minima persist; none of these runs met the strict stopping condition."
+  ],
+  "renderingCorrection": "The investigation described the earlier build, which incorrectly limited the points and hull to hubs. The current build renders all fitted airports and uses the top 10% only for scene text labels. The all-airport numerical findings remain applicable.",
+  "surfaceRenderingUpdate": "The default all-airport surface now uses every retained airport as a mesh vertex at its exact fitted XYZ coordinates. Direction-based connectivity permits concavity and dents. Convex envelope remains a comparison option. This changes rendering only; all-airport optimization and the numerical findings remain applicable."
+}
