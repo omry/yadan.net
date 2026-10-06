@@ -1,0 +1,58 @@
+{
+  "synthetic": true,
+  "points": 24,
+  "pairDistances": 276,
+  "metric": "Euclidean chord distance",
+  "groundTruthSuppliedToSolver": false,
+  "hullAffectsOptimization": false,
+  "modes": {
+    "space": {
+      "stress": 1.9224020189245193e-7,
+      "rmse": 0.0000016662944027123558,
+      "edges": 276,
+      "airports": 24,
+      "iterations": 519,
+      "phase": "stable",
+      "stable": true,
+      "startMode": "space",
+      "planeStress": null,
+      "lift": null,
+      "initialError": 0.4376970629525786,
+      "radialVariation": 7.469772781548105e-10,
+      "radiusError": 2.916185811348745e-14,
+      "recovered": true,
+      "hull": {
+        "facets": 44,
+        "outerPoints": 24,
+        "dimension": 3
+      }
+    },
+    "plane": {
+      "stress": 1.8980818393055236e-7,
+      "rmse": 0.0000016452142234505993,
+      "edges": 276,
+      "airports": 24,
+      "iterations": 2102,
+      "phase": "stable",
+      "stable": true,
+      "startMode": "plane",
+      "planeStress": 0.26111103090526716,
+      "lift": {
+        "curvature": -16.225176104992325,
+        "energyBefore": 1413.7563352574036,
+        "energyAfter": 580.575575117928,
+        "iteration": 1741
+      },
+      "initialError": 0.5012856244416264,
+      "radialVariation": 4.847284974550636e-10,
+      "radiusError": 2.7977620220553945e-14,
+      "recovered": true,
+      "hull": {
+        "facets": 44,
+        "outerPoints": 24,
+        "dimension": 3
+      }
+    }
+  },
+  "seconds": 0.477320977
+}
