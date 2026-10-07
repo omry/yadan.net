@@ -4,8 +4,11 @@ title: Reconstructing Airport Positions from Flight Times
 authors: [omry]
 tags: [engineering, projects, visualization]
 description: An interactive experiment in recovering a 3D airport network from flight schedules, without supplying coordinates or an assumed shape.
+image: /img/lab/airport-time-space.png
 draft: false
 ---
+
+import Head from '@docusaurus/Head';
 
 If you had flight times between airports but no map, what shape could you
 recover?
@@ -16,6 +19,13 @@ moves them to make the distances between connected airports match their flight
 times. No latitude, longitude, or assumed sphere is supplied to the optimizer.
 
 <!-- truncate -->
+
+<Head>
+  <meta property="og:image:width" content="1280" />
+  <meta property="og:image:height" content="889" />
+  <meta property="og:image:alt" content="Time / Space reconstructing a 3D airport network from flight times." />
+  <meta name="twitter:image:alt" content="Time / Space reconstructing a 3D airport network from flight times." />
+</Head>
 
 [![Time / Space showing a globe-like reconstruction of 201 airports from 3,875 flight-time constraints.](/img/lab/airport-time-space.png)](pathname:///lab/airport-time-space/)
 
