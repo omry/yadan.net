@@ -62,7 +62,7 @@ export const featuredProjects = [
       {
         type: 'docs',
         label: 'Docs',
-        href: 'https://omegaconf.readthedocs.io/en/latest/',
+        href: 'https://omegaconf.cli.dev/',
       },
       {type: 'github', label: 'GitHub', href: 'https://github.com/omry/omegaconf'},
     ],
