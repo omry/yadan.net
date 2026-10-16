@@ -72,7 +72,13 @@ RECAPTCHA_SITE_KEY=your-public-site-key npm run build
 ## Lab
 
 `/lab/` lists the interactive experiments. Airport Time / Space is maintained in
-`lab/airport-time-space/` and published at `/lab/airport-time-space/`. The existing
-start and build commands prepare its static files automatically. See the
-[app README](lab/airport-time-space/README.md) for standalone use, tests, CSV
-format, and data provenance.
+[its own repository](https://github.com/omry/airport-time-space) and published at
+`/lab/airport-time-space/`. The existing start and build commands download the
+release pinned in `lab/airport-time-space.release.json`, verify its SHA-256,
+and extract it into the ignored `static/lab/airport-time-space/` directory.
+The archive is cached locally under `.cache/airport-time-space/`; subsequent
+builds can use that cache without downloading the app again.
+
+To deploy an app update, publish a release in the app repository and update
+the pinned archive URL and SHA-256 here. The app repository documents standalone
+use, tests, CSV format, and data provenance.

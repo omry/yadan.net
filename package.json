@@ -7,6 +7,7 @@
     "build": "NO_UPDATE_NOTIFIER=1 docusaurus build",
     "serve": "NO_UPDATE_NOTIFIER=1 docusaurus serve",
     "clear": "NO_UPDATE_NOTIFIER=1 docusaurus clear",
+    "test:lab": "node --test scripts/test-prepare-lab.mjs",
     "prestart": "node scripts/prepare-lab.mjs",
     "prebuild": "node scripts/prepare-lab.mjs"
   },
