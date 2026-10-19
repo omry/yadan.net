@@ -35,5 +35,6 @@
   },
   "devDependencies": {
     "playwright": "^1.60.0"
-  }
+  },
+  "packageManager": "npm@11.9.0"
 }
